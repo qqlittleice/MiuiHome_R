@@ -6,13 +6,13 @@ plugins {
 }
 
 android {
-    compileSdk = 32
-    buildToolsVersion = "32.0.0"
+    compileSdk = 33
+    buildToolsVersion = "33.0.0"
     namespace = "com.yuk.xposedmodulebase"
     defaultConfig {
         applicationId = namespace
         minSdk = 26
-        targetSdk = 32
+        targetSdk = 33
         versionCode = 1
         versionName = "0.1"
     }
