@@ -21,9 +21,6 @@ import java.util.Set;
 
 public class MainActivity extends BaseAppCompatActivity {
 
-    private FileObserver fileObserver;
-    private SharedPreferences.OnSharedPreferenceChangeListener mPreferenceChangeListener;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +30,8 @@ public class MainActivity extends BaseAppCompatActivity {
     }
 
     private void initData() {
-        mPreferenceChangeListener = (sharedPreferences, s) -> {
+        /*requestBackup();*/
+        SharedPreferences.OnSharedPreferenceChangeListener mPreferenceChangeListener = (sharedPreferences, s) -> {
             Log.i("prefs", "Changed: " + s);
             /*requestBackup();*/
             Object val = sharedPreferences.getAll().get(s);
@@ -47,14 +45,15 @@ public class MainActivity extends BaseAppCompatActivity {
             else if (val instanceof Boolean)
                 path = "boolean/";
             getContentResolver().notifyChange(Uri.parse("content://" + SharedPrefsProvider.AUTHORITY + "/" + path + s), null);
-            if (!path.equals("")) getContentResolver().notifyChange(Uri.parse("content://" + SharedPrefsProvider.AUTHORITY + "/pref/" + path + s), null);
+            if (!path.equals(""))
+                getContentResolver().notifyChange(Uri.parse("content://" + SharedPrefsProvider.AUTHORITY + "/pref/" + path + s), null);
         };
 
         PrefsUtils.mSharedPreferences.registerOnSharedPreferenceChangeListener(mPreferenceChangeListener);
         Helpers.fixPermissionsAsync(getApplicationContext());
 
         try {
-            fileObserver = new FileObserver(PrefsUtils.getSharedPrefsPath(), FileObserver.CLOSE_WRITE) {
+            FileObserver fileObserver = new FileObserver(PrefsUtils.getSharedPrefsPath(), FileObserver.CLOSE_WRITE) {
                 @Override
                 public void onEvent(int event, String path) {
                     Helpers.fixPermissionsAsync(getApplicationContext());
@@ -82,7 +81,7 @@ public class MainActivity extends BaseAppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu,menu);
+        getMenuInflater().inflate(R.menu.main_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 }

@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">MiuiHomeR</string>
-    <string name="xposed_desc">Alpha</string>
+    <string name="xposed_desc">针对 Miui 桌面的自定义扩展</string>
 </resources>

@@ -3,8 +3,7 @@ package com.yuk.miuiHomeR
 import com.github.kyuubiran.ezxhelper.init.EzXHelperInit
 import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.Log.logexIfThrow
-import com.yuk.miuiHomeR.hook.BaseHook
-import com.yuk.miuiHomeR.hook.ExampleHook
+import com.yuk.miuiHomeR.hook.*
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.IXposedHookZygoteInit
 import de.robv.android.xposed.callbacks.XC_LoadPackage
@@ -20,7 +19,17 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
             EzXHelperInit.setLogTag(TAG)
             EzXHelperInit.setToastTag(TAG)
             // Init hooks
-            initHooks(ExampleHook)
+            initHooks(
+                AllowMoveAllWidgetToMinus,
+                AlwaysBlurWallpaper,
+                AlwaysShowMiuiWidget,
+                AlwaysShowStatusClock,
+                DisableRecentViewWallpaperDarken,
+                HideStatusBarWhenEnterRecent,
+                ModifyAnimDurationRatio,
+                ModifyDoubleTapToSleep,
+
+                )
         }
     }
 
