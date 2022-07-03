@@ -4,6 +4,7 @@
     package="com.yuk.miuiHomeR">
 
     <application
+        android:name=".Application"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
         tools:ignore="MissingApplicationIcon">
@@ -15,6 +16,13 @@
                 <category android:name="de.robv.android.xposed.category.MODULE_SETTINGS"/>
             </intent-filter>
         </activity>
+
+        <provider
+            android:name=".provider.SharedPrefsProvider"
+            android:authorities="com.yuk.miuiHomeR.provider.sharedprefs"
+            android:grantUriPermissions="true"
+            android:exported="true"
+            android:directBootAware="true" />
 
         <meta-data
             android:name="xposeddescription"
