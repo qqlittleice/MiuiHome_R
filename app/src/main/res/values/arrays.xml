@@ -3,4 +3,18 @@
     <string-array name="xposedscope">
     <item>com.miui.home</item>
     </string-array>
+
+    <string-array name="folder_shade">
+        <item>无模糊</item>
+        <item>简单模糊</item>
+        <item>测试模糊</item>
+        <item>完整模糊</item>
+    </string-array>
+
+    <string-array name="folder_shade_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
 </resources>

@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.yuk.miuiHomeR"
-        minSdk = 29
+        minSdk = 30
         targetSdk = 33
         versionCode = 1
         versionName = "1.0.0"
@@ -58,4 +58,28 @@ android {
 dependencies {
     implementation("com.github.kyuubiran:EzXHelper:0.9.7")
     compileOnly("de.robv.android.xposed:api:82")
+
+    implementation(files("libs/animation-debug.aar"))
+    implementation(files("libs/appcompat-debug.aar"))
+    implementation(files("libs/appcompat-resources-debug.aar"))
+    implementation(files("libs/core-debug.aar"))
+    implementation(files("libs/haptic-debug.aar"))
+    implementation(files("libs/internal-debug.aar"))
+    implementation(files("libs/annotation-debug.aar"))
+    implementation(files("libs/recyclerview-debug.aar"))
+    implementation(files("libs/preference-debug.aar"))
+    implementation(files("libs/springback-debug.aar"))
+    implementation(files("libs/utils-debug.aar"))
+    implementation(files("libs/view-debug.aar"))
+    implementation(files("libs/blur-debug.aar"))
+
+
+    implementation("androidx.fragment:fragment:1.4.0-alpha04")
+    implementation("androidx.customview:customview:1.0.0")
+    implementation("androidx.core:core:1.7.0-alpha01")
+    implementation("androidx.vectordrawable:vectordrawable:1.1.0")
+    implementation("androidx.vectordrawable:vectordrawable-animated:1.1.0")
+    implementation("androidx.activity:activity:1.3.0-rc01")
+    implementation("androidx.resourceinspection:resourceinspection-annotation:1.0.0-alpha03")
+    implementation("androidx.drawerlayout:drawerlayout:1.1.1")
 }
