@@ -25,7 +25,7 @@
 -classobfuscationdictionary dict.txt
 -packageobfuscationdictionary dict.txt
 
--keep class com.yuk.xposedmodulebase.XposedInit {
+-keep class com.yuk.miuiHomeR.MainHook {
     <init>();
 }
 

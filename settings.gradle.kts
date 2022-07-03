@@ -1,8 +1,8 @@
 pluginManagement {
     repositories {
+        gradlePluginPortal()
         google()
         mavenCentral()
-        gradlePluginPortal()
     }
 }
 dependencyResolutionManagement {
@@ -10,8 +10,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven("https://api.xposed.info")
+        maven("https://api.xposed.info/")
     }
 }
-rootProject.name = "XposedModuleBase"
+
 include(":app")
+rootProject.name = "MiuiHomeR"
+

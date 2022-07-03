@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">XposedModuleBase</string>
+    <string name="app_name">MiuiHomeR</string>
+    <string name="xposed_desc">Alpha</string>
 </resources>
