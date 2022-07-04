@@ -25,7 +25,8 @@
             android:key="prefs_key_home_anim_ratio"
             android:max="500"
             android:min="10"
-            android:title="手势动画速度" />
+            android:title="手势动画速度"
+            app:showSeekBarValue="true" />
 
     </PreferenceCategory>
 

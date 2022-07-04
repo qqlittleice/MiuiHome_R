@@ -2,11 +2,12 @@ package com.yuk.miuiHomeR.hook
 
 import com.github.kyuubiran.ezxhelper.utils.findMethod
 import com.github.kyuubiran.ezxhelper.utils.hookReturnConstant
-import com.yuk.miuiHomeR.utils.PrefsUtils
+import com.yuk.miuiHomeR.mPrefsMap
 
 object HideStatusBarWhenEnterRecent : BaseHook() {
     override fun init() {
-        if (PrefsUtils.mSharedPreferences.getBoolean("prefs_key_home_hide_status", false)) {
+
+        if (mPrefsMap.getBoolean("home_hide_status")) {
             findMethod("com.miui.home.launcher.common.DeviceLevelUtils") {
                 name == "isHideStatusBarWhenEnterRecents"
             }.hookReturnConstant(true)
@@ -18,6 +19,7 @@ object HideStatusBarWhenEnterRecent : BaseHook() {
                 name == "isHideStatusBarWhenEnterRecents"
             }.hookReturnConstant(false)
         }
+
     }
 }
 

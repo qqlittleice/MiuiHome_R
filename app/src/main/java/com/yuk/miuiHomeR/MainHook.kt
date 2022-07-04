@@ -35,10 +35,11 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                 AlwaysShowStatusClock,
                 DisableRecentViewWallpaperDarken,
                 HideStatusBarWhenEnterRecent,
-                ModifyAnimDurationRatio,
-                ModifyDoubleTapToSleep,
+                AnimDurationRatio,
+                DoubleTapToSleep,
+                HideWidgetTitles,
 
-                )
+            )
         }
     }
 
@@ -55,7 +56,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                 } else {
                     mXSharedPreferences = XSharedPreferences(File(PrefsUtils.mPrefsFile))
                 }
-                mXSharedPreferences!!.makeWorldReadable()
+                mXSharedPreferences.makeWorldReadable()
             } catch (t: Throwable) {
                 XposedBridge.log(t)
             }
