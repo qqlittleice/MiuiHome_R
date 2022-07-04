@@ -10,6 +10,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
+import com.topjohnwu.superuser.Shell
 import com.yuk.miuiHomeR.R
 import com.yuk.miuiHomeR.provider.SharedPrefsProvider
 import com.yuk.miuiHomeR.ui.base.BaseAppCompatActivity
@@ -78,9 +79,23 @@ class MainActivity : BaseAppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.about) {
-            val intent = Intent(this, AboutActivity::class.java)
-            startActivity(intent)
+        when (item.itemId) {
+            R.id.reset -> {
+
+            }
+            R.id.backup -> {
+
+            }
+            R.id.restore -> {
+
+            }
+            R.id.about -> {
+                val intent = Intent(this, AboutActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.reboot_home -> {
+                Shell.cmd("pkill -f com.miui.home", "pkill -f com.yuk.miuiHomeR").exec()
+            }
         }
         return super.onOptionsItemSelected(item)
     }

@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    compileSdk = 33
+    compileSdk = 32
 
     defaultConfig {
         applicationId = "com.yuk.miuiHomeR"
@@ -75,12 +75,13 @@ dependencies {
 
     implementation("org.lsposed.hiddenapibypass:hiddenapibypass:4.3")
     implementation("com.github.kyuubiran:EzXHelper:0.9.7")
-    implementation("androidx.fragment:fragment:1.4.0-alpha04")
-    implementation("androidx.customview:customview:1.0.0")
-    implementation("androidx.core:core:1.7.0-alpha01")
+    implementation("androidx.fragment:fragment:1.5.0-alpha04")
+    implementation("androidx.customview:customview:1.1.0")
+    implementation("androidx.core:core:1.9.0-alpha04")
     implementation("androidx.vectordrawable:vectordrawable:1.1.0")
     implementation("androidx.vectordrawable:vectordrawable-animated:1.1.0")
-    implementation("androidx.activity:activity:1.3.0-rc01")
-    implementation("androidx.resourceinspection:resourceinspection-annotation:1.0.0-alpha03")
+    implementation("androidx.activity:activity:1.6.0-alpha01")
+    implementation("androidx.resourceinspection:resourceinspection-annotation:1.0.1")
     implementation("androidx.drawerlayout:drawerlayout:1.1.1")
+    implementation("com.github.topjohnwu.libsu:core:5.0.2")
 }
