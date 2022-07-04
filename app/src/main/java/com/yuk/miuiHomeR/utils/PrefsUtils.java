@@ -1,5 +1,6 @@
 package com.yuk.miuiHomeR.utils;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 
@@ -15,6 +16,7 @@ public class PrefsUtils {
     public static String mPrefsPath = "/data/user_de/0/" + Helpers.mAppModulePkg + "/shared_prefs";
     public static String mPrefsFile = mPrefsPath + "/" + mPrefsName + ".xml";
 
+    @SuppressLint("WorldReadableFiles")
     public static SharedPreferences getSharedPrefs(Context context, boolean protectedStorage, boolean multiProcess) {
         if (protectedStorage) context = Helpers.getProtectedContext(context);
         try {
@@ -32,26 +34,27 @@ public class PrefsUtils {
         if (mPrefsPathCurrent == null) try {
             Field mFile = mSharedPreferences.getClass().getDeclaredField("mFile");
             mFile.setAccessible(true);
-            mPrefsPathCurrent = ((File)mFile.get(mSharedPreferences)).getParentFile().getAbsolutePath();
+            mPrefsPathCurrent = ((File) mFile.get(mSharedPreferences)).getParentFile().getAbsolutePath();
             return mPrefsPathCurrent;
         } catch (Throwable t) {
             System.out.print("Test" + t);
             return mPrefsPath;
-        } else return mPrefsPathCurrent;
+        }
+        else return mPrefsPathCurrent;
     }
 
     public static String getSharedPrefsFile() {
         if (mPrefsFileCurrent == null) try {
             Field fFile = mSharedPreferences.getClass().getDeclaredField("mFile");
             fFile.setAccessible(true);
-            mPrefsFileCurrent = ((File)fFile.get(mSharedPreferences)).getAbsolutePath();
+            mPrefsFileCurrent = ((File) fFile.get(mSharedPreferences)).getAbsolutePath();
             System.out.println("Test: mPrefsFileCurrent");
             return mPrefsFileCurrent;
         } catch (Throwable t) {
             System.out.println("Test: mPrefsFile" + t);
             return mPrefsFile;
-        } else
-            System.out.println("Test: mPrefsFileCurrent2");
+        }
+        else System.out.println("Test: mPrefsFileCurrent2");
         return mPrefsFileCurrent;
     }
 }

@@ -25,8 +25,6 @@ public class SharedPrefsProvider extends ContentProvider {
     public static final String AUTHORITY = "com.yuk.miuiHomeR.provider.sharedprefs";
     private static final UriMatcher uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 
-    SharedPreferences prefs;
-
     static {
         uriMatcher.addURI(AUTHORITY, "string/*/", 0);
         uriMatcher.addURI(AUTHORITY, "string/*/*", 1);
@@ -36,6 +34,8 @@ public class SharedPrefsProvider extends ContentProvider {
         uriMatcher.addURI(AUTHORITY, "test/*", 5);
         uriMatcher.addURI(AUTHORITY, "shortcut_icon/*", 6);
     }
+
+    SharedPreferences prefs;
 
     @Override
     public boolean onCreate() {
@@ -71,9 +71,8 @@ public class SharedPrefsProvider extends ContentProvider {
                 return cursor;
             }
             case 4: {
-                Set<String> strings = prefs.getStringSet(parts.get(1), new LinkedHashSet<String>());
-                if (strings != null)
-                    for (String str: strings) cursor.newRow().add("data", str);
+                Set<String> strings = prefs.getStringSet(parts.get(1), new LinkedHashSet<>());
+                for (String str : strings) cursor.newRow().add("data", str);
                 return cursor;
             }
         }

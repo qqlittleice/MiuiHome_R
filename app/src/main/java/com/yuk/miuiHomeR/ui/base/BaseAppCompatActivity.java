@@ -16,11 +16,8 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (initFragment() != null ) {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragment_container, initFragment())
-                    .commit();
+        if (initFragment() != null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, initFragment()).commit();
         }
     }
 
@@ -28,6 +25,6 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
 
 
     public void startActivity(AppCompatActivity activity, Class<?> cls) {
-        startActivity(new Intent(activity,cls));
+        startActivity(new Intent(activity, cls));
     }
 }

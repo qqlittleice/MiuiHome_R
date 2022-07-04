@@ -1,5 +1,6 @@
 package com.yuk.miuiHomeR.utils;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
@@ -27,7 +28,10 @@ public class Helpers {
 
     public static void fixPermissionsAsync(Context context) {
         AsyncTask.execute(() -> {
-            try { Thread.sleep(500); } catch (Throwable ignore) {}
+            try {
+                Thread.sleep(500);
+            } catch (Throwable ignore) {
+            }
             File pkgFolder = context.getDataDir();
             if (pkgFolder.exists()) {
                 pkgFolder.setExecutable(true, false);

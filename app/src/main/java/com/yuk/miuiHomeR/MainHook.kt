@@ -22,9 +22,9 @@ var mPrefsMap = PrefsMap<String, Any>()
 var versionName: String? = null
 var isAlpha: Boolean? = null
 var versionCode: Long? = null
-var  miuiVersion: String? = null
-var  androidVersion: String? = null
-var  isPadDevice: Boolean? = null
+var miuiVersion: String? = null
+var androidVersion: String? = null
+var isPadDevice: Boolean? = null
 
 class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
     override fun handleLoadPackage(lpparam: XC_LoadPackage.LoadPackageParam) {

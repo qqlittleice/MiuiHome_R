@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 import com.yuk.miuiHomeR.utils.PrefsUtils;
 
+import java.util.Objects;
+
 import moralnorm.preference.PreferenceFragmentCompat;
 import moralnorm.preference.PreferenceManager;
 
@@ -17,7 +19,7 @@ public class BasePreferenceFragment extends PreferenceFragmentCompat {
             getPreferenceManager().setSharedPreferencesName(PrefsUtils.mPrefsName);
             getPreferenceManager().setSharedPreferencesMode(Context.MODE_PRIVATE);
             getPreferenceManager().setStorageDeviceProtected();
-            PreferenceManager.setDefaultValues(getActivity(), prefs_default, false);
+            PreferenceManager.setDefaultValues(requireActivity(), prefs_default, false);
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
