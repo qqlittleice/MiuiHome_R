@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="xposedscope">
-    <item>com.miui.home</item>
+        <item>com.miui.home</item>
     </string-array>
 
-    <string-array name="folder_shade">
-        <item>无模糊</item>
-        <item>简单模糊</item>
-        <item>测试模糊</item>
+    <string-array name="recent_blur">
         <item>完整模糊</item>
+        <item>测试模糊</item>
+        <item>简单模糊</item>
+        <item>无模糊</item>
+        <item>无模糊 + 简单动画</item>
     </string-array>
 
-    <string-array name="folder_shade_value">
+    <string-array name="recent_blur_value">
         <item>0</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
+        <item>4</item>
     </string-array>
 </resources>

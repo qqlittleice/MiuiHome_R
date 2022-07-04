@@ -6,45 +6,67 @@
 
         <DropDownPreference
             android:defaultValue="3"
-            android:title="后台模糊级别"
-            app:entries="@array/folder_shade"
-            app:entryValues="@array/folder_shade_value" />
-
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="prefs_key_home_hide_status"
-            android:title="后台界面隐藏状态栏" />
+            android:key="prefs_key_recent_blur"
+            android:title="模糊级别"
+            app:entries="@array/recent_blur"
+            app:entryValues="@array/recent_blur_value" />
 
         <SwitchPreference
             android:defaultValue="false"
             android:key="prefs_key_home_disable_darken"
             android:title="取消壁纸压暗" />
 
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefs_key_home_hide_status"
+            android:title="后台界面隐藏状态栏" />
+
         <SeekBarPreference
             android:defaultValue="100"
             android:key="prefs_key_home_anim_ratio"
             android:max="500"
             android:min="10"
-            android:title="手势动画速度"
+            android:title="动画速度"
             app:showSeekBarValue="true" />
 
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="小部件">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="prefs_key_home_widget_hide"
+            android:title="隐藏小部件标题" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefs_key_home_widget_to_minus"
+            android:title="允许将安卓小部件移到负一屏" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefs_key_home_widget_miui"
+            android:title="在安卓小部件显示 MIUI 小部件" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="文件夹">
 
         <SwitchPreference
             android:defaultValue="false"
+            android:key="prefs_key_small_folder_blur"
             android:title="小文件夹模糊" />
 
         <SeekBarPreference
             android:defaultValue="50"
             android:max="100"
+            android:key="prefs_key_small_folder_corner"
             android:title="小文件夹模糊圆角半径"
             app:showSeekBarValue="true" />
 
         <SeekBarPreference
-            android:defaultValue="160"
-            android:max="200"
+            android:defaultValue="300"
+            android:max="500"
+            android:key="prefs_key_small_folder_side"
             android:title="小文件夹模糊背景大小"
             app:showSeekBarValue="true" />
 
@@ -65,29 +87,11 @@
 
         <SeekBarPreference
             android:defaultValue="3"
-            android:key="prefs_key_home_folder_cols"
+            android:key="prefs_key_home_folder_columns"
             android:max="6"
             android:title="文件夹排列数"
             app:showSeekBarValue="true" />
 
-    </PreferenceCategory>
-
-    <PreferenceCategory android:title="小部件">
-
-        <SwitchPreference
-            android:defaultValue="true"
-            android:key="prefs_key_home_widget_hide"
-            android:title="隐藏桌面小部件标题" />
-
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="prefs_key_home_widget_to_minus"
-            android:title="允许将安卓小部件移到负一屏" />
-
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="prefs_key_home_widget_miui"
-            android:title="在安卓小部件显示 MIUI 小部件" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="其他">
@@ -106,6 +110,13 @@
             android:defaultValue="false"
             android:key="prefs_key_home_double_sleep"
             android:title="双击锁屏" />
+
+        <SeekBarPreference
+            android:defaultValue="100"
+            android:key="prefs_key_home_blur_radius"
+            android:max="500"
+            android:title="模糊半径"
+            app:showSeekBarValue="true" />
 
     </PreferenceCategory>
 
