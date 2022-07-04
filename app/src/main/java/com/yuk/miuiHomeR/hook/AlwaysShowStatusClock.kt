@@ -11,7 +11,7 @@ object AlwaysShowStatusClock : BaseHook() {
         findMethod("com.miui.home.launcher.Workspace") {
             name == "isScreenHasClockGadget" && parameterCount == 1
         }.hookReturnConstant(false)
-    }
 
+    }
 }
 

@@ -56,7 +56,7 @@ android {
 }
 
 dependencies {
-    implementation("com.github.kyuubiran:EzXHelper:0.9.7")
+    compileOnly(project(":hidden-api"))
     compileOnly("de.robv.android.xposed:api:82")
 
     implementation(files("libs/animation-debug.aar"))
@@ -73,7 +73,8 @@ dependencies {
     implementation(files("libs/view-debug.aar"))
     implementation(files("libs/blur-debug.aar"))
 
-
+    implementation("org.lsposed.hiddenapibypass:hiddenapibypass:4.3")
+    implementation("com.github.kyuubiran:EzXHelper:0.9.7")
     implementation("androidx.fragment:fragment:1.4.0-alpha04")
     implementation("androidx.customview:customview:1.0.0")
     implementation("androidx.core:core:1.7.0-alpha01")
