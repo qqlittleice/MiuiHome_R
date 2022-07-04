@@ -17,7 +17,7 @@
 
             <ImageView
                 android:layout_gravity="center"
-                android:background="@drawable/ic_launcher"
+                android:background="@mipmap/ic_launcher"
                 android:layout_width="90dp"
                 android:layout_height="90dp"/>
 
