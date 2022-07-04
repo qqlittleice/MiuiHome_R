@@ -1,15 +1,24 @@
 package com.yuk.miuiHomeR
 
+import android.os.Process
 import com.github.kyuubiran.ezxhelper.init.EzXHelperInit
 import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.Log.logexIfThrow
 import com.yuk.miuiHomeR.hook.*
+import com.yuk.miuiHomeR.utils.Helpers
+import com.yuk.miuiHomeR.utils.PrefsMap
+import com.yuk.miuiHomeR.utils.PrefsUtils
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.IXposedHookZygoteInit
+import de.robv.android.xposed.XSharedPreferences
+import de.robv.android.xposed.XposedBridge
 import de.robv.android.xposed.callbacks.XC_LoadPackage
+import java.io.File
+
 
 private const val PACKAGE_NAME_HOOKED = "com.miui.home"
 private const val TAG = "MiuiHomeR"
+var mPrefsMap = PrefsMap<String, Any>()
 
 class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
     override fun handleLoadPackage(lpparam: XC_LoadPackage.LoadPackageParam) {
@@ -36,6 +45,27 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
     // Optional
     override fun initZygote(startupParam: IXposedHookZygoteInit.StartupParam) {
         EzXHelperInit.initZygote(startupParam)
+
+        if (mPrefsMap.size == 0) {
+            var mXSharedPreferences: XSharedPreferences? = null
+            try {
+                if (XposedBridge.getXposedVersion() >= 93) {
+                    mXSharedPreferences =
+                        XSharedPreferences(Helpers.mAppModulePkg, PrefsUtils.mPrefsName)
+                } else {
+                    mXSharedPreferences = XSharedPreferences(File(PrefsUtils.mPrefsFile))
+                }
+                mXSharedPreferences!!.makeWorldReadable()
+            } catch (t: Throwable) {
+                XposedBridge.log(t)
+            }
+            val allPrefs = mXSharedPreferences?.all
+            if (allPrefs == null || allPrefs.size == 0) {
+                XposedBridge.log("[UID " + Process.myUid() + "] Cannot read module's SharedPreferences, some mods might not work!")
+            } else {
+                mPrefsMap.putAll(allPrefs)
+            }
+        }
     }
 
     private fun initHooks(vararg hook: BaseHook) {
