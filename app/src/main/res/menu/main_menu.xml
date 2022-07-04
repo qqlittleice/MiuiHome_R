@@ -3,6 +3,6 @@
     <item android:title="备份模块设置"/>
     <item android:title="恢复模块设置"/>
     <item android:title="重置模块设置"/>
-    <item android:title="重启桌面"/>
-    <item android:title="关于"/>
+    <item android:id="@+id/reboot_home" android:title="重启桌面"/>
+    <item android:id="@+id/about" android:title="关于"/>
 </menu>

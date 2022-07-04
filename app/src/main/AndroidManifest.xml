@@ -19,6 +19,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:label="关于" android:name=".ui.AboutActivity"/>
+
         <provider
             android:name=".provider.SharedPrefsProvider"
             android:authorities="com.yuk.miuiHomeR.provider.sharedprefs"
