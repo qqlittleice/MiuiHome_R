@@ -24,9 +24,9 @@
         <SeekBarPreference
             android:defaultValue="100"
             android:key="prefs_key_home_anim_ratio"
-            android:max="500"
-            android:min="10"
             android:title="动画速度"
+            app:maxValue="500"
+            app:minValue="10"
             app:showSeekBarValue="true" />
 
     </PreferenceCategory>
@@ -59,15 +59,15 @@
         <SeekBarPreference
             android:defaultValue="50"
             android:key="prefs_key_small_folder_corner"
-            android:max="100"
             android:title="小文件夹模糊圆角半径"
+            app:maxValue="100"
             app:showSeekBarValue="true" />
 
         <SeekBarPreference
             android:defaultValue="300"
             android:key="prefs_key_small_folder_side"
-            android:max="500"
             android:title="小文件夹模糊背景大小"
+            app:maxValue="500"
             app:showSeekBarValue="true" />
 
         <SwitchPreference
@@ -88,8 +88,9 @@
         <SeekBarPreference
             android:defaultValue="3"
             android:key="prefs_key_home_folder_columns"
-            android:max="6"
             android:title="文件夹排列数"
+            app:maxValue="6"
+            app:minValue="1"
             app:showSeekBarValue="true" />
 
     </PreferenceCategory>
@@ -114,8 +115,8 @@
         <SeekBarPreference
             android:defaultValue="100"
             android:key="prefs_key_home_blur_radius"
-            android:max="500"
             android:title="模糊半径"
+            app:maxValue="500"
             app:showSeekBarValue="true" />
 
     </PreferenceCategory>
