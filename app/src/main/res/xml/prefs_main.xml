@@ -58,15 +58,15 @@
 
         <SeekBarPreference
             android:defaultValue="50"
-            android:max="100"
             android:key="prefs_key_small_folder_corner"
+            android:max="100"
             android:title="小文件夹模糊圆角半径"
             app:showSeekBarValue="true" />
 
         <SeekBarPreference
             android:defaultValue="300"
-            android:max="500"
             android:key="prefs_key_small_folder_side"
+            android:max="500"
             android:title="小文件夹模糊背景大小"
             app:showSeekBarValue="true" />
 
