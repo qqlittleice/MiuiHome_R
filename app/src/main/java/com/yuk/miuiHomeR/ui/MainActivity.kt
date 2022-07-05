@@ -90,8 +90,7 @@ class MainActivity : BaseAppCompatActivity() {
 
             }
             R.id.about -> {
-                val intent = Intent(this, AboutActivity::class.java)
-                startActivity(intent)
+                startActivity(this,AboutActivity::class.java)
             }
             R.id.reboot_home -> {
                 Shell.cmd("pkill -f com.miui.home", "pkill -f com.yuk.miuiHomeR").exec()
