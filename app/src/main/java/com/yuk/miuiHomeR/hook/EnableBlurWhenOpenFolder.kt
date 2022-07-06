@@ -3,7 +3,6 @@ package com.yuk.miuiHomeR.hook
 import android.app.Activity
 import android.os.Bundle
 import android.view.View
-import com.yuk.miuiHomeR.MainHook
 import com.yuk.miuiHomeR.isAlpha
 import com.yuk.miuiHomeR.mPrefsMap
 import com.yuk.miuiHomeR.utils.ktx.callStaticMethod

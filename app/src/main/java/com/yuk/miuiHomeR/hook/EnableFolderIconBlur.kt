@@ -19,8 +19,10 @@ object EnableFolderIconBlur : BaseHook() {
         if (!mPrefsMap.getBoolean("small_folder_blur") || Build.VERSION.SDK_INT < 31) return
         val value = mPrefsMap.getInt("small_folder_corner", 30).toFloat()
         val value1 = mPrefsMap.getInt("small_folder_side", 300)
-        findMethod(loadClass("com.miui.home.launcher.FolderIcon"), true)
-        { name == "onFinishInflate" }.hookAfter { hookParam ->
+        findMethod(
+            loadClass("com.miui.home.launcher.FolderIcon"),
+            true
+        ) { name == "onFinishInflate" }.hookAfter { hookParam ->
             val mIconImageView = hookParam.thisObject.getObjectFieldAs<ImageView>("mIconImageView")
             val mIconContainer = mIconImageView.parent as FrameLayout
             val blur = WindowBlurFrameLayout(mIconContainer.context)
