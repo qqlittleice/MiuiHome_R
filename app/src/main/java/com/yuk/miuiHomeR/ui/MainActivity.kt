@@ -1,8 +1,9 @@
 package com.yuk.miuiHomeR.ui
 
-import android.content.Intent
+import android.content.ComponentName
 import android.content.SharedPreferences
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.os.FileObserver
@@ -75,6 +76,13 @@ class MainActivity : BaseAppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
+        menu.findItem(R.id.icon).title = if (packageManager.getComponentEnabledSetting(
+                ComponentName(
+                    this,
+                    this.javaClass.name + "Alias"
+                )
+            ) == PackageManager.COMPONENT_ENABLED_STATE_ENABLED
+        ) "隐藏图标" else "显示图标"
         return super.onCreateOptionsMenu(menu)
     }
 
@@ -89,8 +97,16 @@ class MainActivity : BaseAppCompatActivity() {
             R.id.restore -> {
 
             }
+            R.id.icon -> {
+                packageManager.setComponentEnabledSetting(
+                    ComponentName(this, this.javaClass.name + "Alias"),
+                    if (item.title == "隐藏图标") PackageManager.COMPONENT_ENABLED_STATE_DISABLED
+                    else PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                    PackageManager.DONT_KILL_APP
+                )
+            }
             R.id.about -> {
-                startActivity(this,AboutActivity::class.java)
+                startActivity(this, AboutActivity::class.java)
             }
             R.id.reboot_home -> {
                 Shell.cmd("pkill -f com.miui.home", "pkill -f com.yuk.miuiHomeR").exec()
