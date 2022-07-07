@@ -75,6 +75,8 @@ dependencies {
 
     implementation("org.lsposed.hiddenapibypass:hiddenapibypass:4.3")
     implementation("com.github.kyuubiran:EzXHelper:0.9.7")
+    implementation("com.github.topjohnwu.libsu:core:5.0.2")
+
     implementation("androidx.fragment:fragment:1.5.0-alpha04")
     implementation("androidx.customview:customview:1.1.0")
     implementation("androidx.core:core:1.9.0-alpha04")
@@ -83,5 +85,4 @@ dependencies {
     implementation("androidx.activity:activity:1.6.0-alpha01")
     implementation("androidx.resourceinspection:resourceinspection-annotation:1.0.1")
     implementation("androidx.drawerlayout:drawerlayout:1.1.1")
-    implementation("com.github.topjohnwu.libsu:core:5.0.2")
 }
