@@ -3,17 +3,17 @@ package com.yuk.miuiHomeR
 import android.content.Context
 import android.os.Process
 import com.github.kyuubiran.ezxhelper.init.EzXHelperInit
-import com.github.kyuubiran.ezxhelper.init.InitFields
 import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.Log.logexIfThrow
-import com.github.kyuubiran.ezxhelper.utils.loadClass
 import com.yuk.miuiHomeR.hook.*
 import com.yuk.miuiHomeR.utils.Helpers
 import com.yuk.miuiHomeR.utils.PrefsMap
 import com.yuk.miuiHomeR.utils.PrefsUtils
-import com.yuk.miuiHomeR.utils.ktx.getProp
 import com.yuk.miuiHomeR.utils.ktx.hookAfterMethod
-import de.robv.android.xposed.*
+import de.robv.android.xposed.IXposedHookLoadPackage
+import de.robv.android.xposed.IXposedHookZygoteInit
+import de.robv.android.xposed.XSharedPreferences
+import de.robv.android.xposed.XposedBridge
 import de.robv.android.xposed.callbacks.XC_LoadPackage
 
 private const val PACKAGE_NAME_HOOKED = "com.miui.home"
@@ -27,7 +27,6 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                 EzXHelperInit.initHandleLoadPackage(lpparam)
                 EzXHelperInit.setLogTag(TAG)
                 EzXHelperInit.setToastTag(TAG)
-                EzXHelperInit.setLogXp(true)
                 "com.miui.home.launcher.Application".hookAfterMethod(
                     "attachBaseContext", Context::class.java
                 ) {

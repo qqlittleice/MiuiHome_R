@@ -7,7 +7,11 @@ import com.github.kyuubiran.ezxhelper.init.InitFields
 import com.github.kyuubiran.ezxhelper.utils.loadClass
 import de.robv.android.xposed.XposedHelpers
 
-fun dp2px(dpValue: Float): Int = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpValue, InitFields.appContext.resources.displayMetrics).toInt()
+fun dp2px(dpValue: Float): Int = TypedValue.applyDimension(
+    TypedValue.COMPLEX_UNIT_DIP,
+    dpValue,
+    InitFields.appContext.resources.displayMetrics
+).toInt()
 
 fun px2dp(pxValue: Int): Int =
     (pxValue / InitFields.appContext.resources.displayMetrics.density + 0.5f).toInt()
@@ -25,18 +29,15 @@ fun getProp(mKey: String): String =
         .invoke(Class.forName("android.os.SystemProperties"), mKey).toString()
 
 fun checkVersionName(): String = InitFields.appContext.packageManager.getPackageInfo(
-    InitFields.appContext.packageName,
-    0
+    InitFields.appContext.packageName, 0
 ).versionName
 
 fun checkIsAlpha(): Boolean = InitFields.appContext.packageManager.getPackageInfo(
-    InitFields.appContext.packageName,
-    0
+    InitFields.appContext.packageName, 0
 ).versionName.contains("ALPHA", ignoreCase = true)
 
 fun checkIsPadDevice(): Boolean = XposedHelpers.callStaticMethod(
-    loadClass("com.miui.home.launcher.common.Utilities"),
-    "isPadDevice"
+    loadClass("com.miui.home.launcher.common.Utilities"), "isPadDevice"
 ) as Boolean
 
 fun checkMiuiVersion(): String = when (getProp("ro.miui.ui.version.name")) {
@@ -51,6 +52,5 @@ fun checkMiuiVersion(): String = when (getProp("ro.miui.ui.version.name")) {
 fun checkAndroidVersion(): String = getProp("ro.build.version.release")
 
 fun checkVersionCode(): Long = InitFields.appContext.packageManager.getPackageInfo(
-    InitFields.appContext.packageName,
-    0
+    InitFields.appContext.packageName, 0
 ).longVersionCode

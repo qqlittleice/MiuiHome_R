@@ -53,6 +53,7 @@ android {
             }
         }
     }
+    namespace = "com.yuk.miuiHomeR"
 }
 
 dependencies {
