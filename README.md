@@ -2,7 +2,7 @@
 
 <h1>MiuiHomeR</h1>
 
-<b>针对 Miui 桌面的自定义扩展 - Xposed
+<b>Make MiuiHome Great Again - Xposed
 
 ![Launcher](https://github.com/qqlittleice/MiuiHome/blob/main/Pic/MiuiHome.png)
 
