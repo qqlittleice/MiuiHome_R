@@ -12,7 +12,7 @@ android {
         applicationId = namespace
         minSdk = 31
         targetSdk = 33
-        versionCode = 6
+        versionCode = 7
         versionName = "1.0.0"
     }
 
