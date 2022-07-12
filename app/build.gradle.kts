@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    compileSdk = 32
-
+    compileSdk = 33
+    namespace = "com.yuk.miuiHomeR"
     defaultConfig {
-        applicationId = "com.yuk.miuiHomeR"
-        minSdk = 30
+        applicationId = namespace
+        minSdk = 33
         targetSdk = 33
         versionCode = 1
         versionName = "1.0.0"
@@ -53,7 +53,6 @@ android {
             }
         }
     }
-    namespace = "com.yuk.miuiHomeR"
 }
 
 dependencies {
