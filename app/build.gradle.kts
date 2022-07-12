@@ -10,7 +10,7 @@ android {
     namespace = "com.yuk.miuiHomeR"
     defaultConfig {
         applicationId = namespace
-        minSdk = 33
+        minSdk = 32
         targetSdk = 33
         versionCode = 5
         versionName = "1.0.0"
