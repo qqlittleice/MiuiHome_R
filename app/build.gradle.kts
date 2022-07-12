@@ -6,13 +6,13 @@ plugins {
 }
 
 android {
-    compileSdk = 33
+    compileSdk = 3
     namespace = "com.yuk.miuiHomeR"
     defaultConfig {
         applicationId = namespace
         minSdk = 33
         targetSdk = 33
-        versionCode = 1
+        versionCode = 2
         versionName = "1.0.0"
     }
 
