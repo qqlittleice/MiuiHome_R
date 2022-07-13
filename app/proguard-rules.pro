@@ -34,7 +34,8 @@
     public static void throw*(...);
 }
 
--keep public class * extends moralnorm.*
+-keep class moralnorm.** {*;}
+-keep public class * extends moralnorm.**
 
 -keepclasseswithmembers class * {
     public <init>(android.content.Context, android.util.AttributeSet);

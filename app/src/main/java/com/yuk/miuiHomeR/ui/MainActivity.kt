@@ -76,13 +76,20 @@ class MainActivity : BaseAppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
-        menu.findItem(R.id.icon).title = if (packageManager.getComponentEnabledSetting(
-                ComponentName(
-                    this,
-                    this.javaClass.name + "Alias"
-                )
-            ) == PackageManager.COMPONENT_ENABLED_STATE_ENABLED
-        ) "隐藏图标" else "显示图标"
+        val state = packageManager.getComponentEnabledSetting(
+            ComponentName(
+                this, this.javaClass.name + "Alias"
+            )
+        )
+        menu.findItem(R.id.icon).title = when (state) {
+            PackageManager.COMPONENT_ENABLED_STATE_DISABLED -> {
+                "显示图标"
+            }
+            PackageManager.COMPONENT_ENABLED_STATE_ENABLED -> {
+                "隐藏图标"
+            }
+            else -> "隐藏图标"
+        }
         return super.onCreateOptionsMenu(menu)
     }
 
