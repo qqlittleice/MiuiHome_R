@@ -27,6 +27,7 @@
             android:title="动画速度"
             app:maxValue="500"
             app:minValue="10"
+            app:format="%df"
             app:showSeekBarValue="true" />
 
     </PreferenceCategory>
@@ -60,6 +61,7 @@
             android:defaultValue="50"
             android:key="prefs_key_small_folder_corner"
             android:title="小文件夹模糊圆角半径"
+            app:format="%ddp"
             app:maxValue="100"
             app:showSeekBarValue="true" />
 
@@ -67,6 +69,7 @@
             android:defaultValue="300"
             android:key="prefs_key_small_folder_side"
             android:title="小文件夹模糊背景大小"
+            app:format="%ddp"
             app:maxValue="500"
             app:showSeekBarValue="true" />
 
@@ -116,6 +119,7 @@
             android:defaultValue="100"
             android:key="prefs_key_home_blur_radius"
             android:title="模糊半径"
+            app:format="%df"
             app:maxValue="500"
             app:showSeekBarValue="true" />
 
