@@ -20,7 +20,7 @@ class SystemBlurController(
 ) : View.OnAttachStateChangeListener {
 
     private var windowManager: WindowManager? = null
-    private val crossWindowBlurListener = Consumer<Boolean>{ blurEnabled = it }
+    private val crossWindowBlurListener = Consumer<Boolean> { blurEnabled = it }
     private var blurEnabled: Boolean = false
         set(value) {
             if (value != field) {
@@ -103,7 +103,12 @@ class SystemBlurController(
     }
 
     private fun setCornerRadius(blurDrawable: BackgroundBlurDrawable, corners: CornersRadius) {
-        blurDrawable.setCornerRadius(corners.topLeft, corners.topRight, corners.bottomLeft, corners.bottomRight)
+        blurDrawable.setCornerRadius(
+            corners.topLeft,
+            corners.topRight,
+            corners.bottomLeft,
+            corners.bottomRight
+        )
     }
 
     private fun getShapeFromCorners(corners: CornersRadius): RoundRectShape {
@@ -111,7 +116,16 @@ class SystemBlurController(
     }
 
     private fun getCornersFloatArray(corners: CornersRadius): FloatArray {
-        return floatArrayOf(corners.topLeft, corners.topLeft, corners.topRight, corners.topRight, corners.bottomRight, corners.bottomRight, corners.bottomLeft, corners.bottomLeft)
+        return floatArrayOf(
+            corners.topLeft,
+            corners.topLeft,
+            corners.topRight,
+            corners.topRight,
+            corners.bottomRight,
+            corners.bottomRight,
+            corners.bottomLeft,
+            corners.bottomLeft
+        )
     }
 
     private fun getWindowManager(context: Context): WindowManager {

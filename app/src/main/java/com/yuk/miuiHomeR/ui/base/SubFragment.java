@@ -10,7 +10,7 @@ public abstract class SubFragment extends BasePreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         mContentResId = getContentResId();
         if (mContentResId != 0) {
-            super.onCreate(savedInstanceState,mContentResId);
+            super.onCreate(savedInstanceState, mContentResId);
             addPreferencesFromResource(mContentResId);
         } else {
             super.onCreate(savedInstanceState);
@@ -23,5 +23,7 @@ public abstract class SubFragment extends BasePreferenceFragment {
 
     public void initPrefs() {
 
-    };
+    }
+
+    ;
 }

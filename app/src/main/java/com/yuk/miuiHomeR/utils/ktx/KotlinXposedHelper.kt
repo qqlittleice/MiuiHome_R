@@ -363,7 +363,8 @@ fun Class<*>.callStaticMethodOrNull(
     callStaticMethod(this, methodName, parameterTypes, *args)
 }
 
-fun String.findClass(classLoader: ClassLoader = ezXClassLoader): Class<*> = findClass(this, classLoader)
+fun String.findClass(classLoader: ClassLoader = ezXClassLoader): Class<*> =
+    findClass(this, classLoader)
 
 fun String.findClassOrNull(classLoader: ClassLoader = ezXClassLoader): Class<*>? =
     findClassIfExists(this, classLoader)
@@ -490,7 +491,11 @@ fun Any.getFieldByClassOrObject(
     var clz: Class<*> = if (this is Class<*>) this else this.javaClass
     do {
         clz.declaredFields
-            .filter { !(isStatic && !Modifier.isStatic(it.modifiers)) || !(!isStatic && Modifier.isStatic(it.modifiers)) }
+            .filter {
+                !(isStatic && !Modifier.isStatic(it.modifiers)) || !(!isStatic && Modifier.isStatic(
+                    it.modifiers
+                ))
+            }
             .firstOrNull {
                 (fieldType == null || it.type == fieldType) && (it.name == fieldName)
             }?.let { it.isAccessible = true;return it }

@@ -5,7 +5,6 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
 import android.view.View;
 
-
 import com.yuk.miuiHomeR.R;
 
 import moralnorm.internal.graphics.drawable.TaggingDrawable;
@@ -13,14 +12,14 @@ import moralnorm.internal.graphics.drawable.TaggingDrawable;
 public class TaggingDrawableUtils {
 
     private static final int UNINITIAL = -1;
-    private static int mPaddingLarge = -1;
-    private static int mPaddingSingle = -1;
-    private static int mPaddingSmall = -1;
     private static final int[] STATES_TAGS = {16842915, 16842916, 16842917, 16842918};
     private static final int[] STATE_SET_SINGLE = {16842915};
     private static final int[] STATE_SET_FIRST = {16842916};
     private static final int[] STATE_SET_MIDDLE = {16842917};
     private static final int[] STATE_SET_LAST = {16842918};
+    private static int mPaddingLarge = -1;
+    private static int mPaddingSingle = -1;
+    private static int mPaddingSmall = -1;
 
     public static void updateItemBackground(View view, int i, int i2) {
         updateBackgroundState(view, i, i2);

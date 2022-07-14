@@ -10,7 +10,11 @@ import de.robv.android.xposed.XposedBridge
 object EnableBlurWhenOpenFolder : BaseHook() {
     override fun init() {
 
-        if (mPrefsMap.getStringAsInt("recent_blur", 0) == 4 || !mPrefsMap.getBoolean("home_folder_blur")) {
+        if (mPrefsMap.getStringAsInt(
+                "recent_blur",
+                0
+            ) == 4 || !mPrefsMap.getBoolean("home_folder_blur")
+        ) {
             if (checkIsAlpha()) {
                 XposedBridge.log(checkIsAlpha().toString())
                 "com.miui.home.launcher.common.BlurUtils".hookBeforeMethod("isUserBlurWhenOpenFolder") {
@@ -39,22 +43,58 @@ object EnableBlurWhenOpenFolder : BaseHook() {
                             blurClass.callStaticMethod("fastBlur", 1.0f, activity.window, true)
                         }
                         launcherClass.hookAfterMethod("closeFolder", Boolean::class.java) {
-                            blurClass.callStaticMethod("fastBlur", 0.0f, activity.window, true, 300L)
+                            blurClass.callStaticMethod(
+                                "fastBlur",
+                                0.0f,
+                                activity.window,
+                                true,
+                                300L
+                            )
                         }
-                        blurClass.hookAfterMethod("fastBlurWhenStartOpenOrCloseApp", Boolean::class.java, launcherClass
+                        blurClass.hookAfterMethod(
+                            "fastBlurWhenStartOpenOrCloseApp", Boolean::class.java, launcherClass
                         ) { hookParam ->
-                            if (isFolderShowing) hookParam.result = blurClass.callStaticMethod("fastBlur", 1.0f, activity.window, true, 0L)
+                            if (isFolderShowing) hookParam.result = blurClass.callStaticMethod(
+                                "fastBlur",
+                                1.0f,
+                                activity.window,
+                                true,
+                                0L
+                            )
                         }
-                        blurClass.hookAfterMethod("fastBlurWhenFinishOpenOrCloseApp", launcherClass
+                        blurClass.hookAfterMethod(
+                            "fastBlurWhenFinishOpenOrCloseApp", launcherClass
                         ) { hookParam ->
-                            if (isFolderShowing) hookParam.result = blurClass.callStaticMethod("fastBlur", 1.0f, activity.window, true, 0L)
+                            if (isFolderShowing) hookParam.result = blurClass.callStaticMethod(
+                                "fastBlur",
+                                1.0f,
+                                activity.window,
+                                true,
+                                0L
+                            )
                         }
-                        blurClass.hookAfterMethod("fastBlurWhenExitRecents", launcherClass, launcherStateClass, Boolean::class.java
+                        blurClass.hookAfterMethod(
+                            "fastBlurWhenExitRecents",
+                            launcherClass,
+                            launcherStateClass,
+                            Boolean::class.java
                         ) { hookParam ->
-                            if (isFolderShowing) hookParam.result = blurClass.callStaticMethod("fastBlur", 1.0f, activity.window, true, 0L)
+                            if (isFolderShowing) hookParam.result = blurClass.callStaticMethod(
+                                "fastBlur",
+                                1.0f,
+                                activity.window,
+                                true,
+                                0L
+                            )
                         }
                         launcherClass.hookAfterMethod("onGesturePerformAppToHome") {
-                            if (isFolderShowing) blurClass.callStaticMethod("fastBlur", 1.0f, activity.window, true, 0L)
+                            if (isFolderShowing) blurClass.callStaticMethod(
+                                "fastBlur",
+                                1.0f,
+                                activity.window,
+                                true,
+                                0L
+                            )
                         }
                     }
                 }

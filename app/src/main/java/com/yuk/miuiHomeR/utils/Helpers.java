@@ -1,6 +1,5 @@
 package com.yuk.miuiHomeR.utils;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.os.AsyncTask;

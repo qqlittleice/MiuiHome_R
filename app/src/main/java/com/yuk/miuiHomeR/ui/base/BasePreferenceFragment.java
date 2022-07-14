@@ -5,8 +5,6 @@ import android.os.Bundle;
 
 import com.yuk.miuiHomeR.utils.PrefsUtils;
 
-import java.util.Objects;
-
 import moralnorm.preference.PreferenceFragmentCompat;
 import moralnorm.preference.PreferenceManager;
 

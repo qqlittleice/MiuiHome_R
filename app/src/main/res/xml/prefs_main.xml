@@ -25,9 +25,9 @@
             android:defaultValue="100"
             android:key="prefs_key_home_anim_ratio"
             android:title="动画速度"
+            app:format="%df"
             app:maxValue="500"
             app:minValue="10"
-            app:format="%df"
             app:showSeekBarValue="true" />
 
     </PreferenceCategory>
