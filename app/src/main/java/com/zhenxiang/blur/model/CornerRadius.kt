@@ -13,10 +13,7 @@ data class CornersRadius(
         }
 
         fun custom(
-            topLeft: Float,
-            topRight: Float,
-            bottomLeft: Float,
-            bottomRight: Float
+            topLeft: Float, topRight: Float, bottomLeft: Float, bottomRight: Float
         ): CornersRadius {
             return CornersRadius(topLeft, topRight, bottomLeft, bottomRight)
         }

@@ -1,5 +1,5 @@
 import com.android.build.gradle.internal.api.BaseVariantOutputImpl
-import java.util.Properties
+import java.util.*
 
 plugins {
     id("com.android.application")
@@ -7,12 +7,12 @@ plugins {
 }
 
 android {
-    compileSdk = 33
+    compileSdk = 32
     namespace = "com.yuk.miuiHomeR"
     defaultConfig {
         applicationId = namespace
         minSdk = 31
-        targetSdk = 33
+        targetSdk = 32
         versionCode = 10
         versionName = "1.0.1" + (getGitHeadRefsSuffix(rootProject))
     }

@@ -46,7 +46,8 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         FolderColumnsCount,
                         EnableBlurWhenOpenFolder,
                         EnableFolderIconBlur,
-                        SetDeviceLevel
+                        SetDeviceLevel,
+                        DockBlur
                     )
                 }
             }

@@ -25,7 +25,7 @@
             android:defaultValue="100"
             android:key="prefs_key_home_anim_ratio"
             android:title="动画速度"
-            app:format="%df"
+            app:format="%d / 100 f"
             app:maxValue="500"
             app:minValue="10"
             app:showSeekBarValue="true" />
@@ -61,7 +61,7 @@
             android:defaultValue="50"
             android:key="prefs_key_small_folder_corner"
             android:title="小文件夹模糊圆角半径"
-            app:format="%ddp"
+            app:format="%d dp"
             app:maxValue="100"
             app:showSeekBarValue="true" />
 
@@ -69,7 +69,7 @@
             android:defaultValue="300"
             android:key="prefs_key_small_folder_side"
             android:title="小文件夹模糊背景大小"
-            app:format="%ddp"
+            app:format="%d dp"
             app:maxValue="500"
             app:showSeekBarValue="true" />
 
@@ -94,6 +94,56 @@
             android:title="文件夹排列数"
             app:maxValue="6"
             app:minValue="1"
+            app:format="%d 个"
+            app:showSeekBarValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="底栏设置">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefs_key_home_dock_blur"
+            android:title="启用底栏" />
+
+        <SeekBarPreference
+            android:defaultValue="100"
+            android:key="prefs_key_home_dock_height"
+            android:title="底栏高度"
+            app:format="%d dp"
+            app:maxValue="200"
+            app:showSeekBarValue="true" />
+
+        <SeekBarPreference
+            android:defaultValue="10"
+            android:key="prefs_key_home_dock_margin"
+            android:title="底栏两侧边距"
+            app:format="%d dp"
+            app:maxValue="100"
+            app:showSeekBarValue="true" />
+
+        <SeekBarPreference
+            android:defaultValue="30"
+            android:key="prefs_key_home_dock_top_margin"
+            android:title="底栏上边距"
+            app:format="%d dp"
+            app:maxValue="100"
+            app:showSeekBarValue="true" />
+
+        <SeekBarPreference
+            android:defaultValue="20"
+            android:key="prefs_key_home_dock_bottom_margin"
+            android:title="底栏下边距"
+            app:format="%d dp"
+            app:maxValue="100"
+            app:showSeekBarValue="true" />
+
+        <SeekBarPreference
+            android:defaultValue="25"
+            android:key="prefs_key_home_dock_corner"
+            android:title="底栏圆角半径"
+            app:format="%d dp"
+            app:maxValue="50"
             app:showSeekBarValue="true" />
 
     </PreferenceCategory>

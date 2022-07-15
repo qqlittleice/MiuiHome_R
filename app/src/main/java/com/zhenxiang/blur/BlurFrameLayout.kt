@@ -1,8 +1,8 @@
 package com.zhenxiang.blur
 
 import android.content.Context
-import android.widget.LinearLayout
+import android.widget.FrameLayout
 
-class WindowBlurLinearLayout constructor(context: Context) : LinearLayout(context) {
+class BlurFrameLayout constructor(context: Context) : FrameLayout(context) {
     val blurController: SystemBlurController = SystemBlurController(this)
 }
