@@ -30,14 +30,14 @@ object DockBlur : BaseHook() {
                 it.thisObject.callMethod("getSearchBarContainer") as FrameLayout
             val mSearchEdgeLayout = mSearchBarContainer.parent as FrameLayout
             val mDockHeight = DisplayUtils.dip2px(
-                mSearchBarContainer.context, mPrefsMap.getInt("home_dock_height", 85).toFloat()
+                mSearchBarContainer.context, mPrefsMap.getInt("home_dock_height", 98).toFloat()
             )
             val mDockMargin = DisplayUtils.dip2px(
                 mSearchBarContainer.context, mPrefsMap.getInt("home_dock_margin", 10).toFloat()
             )
             val mDockBottomMargin = DisplayUtils.dip2px(
                 mSearchBarContainer.context,
-                mPrefsMap.getInt("home_dock_bottom_margin", 30).toFloat()
+                mPrefsMap.getInt("home_dock_bottom_margin", 13).toFloat()
             )
             val mDockCorner = DisplayUtils.dip2px(
                 mSearchBarContainer.context, mPrefsMap.getInt("home_dock_corner", 50).toFloat()
@@ -86,6 +86,17 @@ object DockBlur : BaseHook() {
             val context: Context = it.args[0] as Context
             it.result = DisplayUtils.dip2px(
                 context, mPrefsMap.getInt("home_dock_top_margin", 30).toFloat()
+            )
+        }
+        "com.miui.home.launcher.DeviceConfig".hookBeforeMethod(
+            "calcHotSeatsMarginBottom",
+            Context::class.java,
+            Boolean::class.java,
+            Boolean::class.java
+        ) {
+            val context: Context = it.args[0] as Context
+            it.result = DisplayUtils.dip2px(
+                context, mPrefsMap.getInt("home_dock_icon_bottom_margin", -8).toFloat()
             )
         }
     }

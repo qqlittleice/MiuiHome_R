@@ -125,7 +125,16 @@
             android:title="启用底栏" />
 
         <SeekBarPreference
-            android:defaultValue="100"
+            android:defaultValue="-8"
+            android:key="prefs_key_home_dock_icon_bottom_margin"
+            android:title="图标下边距"
+            app:format="%d dp"
+            app:maxValue="100"
+            app:minValue="-20"
+            app:showSeekBarValue="true" />
+
+        <SeekBarPreference
+            android:defaultValue="98"
             android:key="prefs_key_home_dock_height"
             android:title="底栏高度"
             app:format="%d dp"
@@ -149,7 +158,7 @@
             app:showSeekBarValue="true" />
 
         <SeekBarPreference
-            android:defaultValue="20"
+            android:defaultValue="13"
             android:key="prefs_key_home_dock_bottom_margin"
             android:title="底栏下边距"
             app:format="%d dp"
