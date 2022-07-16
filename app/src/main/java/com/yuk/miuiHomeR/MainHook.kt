@@ -10,6 +10,7 @@ import com.yuk.miuiHomeR.utils.Helpers
 import com.yuk.miuiHomeR.utils.PrefsMap
 import com.yuk.miuiHomeR.utils.PrefsUtils
 import com.yuk.miuiHomeR.utils.ktx.hookAfterMethod
+import com.yuk.miuiHomeR.utils.ktx.hookBeforeMethod
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.IXposedHookZygoteInit
 import de.robv.android.xposed.XSharedPreferences
@@ -27,7 +28,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                 EzXHelperInit.initHandleLoadPackage(lpparam)
                 EzXHelperInit.setLogTag(TAG)
                 EzXHelperInit.setToastTag(TAG)
-                "com.miui.home.launcher.Application".hookAfterMethod(
+                "com.miui.home.launcher.Application".hookBeforeMethod(
                     "attachBaseContext", Context::class.java
                 ) {
                     EzXHelperInit.initAppContext(it.args[0] as Context)
