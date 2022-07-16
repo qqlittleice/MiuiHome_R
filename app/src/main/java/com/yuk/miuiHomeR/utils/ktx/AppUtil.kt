@@ -36,10 +36,6 @@ fun checkIsAlpha(): Boolean = InitFields.appContext.packageManager.getPackageInf
     InitFields.appContext.packageName, 0
 ).versionName.contains("ALPHA", ignoreCase = true)
 
-fun checkIsPadDevice(): Boolean = XposedHelpers.callStaticMethod(
-    loadClass("com.miui.home.launcher.common.Utilities"), "isPadDevice"
-) as Boolean
-
 fun checkMiuiVersion(): String = when (getProp("ro.miui.ui.version.name")) {
     "V130" -> "13"
     "V125" -> "12.5"
@@ -54,3 +50,7 @@ fun checkAndroidVersion(): String = getProp("ro.build.version.release")
 fun checkVersionCode(): Long = InitFields.appContext.packageManager.getPackageInfo(
     InitFields.appContext.packageName, 0
 ).longVersionCode
+
+fun checkIsPadDevice(): Boolean = XposedHelpers.callStaticMethod(
+    loadClass("com.miui.home.launcher.common.Utilities"), "isPadDevice"
+) as Boolean

@@ -49,7 +49,13 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         EnableFolderIconBlur,
                         SetDeviceLevel,
                         DockBlur,
-                        ResourcesHook,
+                        ResourcesHook
+                    )
+                }
+                "com.miui.home.launcher.Application".hookAfterMethod(
+                    "attachBaseContext", Context::class.java
+                ) {
+                    initHooks(
                         PadA12DockBlur
                     )
                 }
