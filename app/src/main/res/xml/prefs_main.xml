@@ -178,6 +178,11 @@
 
         <SwitchPreference
             android:defaultValue="false"
+            android:key="prefs_key_home_shortcut_blur"
+            android:title="快捷菜单模糊" />
+
+        <SwitchPreference
+            android:defaultValue="false"
             android:key="prefs_key_home_unlock_grids"
             android:title="解锁桌面布局" />
 

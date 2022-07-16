@@ -24,7 +24,6 @@ object EnableBlurWhenOpenFolder : BaseHook() {
         } else {
             if (mPrefsMap.getBoolean("home_folder_blur")) {
                 if (checkIsAlpha()) {
-                    XposedBridge.log(checkIsAlpha().toString())
                     "com.miui.home.launcher.common.BlurUtils".hookBeforeMethod("isUserBlurWhenOpenFolder") {
                         it.result = true
                     }

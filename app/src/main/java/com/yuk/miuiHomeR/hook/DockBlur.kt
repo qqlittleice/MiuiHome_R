@@ -24,8 +24,8 @@ object DockBlur : BaseHook() {
         launcherClass.hookAfterMethod(
             "onCreate", Bundle::class.java
         ) {
-            var isInEditing = false
             var isFolderShowing = false
+            var boolean = false
             val mSearchBarContainer =
                 it.thisObject.callMethod("getSearchBarContainer") as FrameLayout
             val mSearchEdgeLayout = mSearchBarContainer.parent as FrameLayout
@@ -50,16 +50,23 @@ object DockBlur : BaseHook() {
             mSearchEdgeLayout.addView(blur, 0)
             launcherClass.hookAfterMethod("isFolderShowing") { hookParam ->
                 isFolderShowing = hookParam.result as Boolean
-                if (isFolderShowing) blur.visibility = View.GONE
-                else blur.visibility = View.VISIBLE
+                launcherClass.hookAfterMethod("showEditPanel", Boolean::class.java) { hookParam1 ->
+                    boolean = hookParam1.args[0] as Boolean
+                }
+                if (isFolderShowing && blur.visibility == View.VISIBLE) blur.visibility = View.GONE
+                else if (!boolean && !isFolderShowing && blur.visibility == View.GONE) blur.visibility =
+                    View.VISIBLE
             }
-            launcherClass.hookAfterMethod("isInEditing") { hookParam ->
-                isInEditing = hookParam.result as Boolean
+            launcherClass.hookAfterMethod("showEditPanel", Boolean::class.java) { hookParam1 ->
+                boolean = hookParam1.args[0] as Boolean
+                if (boolean && blur.visibility == View.VISIBLE) blur.visibility = View.GONE
+                else if (!boolean && !isFolderShowing && blur.visibility == View.GONE) blur.visibility =
+                    View.VISIBLE
             }
             launcherStateManagerClass.hookAfterMethod("getState") { hookParam ->
                 val state = hookParam.result.toString()
                 val a = state.lastIndexOf("LauncherState")
-                if (a != -1 && !isInEditing) {
+                if (a != -1) {
                     blur.blurController.apply {
                         backgroundColour = Color.parseColor("#44FFFFFF")
                         cornerRadius = CornersRadius.all(mDockCorner.toFloat())

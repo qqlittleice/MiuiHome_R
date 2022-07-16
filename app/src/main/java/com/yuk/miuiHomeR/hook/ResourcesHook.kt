@@ -2,7 +2,6 @@ package com.yuk.miuiHomeR.hook
 
 import android.content.res.Resources
 import com.github.kyuubiran.ezxhelper.init.InitFields.appContext
-import com.yuk.miuiHomeR.BuildConfig
 import com.yuk.miuiHomeR.mPrefsMap
 import com.yuk.miuiHomeR.utils.ResourcesHookData
 import com.yuk.miuiHomeR.utils.ResourcesHookMap
@@ -11,7 +10,6 @@ import com.yuk.miuiHomeR.utils.ktx.findClass
 import com.yuk.miuiHomeR.utils.ktx.hookBeforeAllMethods
 import com.yuk.miuiHomeR.utils.ktx.hookBeforeMethod
 import de.robv.android.xposed.XC_MethodHook
-import de.robv.android.xposed.XposedBridge
 
 object ResourcesHook : BaseHook() {
     private val hookMap = ResourcesHookMap<String, ResourcesHookData>()
@@ -22,7 +20,6 @@ object ResourcesHook : BaseHook() {
             if (hookMap.isKeyExist(resName))
                 if (hookMap[resName]?.type == resType) {
                     param.result = hookMap[resName]?.afterValue
-                    if (BuildConfig.DEBUG) XposedBridge.log("MiuiHome: [$resName] hooked, now it's ${hookMap[resName]?.afterValue}")
                 }
         } catch (ignore: Exception) {
         }
