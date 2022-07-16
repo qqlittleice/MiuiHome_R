@@ -115,7 +115,9 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="底栏设置">
+    <PreferenceCategory
+        android:title="底栏设置"
+        android:key="prefs_key_home_dock_settings">
 
         <SwitchPreference
             android:defaultValue="false"

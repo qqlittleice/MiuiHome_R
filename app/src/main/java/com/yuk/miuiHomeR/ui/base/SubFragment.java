@@ -21,9 +21,5 @@ public abstract class SubFragment extends BasePreferenceFragment {
     public abstract int getContentResId();
 
 
-    public void initPrefs() {
-
-    }
-
-    ;
+    public abstract void initPrefs();
 }
