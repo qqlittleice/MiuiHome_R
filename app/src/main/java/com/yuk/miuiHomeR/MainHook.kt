@@ -47,7 +47,8 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         EnableBlurWhenOpenFolder,
                         EnableFolderIconBlur,
                         SetDeviceLevel,
-                        DockBlur
+                        DockBlur,
+                        ResourcesHook
                     )
                 }
             }

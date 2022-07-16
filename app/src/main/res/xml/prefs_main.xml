@@ -22,6 +22,22 @@
             android:title="后台界面隐藏状态栏" />
 
         <SeekBarPreference
+            android:defaultValue="40"
+            android:key="prefs_key_task_view_header_height"
+            android:title="应用名称距卡片"
+            app:format="%d dp"
+            app:maxValue="150"
+            app:showSeekBarValue="true" />
+
+        <SeekBarPreference
+            android:defaultValue="20"
+            android:key="prefs_key_task_view_corners"
+            android:title="卡片圆角大小"
+            app:format="%d dp"
+            app:maxValue="100"
+            app:showSeekBarValue="true" />
+
+        <SeekBarPreference
             android:defaultValue="100"
             android:key="prefs_key_home_anim_ratio"
             android:title="动画速度"
@@ -149,12 +165,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="其他">
-
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="prefs_key_home_blur_wallpaper"
-            android:title="始终模糊壁纸" />
-
+        
         <SwitchPreference
             android:defaultValue="true"
             android:key="prefs_key_home_show_status_clock"
@@ -165,11 +176,21 @@
             android:key="prefs_key_home_double_sleep"
             android:title="双击锁屏" />
 
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefs_key_home_unlock_grids"
+            android:title="解锁桌面布局" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefs_key_home_blur_wallpaper"
+            android:title="始终模糊壁纸" />
+
         <SeekBarPreference
             android:defaultValue="100"
             android:key="prefs_key_home_blur_radius"
             android:title="模糊半径"
-            app:format="%df"
+            app:format="%d f"
             app:maxValue="500"
             app:showSeekBarValue="true" />
 
