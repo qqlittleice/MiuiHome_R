@@ -14,7 +14,6 @@ import de.robv.android.xposed.XC_MethodHook
 import de.robv.android.xposed.XposedBridge
 
 object ResourcesHook : BaseHook() {
-
     private val hookMap = ResourcesHookMap<String, ResourcesHookData>()
     private fun hook(param: XC_MethodHook.MethodHookParam) {
         try {
