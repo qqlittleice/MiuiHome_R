@@ -122,7 +122,6 @@ dependencies {
     implementation(files("libs/springback-debug.aar"))
     implementation(files("libs/utils-debug.aar"))
     implementation(files("libs/view-debug.aar"))
-    implementation(files("libs/blur-debug.aar"))
 
     implementation("org.lsposed.hiddenapibypass:hiddenapibypass:4.3")
     implementation("com.github.kyuubiran:EzXHelper:0.9.9")
