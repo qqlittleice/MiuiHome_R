@@ -70,7 +70,7 @@ object DockBlur : BaseHook() {
                     blur.blurController.apply {
                         backgroundColour = Color.parseColor("#44FFFFFF")
                         cornerRadius = CornersRadius.all(mDockCorner.toFloat())
-                        blurRadius = 100
+                        blurRadius = mPrefsMap.getInt("prefs_key_home_blur_radius", 100)
                     }
                 } else {
                     blur.blurController.apply {

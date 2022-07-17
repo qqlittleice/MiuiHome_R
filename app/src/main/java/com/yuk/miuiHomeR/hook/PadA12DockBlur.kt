@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.view.ViewGroup
 import com.github.kyuubiran.ezxhelper.utils.Log
 import com.yuk.miuiHomeR.mPrefsMap
-import com.yuk.miuiHomeR.utils.ktx.checkIsPadDevice
+import com.yuk.miuiHomeR.utils.DeviceUtils.isPad
 import com.yuk.miuiHomeR.utils.ktx.hookAfterMethod
 import com.zhenxiang.blur.BlurFrameLayout
 import com.zhenxiang.blur.model.CornersRadius
@@ -16,7 +16,7 @@ import de.robv.android.xposed.XposedHelpers
 object PadA12DockBlur : BaseHook() {
     override fun init() {
 
-        if (!mPrefsMap.getBoolean("pad_dock_blur") || Build.VERSION.SDK_INT < 31 || !checkIsPadDevice()) return
+        if (!mPrefsMap.getBoolean("pad_dock_blur") || Build.VERSION.SDK_INT < 31 || !isPad()) return
         try {
             "com.miui.home.launcher.Launcher".hookAfterMethod("onCreate", Bundle::class.java) {
                 val activity = it.thisObject as Activity

@@ -9,7 +9,6 @@ import com.yuk.miuiHomeR.hook.*
 import com.yuk.miuiHomeR.utils.Helpers
 import com.yuk.miuiHomeR.utils.PrefsMap
 import com.yuk.miuiHomeR.utils.PrefsUtils
-import com.yuk.miuiHomeR.utils.ktx.hookAfterMethod
 import com.yuk.miuiHomeR.utils.ktx.hookBeforeMethod
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.IXposedHookZygoteInit
@@ -50,13 +49,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         SetDeviceLevel,
                         DockBlur,
                         ResourcesHook,
-                        ShortcutBlur
-                    )
-                }
-                "com.miui.home.launcher.Application".hookAfterMethod(
-                    "attachBaseContext", Context::class.java
-                ) {
-                    initHooks(
+                        ShortcutBlur,
                         PadA12DockBlur
                     )
                 }

@@ -9,13 +9,14 @@ import android.os.Build
 import android.view.View
 import android.view.WindowManager
 import com.android.internal.graphics.drawable.BackgroundBlurDrawable
+import com.yuk.miuiHomeR.mPrefsMap
 import com.zhenxiang.blur.model.CornersRadius
 import java.util.function.Consumer
 
 class SystemBlurController(
     private val view: View,
     backgroundColour: Int = Color.TRANSPARENT,
-    blurRadius: Int = 100,
+    blurRadius: Int = mPrefsMap.getInt("prefs_key_home_blur_radius", 100),
     cornerRadius: CornersRadius = CornersRadius.all(0f),
 ) : View.OnAttachStateChangeListener {
 

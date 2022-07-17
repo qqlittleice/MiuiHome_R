@@ -94,12 +94,12 @@ class MainActivity : BaseAppCompatActivity() {
         )
         menu.findItem(R.id.icon).title = when (state) {
             PackageManager.COMPONENT_ENABLED_STATE_DISABLED -> {
-                "显示图标"
+                getString(R.string.show_icon)
             }
             PackageManager.COMPONENT_ENABLED_STATE_ENABLED -> {
-                "隐藏图标"
+                getString(R.string.hide_icon)
             }
-            else -> "隐藏图标"
+            else -> getString(R.string.hide_icon)
         }
         return super.onCreateOptionsMenu(menu)
     }

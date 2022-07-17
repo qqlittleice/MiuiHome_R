@@ -13,8 +13,8 @@ android {
         applicationId = namespace
         minSdk = 31
         targetSdk = 32
-        versionCode = 10
-        versionName = "1.0.1" + (getGitHeadRefsSuffix(rootProject))
+        versionCode = 11
+        versionName = "1.0.2" + (getGitHeadRefsSuffix(rootProject))
     }
 
     val properties = Properties()

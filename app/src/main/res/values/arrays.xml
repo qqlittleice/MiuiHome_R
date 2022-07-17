@@ -5,11 +5,11 @@
     </string-array>
 
     <string-array name="recent_blur">
-        <item>完整模糊</item>
-        <item>测试模糊</item>
-        <item>简单模糊</item>
-        <item>无模糊</item>
-        <item>无模糊 + 简单动画</item>
+        <item>@string/complete_blur</item>
+        <item>@string/test_blur</item>
+        <item>@string/simple_blur</item>
+        <item>@string/none_blur</item>
+        <item>@string/none_blur_simple_amin</item>
     </string-array>
 
     <string-array name="recent_blur_value">

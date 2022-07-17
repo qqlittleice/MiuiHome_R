@@ -50,7 +50,3 @@ fun checkAndroidVersion(): String = getProp("ro.build.version.release")
 fun checkVersionCode(): Long = InitFields.appContext.packageManager.getPackageInfo(
     InitFields.appContext.packageName, 0
 ).longVersionCode
-
-fun checkIsPadDevice(): Boolean = XposedHelpers.callStaticMethod(
-    loadClass("com.miui.home.launcher.common.Utilities"), "isPadDevice"
-) as Boolean

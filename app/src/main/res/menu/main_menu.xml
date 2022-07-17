@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
     <item
         android:id="@+id/backup"
-        android:title="备份模块设置" />
+        android:title="@string/backup" />
     <item
         android:id="@+id/restore"
-        android:title="恢复模块设置" />
+        android:title="@string/restore" />
     <item
         android:id="@+id/reset"
-        android:title="重置模块设置" />
+        android:title="@string/reset" />
     <item
         android:id="@+id/reboot_home"
-        android:title="重启桌面" />
+        android:title="@string/reboot_home" />
     <item
         android:id="@+id/icon"
-        android:title="隐藏图标" />
+        android:title=""
+        tools:ignore="HardcodedText" />
     <item
         android:id="@+id/about"
-        android:title="关于" />
+        android:title="@string/about" />
 </menu>
