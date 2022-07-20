@@ -7,13 +7,13 @@ import android.view.Gravity
 import android.view.View
 import android.widget.FrameLayout
 import com.yuk.miuiHomeR.mPrefsMap
+import com.yuk.miuiHomeR.utils.DisplayUtils
 import com.yuk.miuiHomeR.utils.ktx.callMethod
 import com.yuk.miuiHomeR.utils.ktx.findClass
 import com.yuk.miuiHomeR.utils.ktx.hookAfterMethod
 import com.yuk.miuiHomeR.utils.ktx.hookBeforeMethod
 import com.zhenxiang.blur.BlurFrameLayout
 import com.zhenxiang.blur.model.CornersRadius
-import moralnorm.utils.DisplayUtils
 
 object DockBlur : BaseHook() {
     override fun init() {

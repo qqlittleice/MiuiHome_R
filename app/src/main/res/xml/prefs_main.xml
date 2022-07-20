@@ -110,63 +110,13 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:title="@string/dock_settings"
-        android:key="prefs_key_home_dock_settings">
+    <PreferenceCategory>
 
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="prefs_key_home_dock_blur"
-            android:title="@string/enable_dock" />
-
-        <SeekBarPreference
-            android:defaultValue="-8"
-            android:key="prefs_key_home_dock_icon_bottom_margin"
-            android:title="@string/bottom_margin_of_icon"
-            app:format="%d dp"
-            app:maxValue="100"
-            app:minValue="-20"
-            app:showSeekBarValue="true" />
-
-        <SeekBarPreference
-            android:defaultValue="98"
-            android:key="prefs_key_home_dock_height"
-            android:title="@string/height_of_dock_view"
-            app:format="%d dp"
-            app:maxValue="200"
-            app:showSeekBarValue="true" />
-
-        <SeekBarPreference
-            android:defaultValue="10"
-            android:key="prefs_key_home_dock_margin"
-            android:title="@string/margins_on_both_sides_of_dock_view"
-            app:format="%d dp"
-            app:maxValue="100"
-            app:showSeekBarValue="true" />
-
-        <SeekBarPreference
-            android:defaultValue="30"
-            android:key="prefs_key_home_dock_top_margin"
-            android:title="@string/top_margin_of_dock_view"
-            app:format="%d dp"
-            app:maxValue="100"
-            app:showSeekBarValue="true" />
-
-        <SeekBarPreference
-            android:defaultValue="13"
-            android:key="prefs_key_home_dock_bottom_margin"
-            android:title="@string/bottom_margin_of_dock_view"
-            app:format="%d dp"
-            app:maxValue="100"
-            app:showSeekBarValue="true" />
-
-        <SeekBarPreference
-            android:defaultValue="25"
-            android:key="prefs_key_home_dock_corner"
-            android:title="@string/corner_radius_of_dock_view"
-            app:format="%d dp"
-            app:maxValue="50"
-            app:showSeekBarValue="true" />
+        <Preference android:title="@string/dock_settings">
+            <intent
+                android:targetPackage="com.yuk.miuiHomeR"
+                android:targetClass="com.yuk.miuiHomeR.ui.HomeDockSettings"/>
+        </Preference>
 
     </PreferenceCategory>
 

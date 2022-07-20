@@ -78,9 +78,7 @@ class MainActivity : BaseAppCompatActivity() {
 
         override fun initPrefs() {
             val mPadDockBlur = findPreference<SwitchPreference>("prefs_key_pad_dock_blur")
-            val mHomeDockSettings = findPreference<PreferenceCategory>("prefs_key_home_dock_settings")
 
-            mHomeDockSettings.isVisible = !DeviceUtils.isPad()
             mPadDockBlur.isVisible = DeviceUtils.isPad()
         }
     }

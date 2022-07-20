@@ -28,6 +28,10 @@
         </activity-alias>
 
         <activity
+            android:label="@string/dock_settings"
+            android:name=".ui.HomeDockSettings" />
+
+        <activity
             android:name=".ui.AboutActivity"
             android:label="关于" />
 
