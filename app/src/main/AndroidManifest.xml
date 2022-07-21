@@ -28,8 +28,24 @@
         </activity-alias>
 
         <activity
+            android:label="@string/recent"
+            android:name=".ui.HomeRecentSettings"/>
+
+        <activity
+            android:label="@string/widget"
+            android:name=".ui.HomeWidgetSettings"/>
+
+        <activity
+            android:label="文件夹"
+            android:name=".ui.HomeFolderSettings"/>
+
+        <activity
             android:label="@string/dock_settings"
             android:name=".ui.HomeDockSettings" />
+
+        <activity
+            android:label="@string/other_features"
+            android:name=".ui.HomeOtherFeaturesSettings"/>
 
         <activity
             android:name=".ui.AboutActivity"

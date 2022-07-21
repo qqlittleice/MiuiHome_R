@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefs_key_home_widget_hide"
+            android:title="@string/hide_widget_title" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefs_key_home_widget_to_minus"
+            android:title="@string/allow_moved_to_minus_one_screen" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefs_key_home_widget_miui"
+            android:title="@string/Show_MIUI_widget" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

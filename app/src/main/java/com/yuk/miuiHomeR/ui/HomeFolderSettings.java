@@ -6,18 +6,17 @@ import com.yuk.miuiHomeR.R;
 import com.yuk.miuiHomeR.ui.base.BaseAppCompatActivity;
 import com.yuk.miuiHomeR.ui.base.SubFragment;
 
-public class HomeDockSettings extends BaseAppCompatActivity {
-
+public class HomeFolderSettings extends BaseAppCompatActivity {
     @Override
     public Fragment initFragment() {
-        return new HomeDockFragment();
+        return new HomeFolderFragment();
     }
 
-    public static class HomeDockFragment extends SubFragment {
+    public static class HomeFolderFragment extends SubFragment {
 
         @Override
         public int getContentResId() {
-            return R.xml.prefs_home_dock;
+            return R.xml.prefs_home_folder;
         }
 
         @Override

@@ -1,164 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <PreferenceCategory android:title="@string/recent">
-
-        <DropDownPreference
-            android:defaultValue="0"
-            android:key="prefs_key_recent_blur"
-            android:title="@string/blur_level"
-            app:entries="@array/recent_blur"
-            app:entryValues="@array/recent_blur_value" />
-
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="prefs_key_home_disable_darken"
-            android:title="@string/cancel_wallpaper_dimming" />
-
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="prefs_key_home_hide_status"
-            android:title="@string/hide_status_bar_in_task_view" />
-
-        <SeekBarPreference
-            android:defaultValue="40"
-            android:key="prefs_key_task_view_header_height"
-            android:title="@string/app_name_distance_task_view_card"
-            app:format="%d dp"
-            app:maxValue="150"
-            app:showSeekBarValue="true" />
-
-        <SeekBarPreference
-            android:defaultValue="20"
-            android:key="prefs_key_task_view_corners"
-            android:title="@string/task_view_card_rounded_corners"
-            app:format="%d dp"
-            app:maxValue="100"
-            app:showSeekBarValue="true" />
-
-        <SeekBarPreference
-            android:defaultValue="150"
-            android:key="prefs_key_home_anim_ratio"
-            android:title="@string/anim_speed"
-            app:format="%d / 100 f"
-            app:maxValue="500"
-            app:minValue="10"
-            app:showSeekBarValue="true" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory android:title="@string/widget">
-
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="prefs_key_home_widget_hide"
-            android:title="@string/hide_widget_title" />
-
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="prefs_key_home_widget_to_minus"
-            android:title="@string/allow_moved_to_minus_one_screen" />
-
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="prefs_key_home_widget_miui"
-            android:title="@string/Show_MIUI_widget" />
-    </PreferenceCategory>
-
-    <PreferenceCategory android:title="文件夹">
-
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="prefs_key_small_folder_blur"
-            android:title="@string/small_folder_blur" />
-
-        <SeekBarPreference
-            android:defaultValue="60"
-            android:key="prefs_key_small_folder_corner"
-            android:title="@string/small_folder_blur_corner_radius"
-            app:format="%d dp"
-            app:maxValue="100"
-            app:showSeekBarValue="true" />
-
-        <SeekBarPreference
-            android:defaultValue="250"
-            android:key="prefs_key_small_folder_side"
-            android:title="@string/small_folder_blur_background_size"
-            app:format="%d dp"
-            app:maxValue="500"
-            app:showSeekBarValue="true" />
-
-        <SwitchPreference
-            android:defaultValue="true"
-            android:key="prefs_key_home_folder_blur"
-            android:title="@string/blurred_background_when_opening_folder_view" />
-
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="prefs_key_home_folder_width"
-            android:title="@string/using_full_width_of_folder_view" />
-
-        <SeekBarPreference
-            android:defaultValue="3"
-            android:key="prefs_key_home_folder_columns"
-            android:title="@string/number_of_icons_in_folder_iew"
-            app:maxValue="6"
-            app:minValue="1"
-            app:format="%d"
-            app:showSeekBarValue="true" />
-
-    </PreferenceCategory>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory>
 
-        <Preference android:title="@string/dock_settings">
+        <Preference android:title="@string/recent">
+            <intent
+                android:targetPackage="com.yuk.miuiHomeR"
+                android:targetClass="com.yuk.miuiHomeR.ui.HomeRecentSettings"/>
+        </Preference>
+
+        <Preference android:title="@string/widget">
+            <intent
+                android:targetPackage="com.yuk.miuiHomeR"
+                android:targetClass="com.yuk.miuiHomeR.ui.HomeWidgetSettings"/>
+        </Preference>
+
+        <Preference android:title="文件夹">
+            <intent
+                android:targetPackage="com.yuk.miuiHomeR"
+                android:targetClass="com.yuk.miuiHomeR.ui.HomeFolderSettings"/>
+        </Preference>
+
+        <Preference
+            android:title="@string/dock_settings"
+            android:key="prefs_key_home_dock_settings">
             <intent
                 android:targetPackage="com.yuk.miuiHomeR"
                 android:targetClass="com.yuk.miuiHomeR.ui.HomeDockSettings"/>
         </Preference>
 
-    </PreferenceCategory>
-
-    <PreferenceCategory android:title="@string/other_features">
-
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="prefs_key_home_blur_wallpaper"
-            android:title="@string/Always_blur_launcher_wallpaper" />
-
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="prefs_key_home_show_status_clock"
-            android:title="@string/always_show_status_bar_clock" />
-
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="prefs_key_home_double_sleep"
-            android:title="@string/double_tap_to_lock_screen" />
-
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="prefs_key_home_shortcut_blur"
-            android:title="@string/shortcut_menu_background_view_blur" />
-
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="prefs_key_home_unlock_grids"
-            android:title="@string/unlock_launcher_icon_grids" />
-
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="prefs_key_pad_dock_blur"
-            android:title="@string/Pad_android_12_dock_blur" />
-
-        <SeekBarPreference
-            android:defaultValue="100"
-            android:key="prefs_key_home_blur_radius"
-            android:title="@string/blur_radius"
-            app:format="%d / 100 f"
-            app:maxValue="500"
-            app:showSeekBarValue="true" />
+        <Preference android:title="@string/other_features">
+            <intent
+                android:targetPackage="com.yuk.miuiHomeR"
+                android:targetClass="com.yuk.miuiHomeR.ui.HomeOtherFeaturesSettings"/>
+        </Preference>
 
     </PreferenceCategory>
 

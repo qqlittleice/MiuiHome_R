@@ -4,7 +4,7 @@ import moralnorm.internal.utils.DeviceHelper;
 
 public class DeviceUtils {
 
-    public static boolean isPad() {
+    public static boolean isPadDevice() {
         return DeviceHelper.isTablet() || DeviceHelper.isFoldDevice();
     }
 }

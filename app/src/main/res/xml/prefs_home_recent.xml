@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory>
+
+        <DropDownPreference
+            android:defaultValue="0"
+            android:key="prefs_key_recent_blur"
+            android:title="@string/blur_level"
+            app:entries="@array/recent_blur"
+            app:entryValues="@array/recent_blur_value" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefs_key_home_disable_darken"
+            android:title="@string/cancel_wallpaper_dimming" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefs_key_home_hide_status"
+            android:title="@string/hide_status_bar_in_task_view" />
+
+        <SeekBarPreference
+            android:defaultValue="40"
+            android:key="prefs_key_task_view_header_height"
+            android:title="@string/app_name_distance_task_view_card"
+            app:format="%d dp"
+            app:maxValue="150"
+            app:showSeekBarValue="true" />
+
+        <SeekBarPreference
+            android:defaultValue="20"
+            android:key="prefs_key_task_view_corners"
+            android:title="@string/task_view_card_rounded_corners"
+            app:format="%d dp"
+            app:maxValue="100"
+            app:showSeekBarValue="true" />
+
+        <SeekBarPreference
+            android:defaultValue="150"
+            android:key="prefs_key_home_anim_ratio"
+            android:title="@string/anim_speed"
+            app:format="%d / 100 f"
+            app:maxValue="500"
+            app:minValue="10"
+            app:showSeekBarValue="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

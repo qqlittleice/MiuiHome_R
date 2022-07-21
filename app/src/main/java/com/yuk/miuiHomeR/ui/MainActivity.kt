@@ -19,8 +19,7 @@ import com.yuk.miuiHomeR.ui.base.SubFragment
 import com.yuk.miuiHomeR.utils.DeviceUtils
 import com.yuk.miuiHomeR.utils.Helpers
 import com.yuk.miuiHomeR.utils.PrefsUtils
-import moralnorm.preference.PreferenceCategory
-import moralnorm.preference.SwitchPreference
+import moralnorm.preference.Preference
 
 class MainActivity : BaseAppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -77,9 +76,8 @@ class MainActivity : BaseAppCompatActivity() {
         }
 
         override fun initPrefs() {
-            val mPadDockBlur = findPreference<SwitchPreference>("prefs_key_pad_dock_blur")
-
-            mPadDockBlur.isVisible = DeviceUtils.isPad()
+            val mHomeDockSettings = findPreference<Preference>("prefs_key_home_dock_settings")
+            mHomeDockSettings.isVisible = !DeviceUtils.isPadDevice()
         }
     }
 
