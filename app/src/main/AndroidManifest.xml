@@ -28,6 +28,10 @@
         </activity-alias>
 
         <activity
+            android:label="@string/home"
+            android:name=".ui.HomeHomeSettings"/>
+
+        <activity
             android:label="@string/recent"
             android:name=".ui.HomeRecentSettings"/>
 

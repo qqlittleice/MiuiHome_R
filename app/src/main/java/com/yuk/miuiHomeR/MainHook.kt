@@ -53,7 +53,8 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         PadA12DockBlur,
                         UnlockHotseatIcon,
                         TaskViewHorizontal,
-                        TaskViewVertical
+                        TaskViewVertical,
+                        ModifyIconTitleSize
                     )
                 }
             }
