@@ -46,4 +46,8 @@
     <string name="Always_blur_launcher_wallpaper">Always blur launcher wallpaper</string>
     <string name="Pad_android_12_dock_blur">Pad Android 12 dock blur</string>
     <string name="blur_radius">Blur Radius</string>
+    <string name="unlock_hotseat">Remove icon number restriction from dock</string>
+    <string name="vertical_task_view_card_size">Thumbnail size for Vertically</string>
+    <string name="horizontal_task_view_card_size1">Thumbnail size for Horizontally-Vertical</string>
+    <string name="horizontal_task_view_card_size2">Thumbnail size for Horizontally-Horizontal</string>
 </resources>

@@ -128,8 +128,8 @@ dependencies {
     implementation("androidx.core:core:1.9.0-alpha04")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
     implementation("androidx.fragment:fragment:1.5.0-alpha04")
-    implementation("androidx.collection:collection:1.2.0-alpha01")
-    implementation("androidx.lifecycle:lifecycle-common:2.4.0-alpha02")
+    implementation("androidx.collection:collection:1.2.0")
+    implementation("androidx.lifecycle:lifecycle-common:2.5.0-alpha05")
     implementation("androidx.vectordrawable:vectordrawable:1.1.0")
     implementation("androidx.vectordrawable:vectordrawable-animated:1.1.0")
 }

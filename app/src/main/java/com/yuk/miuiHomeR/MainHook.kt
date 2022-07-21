@@ -50,7 +50,10 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         DockBlur,
                         ResourcesHook,
                         ShortcutBlur,
-                        PadA12DockBlur
+                        PadA12DockBlur,
+                        UnlockHotseatIcon,
+                        TaskViewHorizontal,
+                        TaskViewVertical
                     )
                 }
             }

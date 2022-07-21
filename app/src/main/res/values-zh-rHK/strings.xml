@@ -46,4 +46,8 @@
     <string name="Always_blur_launcher_wallpaper">始終模糊桌面壁紙</string>
     <string name="Pad_android_12_dock_blur">平板安卓 12 底欄模糊</string>
     <string name="blur_radius">模糊半徑</string>
+    <string name="unlock_hotseat">解鎖底欄圖標數量限制</string>
+    <string name="vertical_task_view_card_size">瀑布後台卡片大小</string>
+    <string name="horizontal_task_view_card_size1">平鋪後台卡片大小-豎屏</string>
+    <string name="horizontal_task_view_card_size2">平鋪後台卡片大小-橫屏</string>
 </resources>
