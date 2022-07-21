@@ -10,8 +10,8 @@
             android:title="@string/enable_dock" />
 
         <SeekBarPreference
-            android:dependency="prefs_key_home_dock_blur"
             android:defaultValue="-8"
+            android:dependency="prefs_key_home_dock_blur"
             android:key="prefs_key_home_dock_icon_bottom_margin"
             android:title="@string/bottom_margin_of_icon"
             app:format="%d dp"
@@ -20,8 +20,8 @@
             app:showSeekBarValue="true" />
 
         <SeekBarPreference
-            android:dependency="prefs_key_home_dock_blur"
             android:defaultValue="98"
+            android:dependency="prefs_key_home_dock_blur"
             android:key="prefs_key_home_dock_height"
             android:title="@string/height_of_dock_view"
             app:format="%d dp"
@@ -29,8 +29,8 @@
             app:showSeekBarValue="true" />
 
         <SeekBarPreference
-            android:dependency="prefs_key_home_dock_blur"
             android:defaultValue="10"
+            android:dependency="prefs_key_home_dock_blur"
             android:key="prefs_key_home_dock_margin"
             android:title="@string/margins_on_both_sides_of_dock_view"
             app:format="%d dp"
@@ -38,8 +38,8 @@
             app:showSeekBarValue="true" />
 
         <SeekBarPreference
-            android:dependency="prefs_key_home_dock_blur"
             android:defaultValue="30"
+            android:dependency="prefs_key_home_dock_blur"
             android:key="prefs_key_home_dock_top_margin"
             android:title="@string/top_margin_of_dock_view"
             app:format="%d dp"
@@ -47,8 +47,8 @@
             app:showSeekBarValue="true" />
 
         <SeekBarPreference
-            android:dependency="prefs_key_home_dock_blur"
             android:defaultValue="13"
+            android:dependency="prefs_key_home_dock_blur"
             android:key="prefs_key_home_dock_bottom_margin"
             android:title="@string/bottom_margin_of_dock_view"
             app:format="%d dp"
@@ -56,8 +56,8 @@
             app:showSeekBarValue="true" />
 
         <SeekBarPreference
-            android:dependency="prefs_key_home_dock_blur"
             android:defaultValue="25"
+            android:dependency="prefs_key_home_dock_blur"
             android:key="prefs_key_home_dock_corner"
             android:title="@string/corner_radius_of_dock_view"
             app:format="%d dp"

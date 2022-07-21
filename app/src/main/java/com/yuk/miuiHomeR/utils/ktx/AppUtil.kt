@@ -4,8 +4,6 @@ import android.annotation.SuppressLint
 import android.content.res.Configuration
 import android.util.TypedValue
 import com.github.kyuubiran.ezxhelper.init.InitFields
-import com.github.kyuubiran.ezxhelper.utils.loadClass
-import de.robv.android.xposed.XposedHelpers
 
 fun dp2px(dpValue: Float): Int = TypedValue.applyDimension(
     TypedValue.COMPLEX_UNIT_DIP,
@@ -36,6 +34,11 @@ fun checkIsAlpha(): Boolean = InitFields.appContext.packageManager.getPackageInf
     InitFields.appContext.packageName, 0
 ).versionName.contains("ALPHA", ignoreCase = true)
 
+
+fun checkVersionCode(): Long = InitFields.appContext.packageManager.getPackageInfo(
+    InitFields.appContext.packageName, 0
+).longVersionCode
+
 fun checkMiuiVersion(): String = when (getProp("ro.miui.ui.version.name")) {
     "V130" -> "13"
     "V125" -> "12.5"
@@ -46,7 +49,3 @@ fun checkMiuiVersion(): String = when (getProp("ro.miui.ui.version.name")) {
 }
 
 fun checkAndroidVersion(): String = getProp("ro.build.version.release")
-
-fun checkVersionCode(): Long = InitFields.appContext.packageManager.getPackageInfo(
-    InitFields.appContext.packageName, 0
-).longVersionCode

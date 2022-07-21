@@ -5,34 +5,34 @@
 
         <Preference android:title="@string/recent">
             <intent
-                android:targetPackage="com.yuk.miuiHomeR"
-                android:targetClass="com.yuk.miuiHomeR.ui.HomeRecentSettings"/>
+                android:targetClass="com.yuk.miuiHomeR.ui.HomeRecentSettings"
+                android:targetPackage="com.yuk.miuiHomeR" />
         </Preference>
 
         <Preference android:title="@string/widget">
             <intent
-                android:targetPackage="com.yuk.miuiHomeR"
-                android:targetClass="com.yuk.miuiHomeR.ui.HomeWidgetSettings"/>
+                android:targetClass="com.yuk.miuiHomeR.ui.HomeWidgetSettings"
+                android:targetPackage="com.yuk.miuiHomeR" />
         </Preference>
 
         <Preference android:title="文件夹">
             <intent
-                android:targetPackage="com.yuk.miuiHomeR"
-                android:targetClass="com.yuk.miuiHomeR.ui.HomeFolderSettings"/>
+                android:targetClass="com.yuk.miuiHomeR.ui.HomeFolderSettings"
+                android:targetPackage="com.yuk.miuiHomeR" />
         </Preference>
 
         <Preference
-            android:title="@string/dock_settings"
-            android:key="prefs_key_home_dock_settings">
+            android:key="prefs_key_home_dock_settings"
+            android:title="@string/dock_settings">
             <intent
-                android:targetPackage="com.yuk.miuiHomeR"
-                android:targetClass="com.yuk.miuiHomeR.ui.HomeDockSettings"/>
+                android:targetClass="com.yuk.miuiHomeR.ui.HomeDockSettings"
+                android:targetPackage="com.yuk.miuiHomeR" />
         </Preference>
 
         <Preference android:title="@string/other_features">
             <intent
-                android:targetPackage="com.yuk.miuiHomeR"
-                android:targetClass="com.yuk.miuiHomeR.ui.HomeOtherFeaturesSettings"/>
+                android:targetClass="com.yuk.miuiHomeR.ui.HomeOtherFeaturesSettings"
+                android:targetPackage="com.yuk.miuiHomeR" />
         </Preference>
 
     </PreferenceCategory>
