@@ -20,7 +20,7 @@
     <string name="task_view_card_rounded_corners">卡片圆角大小</string>
     <string name="anim_speed">动画速度</string>
     <string name="recent">最近任务</string>
-    <string name="widget">小部件儿</string>
+    <string name="widget">小部件</string>
     <string name="hide_widget_title">隐藏小部件标题</string>
     <string name="allow_moved_to_minus_one_screen">允许将安卓小部件移到负一屏</string>
     <string name="Show_MIUI_widget">在安卓小部件页面显示 MIUI 小部件</string>
