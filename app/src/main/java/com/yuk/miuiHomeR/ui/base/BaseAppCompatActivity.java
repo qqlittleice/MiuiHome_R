@@ -8,11 +8,13 @@ import androidx.fragment.app.Fragment;
 import com.yuk.miuiHomeR.R;
 
 import moralnorm.appcompat.app.AppCompatActivity;
+import moralnorm.internal.utils.ViewUtils;
 
 public abstract class BaseAppCompatActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(ViewUtils.isNightMode(this) ? R.style.AppTheme_Dark : R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

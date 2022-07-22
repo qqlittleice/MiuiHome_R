@@ -46,7 +46,7 @@
 
     <PreferenceCategory
         android:title="Test"
-        app:isPreferenceVisible="true">
+        app:isPreferenceVisible="false">
 
 
         <PreferenceCategory>
