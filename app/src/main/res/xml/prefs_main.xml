@@ -3,6 +3,12 @@
 
     <PreferenceCategory>
 
+        <Preference android:title="@string/home">
+            <intent
+                android:targetClass="com.yuk.miuiHomeR.ui.HomeHomeSettings"
+                android:targetPackage="com.yuk.miuiHomeR" />
+        </Preference>
+
         <Preference android:title="@string/recent">
             <intent
                 android:targetClass="com.yuk.miuiHomeR.ui.HomeRecentSettings"

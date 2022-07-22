@@ -9,23 +9,22 @@ import com.yuk.miuiHomeR.utils.DeviceUtils;
 
 import moralnorm.preference.SwitchPreference;
 
-public class HomeOtherFeaturesSettings extends BaseAppCompatActivity {
+public class HomeHomeSettings extends BaseAppCompatActivity {
 
     @Override
     public Fragment initFragment() {
-        return new HomeOtherFeaturesFragment();
+        return new HomeFragment();
     }
 
-    public static class HomeOtherFeaturesFragment extends SubFragment {
+    public static class HomeFragment extends SubFragment {
 
         @Override
-        public int getContentResId() {
-            return R.xml.prefs_home_other_features;
-        }
+        public int getContentResId() { return R.xml.prefs_home_home; }
 
         @Override
         public void initPrefs() {
-
+            SwitchPreference mPadDockBlur = findPreference("prefs_key_pad_dock_blur");
+            mPadDockBlur.setVisible(DeviceUtils.isPadDevice());
         }
     }
 }
