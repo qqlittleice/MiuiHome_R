@@ -33,23 +33,23 @@
 
         <activity
             android:label="@string/recent"
-            android:name=".ui.HomeRecentSettings"/>
+            android:name=".ui.RecentActivity"/>
 
         <activity
             android:label="@string/widget"
-            android:name=".ui.HomeWidgetSettings"/>
+            android:name=".ui.WidgetActivity"/>
 
         <activity
             android:label="文件夹"
-            android:name=".ui.HomeFolderSettings"/>
+            android:name=".ui.FolderActivity"/>
 
         <activity
             android:label="@string/dock_settings"
-            android:name=".ui.HomeDockSettings" />
+            android:name=".ui.DockActivity" />
 
         <activity
             android:label="@string/other_features"
-            android:name=".ui.HomeOtherFeaturesSettings"/>
+            android:name=".ui.OtherFeaturesActivity"/>
 
         <activity
             android:name=".ui.AboutActivity"

@@ -6,19 +6,18 @@ import com.yuk.miuiHomeR.R;
 import com.yuk.miuiHomeR.ui.base.BaseAppCompatActivity;
 import com.yuk.miuiHomeR.ui.base.SubFragment;
 
-public class HomeWidgetSettings extends BaseAppCompatActivity {
+public class RecentActivity extends BaseAppCompatActivity {
 
     @Override
     public Fragment initFragment() {
-        return new HomeWidgetFragment();
+        return new RecentFragment();
     }
 
-
-    public static class HomeWidgetFragment extends SubFragment {
+    public static class RecentFragment extends SubFragment {
 
         @Override
         public int getContentResId() {
-            return R.xml.prefs_home_widget;
+            return R.xml.prefs_recent;
         }
 
         @Override

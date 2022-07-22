@@ -5,22 +5,18 @@ import androidx.fragment.app.Fragment;
 import com.yuk.miuiHomeR.R;
 import com.yuk.miuiHomeR.ui.base.BaseAppCompatActivity;
 import com.yuk.miuiHomeR.ui.base.SubFragment;
-import com.yuk.miuiHomeR.utils.DeviceUtils;
 
-import moralnorm.preference.SwitchPreference;
-
-public class HomeOtherFeaturesSettings extends BaseAppCompatActivity {
-
+public class FolderActivity extends BaseAppCompatActivity {
     @Override
     public Fragment initFragment() {
-        return new HomeOtherFeaturesFragment();
+        return new FolderFragment();
     }
 
-    public static class HomeOtherFeaturesFragment extends SubFragment {
+    public static class FolderFragment extends SubFragment {
 
         @Override
         public int getContentResId() {
-            return R.xml.prefs_home_other_features;
+            return R.xml.prefs_folder;
         }
 
         @Override
