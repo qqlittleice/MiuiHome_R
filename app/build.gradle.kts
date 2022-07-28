@@ -122,7 +122,7 @@ dependencies {
     implementation(files("libs/blur-debug.aar"))
 
     implementation("org.lsposed.hiddenapibypass:hiddenapibypass:4.3")
-    implementation("com.github.kyuubiran:EzXHelper:0.9.9")
+    implementation("com.github.kyuubiran:EzXHelper:1.0.0")
     implementation("com.github.topjohnwu.libsu:core:5.0.2")
 
     implementation("androidx.core:core:1.9.0-alpha04")
