@@ -51,4 +51,5 @@
     <string name="horizontal_task_view_card_size2">Thumbnail size for Horizontally-Horizontal</string>
     <string name="icon_title_font_size">Icon Labels Font Size</string>
     <string name="home">Home</string>
+    <string name="folder">Folder</string>
 </resources>

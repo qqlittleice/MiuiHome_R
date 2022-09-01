@@ -40,7 +40,7 @@
             android:name=".ui.WidgetActivity"/>
 
         <activity
-            android:label="文件夹"
+            android:label="@string/folder"
             android:name=".ui.FolderActivity"/>
 
         <activity
@@ -53,7 +53,7 @@
 
         <activity
             android:name=".ui.AboutActivity"
-            android:label="关于" />
+            android:label="@string/about" />
 
         <provider
             android:name=".provider.SharedPrefsProvider"

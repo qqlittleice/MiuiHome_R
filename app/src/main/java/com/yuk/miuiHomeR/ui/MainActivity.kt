@@ -16,10 +16,8 @@ import com.yuk.miuiHomeR.R
 import com.yuk.miuiHomeR.provider.SharedPrefsProvider
 import com.yuk.miuiHomeR.ui.base.BaseAppCompatActivity
 import com.yuk.miuiHomeR.ui.base.SubFragment
-import com.yuk.miuiHomeR.utils.DeviceUtils
 import com.yuk.miuiHomeR.utils.Helpers
 import com.yuk.miuiHomeR.utils.PrefsUtils
-import moralnorm.preference.Preference
 
 class MainActivity : BaseAppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -75,10 +73,7 @@ class MainActivity : BaseAppCompatActivity() {
             return R.xml.prefs_main
         }
 
-        override fun initPrefs() {
-            val mHomeDockSettings = findPreference<Preference>("prefs_key_home_dock_settings")
-            mHomeDockSettings.isVisible = !DeviceUtils.isPadDevice()
-        }
+        override fun initPrefs() {}
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

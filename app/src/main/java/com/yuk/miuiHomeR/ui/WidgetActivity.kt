@@ -5,19 +5,17 @@ import com.yuk.miuiHomeR.R
 import com.yuk.miuiHomeR.ui.base.BaseAppCompatActivity
 import com.yuk.miuiHomeR.ui.base.SubFragment
 
-class AboutActivity : BaseAppCompatActivity() {
+class WidgetActivity : BaseAppCompatActivity() {
 
     override fun initFragment(): Fragment {
-        return AboutFragment()
+        return WidgetFragment()
     }
 
-    class AboutFragment : SubFragment() {
+    class WidgetFragment : SubFragment() {
         override fun getContentResId(): Int {
-            return R.xml.prefs_about
+            return R.xml.prefs_widget
         }
 
-        override fun initPrefs() {
-
-        }
+        override fun initPrefs() {}
     }
 }

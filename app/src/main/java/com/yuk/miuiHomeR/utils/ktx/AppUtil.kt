@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.res.Configuration
 import android.util.TypedValue
 import com.github.kyuubiran.ezxhelper.init.InitFields
+import moralnorm.internal.utils.DeviceHelper
 
 fun dp2px(dpValue: Float): Int = TypedValue.applyDimension(
     TypedValue.COMPLEX_UNIT_DIP,
@@ -34,6 +35,7 @@ fun checkIsAlpha(): Boolean = InitFields.appContext.packageManager.getPackageInf
     InitFields.appContext.packageName, 0
 ).versionName.contains("ALPHA", ignoreCase = true)
 
+fun isPadDevice(): Boolean = DeviceHelper.isTablet() || DeviceHelper.isFoldDevice()
 
 fun checkVersionCode(): Long = InitFields.appContext.packageManager.getPackageInfo(
     InitFields.appContext.packageName, 0

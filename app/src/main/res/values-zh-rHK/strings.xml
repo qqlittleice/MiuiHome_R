@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="xposed_desc">針對 MiuiHome 的自定義擴展.</string>
-    <string name="backup">備份模塊設置</string>
-    <string name="restore">恢復模塊設置</string>
-    <string name="reset">重置模塊設置</string>
+    <string name="backup">備份模組設定</string>
+    <string name="restore">恢復模組設定</string>
+    <string name="reset">重置模組設定</string>
     <string name="reboot_home">重啟桌面</string>
     <string name="about">關於</string>
     <string name="show_icon">顯示圖標</string>
@@ -30,7 +30,7 @@
     <string name="blurred_background_when_opening_folder_view">文件夾打開時背景模糊</string>
     <string name="using_full_width_of_folder_view">利用整個文件夾視圖的寬度</string>
     <string name="number_of_icons_in_folder_iew">文件夾視圖內圖標的排數</string>
-    <string name="dock_settings">底欄設置</string>
+    <string name="dock_settings">底欄設定</string>
     <string name="enable_dock">啟用底欄</string>
     <string name="bottom_margin_of_icon">圖標下邊距</string>
     <string name="height_of_dock_view">底欄高度</string>
@@ -50,5 +50,6 @@
     <string name="horizontal_task_view_card_size1">平鋪後台卡片大小-豎屏</string>
     <string name="horizontal_task_view_card_size2">平鋪後台卡片大小-橫屏</string>
     <string name="icon_title_font_size">應用標題文字大小</string>
-    <string name="home">桌面</string>
+    <string name="home">啟動器</string>
+    <string name="folder">文件夾</string>
 </resources>
