@@ -1,15 +1,11 @@
 plugins {
     id("com.android.library")
-    id("kotlin-android")
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
     compileSdk = 33
     namespace = "com.android.internal"
-    defaultConfig {
-        minSdk = 29
-        targetSdk = 33
-    }
     buildTypes {
         release {
             isMinifyEnabled = false

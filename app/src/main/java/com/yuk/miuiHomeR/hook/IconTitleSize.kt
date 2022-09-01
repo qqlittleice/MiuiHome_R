@@ -12,7 +12,7 @@ import com.yuk.miuiHomeR.utils.ktx.findClass
 import com.yuk.miuiHomeR.utils.ktx.getObjectField
 import com.yuk.miuiHomeR.utils.ktx.hookAfterMethod
 
-object ModifyIconTitleSize : BaseHook() {
+object IconTitleSize : BaseHook() {
 
     override fun init() {
         val value = mPrefsMap.getInt("icon_title_font_size", -1).toFloat()

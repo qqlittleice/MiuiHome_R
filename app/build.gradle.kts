@@ -7,12 +7,12 @@ plugins {
 }
 
 android {
-    compileSdk = 32
+    compileSdk = 33
     namespace = "com.yuk.miuiHomeR"
     defaultConfig {
         applicationId = namespace
         minSdk = 31
-        targetSdk = 32
+        targetSdk = 33
         versionCode = 11
         versionName = "1.0.2" + (getGitHeadRefsSuffix(rootProject))
     }
@@ -60,7 +60,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
+        jvmTarget = JavaVersion.VERSION_11.majorVersion
     }
     packagingOptions {
         resources {
@@ -75,8 +75,7 @@ android {
         }
         applicationVariants.all {
             outputs.all {
-                (this as BaseVariantOutputImpl).outputFileName =
-                    "MiuiHomeR-$versionName($versionCode)-$name.apk"
+                (this as BaseVariantOutputImpl).outputFileName = "MiuiHomeR-$versionName($versionCode)-$name.apk"
             }
         }
     }
@@ -108,7 +107,19 @@ fun getGitHeadRefsSuffix(project: Project): String {
 
 dependencies {
     compileOnly(project(":hidden-api"))
-    compileOnly("de.robv.android.xposed:api:82")
+    compileOnly("de.robv.android.xposed:api:_")
+
+    implementation(AndroidX.core)
+    implementation(AndroidX.recyclerView)
+    implementation(AndroidX.fragment)
+    implementation(AndroidX.collection)
+    implementation(AndroidX.lifecycle.common)
+    implementation(AndroidX.vectorDrawable)
+    implementation(AndroidX.vectorDrawable.animated)
+
+    implementation("com.github.topjohnwu.libsu:core:_")
+    implementation("com.github.kyuubiran:EzXHelper:_")
+    implementation("org.lsposed.hiddenapibypass:hiddenapibypass:_")
 
     implementation(files("libs/animation-debug.aar"))
     implementation(files("libs/appcompat-debug.aar"))
@@ -121,15 +132,4 @@ dependencies {
     implementation(files("libs/springback-debug.aar"))
     implementation(files("libs/blur-debug.aar"))
 
-    implementation("org.lsposed.hiddenapibypass:hiddenapibypass:4.3")
-    implementation("com.github.kyuubiran:EzXHelper:0.9.9")
-    implementation("com.github.topjohnwu.libsu:core:5.0.2")
-
-    implementation("androidx.core:core:1.9.0-alpha04")
-    implementation("androidx.recyclerview:recyclerview:1.2.1")
-    implementation("androidx.fragment:fragment:1.5.0-alpha04")
-    implementation("androidx.collection:collection:1.2.0")
-    implementation("androidx.lifecycle:lifecycle-common:2.5.0-alpha05")
-    implementation("androidx.vectordrawable:vectordrawable:1.1.0")
-    implementation("androidx.vectordrawable:vectordrawable-animated:1.1.0")
 }

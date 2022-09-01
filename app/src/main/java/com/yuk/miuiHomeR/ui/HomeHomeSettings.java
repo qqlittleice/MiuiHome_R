@@ -25,8 +25,6 @@ public class HomeHomeSettings extends BaseAppCompatActivity {
 
         @Override
         public void initPrefs() {
-            SwitchPreference mPadDockBlur = findPreference("prefs_key_pad_dock_blur");
-            mPadDockBlur.setVisible(DeviceUtils.isPadDevice());
         }
     }
 }

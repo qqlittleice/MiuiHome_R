@@ -44,7 +44,6 @@
     <string name="shortcut_menu_background_view_blur">快捷鍵菜單背景模糊</string>
     <string name="unlock_launcher_icon_grids">解鎖桌面圖標佈局限制</string>
     <string name="Always_blur_launcher_wallpaper">始終模糊桌面壁紙</string>
-    <string name="Pad_android_12_dock_blur">平板安卓 12 底欄模糊</string>
     <string name="blur_radius">模糊半徑</string>
     <string name="unlock_hotseat">解鎖底欄圖標數量限制</string>
     <string name="vertical_task_view_card_size">瀑布後台卡片大小</string>
