@@ -31,7 +31,7 @@ fun checkVersionName(): String = InitFields.appContext.packageManager.getPackage
     InitFields.appContext.packageName, 0
 ).versionName
 
-fun checkIsAlpha(): Boolean = InitFields.appContext.packageManager.getPackageInfo(
+fun isAlpha(): Boolean = InitFields.appContext.packageManager.getPackageInfo(
     InitFields.appContext.packageName, 0
 ).versionName.contains("ALPHA", ignoreCase = true)
 

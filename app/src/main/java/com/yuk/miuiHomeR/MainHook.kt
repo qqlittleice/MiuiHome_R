@@ -33,12 +33,6 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                     EzXHelperInit.initAppContext(it.args[0] as Context)
                     initHooks(
                         ResourcesHook,
-                    )
-                }
-                "com.miui.home.launcher.Application".hookBeforeMethod(
-                    "attachBaseContext", Context::class.java
-                ) {
-                    initHooks(
                         AllowMoveAllWidgetToMinus,
                         AlwaysBlurWallpaper,
                         AlwaysShowMiuiWidget,
@@ -59,7 +53,12 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         UnlockHotseatIcon,
                         TaskViewHorizontal,
                         TaskViewVertical,
-                        IconTitleSize
+                        IconTitleSize,
+                        ShowDockIconTitle,
+                        InfiniteScroll,
+                        HideSeekPoint,
+                        AppDrawer,
+                        Recent,
                     )
                 }
             }

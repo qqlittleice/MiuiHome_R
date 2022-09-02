@@ -19,8 +19,10 @@ class DockActivity : BaseAppCompatActivity() {
         }
 
         override fun initPrefs() {
-            val mDockActivity = findPreference<Preference>("prefs_key_home_dock_blur")
-            mDockActivity.isVisible = !isPadDevice()
+            val mDockVisible = findPreference<Preference>("prefs_key_home_dock_blur")
+            mDockVisible.isVisible = !isPadDevice()
+            val mDockTitleVisible = findPreference<Preference>("prefs_key_home_dock_icon_title")
+            mDockTitleVisible.isVisible = !isPadDevice()
         }
     }
 }

@@ -12,6 +12,7 @@
         <SeekBarPreference
             android:defaultValue="100"
             android:key="prefs_key_home_blur_radius"
+            android:summary="@string/blur_radius_summary"
             android:title="@string/blur_radius"
             app:format="%d / 100 f"
             app:maxValue="500"

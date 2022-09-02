@@ -6,7 +6,6 @@ import com.yuk.miuiHomeR.mPrefsMap
 import com.yuk.miuiHomeR.utils.ktx.callStaticMethod
 import com.yuk.miuiHomeR.utils.ktx.findClass
 import com.yuk.miuiHomeR.utils.ktx.hookAfterMethod
-import de.robv.android.xposed.XposedBridge
 
 object ShortcutBlur : BaseHook() {
     override fun init() {

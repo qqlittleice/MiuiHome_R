@@ -6,6 +6,17 @@
 
         <SwitchPreference
             android:defaultValue="false"
+            android:key="prefs_key_home_infinite_scroll"
+            android:title="@string/infinite_scroll"
+            android:summary="@string/infinite_scroll_summary"/>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefs_key_home_hide_seek_point"
+            android:title="@string/hide_seek_point" />
+
+        <SwitchPreference
+            android:defaultValue="false"
             android:key="prefs_key_home_blur_wallpaper"
             android:title="@string/Always_blur_launcher_wallpaper" />
 

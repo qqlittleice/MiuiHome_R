@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import com.yuk.miuiHomeR.mPrefsMap
 import com.yuk.miuiHomeR.utils.ktx.*
-import de.robv.android.xposed.XposedBridge
 
 object EnableBlurWhenOpenFolder : BaseHook() {
     override fun init() {
@@ -15,15 +14,14 @@ object EnableBlurWhenOpenFolder : BaseHook() {
                 0
             ) == 4 || !mPrefsMap.getBoolean("home_folder_blur")
         ) {
-            if (checkIsAlpha()) {
-                XposedBridge.log(checkIsAlpha().toString())
+            if (isAlpha()) {
                 "com.miui.home.launcher.common.BlurUtils".hookBeforeMethod("isUserBlurWhenOpenFolder") {
                     it.result = false
                 }
             }
         } else {
             if (mPrefsMap.getBoolean("home_folder_blur")) {
-                if (checkIsAlpha()) {
+                if (isAlpha()) {
                     "com.miui.home.launcher.common.BlurUtils".hookBeforeMethod("isUserBlurWhenOpenFolder") {
                         it.result = true
                     }

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory>
 
         <Preference android:title="@string/home">
             <intent
-                android:targetClass="com.yuk.miuiHomeR.ui.HomeHomeSettings"
+                android:targetClass="com.yuk.miuiHomeR.ui.HomeActivity"
                 android:targetPackage="com.yuk.miuiHomeR" />
         </Preference>
 
@@ -22,15 +21,19 @@
                 android:targetPackage="com.yuk.miuiHomeR" />
         </Preference>
 
-        <Preference android:title="文件夹">
+        <Preference android:title="@string/folder">
             <intent
                 android:targetClass="com.yuk.miuiHomeR.ui.FolderActivity"
                 android:targetPackage="com.yuk.miuiHomeR" />
         </Preference>
 
-        <Preference
-            android:key="prefs_key_home_dock_settings"
-            android:title="@string/dock_settings">
+        <Preference android:title="@string/app_drawer">
+            <intent
+                android:targetClass="com.yuk.miuiHomeR.ui.AppDrawerActivity"
+                android:targetPackage="com.yuk.miuiHomeR" />
+        </Preference>
+
+        <Preference android:title="@string/dock_settings">
             <intent
                 android:targetClass="com.yuk.miuiHomeR.ui.DockActivity"
                 android:targetPackage="com.yuk.miuiHomeR" />
@@ -38,100 +41,9 @@
 
         <Preference android:title="@string/other_features">
             <intent
-                android:targetClass="com.yuk.miuiHomeR.ui.OtherFeaturesActivity"
+                android:targetClass="com.yuk.miuiHomeR.ui.OtherActivity"
                 android:targetPackage="com.yuk.miuiHomeR" />
         </Preference>
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:title="Test"
-        app:isPreferenceVisible="false">
-
-
-        <PreferenceCategory>
-            <EditTextPreference
-                android:key="signature"
-                android:title="@string/app_name" />
-
-            <ListPreference
-                android:defaultValue="reply"
-                android:entries="@array/recent_blur"
-                android:entryValues="@array/recent_blur_value"
-                android:key="reply"
-                android:title="@string/app_name" />
-
-            <MultiSelectListPreference
-                android:entries="@array/recent_blur"
-                android:entryValues="@array/recent_blur_value"
-                android:key="reply2"
-                android:title="@string/app_name" />
-
-            <SeekBarPreference
-                android:title="@string/app_name"
-                android:defaultValue="50"
-                app:minValue="0"
-                app:format="%d%%"
-                app:stepValue="5"
-                app:showSeekBarValue="true"
-                app:defaultValueTitle="默认"/>
-        </PreferenceCategory>
-
-        <PreferenceCategory>
-
-            <DropDownPreference
-                android:key="DropDown"
-                android:title="@string/app_name"
-                app:entries="@array/recent_blur"
-                app:entryValues="@array/recent_blur_value"
-                android:defaultValue="0"/>
-
-            <CheckBoxPreference
-                android:key="checkbox"
-                android:title="@string/app_name" />
-
-            <CheckBoxPreference
-                android:dependency="checkbox"
-                android:title="@string/app_name" />
-
-            <SwitchPreference
-                android:key="sync"
-                android:title="@string/app_name" />
-
-            <SwitchPreference
-                android:dependency="sync"
-                android:key="attachment"
-                android:summaryOff="attachment_summary_off"
-                android:summaryOn="attachment_summary_on"
-                android:title="@string/app_name" />
-
-        </PreferenceCategory>
-
-        <moralnorm.preference.RadioButtonPreferenceCategory
-            android:dependency="attachment">
-
-            <moralnorm.preference.RadioButtonPreference
-                android:layout="@layout/preference_radiobutton_two_state"
-                android:title="@string/app_name" />
-
-            <moralnorm.preference.RadioButtonPreference
-                android:layout="@layout/preference_radiobutton_two_state"
-                android:title="@string/app_name" />
-
-            <moralnorm.preference.RadioSetPreferenceCategory>
-
-                <moralnorm.preference.RadioButtonPreference
-                    android:key="signature2"
-                    android:title="@string/app_name" />
-
-                <EditTextPreference
-                    android:key="signature"
-                    android:title="@string/app_name"
-                    android:dependency="signature2"/>
-
-            </moralnorm.preference.RadioSetPreferenceCategory>
-
-        </moralnorm.preference.RadioButtonPreferenceCategory>
 
     </PreferenceCategory>
 

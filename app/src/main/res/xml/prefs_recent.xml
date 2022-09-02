@@ -18,6 +18,16 @@
 
         <SwitchPreference
             android:defaultValue="false"
+            android:key="prefs_key_home_hide_clean_up"
+            android:title="@string/hide_clean_up" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefs_key_home_hide_small_window"
+            android:title="@string/hide_small_window" />
+
+        <SwitchPreference
+            android:defaultValue="false"
             android:key="prefs_key_home_hide_status"
             android:title="@string/hide_status_bar_in_task_view" />
 

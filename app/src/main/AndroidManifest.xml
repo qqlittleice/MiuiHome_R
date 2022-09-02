@@ -28,28 +28,32 @@
         </activity-alias>
 
         <activity
-            android:label="@string/home"
-            android:name=".ui.HomeHomeSettings"/>
+            android:name=".ui.HomeActivity"
+            android:label="@string/home" />
 
         <activity
-            android:label="@string/recent"
-            android:name=".ui.RecentActivity"/>
+            android:name=".ui.AppDrawerActivity"
+            android:label="@string/app_drawer" />
 
         <activity
-            android:label="@string/widget"
-            android:name=".ui.WidgetActivity"/>
+            android:name=".ui.RecentActivity"
+            android:label="@string/recent" />
 
         <activity
-            android:label="@string/folder"
-            android:name=".ui.FolderActivity"/>
+            android:name=".ui.WidgetActivity"
+            android:label="@string/widget" />
 
         <activity
-            android:label="@string/dock_settings"
-            android:name=".ui.DockActivity" />
+            android:name=".ui.FolderActivity"
+            android:label="@string/folder" />
 
         <activity
-            android:label="@string/other_features"
-            android:name=".ui.OtherFeaturesActivity"/>
+            android:name=".ui.DockActivity"
+            android:label="@string/dock_settings" />
+
+        <activity
+            android:name=".ui.OtherActivity"
+            android:label="@string/other_features" />
 
         <activity
             android:name=".ui.AboutActivity"

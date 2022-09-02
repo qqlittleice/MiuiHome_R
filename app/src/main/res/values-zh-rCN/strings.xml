@@ -12,7 +12,7 @@
     <string name="test_blur">测试模糊</string>
     <string name="simple_blur">简单模糊</string>
     <string name="none_blur">关闭模糊</string>
-    <string name="none_blur_simple_amin">关闭模糊 + 简单动画</string>
+    <string name="none_blur_simple_amin">关闭模糊&amp;简单动画</string>
     <string name="blur_level">模糊级别</string>
     <string name="cancel_wallpaper_dimming">取消壁纸压暗</string>
     <string name="hide_status_bar_in_task_view">在最近任务隐藏状态栏</string>
@@ -30,15 +30,15 @@
     <string name="blurred_background_when_opening_folder_view">文件夹打开时背景模糊</string>
     <string name="using_full_width_of_folder_view">利用整个文件夹视图的宽度</string>
     <string name="number_of_icons_in_folder_iew">文件夹视图内图标的排数</string>
-    <string name="dock_settings">底栏设置</string>
-    <string name="enable_dock">启用底栏</string>
+    <string name="dock_settings">底栏</string>
+    <string name="enable_dock">启用底栏模糊</string>
     <string name="bottom_margin_of_icon">图标下边距</string>
     <string name="height_of_dock_view">底栏高度</string>
     <string name="margins_on_both_sides_of_dock_view">底栏两侧边距</string>
     <string name="top_margin_of_dock_view">底栏上边距</string>
     <string name="bottom_margin_of_dock_view">底栏下边距</string>
     <string name="corner_radius_of_dock_view">底栏圆角半径</string>
-    <string name="other_features">其他功能</string>
+    <string name="other_features">其他</string>
     <string name="always_show_status_bar_clock">始终显示状态栏时钟</string>
     <string name="double_tap_to_lock_screen">双击桌面空白处锁屏</string>
     <string name="shortcut_menu_background_view_blur">快捷键菜单背景模糊</string>
@@ -52,4 +52,15 @@
     <string name="icon_title_font_size">应用标题文字大小</string>
     <string name="home">桌面</string>
     <string name="folder">文件夹</string>
+    <string name="dock_icon_title">显示底栏应用标题</string>
+    <string name="blur_radius_summary">仅生效于 MiuiHome 范围内</string>
+    <string name="home_folder_columns">%d 列</string>
+    <string name="infinite_scroll">无限滚动</string>
+    <string name="infinite_scroll_summary">从最后一页继续右滑将回到第一页，如不开启智能助理则反之亦然</string>
+    <string name="hide_seek_point">移除页面指示器</string>
+    <string name="app_drawer">抽屉</string>
+    <string name="hide_category_all">移除应用分组中的「全部」</string>
+    <string name="hide_category_paging_edit">移除应用分页内的「编辑」按钮</string>
+    <string name="hide_clean_up">移除「清理」按钮</string>
+    <string name="hide_small_window">移除「小窗应用」按钮</string>
 </resources>

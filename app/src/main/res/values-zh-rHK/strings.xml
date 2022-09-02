@@ -12,7 +12,7 @@
     <string name="test_blur">測試模糊</string>
     <string name="simple_blur">簡單模糊</string>
     <string name="none_blur">關閉模糊</string>
-    <string name="none_blur_simple_amin">關閉模糊 + 簡單動畫</string>
+    <string name="none_blur_simple_amin">關閉模糊&amp;簡單動畫</string>
     <string name="blur_level">模糊級別</string>
     <string name="cancel_wallpaper_dimming">取消壁紙壓暗</string>
     <string name="hide_status_bar_in_task_view">在最近任務隱藏狀態欄</string>
@@ -30,15 +30,15 @@
     <string name="blurred_background_when_opening_folder_view">文件夾打開時背景模糊</string>
     <string name="using_full_width_of_folder_view">利用整個文件夾視圖的寬度</string>
     <string name="number_of_icons_in_folder_iew">文件夾視圖內圖標的排數</string>
-    <string name="dock_settings">底欄設定</string>
-    <string name="enable_dock">啟用底欄</string>
+    <string name="dock_settings">底欄</string>
+    <string name="enable_dock">啟用底欄模糊</string>
     <string name="bottom_margin_of_icon">圖標下邊距</string>
     <string name="height_of_dock_view">底欄高度</string>
     <string name="margins_on_both_sides_of_dock_view">底欄兩側邊距</string>
     <string name="top_margin_of_dock_view">底欄上邊距</string>
     <string name="bottom_margin_of_dock_view">底欄下邊距</string>
     <string name="corner_radius_of_dock_view">底欄圓角半徑</string>
-    <string name="other_features">其他功能</string>
+    <string name="other_features">其他</string>
     <string name="always_show_status_bar_clock">始終顯示狀態欄時鐘</string>
     <string name="double_tap_to_lock_screen">雙擊桌面空白處鎖屏</string>
     <string name="shortcut_menu_background_view_blur">快捷鍵菜單背景模糊</string>
@@ -52,4 +52,15 @@
     <string name="icon_title_font_size">應用標題文字大小</string>
     <string name="home">啟動器</string>
     <string name="folder">文件夾</string>
+    <string name="dock_icon_title">顯示底欄應用標題</string>
+    <string name="blur_radius_summary">僅生效於 MiuiHome 範圍內</string>
+    <string name="home_folder_columns">%d 列</string>
+    <string name="infinite_scroll">无限滚动</string>
+    <string name="infinite_scroll_summary">從最後一頁繼續右滑將回到第一頁</string>
+    <string name="hide_seek_point">移除頁面指示器</string>
+    <string name="app_drawer">抽屜</string>
+    <string name="hide_category_all">隱藏分組中的「全部」</string>
+    <string name="hide_category_paging_edit">隱藏分類頁面內的「編輯」按鈕</string>
+    <string name="hide_clean_up">隱藏「清理」按鈕</string>
+    <string name="hide_small_window">隱藏「小窗應用程」按鈕</string>
 </resources>

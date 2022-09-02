@@ -12,7 +12,7 @@
     <string name="test_blur">Test Blur</string>
     <string name="simple_blur">Simple Blur</string>
     <string name="none_blur">None Blur</string>
-    <string name="none_blur_simple_amin">None Blur + Simple Amin</string>
+    <string name="none_blur_simple_amin">None Blur&amp;Simple Amin</string>
     <string name="blur_level">Blur Level</string>
     <string name="cancel_wallpaper_dimming">Cancel Wallpaper Dimming</string>
     <string name="hide_status_bar_in_task_view">Hide Status Bar When In Task View</string>
@@ -30,15 +30,15 @@
     <string name="blurred_background_when_opening_folder_view">Blurred background when opening folder view</string>
     <string name="using_full_width_of_folder_view">Using the full width of the folder view</string>
     <string name="number_of_icons_in_folder_iew">Number of rows of icons in the folder view</string>
-    <string name="dock_settings">Dock Settings</string>
-    <string name="enable_dock">Enable dock</string>
+    <string name="dock_settings">Dock</string>
+    <string name="enable_dock">Enable dock blur</string>
     <string name="bottom_margin_of_icon">Bottom margin of icon</string>
     <string name="height_of_dock_view">Height of dock view</string>
     <string name="margins_on_both_sides_of_dock_view">Margins on both sides of the dock view</string>
     <string name="top_margin_of_dock_view">Top margin of the dock view</string>
     <string name="bottom_margin_of_dock_view">Bottom margin of the dock view</string>
     <string name="corner_radius_of_dock_view">Corner radius of the dock view</string>
-    <string name="other_features">Other Features</string>
+    <string name="other_features">Other</string>
     <string name="always_show_status_bar_clock">Always show status bar clock</string>
     <string name="double_tap_to_lock_screen">Double tap to lock the screen</string>
     <string name="shortcut_menu_background_view_blur">Shortcut menu background view blur</string>
@@ -52,4 +52,15 @@
     <string name="icon_title_font_size">Icon Labels Font Size</string>
     <string name="home">Home</string>
     <string name="folder">Folder</string>
+    <string name="dock_icon_title">Show App name in the Dock</string>
+    <string name="blur_radius_summary">MiuiHome scope only</string>
+    <string name="home_folder_columns">%d Columns</string>
+    <string name="infinite_scroll">Enable launcher infinite scroll</string>
+    <string name="infinite_scroll_summary">Continuing right swipe from the last page will take you back to the first page</string>
+    <string name="hide_seek_point">Remove Page Indicator</string>
+    <string name="app_drawer">App Drawer</string>
+    <string name="hide_category_all">Hide \"All\" in App Drawer</string>
+    <string name="hide_category_paging_edit">Hide \"Edit\" Button in App Drawer\'s Paging</string>
+    <string name="hide_clean_up">Hide the Clean All Button</string>
+    <string name="hide_small_window">Remove the \"Floating windows\" button</string>
 </resources>
