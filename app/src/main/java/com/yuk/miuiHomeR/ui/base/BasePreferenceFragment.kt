@@ -20,5 +20,5 @@ open class BasePreferenceFragment : PreferenceFragmentCompat() {
         }
     }
 
-    override fun onCreatePreferences(bundle: Bundle, s: String) {}
+    override fun onCreatePreferences(bundle: Bundle?, s: String?) {}
 }

@@ -13,14 +13,14 @@ abstract class BaseAppCompatActivity : AppCompatActivity() {
         setTheme(if (ViewUtils.isNightMode(this)) R.style.AppTheme_Dark else R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        if (initFragment() != null) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, initFragment()!!).commit()
-        }
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, initFragment())
+            .commit()
     }
 
-    abstract fun initFragment(): Fragment?
-    fun startActivity(activity: AppCompatActivity?, cls: Class<*>?) {
+    abstract fun initFragment(): Fragment
+
+    fun startActivity(activity: AppCompatActivity, cls: Class<*>) {
         startActivity(Intent(activity, cls))
     }
 }
