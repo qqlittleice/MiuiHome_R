@@ -13,8 +13,8 @@ android {
         applicationId = namespace
         minSdk = 31
         targetSdk = 33
-        versionCode = 11
-        versionName = "1.0.2" + (getGitHeadRefsSuffix(rootProject))
+        versionCode = 12
+        versionName = "1.0.3" + (getGitHeadRefsSuffix(rootProject))
     }
 
     val properties = Properties()
@@ -106,6 +106,8 @@ fun getGitHeadRefsSuffix(project: Project): String {
 }
 
 dependencies {
+    //  To find available updates, run this:
+    //  ./gradlew refreshVersions
     compileOnly(project(":hidden-api"))
     compileOnly("de.robv.android.xposed:api:_")
 
