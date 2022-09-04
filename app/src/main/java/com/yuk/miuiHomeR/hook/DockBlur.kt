@@ -2,6 +2,7 @@ package com.yuk.miuiHomeR.hook
 
 import android.content.Context
 import android.graphics.Color
+import android.os.Bundle
 import android.view.Gravity
 import android.view.View
 import android.widget.FrameLayout
@@ -14,11 +15,17 @@ object DockBlur : BaseHook() {
     override fun init() {
 
         if (!mPrefsMap.getBoolean("home_dock_blur")) return
+        var showEditPanel = false
         val launcherClass = "com.miui.home.launcher.Launcher".findClass()
         val mDockHeight = dp2px(mPrefsMap.getInt("home_dock_height", 98).toFloat())
         val mDockMargin = dp2px(mPrefsMap.getInt("home_dock_margin", 10).toFloat())
         val mDockBottomMargin = dp2px(mPrefsMap.getInt("home_dock_bottom_margin", 13).toFloat())
         val mDockCorner = dp2px(mPrefsMap.getInt("home_dock_corner", 25).toFloat())
+        launcherClass.hookAfterMethod(
+            "onCreate", Bundle::class.java
+        ) {
+            showEditPanel = it.thisObject.callMethod("showEditPanel") as Boolean
+        }
         launcherClass.hookAfterMethod("onResume") {
             val mSearchBarContainer = it.thisObject.callMethod("getSearchBarContainer") as FrameLayout
             val mSearchEdgeLayout = mSearchBarContainer.parent as FrameLayout
@@ -34,7 +41,6 @@ object DockBlur : BaseHook() {
             blur.layoutParams = lp
             mSearchEdgeLayout.addView(blur, 0)
             launcherClass.hookAfterMethod("isFolderShowing") { hookParam ->
-                var showEditPanel = false
                 val isFolderShowing = hookParam.result as Boolean
                 launcherClass.hookAfterMethod("showEditPanel", Boolean::class.java) { hookParam1 ->
                     showEditPanel = hookParam1.args[0] as Boolean
@@ -73,4 +79,5 @@ object DockBlur : BaseHook() {
             }
         }
     }
+
 }
