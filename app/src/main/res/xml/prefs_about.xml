@@ -2,14 +2,14 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory
-        android:title="@string/app_name"
-        android:layout="@layout/activity_about" />
+        android:layout="@layout/activity_about"
+        android:title="@string/app_name" />
 
     <PreferenceCategory>
-        <Preference android:title="项目地址">
+        <Preference android:title="@string/github">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://github.com/qqlittleice/MiuiHome_R"/>
+                android:data="https://github.com/qqlittleice/MiuiHome_R" />
         </Preference>
     </PreferenceCategory>
 

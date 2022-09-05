@@ -19,7 +19,9 @@ object Dock : BaseHook() {
 
         if (!mPrefsMap.getBoolean("home_dock_blur")) return
         val launcherClass = "com.miui.home.launcher.Launcher".findClass()
+        val launcherStateClass = "com.miui.home.launcher.LauncherState".findClass()
         val folderInfo = "com.miui.home.launcher.FolderInfo".findClass()
+        val blurClass = "com.miui.home.launcher.common.BlurUtils".findClass()
         val mDockHeight = dp2px(mPrefsMap.getInt("home_dock_height", 98).toFloat())
         val mDockMargin = dp2px(mPrefsMap.getInt("home_dock_margin", 10).toFloat())
         val mDockBottomMargin = dp2px(mPrefsMap.getInt("home_dock_bottom_margin", 13).toFloat())
@@ -45,27 +47,35 @@ object Dock : BaseHook() {
             mDockBlur.layoutParams = lp
             mSearchEdgeLayout.addView(mDockBlur, 0)
             launcherClass.hookAfterMethod("openFolder", folderInfo, View::class.java) {
-                if (mDockBlur.visibility == View.VISIBLE) mDockBlur.visibility = View.GONE
+                mDockBlur.visibility = View.GONE
             }
             launcherClass.hookAfterMethod("closeFolder", Boolean::class.java) {
-                if (mDockBlur.visibility == View.GONE) mDockBlur.visibility = View.VISIBLE
+                mDockBlur.visibility = View.VISIBLE
             }
             launcherClass.hookAfterMethod("showEditPanel", Boolean::class.java) {
                 if (it.args[0] as Boolean) mDockBlur.visibility = View.GONE
                 else mDockBlur.visibility = View.VISIBLE
             }
+            blurClass.hookAfterMethod(
+                "fastBlurWhenEnterRecents", launcherClass, launcherStateClass, Boolean::class.java
+            ) {
+                mDockBlur.visibility = View.GONE
+            }
+            blurClass.hookAfterMethod(
+                "fastBlurWhenExitRecents", launcherClass, launcherStateClass, Boolean::class.java
+            ) {
+                mDockBlur.visibility = View.VISIBLE
+            }
         }
         launcherClass.hookAfterMethod("onStateSetStart", "com.miui.home.launcher.LauncherState".findClass()) {
             val mDockBlur = XposedHelpers.getAdditionalInstanceField(it.thisObject, "mDockBlur") as BlurFrameLayout
-            if (mDockBlur.visibility != View.GONE && "LauncherState" == it.args[0].javaClass.simpleName) {
+            if ("LauncherState" == it.args[0].javaClass.simpleName) {
                 mDockBlur.blurController.apply {
-                    backgroundColour = Color.parseColor("#44FFFFFF")
-                    blurRadius = mPrefsMap.getInt("home_blur_radius", 100)
+                    mDockBlur.visibility = View.VISIBLE
                 }
             } else {
                 mDockBlur.blurController.apply {
-                    backgroundColour = Color.TRANSPARENT
-                    blurRadius = 0
+                    mDockBlur.visibility = View.GONE
                 }
             }
         }

@@ -48,15 +48,6 @@
             app:showSeekBarValue="true" />
 
         <SeekBarPreference
-            android:defaultValue="150"
-            android:key="prefs_key_home_anim_ratio"
-            android:title="@string/anim_speed"
-            app:format="%d / 100 f"
-            app:maxValue="500"
-            app:minValue="10"
-            app:showSeekBarValue="true" />
-
-        <SeekBarPreference
             android:defaultValue="100"
             android:key="prefs_key_task_view_vertical"
             android:title="@string/vertical_task_view_card_size"

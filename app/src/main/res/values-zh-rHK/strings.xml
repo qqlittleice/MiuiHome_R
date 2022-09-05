@@ -63,4 +63,5 @@
     <string name="hide_category_paging_edit">隱藏分類頁面內的「編輯」按鈕</string>
     <string name="hide_clean_up">隱藏「清理」按鈕</string>
     <string name="hide_small_window">隱藏「小窗應用程」按鈕</string>
+    <string name="github">項目地址</string>
 </resources>

@@ -7,8 +7,8 @@
         <SwitchPreference
             android:defaultValue="false"
             android:key="prefs_key_home_infinite_scroll"
-            android:title="@string/infinite_scroll"
-            android:summary="@string/infinite_scroll_summary"/>
+            android:summary="@string/infinite_scroll_summary"
+            android:title="@string/infinite_scroll" />
 
         <SwitchPreference
             android:defaultValue="false"
@@ -34,6 +34,15 @@
             android:defaultValue="false"
             android:key="prefs_key_home_unlock_grids"
             android:title="@string/unlock_launcher_icon_grids" />
+        
+        <SeekBarPreference
+            android:defaultValue="150"
+            android:key="prefs_key_home_anim_ratio"
+            android:title="@string/anim_speed"
+            app:format="%d / 100 f"
+            app:maxValue="500"
+            app:minValue="10"
+            app:showSeekBarValue="true" />
 
         <SeekBarPreference
             android:defaultValue="12"
