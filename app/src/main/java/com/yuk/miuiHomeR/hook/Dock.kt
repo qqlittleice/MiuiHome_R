@@ -70,8 +70,9 @@ object Dock : BaseHook() {
         }
         launcherClass.hookAfterMethod("onStateSetStart", launcherStateClass) {
             val mDockBlur = XposedHelpers.getAdditionalInstanceField(it.thisObject, "mDockBlur") as BlurFrameLayout
-            if ("LauncherState" == it.args[0].javaClass.simpleName && !isFolderShowing) mDockBlur.visibility = View.VISIBLE
-            else mDockBlur.visibility = View.GONE
+            if ("LauncherState" == it.args[0].javaClass.simpleName && !isFolderShowing && !isShowEditPanel) {
+                mDockBlur.visibility = View.VISIBLE
+            } else mDockBlur.visibility = View.GONE
         }
         "com.miui.home.launcher.DeviceConfig".hookBeforeMethod(
             "calcHotSeatsMarginTop", Context::class.java, Boolean::class.javaPrimitiveType
