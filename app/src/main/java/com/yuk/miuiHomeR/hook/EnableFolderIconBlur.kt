@@ -45,11 +45,11 @@ object EnableFolderIconBlur : BaseHook() {
             launcherClass.hookAfterMethod(
                 "showEditPanel", Boolean::class.java
             ) {
-                val boolean = it.args[0] as Boolean
-                if (boolean && blur.visibility == View.VISIBLE) {
+                val isShowEditPanel = it.args[0] as Boolean
+                if (isShowEditPanel && blur.visibility == View.VISIBLE) {
                     blur.visibility = View.GONE
                     mIconContainer.addView(mIconImageView)
-                } else if (!boolean && blur.visibility == View.GONE) {
+                } else {
                     blur.visibility = View.VISIBLE
                     mIconContainer.removeView(mIconImageView)
                 }
