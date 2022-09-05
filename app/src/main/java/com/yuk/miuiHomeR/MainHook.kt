@@ -1,5 +1,6 @@
 package com.yuk.miuiHomeR
 
+import android.app.Application
 import android.content.Context
 import android.os.Process
 import com.github.kyuubiran.ezxhelper.init.EzXHelperInit
@@ -16,20 +17,17 @@ import de.robv.android.xposed.XSharedPreferences
 import de.robv.android.xposed.XposedBridge
 import de.robv.android.xposed.callbacks.XC_LoadPackage
 
-private const val PACKAGE_NAME_HOOKED = "com.miui.home"
 private const val TAG = "MiuiHomeR"
 var mPrefsMap = PrefsMap<String, Any>()
 
 class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
     override fun handleLoadPackage(lpparam: XC_LoadPackage.LoadPackageParam) {
         when (lpparam.packageName) {
-            PACKAGE_NAME_HOOKED -> {
-                EzXHelperInit.initHandleLoadPackage(lpparam)
-                EzXHelperInit.setLogTag(TAG)
-                EzXHelperInit.setToastTag(TAG)
-                "com.miui.home.launcher.Application".hookBeforeMethod(
-                    "attachBaseContext", Context::class.java
-                ) {
+            "com.miui.home" -> {
+                Application::class.java.hookBeforeMethod("attach", Context::class.java) {
+                    EzXHelperInit.initHandleLoadPackage(lpparam)
+                    EzXHelperInit.setLogTag(TAG)
+                    EzXHelperInit.setToastTag(TAG)
                     EzXHelperInit.initAppContext(it.args[0] as Context)
                     initHooks(
                         ResourcesHook,
@@ -73,8 +71,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
         if (mPrefsMap.size == 0) {
             var mXSharedPreferences: XSharedPreferences? = null
             try {
-                mXSharedPreferences =
-                    XSharedPreferences(Helpers.mAppModulePkg, PrefsUtils.mPrefsName)
+                mXSharedPreferences = XSharedPreferences(Helpers.mAppModulePkg, PrefsUtils.mPrefsName)
                 mXSharedPreferences.makeWorldReadable()
             } catch (t: Throwable) {
                 XposedBridge.log(t)

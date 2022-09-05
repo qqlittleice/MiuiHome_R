@@ -17,10 +17,9 @@ object ResourcesHook : BaseHook() {
         try {
             val resName = appContext.resources.getResourceEntryName(param.args[0] as Int)
             val resType = appContext.resources.getResourceTypeName(param.args[0] as Int)
-            if (hookMap.isKeyExist(resName))
-                if (hookMap[resName]?.type == resType) {
-                    param.result = hookMap[resName]?.afterValue
-                }
+            if (hookMap.isKeyExist(resName)) if (hookMap[resName]?.type == resType) {
+                param.result = hookMap[resName]?.afterValue
+            }
         } catch (ignore: Exception) {
         }
     }
@@ -48,12 +47,12 @@ object ResourcesHook : BaseHook() {
             hookMap["config_cell_count_y_max"] = ResourcesHookData("integer", 18)
         }
 
-        if (value != -1f) {
+        if (value != -1f && value != 20f) {
             hookMap["recents_task_view_rounded_corners_radius_min"] = ResourcesHookData("dimen", dp2px(value))
             hookMap["recents_task_view_rounded_corners_radius_max"] = ResourcesHookData("dimen", dp2px(value))
         }
 
-        if (value1 != -1f) hookMap["recents_task_view_header_height"] = ResourcesHookData("dimen", dp2px(value1))
+        if (value1 != -1f && value != 40f) hookMap["recents_task_view_header_height"] = ResourcesHookData("dimen", dp2px(value1))
 
     }
 }
