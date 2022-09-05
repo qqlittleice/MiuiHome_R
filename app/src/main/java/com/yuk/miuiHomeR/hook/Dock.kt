@@ -18,6 +18,8 @@ object Dock : BaseHook() {
     override fun init() {
 
         if (!mPrefsMap.getBoolean("home_dock_blur")) return
+        var isShowEditPanel = false
+        var isFolderShowing = false
         val launcherClass = "com.miui.home.launcher.Launcher".findClass()
         val launcherStateClass = "com.miui.home.launcher.LauncherState".findClass()
         val folderInfo = "com.miui.home.launcher.FolderInfo".findClass()
@@ -46,30 +48,29 @@ object Dock : BaseHook() {
             }
             mDockBlur.layoutParams = lp
             mSearchEdgeLayout.addView(mDockBlur, 0)
+            launcherClass.hookAfterMethod("isFolderShowing") { hookParam ->
+                isFolderShowing = hookParam.result as Boolean
+            }
+            launcherClass.hookAfterMethod("showEditPanel", Boolean::class.java) { hookParam ->
+                isShowEditPanel = hookParam.args[0] as Boolean
+                if (isShowEditPanel) mDockBlur.visibility = View.GONE
+                else mDockBlur.visibility = View.VISIBLE
+            }
             launcherClass.hookAfterMethod("openFolder", folderInfo, View::class.java) {
                 mDockBlur.visibility = View.GONE
             }
             launcherClass.hookAfterMethod("closeFolder", Boolean::class.java) {
-                mDockBlur.visibility = View.VISIBLE
-            }
-            launcherClass.hookAfterMethod("showEditPanel", Boolean::class.java) {
-                if (it.args[0] as Boolean) mDockBlur.visibility = View.GONE
-                else mDockBlur.visibility = View.VISIBLE
+                if (!isShowEditPanel) mDockBlur.visibility = View.VISIBLE
             }
             blurClass.hookAfterMethod(
                 "fastBlurWhenEnterRecents", launcherClass, launcherStateClass, Boolean::class.java
             ) {
                 mDockBlur.visibility = View.GONE
             }
-            blurClass.hookAfterMethod(
-                "fastBlurWhenExitRecents", launcherClass, launcherStateClass, Boolean::class.java
-            ) {
-                mDockBlur.visibility = View.VISIBLE
-            }
         }
         launcherClass.hookAfterMethod("onStateSetStart", launcherStateClass) {
             val mDockBlur = XposedHelpers.getAdditionalInstanceField(it.thisObject, "mDockBlur") as BlurFrameLayout
-            if ("LauncherState" == it.args[0].javaClass.simpleName) mDockBlur.visibility = View.VISIBLE
+            if ("LauncherState" == it.args[0].javaClass.simpleName && !isFolderShowing) mDockBlur.visibility = View.VISIBLE
             else mDockBlur.visibility = View.GONE
         }
         "com.miui.home.launcher.DeviceConfig".hookBeforeMethod(
