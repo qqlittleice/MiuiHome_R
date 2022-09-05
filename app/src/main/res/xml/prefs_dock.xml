@@ -44,6 +44,7 @@
             android:title="@string/top_margin_of_dock_view"
             app:format="%d dp"
             app:maxValue="100"
+            app:minValue="-20"
             app:showSeekBarValue="true" />
 
         <SeekBarPreference
@@ -53,6 +54,7 @@
             android:title="@string/bottom_margin_of_dock_view"
             app:format="%d dp"
             app:maxValue="100"
+            app:minValue="-20"
             app:showSeekBarValue="true" />
 
         <SeekBarPreference
