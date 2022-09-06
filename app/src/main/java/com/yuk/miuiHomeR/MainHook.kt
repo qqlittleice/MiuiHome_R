@@ -57,7 +57,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         AppDrawer,
                         Recent,
                     )
-                    if (isLegacyAndroid()) {
+                    if (!isLegacyAndroid()) {
                         initHooks(
                             Dock,
                             EnableFolderIconBlur,
