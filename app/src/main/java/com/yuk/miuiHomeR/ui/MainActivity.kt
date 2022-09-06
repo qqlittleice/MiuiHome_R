@@ -28,36 +28,33 @@ class MainActivity : BaseAppCompatActivity() {
     }
 
     private fun initData() {
-        val mPreferenceChangeListener =
-            OnSharedPreferenceChangeListener { sharedPreferences: SharedPreferences, s: String ->
-                Log.i("prefs", "Changed: $s")
-                val `val` = sharedPreferences.all[s]
-                var path = ""
-                when (`val`) {
-                    is String -> path = "string/"
-                    is Set<*> -> path = "stringset/"
-                    is Int -> path = "integer/"
-                    is Boolean -> path = "boolean/"
-                }
-                contentResolver.notifyChange(
-                    Uri.parse("content://" + SharedPrefsProvider.AUTHORITY + "/" + path + s), null
-                )
-                if (path != "") contentResolver.notifyChange(
-                    Uri.parse("content://" + SharedPrefsProvider.AUTHORITY + "/pref/" + path + s),
-                    null
-                )
+        val mPreferenceChangeListener = OnSharedPreferenceChangeListener { sharedPreferences: SharedPreferences, s: String ->
+            Log.i("prefs", "Changed: $s")
+            val `val` = sharedPreferences.all[s]
+            var path = ""
+            when (`val`) {
+                is String -> path = "string/"
+                is Set<*> -> path = "stringset/"
+                is Int -> path = "integer/"
+                is Boolean -> path = "boolean/"
             }
+            contentResolver.notifyChange(
+                Uri.parse("content://" + SharedPrefsProvider.AUTHORITY + "/" + path + s), null
+            )
+            if (path != "") contentResolver.notifyChange(
+                Uri.parse("content://" + SharedPrefsProvider.AUTHORITY + "/pref/" + path + s), null
+            )
+        }
         PrefsUtils.mSharedPreferences.registerOnSharedPreferenceChangeListener(
             mPreferenceChangeListener
         )
         Helpers.fixPermissionsAsync(applicationContext)
         try {
-            val fileObserver: FileObserver =
-                object : FileObserver(PrefsUtils.getSharedPrefsPath(), CLOSE_WRITE) {
-                    override fun onEvent(event: Int, path: String?) {
-                        Helpers.fixPermissionsAsync(applicationContext)
-                    }
+            val fileObserver: FileObserver = object : FileObserver(PrefsUtils.getSharedPrefsPath(), CLOSE_WRITE) {
+                override fun onEvent(event: Int, path: String?) {
+                    Helpers.fixPermissionsAsync(applicationContext)
                 }
+            }
             fileObserver.startWatching()
         } catch (t: Throwable) {
             Log.e("prefs", "Failed to start FileObserver!")
@@ -109,16 +106,17 @@ class MainActivity : BaseAppCompatActivity() {
             R.id.icon -> {
                 packageManager.setComponentEnabledSetting(
                     ComponentName(this, this.javaClass.name + "Alias"),
-                    if (item.title == "隐藏图标") PackageManager.COMPONENT_ENABLED_STATE_DISABLED
+                    if (item.title == getString(R.string.hide_icon)) PackageManager.COMPONENT_ENABLED_STATE_DISABLED
                     else PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
                     PackageManager.DONT_KILL_APP
                 )
+                Shell.cmd("am force-stop com.yuk.miuiHomeR").exec()
             }
             R.id.about -> {
                 startActivity(this, AboutActivity::class.java)
             }
             R.id.reboot_home -> {
-                Shell.cmd("pkill -f com.miui.home", "pkill -f com.yuk.miuiHomeR").exec()
+                Shell.cmd("am force-stop com.miui.home", "am force-stop com.yuk.miuiHomeR").exec()
             }
         }
         return super.onOptionsItemSelected(item)
