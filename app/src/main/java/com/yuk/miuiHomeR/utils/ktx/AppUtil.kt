@@ -2,6 +2,7 @@ package com.yuk.miuiHomeR.utils.ktx
 
 import android.annotation.SuppressLint
 import android.content.res.Configuration
+import android.os.Build
 import android.util.TypedValue
 import com.github.kyuubiran.ezxhelper.init.InitFields
 import moralnorm.internal.utils.DeviceHelper
@@ -27,6 +28,12 @@ fun getProp(mKey: String): String =
     Class.forName("android.os.SystemProperties").getMethod("get", String::class.java)
         .invoke(Class.forName("android.os.SystemProperties"), mKey).toString()
 
+@SuppressLint("PrivateApi")
+fun getProp(mKey: String, defaultValue: Boolean): Boolean =
+    Class.forName("android.os.SystemProperties")
+        .getMethod("getBoolean", String::class.java, Boolean::class.javaPrimitiveType)
+        .invoke(Class.forName("android.os.SystemProperties"), mKey, defaultValue) as Boolean
+
 fun checkVersionName(): String = InitFields.appContext.packageManager.getPackageInfo(
     InitFields.appContext.packageName, 0
 ).versionName
@@ -36,7 +43,7 @@ fun isAlpha(): Boolean = InitFields.appContext.packageManager.getPackageInfo(
 ).versionName.contains("ALPHA", ignoreCase = true)
 
 fun isPadDevice(): Boolean = DeviceHelper.isTablet() || DeviceHelper.isFoldDevice()
-
+fun isLegacyAndroid(): Boolean = Build.VERSION.SDK_INT < Build.VERSION_CODES.S
 fun checkVersionCode(): Long = InitFields.appContext.packageManager.getPackageInfo(
     InitFields.appContext.packageName, 0
 ).longVersionCode
