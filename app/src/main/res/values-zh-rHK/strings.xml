@@ -64,4 +64,6 @@
     <string name="hide_clean_up">隱藏「清理」按鈕</string>
     <string name="hide_small_window">隱藏「小窗應用程」按鈕</string>
     <string name="github">項目地址</string>
+    <string name="close_folder">自動關閉文件夾</string>
+    <string name="close_folder_summary">從文件夾啟動應用程序時關閉文件夾</string>
 </resources>

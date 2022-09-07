@@ -56,6 +56,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         HideSeekPoint,
                         AppDrawer,
                         Recent,
+                        CloseFolderWhenLaunchedApp,
                     )
                     if (!isLegacyAndroid()) {
                         initHooks(
