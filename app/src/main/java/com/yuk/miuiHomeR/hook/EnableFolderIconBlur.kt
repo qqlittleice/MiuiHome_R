@@ -1,10 +1,12 @@
 package com.yuk.miuiHomeR.hook
 
 import android.graphics.Color
+import android.os.Build
 import android.view.Gravity
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
+import androidx.annotation.RequiresApi
 import com.github.kyuubiran.ezxhelper.init.InitFields
 import com.github.kyuubiran.ezxhelper.utils.findMethod
 import com.github.kyuubiran.ezxhelper.utils.hookAfter
@@ -18,9 +20,9 @@ import com.zhenxiang.blur.BlurFrameLayout
 import com.zhenxiang.blur.model.CornersRadius
 import de.robv.android.xposed.XposedHelpers
 
+@RequiresApi(Build.VERSION_CODES.S)
 object EnableFolderIconBlur : BaseHook() {
     override fun init() {
-
         if (!mPrefsMap.getBoolean("small_folder_blur")) return
         val value = mPrefsMap.getInt("small_folder_corner", 60).toFloat()
         val value1 = mPrefsMap.getInt("small_folder_side", 250)

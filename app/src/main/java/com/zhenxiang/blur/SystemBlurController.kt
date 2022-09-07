@@ -1,6 +1,5 @@
 package com.zhenxiang.blur
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ShapeDrawable
@@ -8,11 +7,13 @@ import android.graphics.drawable.shapes.RoundRectShape
 import android.os.Build
 import android.view.View
 import android.view.WindowManager
+import androidx.annotation.RequiresApi
 import com.android.internal.graphics.drawable.BackgroundBlurDrawable
 import com.yuk.miuiHomeR.mPrefsMap
 import com.zhenxiang.blur.model.CornersRadius
 import java.util.function.Consumer
 
+@RequiresApi(Build.VERSION_CODES.S)
 class SystemBlurController(
     private val view: View,
     backgroundColour: Int = Color.TRANSPARENT,
@@ -62,7 +63,6 @@ class SystemBlurController(
         }
     }
 
-    @SuppressLint("NewApi")
     override fun onViewAttachedToWindow(v: View) {
         windowManager = getWindowManager(view.context).apply {
             blurEnabled = isCrossWindowBlurEnabled
@@ -77,7 +77,6 @@ class SystemBlurController(
         }
     }
 
-    @SuppressLint("NewApi")
     override fun onViewDetachedFromWindow(_v: View) {
         // Clear blur drawable
         if (view.background is BackgroundBlurDrawable) {

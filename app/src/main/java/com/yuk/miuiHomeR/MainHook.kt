@@ -11,6 +11,7 @@ import com.yuk.miuiHomeR.utils.Helpers
 import com.yuk.miuiHomeR.utils.PrefsMap
 import com.yuk.miuiHomeR.utils.PrefsUtils
 import com.yuk.miuiHomeR.utils.ktx.hookBeforeMethod
+import com.yuk.miuiHomeR.utils.ktx.isLegacyAndroid
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.IXposedHookZygoteInit
 import de.robv.android.xposed.XSharedPreferences
@@ -44,9 +45,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         BlurRadius,
                         FolderColumnsCount,
                         EnableBlurWhenOpenFolder,
-                        EnableFolderIconBlur,
                         SetDeviceLevel,
-                        Dock,
                         ShortcutBlur,
                         UnlockHotseatIcon,
                         TaskViewHorizontal,
@@ -58,6 +57,12 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         AppDrawer,
                         Recent,
                     )
+                    if (!isLegacyAndroid()) {
+                        initHooks(
+                            Dock,
+                            EnableFolderIconBlur,
+                        )
+                    }
                 }
             }
             else -> return
@@ -95,6 +100,4 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
             }.logexIfThrow("Failed init hook: ${it.javaClass.simpleName}")
         }
     }
-
-
 }

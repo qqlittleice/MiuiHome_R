@@ -2,10 +2,12 @@ package com.yuk.miuiHomeR.hook
 
 import android.content.Context
 import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
 import android.widget.FrameLayout
+import androidx.annotation.RequiresApi
 import com.github.kyuubiran.ezxhelper.init.InitFields.appContext
 import com.github.kyuubiran.ezxhelper.utils.hookAllConstructorAfter
 import com.yuk.miuiHomeR.mPrefsMap
@@ -14,6 +16,7 @@ import com.zhenxiang.blur.BlurFrameLayout
 import com.zhenxiang.blur.model.CornersRadius
 import de.robv.android.xposed.XposedHelpers
 
+@RequiresApi(Build.VERSION_CODES.S)
 object Dock : BaseHook() {
     override fun init() {
 
@@ -80,7 +83,10 @@ object Dock : BaseHook() {
             it.result = dp2px(mPrefsMap.getInt("home_dock_top_margin", 30).toFloat())
         }
         "com.miui.home.launcher.DeviceConfig".hookBeforeMethod(
-            "calcHotSeatsMarginBottom", Context::class.java, Boolean::class.java, Boolean::class.java
+            "calcHotSeatsMarginBottom",
+            Context::class.java,
+            Boolean::class.java,
+            Boolean::class.java
         ) {
             it.result = dp2px(mPrefsMap.getInt("home_dock_icon_bottom_margin", -8).toFloat())
         }
