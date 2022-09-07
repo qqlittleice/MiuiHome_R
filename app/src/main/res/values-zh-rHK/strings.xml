@@ -66,4 +66,5 @@
     <string name="github">項目地址</string>
     <string name="close_folder">自動關閉文件夾</string>
     <string name="close_folder_summary">從文件夾啟動應用程序時關閉文件夾</string>
+    <string name="folder_anim">回彈動畫</string>
 </resources>

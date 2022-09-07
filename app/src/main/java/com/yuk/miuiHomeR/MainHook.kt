@@ -57,6 +57,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         AppDrawer,
                         Recent,
                         CloseFolderWhenLaunchedApp,
+                        FolderAnim,
                     )
                     if (!isLegacyAndroid()) {
                         initHooks(

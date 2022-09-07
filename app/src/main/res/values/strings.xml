@@ -66,4 +66,5 @@
     <string name="github">Github Repository</string>
     <string name="close_folder">Auto close folder</string>
     <string name="close_folder_summary">Close folder when launch app from folder</string>
+    <string name="folder_anim">Folder animation</string>
 </resources>
