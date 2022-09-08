@@ -14,6 +14,10 @@ object FolderAnim : BaseHook() {
         if (!mPrefsMap.getBoolean("home_folder_anim")) return
         var hook: XC_MethodHook.Unhook? = null
         try {
+            findMethod("com.miui.home.launcher.Launcher$50") {
+                name == "run"
+            }
+        } catch (e: Exception) {
             findMethod("com.miui.home.launcher.Launcher$49") {
                 name == "run"
             }
