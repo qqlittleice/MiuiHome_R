@@ -66,9 +66,10 @@
     <string name="github">Github Repository</string>
     <string name="close_folder">Auto close folder</string>
     <string name="close_folder_summary">Close folder when launch app from folder</string>
-    <string name="folder_anim">动画速度</string>
-    <string name="folder_anim_1">打开速度1</string>
-    <string name="folder_anim_2">打开速度2</string>
-    <string name="folder_anim_3">关闭速度1</string>
-    <string name="folder_anim_4">关闭速度2</string>
+    <string name="folder_anim">Anim mods</string>
+    <string name="folder_anim_1">Open speed 1</string>
+    <string name="folder_anim_2">Open speed 2</string>
+    <string name="folder_anim_3">Close speed 1</string>
+    <string name="folder_anim_4">Close speed 2</string>
+    <string name="optimize_unlock_anim">Optimize unlock anim</string>
 </resources>

@@ -9,6 +9,12 @@
             android:key="prefs_key_home_show_status_clock"
             android:title="@string/always_show_status_bar_clock" />
 
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefs_key_home_unlock_anim"
+            android:title="@string/optimize_unlock_anim" />
+
+
         <SeekBarPreference
             android:defaultValue="100"
             android:key="prefs_key_home_blur_radius"

@@ -66,9 +66,10 @@
     <string name="github">項目地址</string>
     <string name="close_folder">自動關閉文件夾</string>
     <string name="close_folder_summary">從文件夾啟動應用程序時關閉文件夾</string>
-    <string name="folder_anim">动画速度</string>
-    <string name="folder_anim_1">打开速度1</string>
-    <string name="folder_anim_2">打开速度2</string>
-    <string name="folder_anim_3">关闭速度1</string>
-    <string name="folder_anim_4">关闭速度2</string>
+    <string name="folder_anim">動畫修改</string>
+    <string name="folder_anim_1">打開速度1</string>
+    <string name="folder_anim_2">打開速度2</string>
+    <string name="folder_anim_3">關閉速度1</string>
+    <string name="folder_anim_4">關閉速度2</string>
+    <string name="optimize_unlock_anim">優化解鎖動畫</string>
 </resources>
