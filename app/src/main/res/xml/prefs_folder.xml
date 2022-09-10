@@ -9,6 +9,42 @@
             android:key="prefs_key_home_folder_anim"
             android:title="@string/folder_anim"/>
 
+        <SeekBarPreference
+            android:defaultValue="90"
+            android:dependency="prefs_key_home_folder_anim"
+            android:key="prefs_key_home_folder_anim_1"
+            android:title="@string/folder_anim_1"
+            app:format="%d / 100 f"
+            app:maxValue="200"
+            app:showSeekBarValue="true" />
+
+        <SeekBarPreference
+            android:defaultValue="30"
+            android:dependency="prefs_key_home_folder_anim"
+            android:key="prefs_key_home_folder_anim_2"
+            android:title="@string/folder_anim_2"
+            app:format="%d / 100 f"
+            app:maxValue="200"
+            app:showSeekBarValue="true" />
+
+        <SeekBarPreference
+            android:defaultValue="99"
+            android:dependency="prefs_key_home_folder_anim"
+            android:key="prefs_key_home_folder_anim_3"
+            android:title="@string/folder_anim_3"
+            app:format="%d / 100 f"
+            app:maxValue="200"
+            app:showSeekBarValue="true" />
+
+        <SeekBarPreference
+            android:defaultValue="24"
+            android:dependency="prefs_key_home_folder_anim"
+            android:key="prefs_key_home_folder_anim_4"
+            android:title="@string/folder_anim_4"
+            app:format="%d / 100 f"
+            app:maxValue="200"
+            app:showSeekBarValue="true" />
+
         <SwitchPreference
             android:defaultValue="false"
             android:key="prefs_key_small_folder_blur"
