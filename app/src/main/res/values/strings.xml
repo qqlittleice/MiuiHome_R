@@ -41,7 +41,7 @@
     <string name="other_features">Other</string>
     <string name="always_show_status_bar_clock">Always show status bar clock</string>
     <string name="double_tap_to_lock_screen">Double tap to lock the screen</string>
-    <string name="shortcut_menu_background_view_blur">Shortcut menu background view blur</string>
+    <string name="shortcut_menu_background_view_blur">Shortcut background view blur</string>
     <string name="unlock_launcher_icon_grids">Unlock launcher icon grids</string>
     <string name="Always_blur_launcher_wallpaper">Always blur launcher wallpaper</string>
     <string name="blur_radius">Blur Radius</string>
@@ -72,4 +72,6 @@
     <string name="folder_anim_3">Close speed 1</string>
     <string name="folder_anim_4">Close speed 2</string>
     <string name="optimize_unlock_anim">Optimize unlock anim</string>
+    <string name="shortcut_small_window">Add small window in Shortcut</string>
+    <string name="small_window">small window</string>
 </resources>

@@ -41,7 +41,7 @@
     <string name="other_features">其他</string>
     <string name="always_show_status_bar_clock">始終顯示狀態欄時鐘</string>
     <string name="double_tap_to_lock_screen">雙擊桌面空白處鎖屏</string>
-    <string name="shortcut_menu_background_view_blur">快捷鍵菜單背景模糊</string>
+    <string name="shortcut_menu_background_view_blur">快捷菜單背景模糊</string>
     <string name="unlock_launcher_icon_grids">解鎖桌面圖標佈局限制</string>
     <string name="Always_blur_launcher_wallpaper">始終模糊桌面壁紙</string>
     <string name="blur_radius">模糊半徑</string>
@@ -72,4 +72,6 @@
     <string name="folder_anim_3">關閉速度1</string>
     <string name="folder_anim_4">關閉速度2</string>
     <string name="optimize_unlock_anim">優化解鎖動畫</string>
+    <string name="shortcut_small_window">快捷菜單添加小窗</string>
+    <string name="small_window">小窗</string>
 </resources>
