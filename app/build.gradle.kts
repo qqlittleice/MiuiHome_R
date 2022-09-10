@@ -107,7 +107,7 @@ dependencies {
     //  To find available updates, run this:
     //  ./gradlew refreshVersions
     compileOnly(project(":hidden-api"))
-    compileOnly("de.robv.android.xposed:api:_")
+    compileOnly(libs.api)
 
     implementation(AndroidX.core)
     implementation(AndroidX.recyclerView)
@@ -117,9 +117,9 @@ dependencies {
     implementation(AndroidX.vectorDrawable)
     implementation(AndroidX.vectorDrawable.animated)
 
-    implementation("com.github.topjohnwu.libsu:core:_")
-    implementation("com.github.kyuubiran:EzXHelper:_")
-    implementation("org.lsposed.hiddenapibypass:hiddenapibypass:_")
+    implementation(libs.com.github.topjohnwu.libsu.core)
+    implementation(libs.ezxhelper)
+    implementation(libs.hiddenapibypass)
 
     implementation(files("libs/animation-debug.aar"))
     implementation(files("libs/appcompat-debug.aar"))

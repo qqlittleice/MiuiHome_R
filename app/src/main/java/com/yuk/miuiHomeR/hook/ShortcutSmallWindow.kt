@@ -6,8 +6,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.core.content.ContextCompat
-import com.github.kyuubiran.ezxhelper.init.InitFields
 import com.github.kyuubiran.ezxhelper.init.InitFields.appContext
+import com.github.kyuubiran.ezxhelper.init.InitFields.moduleRes
 import com.yuk.miuiHomeR.R
 import com.yuk.miuiHomeR.mPrefsMap
 import com.yuk.miuiHomeR.utils.ktx.*
@@ -62,7 +62,7 @@ object ShortcutSmallWindow : BaseHook() {
         mSystemShortcutMenuItem.hookAfterAllMethods("createAllSystemShortcutMenuItems") {
             val mAllSystemShortcutMenuItems = mSystemShortcutMenuItem.getStaticObjectField("sAllSystemShortcutMenuItems") as Collection<Any>
             val mSmallWindowInstance = XposedHelpers.newInstance(mAppDetailsShortcutMenuItem)
-            mSmallWindowInstance.callMethod("setShortTitle", InitFields.moduleRes.getString(R.string.small_window))
+            mSmallWindowInstance.callMethod("setShortTitle", moduleRes.getString(R.string.small_window))
             mSmallWindowInstance.callMethod(
                 "setIconDrawable", ContextCompat.getDrawable(
                     appContext, appContext.resources.getIdentifier("ic_task_small_window", "drawable", "com.miui.home")
