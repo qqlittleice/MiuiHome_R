@@ -60,6 +60,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         FolderAnim,
                         UnlockAnim,
                         ShortcutSmallWindow,
+                        IconTitleColor,
                     )
                     if (!isLegacyAndroid()) {
                         initHooks(

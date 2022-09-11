@@ -57,5 +57,12 @@
             app:maxValue="30"
             app:showSeekBarValue="true" />
 
+        <moralnorm.preference.ColorPickerPreference
+            android:defaultValue="-1"
+            android:key="prefs_key_icon_title_font_color"
+            android:title="@string/icon_title_font_color"
+            app:showColorShades="true"
+            app:showAlphaSlider="true"/>
+
     </PreferenceCategory>
 </PreferenceScreen>

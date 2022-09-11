@@ -74,4 +74,5 @@
     <string name="optimize_unlock_anim">优化解锁动画</string>
     <string name="shortcut_small_window">快捷菜单添加小窗</string>
     <string name="small_window">小窗</string>
+    <string name="icon_title_font_color">应用标题文字颜色</string>
 </resources>

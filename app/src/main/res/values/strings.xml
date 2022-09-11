@@ -74,4 +74,5 @@
     <string name="optimize_unlock_anim">Optimize unlock anim</string>
     <string name="shortcut_small_window">Add small window in Shortcut</string>
     <string name="small_window">small window</string>
+    <string name="icon_title_font_color">Icon Labels Font Color</string>
 </resources>
