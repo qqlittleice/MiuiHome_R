@@ -45,21 +45,14 @@ object IconTitleSize : BaseHook() {
                 mTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, value)
             }
             "com.miui.home.launcher.ShortcutIcon".hookAfterMethod(
-                "fromXml",
-                Int::class.javaPrimitiveType,
-                launcherClass,
-                ViewGroup::class.java,
-                shortcutInfoClass
+                "fromXml", Int::class.javaPrimitiveType, launcherClass, ViewGroup::class.java, shortcutInfoClass
             ) {
                 val buddyIconView = it.args[3].callMethod("getBuddyIconView", it.args[2]) as View
                 val mTitle = buddyIconView.getObjectField("mTitle") as TextView
                 mTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, value)
             }
             "com.miui.home.launcher.ShortcutIcon".hookAfterMethod(
-                "createShortcutIcon",
-                Int::class.javaPrimitiveType,
-                launcherClass,
-                ViewGroup::class.java
+                "createShortcutIcon", Int::class.javaPrimitiveType, launcherClass, ViewGroup::class.java
             ) {
                 val buddyIcon = it.result as View
                 val mTitle = buddyIcon.getObjectField("mTitle") as TextView
@@ -73,13 +66,9 @@ object IconTitleSize : BaseHook() {
                 Int::class.javaPrimitiveType
             ) {
                 val mTitle = it.args[1] as TextView
-                if (mTitle.id == mTitle.resources.getIdentifier(
-                        "icon_title",
-                        "id",
-                        "com.miui.home"
-                    )
-                )
+                if (mTitle.id == mTitle.resources.getIdentifier("icon_title", "id", "com.miui.home")) {
                     mTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, value)
+                }
             }
         } catch (e: Throwable) {
             Log.ex(e)

@@ -38,7 +38,7 @@ object ShortcutSmallWindow : BaseHook() {
             val obj = it.args[0]
             val view: View = it.args[1] as View
             val mShortTitle = obj.callMethod("getShortTitle") as CharSequence
-            if (mShortTitle == "小窗") {
+            if (mShortTitle == moduleRes.getString(R.string.small_window)) {
                 it.result = null
                 val intent = Intent()
                 val mComponentName = obj.callMethod("getComponentName") as ComponentName
