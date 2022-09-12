@@ -43,7 +43,13 @@ object FolderAnim : BaseHook() {
         }
 
         "com.miui.home.launcher.Launcher".hookAfterMethod("closeFolder", Boolean::class.java) {
-            if (it.args[0] == true) it.thisObject.getObjectField("mFolderOpenAnim")?.callMethod("setDampingResponse", value3, value4)
+            if (it.args[0] == true) {
+                val mFolderOpenAnim = it.thisObject.getObjectField("mFolderOpenAnim")
+                mFolderOpenAnim?.callMethod("setDampingResponse", value3, value4)
+                mFolderOpenAnim?.callMethod("setStartEnd", 1.0f, 0.0f)
+                mFolderOpenAnim?.callMethod("start")
+                it.thisObject.callMethod("fadeInOrOutScreenContentWhenFolderAnimate",false)
+            }
         }
 
     }
