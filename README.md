@@ -31,10 +31,6 @@
 
 </details>
 
-## Screenshot
-
-![Screenshot](https://github.com/qqlittleice/MiuiHome/blob/main/Pic/Screenshot_ZH.png)
-
 ## License
 
 [GNU General Public License v3.0](LICENSE)
