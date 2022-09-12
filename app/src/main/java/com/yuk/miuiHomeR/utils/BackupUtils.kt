@@ -11,7 +11,6 @@ import java.io.InputStreamReader
 import java.io.OutputStreamWriter
 import java.time.LocalDateTime
 
-
 object BackupUtils {
     const val CREATE_DOCUMENT_CODE = 255774
     const val OPEN_DOCUMENT_CODE = 277451
@@ -20,7 +19,7 @@ object BackupUtils {
 
     fun backup(activity: Activity, sp: SharedPreferences) {
         sharedPreferences = sp
-        saveFile(activity, "Fuck_Home_${LocalDateTime.now()}.json")
+        saveFile(activity, "MiuiHomeR_${LocalDateTime.now()}.json")
     }
 
     fun recovery(activity: Activity, sp: SharedPreferences) {

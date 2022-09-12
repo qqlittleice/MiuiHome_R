@@ -42,7 +42,10 @@ class MainActivity : BaseAppCompatActivity() {
                 is Boolean -> path = "boolean/"
             }
             contentResolver.notifyChange(Uri.parse("content://" + SharedPrefsProvider.AUTHORITY + "/" + path + s), null)
-            if (path != "") contentResolver.notifyChange(Uri.parse("content://" + SharedPrefsProvider.AUTHORITY + "/pref/" + path + s), null)
+            if (path != "") contentResolver.notifyChange(
+                Uri.parse("content://" + SharedPrefsProvider.AUTHORITY + "/pref/" + path + s),
+                null
+            )
         }
         PrefsUtils.mSharedPreferences.registerOnSharedPreferenceChangeListener(mPreferenceChangeListener)
         Helpers.fixPermissionsAsync(applicationContext)
@@ -102,8 +105,12 @@ class MainActivity : BaseAppCompatActivity() {
             }
 
             R.id.icon -> {
-                packageManager.setComponentEnabledSetting(ComponentName(this, this.javaClass.name + "Alias"), if (item.title == getString(R.string.hide_icon)) PackageManager.COMPONENT_ENABLED_STATE_DISABLED
-                else PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
+                packageManager.setComponentEnabledSetting(
+                    ComponentName(this, this.javaClass.name + "Alias"),
+                    if (item.title == getString(R.string.hide_icon)) PackageManager.COMPONENT_ENABLED_STATE_DISABLED
+                    else PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                    PackageManager.DONT_KILL_APP
+                )
                 Shell.cmd("am force-stop com.yuk.miuiHomeR").exec()
             }
 

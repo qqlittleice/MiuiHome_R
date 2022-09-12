@@ -12,7 +12,7 @@ object TaskViewHorizontal : BaseHook() {
     override fun init() {
         val value1 = mPrefsMap.getInt("task_view_horizontal1", 100).toFloat() / 100
         val value2 = mPrefsMap.getInt("task_view_horizontal2", 100).toFloat() / 100
-        if ((value1 == -1f || value2 == -1f) || (value1 == 1f && value2 == 1f)) return
+        if (value1 == 1f && value2 == 1f) return
         "com.miui.home.recents.views.TaskStackViewsAlgorithmHorizontal".hookAfterMethod(
             "scaleTaskView", RectF::class.java,
         ) {
