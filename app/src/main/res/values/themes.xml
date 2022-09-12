@@ -5,5 +5,6 @@
 
     <style name="AppTheme.Dark" parent="Theme.AppCompat.Dark" >
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.Dark</item>
+        <item name="android:forceDarkAllowed">false</item>
     </style>
 </resources>
