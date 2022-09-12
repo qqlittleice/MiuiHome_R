@@ -3,7 +3,10 @@ package com.yuk.miuiHomeR.hook
 import com.github.kyuubiran.ezxhelper.utils.findMethod
 import com.github.kyuubiran.ezxhelper.utils.hookMethod
 import com.yuk.miuiHomeR.mPrefsMap
-import com.yuk.miuiHomeR.utils.ktx.*
+import com.yuk.miuiHomeR.utils.ktx.findClass
+import com.yuk.miuiHomeR.utils.ktx.findClassOrNull
+import com.yuk.miuiHomeR.utils.ktx.hookAfterMethod
+import com.yuk.miuiHomeR.utils.ktx.hookBeforeMethod
 import de.robv.android.xposed.XC_MethodHook
 
 object FolderAnim : BaseHook() {
@@ -15,7 +18,8 @@ object FolderAnim : BaseHook() {
         val value3 = mPrefsMap.getInt("home_folder_anim_3", 99).toFloat() / 100
         val value4 = mPrefsMap.getInt("home_folder_anim_4", 24).toFloat() / 100
         val mSpringAnimator = "com.miui.home.launcher.animate.SpringAnimator".findClass()
-        var hook: XC_MethodHook.Unhook? = null
+        var hook1: XC_MethodHook.Unhook? = null
+        var hook2: XC_MethodHook.Unhook? = null
         for (i in 47..60) {
             val launcherClass = "com.miui.home.launcher.Launcher$$i".findClassOrNull()
             if (launcherClass != null) {
@@ -25,7 +29,7 @@ object FolderAnim : BaseHook() {
                             name == "run"
                         }.hookMethod {
                             before {
-                                hook = mSpringAnimator.hookBeforeMethod(
+                                hook1 = mSpringAnimator.hookBeforeMethod(
                                     "setDampingResponse", Float::class.javaPrimitiveType, Float::class.javaPrimitiveType
                                 ) {
                                     it.args[0] = value1
@@ -33,7 +37,7 @@ object FolderAnim : BaseHook() {
                                 }
                             }
                             after {
-                                hook?.unhook()
+                                hook1?.unhook()
                             }
                         }
                         break
@@ -42,15 +46,18 @@ object FolderAnim : BaseHook() {
             }
         }
 
-        "com.miui.home.launcher.Launcher".hookAfterMethod("closeFolder", Boolean::class.java) {
+        "com.miui.home.launcher.Launcher".hookBeforeMethod("closeFolder", Boolean::class.java) {
             if (it.args[0] == true) {
-                val mFolderOpenAnim = it.thisObject.getObjectField("mFolderOpenAnim")
-                mFolderOpenAnim?.callMethod("setDampingResponse", value3, value4)
-                mFolderOpenAnim?.callMethod("setStartEnd", 1.0f, 0.0f)
-                mFolderOpenAnim?.callMethod("start")
-                it.thisObject.callMethod("fadeInOrOutScreenContentWhenFolderAnimate",false)
+                hook2 = mSpringAnimator.hookBeforeMethod(
+                    "setDampingResponse", Float::class.javaPrimitiveType, Float::class.javaPrimitiveType
+                ) { hookParam ->
+                    hookParam.args[0] = value3
+                    hookParam.args[1] = value4
+                }
             }
         }
-
+        "com.miui.home.launcher.Launcher".hookAfterMethod("closeFolder", Boolean::class.java) {
+            hook2?.unhook()
+        }
     }
 }
