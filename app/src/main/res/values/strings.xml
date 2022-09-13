@@ -78,4 +78,5 @@
     <string name="recents_card_bg_color">Customize the thumbnail background color for small window apps</string>
     <string name="recents_text_size">Size of thumbnail labels text</string>
     <string name="recents_text_color">Color of thumbnail labels text</string>
+    <string name="small_folder_blur_drag_offset">Small folder drag view blur top offset</string>
 </resources>

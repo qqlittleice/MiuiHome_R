@@ -72,6 +72,15 @@
             app:maxValue="500"
             app:showSeekBarValue="true" />
 
+        <SeekBarPreference
+            android:defaultValue="22"
+            android:dependency="prefs_key_small_folder_blur"
+            android:key="prefs_key_small_folder_drag"
+            android:title="@string/small_folder_blur_drag_offset"
+            app:format="%d dp"
+            app:maxValue="100"
+            app:showSeekBarValue="true" />
+
         <SwitchPreference
             android:defaultValue="false"
             android:key="prefs_key_home_close_folder"

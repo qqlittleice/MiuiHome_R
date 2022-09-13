@@ -78,4 +78,5 @@
     <string name="recents_card_bg_color">小窗應用卡片背景顏色</string>
     <string name="recents_text_size">標籤文字大小</string>
     <string name="recents_text_color">卡片文字顏色</string>
+    <string name="small_folder_blur_drag_offset">小文件夾拖動視圖模糊頂部偏移</string>
 </resources>
