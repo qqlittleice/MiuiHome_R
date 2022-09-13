@@ -75,4 +75,7 @@
     <string name="shortcut_small_window">快捷菜單添加小窗</string>
     <string name="small_window">小窗</string>
     <string name="icon_title_font_color">應用標題文字顏色</string>
+    <string name="recents_card_bg_color">小窗應用卡片背景顏色</string>
+    <string name="recents_text_size">標籤文字大小</string>
+    <string name="recents_text_color">卡片文字顏色</string>
 </resources>

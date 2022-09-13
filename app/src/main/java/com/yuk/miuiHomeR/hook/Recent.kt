@@ -1,11 +1,10 @@
 package com.yuk.miuiHomeR.hook
 
+import android.util.TypedValue
 import android.view.View
 import android.widget.TextView
 import com.yuk.miuiHomeR.mPrefsMap
-import com.yuk.miuiHomeR.utils.ktx.findClass
-import com.yuk.miuiHomeR.utils.ktx.getObjectField
-import com.yuk.miuiHomeR.utils.ktx.hookAfterMethod
+import com.yuk.miuiHomeR.utils.ktx.*
 
 object Recent : BaseHook() {
     override fun init() {
@@ -25,6 +24,35 @@ object Recent : BaseHook() {
             ) {
                 val mView = it.thisObject.getObjectField("mClearAnimView") as View
                 mView.visibility = View.GONE
+            }
+        }
+
+        val appCardBgColor = mPrefsMap.getInt("recents_card_bg_color", -1)
+        if (appCardBgColor != -1) {
+            "com.miui.home.recents.views.TaskViewThumbnail".findClass().hookAfterAllConstructors {
+                it.thisObject.setIntField("mBgColorForSmallWindow", appCardBgColor)
+            }
+        }
+
+        val recentTextSize = mPrefsMap.getInt("recents_text_size", -1)
+        if (recentTextSize != -1) {
+            val taskViewHeaderClass = "com.miui.home.recents.views.TaskViewHeader".findClass()
+            taskViewHeaderClass.hookAfterMethod(
+                "onFinishInflate"
+            ) {
+                val mTitle = it.thisObject.getObjectField("mTitleView") as TextView
+                mTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, recentTextSize.toFloat())
+            }
+        }
+
+        val recentTextColor = mPrefsMap.getInt("recents_text_color", -1)
+        if (recentTextSize != -1) {
+            val taskViewHeaderClass = "com.miui.home.recents.views.TaskViewHeader".findClass()
+            taskViewHeaderClass.hookAfterMethod(
+                "onFinishInflate"
+            ) {
+                val mTitle = it.thisObject.getObjectField("mTitleView") as TextView
+                mTitle.setTextColor(recentTextColor)
             }
         }
     }

@@ -74,6 +74,29 @@
             app:minValue="50"
             app:showSeekBarValue="true" />
 
+        <SeekBarPreference
+            android:defaultValue="14"
+            android:key="prefs_key_recents_text_size"
+            android:title="@string/recents_text_size"
+            app:format="%d f"
+            app:maxValue="30"
+            app:showSeekBarValue="true" />
+
+        <moralnorm.preference.ColorPickerPreference
+            android:defaultValue="-1"
+            android:key="prefs_key_recents_text_color"
+            android:title="@string/recents_text_color"
+            app:showAlphaSlider="true"
+            app:showColorShades="true" />
+
+        <moralnorm.preference.ColorPickerPreference
+            android:defaultValue="-1"
+            android:key="prefs_key_recents_card_bg_color"
+            android:title="@string/recents_card_bg_color"
+            app:showAlphaSlider="true"
+            app:showColorShades="true" />
+
+
     </PreferenceCategory>
 
 </PreferenceScreen>
