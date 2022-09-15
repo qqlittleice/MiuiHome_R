@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="appcompat_drop_down_menu_padding_small">16.369995dp</dimen>
-    <dimen name="appcompat_drop_down_menu_padding_large">27.269989dp</dimen>
-    <dimen name="appcompat_drop_down_menu_padding_single_item">22.549988dip</dimen>
-</resources>
