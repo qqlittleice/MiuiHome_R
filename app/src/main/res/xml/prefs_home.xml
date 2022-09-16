@@ -22,11 +22,6 @@
 
         <SwitchPreference
             android:defaultValue="false"
-            android:key="prefs_key_home_double_sleep"
-            android:title="@string/double_tap_to_lock_screen" />
-
-        <SwitchPreference
-            android:defaultValue="false"
             android:key="prefs_key_shortcut_small_window"
             android:title="@string/shortcut_small_window" />
 
@@ -34,6 +29,16 @@
             android:defaultValue="false"
             android:key="prefs_key_home_shortcut_blur"
             android:title="@string/shortcut_menu_background_view_blur" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefs_key_home_double_sleep"
+            android:title="@string/double_tap_to_lock_screen" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefs_key_icon_title_font_scrolling"
+            android:title="@string/icon_title_font_scrolling" />
 
         <SwitchPreference
             android:defaultValue="false"

@@ -2,7 +2,7 @@ package com.yuk.miuiHomeR.hook
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.util.TypedValue
+import android.text.TextUtils
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
@@ -13,52 +13,51 @@ import com.yuk.miuiHomeR.utils.ktx.findClass
 import com.yuk.miuiHomeR.utils.ktx.getObjectField
 import com.yuk.miuiHomeR.utils.ktx.hookAfterMethod
 
-object IconTitleSize : BaseHook() {
+object IconTitleScrolling : BaseHook() {
 
     @SuppressLint("DiscouragedApi")
     override fun init() {
-        val value = mPrefsMap.getInt("icon_title_font_size", -1).toFloat()
+        if (!mPrefsMap.getBoolean("icon_title_font_scrolling")) return
         val launcherClass = "com.miui.home.launcher.Launcher".findClass()
         val shortcutInfoClass = "com.miui.home.launcher.ShortcutInfo".findClass()
-        if (value == -1f || value == 12f) return
         try {
             "com.miui.home.launcher.ItemIcon".hookAfterMethod(
                 "onFinishInflate"
             ) {
                 val mTitle = it.thisObject.getObjectField("mTitle") as TextView
-                mTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, value)
+                mTitleScrolling(mTitle)
             }
             "com.miui.home.launcher.maml.MaMlWidgetView".hookAfterMethod(
                 "onFinishInflate"
             ) {
                 val mTitle = it.thisObject.getObjectField("mTitleTextView") as TextView
-                mTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, value)
+                mTitleScrolling(mTitle)
             }
             "com.miui.home.launcher.LauncherMtzGadgetView".hookAfterMethod(
                 "onFinishInflate"
             ) {
                 val mTitle = it.thisObject.getObjectField("mTitleTextView") as TextView
-                mTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, value)
+                mTitleScrolling(mTitle)
             }
             "com.miui.home.launcher.LauncherWidgetView".hookAfterMethod(
                 "onFinishInflate"
             ) {
                 val mTitle = it.thisObject.getObjectField("mTitleTextView") as TextView
-                mTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, value)
+                mTitleScrolling(mTitle)
             }
             "com.miui.home.launcher.ShortcutIcon".hookAfterMethod(
                 "fromXml", Int::class.javaPrimitiveType, launcherClass, ViewGroup::class.java, shortcutInfoClass
             ) {
                 val buddyIconView = it.args[3].callMethod("getBuddyIconView", it.args[2]) as View
                 val mTitle = buddyIconView.getObjectField("mTitle") as TextView
-                mTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, value)
+                mTitleScrolling(mTitle)
             }
             "com.miui.home.launcher.ShortcutIcon".hookAfterMethod(
                 "createShortcutIcon", Int::class.javaPrimitiveType, launcherClass, ViewGroup::class.java
             ) {
                 val buddyIcon = it.result as View
                 val mTitle = buddyIcon.getObjectField("mTitle") as TextView
-                mTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, value)
+                mTitleScrolling(mTitle)
             }
             "com.miui.home.launcher.common.Utilities".hookAfterMethod(
                 "adaptTitleStyleToWallpaper",
@@ -69,11 +68,21 @@ object IconTitleSize : BaseHook() {
             ) {
                 val mTitle = it.args[1] as TextView
                 if (mTitle.id == mTitle.resources.getIdentifier("icon_title", "id", "com.miui.home")) {
-                    mTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, value)
+                    mTitleScrolling(mTitle)
                 }
             }
         } catch (e: Throwable) {
             Log.ex(e)
         }
     }
+
+    private fun mTitleScrolling(mTitle: TextView) {
+        mTitle.ellipsize = TextUtils.TruncateAt.MARQUEE
+        mTitle.isHorizontalFadingEdgeEnabled = true
+        mTitle.setSingleLine()
+        mTitle.marqueeRepeatLimit = -1
+        mTitle.isSelected = true
+        mTitle.setHorizontallyScrolling(true)
+    }
+
 }
