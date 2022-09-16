@@ -3,7 +3,6 @@
     <string name="xposed_desc">針對 MiuiHome 的自定義擴展.</string>
     <string name="backup">備份模組設定</string>
     <string name="restore">恢復模組設定</string>
-    <string name="reset">重置模組設定</string>
     <string name="reboot_home">重啟桌面</string>
     <string name="about">關於</string>
     <string name="show_icon">顯示圖標</string>

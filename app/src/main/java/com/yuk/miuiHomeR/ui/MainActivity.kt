@@ -93,17 +93,6 @@ class MainActivity : BaseAppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.reset -> {
-            }
-
-            R.id.backup -> {
-                BackupUtils.backup(this, PrefsUtils.mSharedPreferences)
-            }
-
-            R.id.restore -> {
-                BackupUtils.recovery(this, PrefsUtils.mSharedPreferences)
-            }
-
             R.id.icon -> {
                 packageManager.setComponentEnabledSetting(
                     ComponentName(this, this.javaClass.name + "Alias"),
@@ -113,13 +102,17 @@ class MainActivity : BaseAppCompatActivity() {
                 )
                 Shell.cmd("am force-stop com.yuk.miuiHomeR").exec()
             }
-
-            R.id.about -> {
-                startActivity(this, AboutActivity::class.java)
+            R.id.backup -> {
+                BackupUtils.backup(this, PrefsUtils.mSharedPreferences)
             }
-
+            R.id.restore -> {
+                BackupUtils.recovery(this, PrefsUtils.mSharedPreferences)
+            }
             R.id.reboot_home -> {
                 Shell.cmd("am force-stop com.miui.home", "am force-stop com.yuk.miuiHomeR").exec()
+            }
+            R.id.about -> {
+                startActivity(this, AboutActivity::class.java)
             }
         }
         return super.onOptionsItemSelected(item)
