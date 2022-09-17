@@ -79,4 +79,6 @@
     <string name="recents_text_color">卡片文字颜色</string>
     <string name="small_folder_blur_drag_offset">小文件夹拖动视图模糊顶部偏移</string>
     <string name="icon_title_font_scrolling">滚动显示长应用标题</string>
+    <string name="overlap_mode">Fold2 样式智能助理</string>
+    <string name="overlap_mode_summary">配合 WINI 使用更佳</string>
 </resources>

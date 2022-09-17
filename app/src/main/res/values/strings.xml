@@ -79,4 +79,6 @@
     <string name="recents_text_color">Color of thumbnail labels text</string>
     <string name="small_folder_blur_drag_offset">Small folder drag view blur top offset</string>
     <string name="icon_title_font_scrolling">Scroll to show App titles</string>
+    <string name="overlap_mode">Fold2 style App Vault</string>
+    <string name="overlap_mode_summary">Works better with WINI</string>
 </resources>

@@ -62,6 +62,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         ShortcutSmallWindow,
                         IconTitleColor,
                         IconTitleScrolling,
+                        OverlapMode,
                     )
                     if (!isLegacyAndroid()) {
                         initHooks(
