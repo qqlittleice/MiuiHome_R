@@ -9,9 +9,8 @@ object AllowMoveAllWidgetToMinus : BaseHook() {
         if (!mPrefsMap.getBoolean("home_widget_to_minus")) return
         findMethod("com.miui.home.launcher.Workspace") {
             name == "canDragToPa"
-        }.hookBefore {
-            val currentDragObject = it.thisObject.getObjectOrNull("mDragController")
-                ?.invokeMethodAuto("getCurrentDragObject")
+        }.hookAfter {
+            val currentDragObject = it.thisObject.getObjectOrNull("mDragController")?.invokeMethodAuto("getCurrentDragObject")
             val dragInfo = currentDragObject?.invokeMethodAuto("getDragInfo")
             dragInfo?.putObject("isMIUIWidget", true)
         }
