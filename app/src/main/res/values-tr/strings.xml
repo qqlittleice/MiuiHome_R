@@ -49,7 +49,7 @@
     <string name="horizontal_task_view_card_size1">Thumbnail size for Horizontally-Vertical</string>
     <string name="horizontal_task_view_card_size2">Thumbnail size for Horizontally-Horizontal</string>
     <string name="icon_title_font_size">Icon Labels Font Size</string>
-    <string name="home">Home</string>
+    <string name="home">Ana sayfa</string>
     <string name="folder">Folder</string>
     <string name="dock_icon_title">Show App name in the Dock</string>
     <string name="blur_radius_summary">MiuiHome scope only</string>
@@ -81,5 +81,5 @@
     <string name="icon_title_font_scrolling">Scroll to show App titles</string>
     <string name="overlap_mode">Fold2 style App Vault</string>
     <string name="overlap_mode_summary">Works better with WINI</string>
-    <string name="module_settings">Module Settings</string>
+    <string name="module_settings">Modül Ayarları</string>
 </resources>
