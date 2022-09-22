@@ -3,7 +3,7 @@
     <string name="xposed_desc">ส่วนขยายที่กำหนดเองสำหรับ MiuiHome</string>
     <string name="backup">پشتیبان گیری تنظیمات ماژول</string>
     <string name="restore">بازیابی تنظیمات ماژول</string>
-    <string name="reboot_home">รีบูตเดสก์ท็อป</string>
+    <string name="reboot_home">راه اندازی مجدد لانچر</string>
     <string name="about">เกี่ยวกับ</string>
     <string name="show_icon">แสดงไอคอน</string>
     <string name="hide_icon">ซ่อนไอคอน</string>
