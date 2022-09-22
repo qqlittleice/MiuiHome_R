@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc">Make MiuiHome Great Again.</string>
-    <string name="backup">Backup Module Settings</string>
+    <string name="xposed_desc">Сделайте MiuiHome снова великим.</string>
+    <string name="backup">Сохранить настройки модуля</string>
     <string name="restore">Restore Module Settings</string>
     <string name="reboot_home">Reboot Launcher</string>
     <string name="about">About</string>
