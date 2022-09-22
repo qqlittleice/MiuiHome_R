@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc">Make MiuiHome Great Again.</string>
-    <string name="backup">Backup Module Settings</string>
-    <string name="restore">Restore Module Settings</string>
-    <string name="reboot_home">Reboot Launcher</string>
-    <string name="about">About</string>
-    <string name="show_icon">Show Icon</string>
-    <string name="hide_icon">Hide Icon</string>
-    <string name="complete_blur">CompleteBlur</string>
-    <string name="test_blur">Test Blur</string>
-    <string name="simple_blur">Simple Blur</string>
-    <string name="none_blur">None Blur</string>
-    <string name="none_blur_simple_amin">None Blur&amp;Simple Amin</string>
+    <string name="xposed_desc">Torne o MiuiHome ainda melhor.</string>
+    <string name="backup">Configurações do Módulo de Backup</string>
+    <string name="restore">Restaurar Configurações do Módulo</string>
+    <string name="reboot_home">Reiniciar o Launcher</string>
+    <string name="about">Sobre</string>
+    <string name="show_icon">Mostrar Ícone</string>
+    <string name="hide_icon">Ocultar Ícone</string>
+    <string name="complete_blur">Desfoque Completo</string>
+    <string name="test_blur">Testar Desfoque</string>
+    <string name="simple_blur">Desfoque Simples</string>
+    <string name="none_blur">Nenhum Desfoque</string>
+    <string name="none_blur_simple_anim">None Blur&amp;Simple Anim</string>
     <string name="blur_level">Blur Level</string>
     <string name="cancel_wallpaper_dimming">Cancel Wallpaper Dimming</string>
     <string name="hide_status_bar_in_task_view">Hide Status Bar When In Task View</string>
