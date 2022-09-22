@@ -22,7 +22,7 @@ object HomeSettings : BaseHook() {
             val mLayoutResId = (it.thisObject.getObjectField("mAllAppsSetting"))?.getObjectField("mLayoutResId")
             val mWidgetLayoutResId = (it.thisObject.getObjectField("mAllAppsSetting"))?.getObjectField("mWidgetLayoutResId")
             val pref = XposedHelpers.newInstance("com.miui.home.settings.preference.ValuePreference".findClass(), appContext).apply {
-                setObjectField("mTitle", "MiuiHome")
+                setObjectField("mTitle", "MiuiHomeR")
                 setObjectField("mOrder", 0)
                 setObjectField("mVisible", true)
                 setObjectField("mLayoutResId", mLayoutResId)
