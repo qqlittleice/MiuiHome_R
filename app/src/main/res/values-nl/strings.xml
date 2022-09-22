@@ -42,8 +42,8 @@
     <string name="double_tap_to_lock_screen">Dubbelklikken om het scherm te vergrendelen</string>
     <string name="shortcut_menu_background_view_blur">Vervaag achtergrond als je een shortcut selecteert</string>
     <string name="unlock_launcher_icon_grids">Ontgrendel launcher pictogram rasters</string>
-    <string name="Always_blur_launcher_wallpaper">Always blur launcher wallpaper</string>
-    <string name="blur_radius">Blur Radius</string>
+    <string name="Always_blur_launcher_wallpaper">Achtergrond altijd vervagen</string>
+    <string name="blur_radius">Blur intensiteit</string>
     <string name="unlock_hotseat">Remove icon number restriction from dock</string>
     <string name="vertical_task_view_card_size">Thumbnail size for Vertically</string>
     <string name="horizontal_task_view_card_size1">Thumbnail size for Horizontally-Vertical</string>
