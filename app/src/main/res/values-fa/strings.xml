@@ -14,7 +14,7 @@
     <string name="none_blur_simple_anim">بدون تاری&amp;انیمیشن ساده</string>
     <string name="blur_level">سطح تاری</string>
     <string name="cancel_wallpaper_dimming">لغو کم نور شدن والپیپر</string>
-    <string name="hide_status_bar_in_task_view">Hide Status Bar When In Task View</string>
+    <string name="hide_status_bar_in_task_view">پنهان کردن نوار وضعیت هنگام تسک‌ویو \"لیست برنامه‌های اخیر\"</string>
     <string name="app_name_distance_task_view_card">App name distance task view card</string>
     <string name="task_view_card_rounded_corners">Task view card rounded corners</string>
     <string name="anim_speed">Animation speed</string>
