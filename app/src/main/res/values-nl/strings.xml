@@ -39,9 +39,9 @@
     <string name="corner_radius_of_dock_view">Afronding van de hoeken van dock</string>
     <string name="other_features">Overig</string>
     <string name="always_show_status_bar_clock">Altijd statusbalk klok weergeven</string>
-    <string name="double_tap_to_lock_screen">Double tap to lock the screen</string>
-    <string name="shortcut_menu_background_view_blur">Shortcut background view blur</string>
-    <string name="unlock_launcher_icon_grids">Unlock launcher icon grids</string>
+    <string name="double_tap_to_lock_screen">Dubbelklikken om het scherm te vergrendelen</string>
+    <string name="shortcut_menu_background_view_blur">Vervaag achtergrond als je een shortcut selecteert</string>
+    <string name="unlock_launcher_icon_grids">Ontgrendel launcher pictogram rasters</string>
     <string name="Always_blur_launcher_wallpaper">Always blur launcher wallpaper</string>
     <string name="blur_radius">Blur Radius</string>
     <string name="unlock_hotseat">Remove icon number restriction from dock</string>
