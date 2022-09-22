@@ -11,7 +11,7 @@
     <string name="test_blur">Test Blur</string>
     <string name="simple_blur">Simple Blur</string>
     <string name="none_blur">None Blur</string>
-    <string name="none_blur_simple_amin">None Blur&amp;Simple Amin</string>
+    <string name="none_blur_simple_anim">None Blur&amp;Simple Anim</string>
     <string name="blur_level">Blur Level</string>
     <string name="cancel_wallpaper_dimming">Cancel Wallpaper Dimming</string>
     <string name="hide_status_bar_in_task_view">Hide Status Bar When In Task View</string>
@@ -61,7 +61,7 @@
     <string name="hide_category_all">Hide \"All\" in App Drawer</string>
     <string name="hide_category_paging_edit">Hide \"Edit\" Button in App Drawer\'s Paging</string>
     <string name="hide_clean_up">Hide the Clean All Button</string>
-    <string name="hide_small_window">Remove the \"Floating windows\" button</string>
+    <string name="hide_small_window">隱藏「小窗應用程式」按鈕</string>
     <string name="github">Github Repository</string>
     <string name="close_folder">Auto close folder</string>
     <string name="close_folder_summary">Close folder when launch app from folder</string>
@@ -70,7 +70,7 @@
     <string name="folder_anim_2">Open speed 2</string>
     <string name="folder_anim_3">Close speed 1</string>
     <string name="folder_anim_4">Close speed 2</string>
-    <string name="optimize_unlock_anim">Optimize unlock anim</string>
+    <string name="optimize_unlock_anim">最佳化解鎖動畫</string>
     <string name="shortcut_small_window">Add small window in Shortcut</string>
     <string name="small_window">small window</string>
     <string name="icon_title_font_color">Icon Labels Font Color</string>
@@ -79,7 +79,7 @@
     <string name="recents_text_color">Color of thumbnail labels text</string>
     <string name="small_folder_blur_drag_offset">Small folder drag view blur top offset</string>
     <string name="icon_title_font_scrolling">Scroll to show App titles</string>
-    <string name="overlap_mode">Fold2 style App Vault</string>
+    <string name="overlap_mode">Fold2 樣式智慧助理</string>
     <string name="overlap_mode_summary">Works better with WINI</string>
-    <string name="module_settings">Module Settings</string>
+    <string name="module_settings">模組設定</string>
 </resources>
