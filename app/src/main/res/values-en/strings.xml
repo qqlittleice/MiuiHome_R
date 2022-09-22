@@ -3,7 +3,7 @@
     <string name="xposed_desc">Make MiuiHome Great Again.</string>
     <string name="backup">Backup Module Settings</string>
     <string name="restore">Restore Module Settings</string>
-    <string name="reboot_home">Reboot Launcher</string>
+    <string name="reboot_home">Restart Launcher</string>
     <string name="about">About</string>
     <string name="show_icon">Show Icon</string>
     <string name="hide_icon">Hide Icon</string>
@@ -11,7 +11,7 @@
     <string name="test_blur">Test Blur</string>
     <string name="simple_blur">Simple Blur</string>
     <string name="none_blur">None Blur</string>
-    <string name="none_blur_simple_amin">None Blur&amp;Simple Amin</string>
+    <string name="none_blur_simple_anim">None Blur&amp;Simple Anim</string>
     <string name="blur_level">Blur Level</string>
     <string name="cancel_wallpaper_dimming">Cancel Wallpaper Dimming</string>
     <string name="hide_status_bar_in_task_view">Hide Status Bar When In Task View</string>
