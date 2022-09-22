@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="xposed_desc">Make MiuiHome Great Again.</string>
-    <string name="backup">Backup Module Settings</string>
-    <string name="restore">Restore Module Settings</string>
-    <string name="reboot_home">Reboot Launcher</string>
-    <string name="about">About</string>
-    <string name="show_icon">Show Icon</string>
-    <string name="hide_icon">Hide Icon</string>
-    <string name="complete_blur">CompleteBlur</string>
+    <string name="backup">پشتیبان‌گیری تنظیمات ماژول</string>
+    <string name="restore">بازیابی تنظیمات ماژول</string>
+    <string name="reboot_home">راه اندازی مجدد لانچر</string>
+    <string name="about">درباره</string>
+    <string name="show_icon">نمایش آیکون</string>
+    <string name="hide_icon">پنهان کردن آیکون‌ها</string>
+    <string name="complete_blur">تاریِ کامل</string>
     <string name="test_blur">Test Blur</string>
     <string name="simple_blur">Simple Blur</string>
     <string name="none_blur">None Blur</string>
