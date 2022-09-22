@@ -79,7 +79,7 @@
     <string name="recents_text_color">Цвет текста подписи миниатюр</string>
     <string name="small_folder_blur_drag_offset">Небольшое смещение при перетаскивании папки</string>
     <string name="icon_title_font_scrolling">Прокрутите для показа подписи приложений</string>
-    <string name="overlap_mode">Fold2 style App Vault</string>
-    <string name="overlap_mode_summary">Works better with WINI</string>
-    <string name="module_settings">Module Settings</string>
+    <string name="overlap_mode">Лента виджетов в стиле Mix Fold 2</string>
+    <string name="overlap_mode_summary">Работает лучше с WINI</string>
+    <string name="module_settings">Настройки модуля</string>
 </resources>
