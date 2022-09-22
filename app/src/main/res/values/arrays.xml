@@ -9,7 +9,7 @@
         <item>@string/test_blur</item>
         <item>@string/simple_blur</item>
         <item>@string/none_blur</item>
-        <item>@string/none_blur_simple_amin</item>
+        <item>@string/none_blur_simple_anim</item>
     </string-array>
 
     <string-array name="recent_blur_value">

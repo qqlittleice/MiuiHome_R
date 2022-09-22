@@ -11,7 +11,7 @@
     <string name="test_blur">測試模糊</string>
     <string name="simple_blur">簡單模糊</string>
     <string name="none_blur">關閉模糊</string>
-    <string name="none_blur_simple_amin">關閉模糊&amp;簡單動畫</string>
+    <string name="none_blur_simple_anim">關閉模糊&amp;簡單動畫</string>
     <string name="blur_level">模糊級別</string>
     <string name="cancel_wallpaper_dimming">取消壁紙壓暗</string>
     <string name="hide_status_bar_in_task_view">在最近任務隱藏狀態欄</string>
