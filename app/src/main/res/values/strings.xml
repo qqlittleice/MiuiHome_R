@@ -81,4 +81,5 @@
     <string name="icon_title_font_scrolling">Scroll to show App titles</string>
     <string name="overlap_mode">Fold2 style App Vault</string>
     <string name="overlap_mode_summary">Works better with WINI</string>
+    <string name="module_settings">Module Settings</string>
 </resources>

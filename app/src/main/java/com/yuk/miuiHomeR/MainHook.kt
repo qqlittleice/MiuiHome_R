@@ -31,6 +31,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                     EzXHelperInit.setToastTag(TAG)
                     EzXHelperInit.initAppContext(it.args[0] as Context)
                     initHooks(
+                        HomeSettings,
                         ResourcesHook,
                         AllowMoveAllWidgetToMinus,
                         AlwaysBlurWallpaper,
