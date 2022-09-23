@@ -4,6 +4,9 @@
 
 <b>Make MiuiHome Great Again - Xposed
 
+[![Android CI](https://github.com/qqlittleice/MiuiHome_R/actions/workflows/android.yml/badge.svg)](https://github.com/qqlittleice/MiuiHome/actions/workflows/android.yml) 
+[![Crowdin](https://badges.crowdin.net/miuihomer/localized.svg)](https://crowdin.com/project/miuihomer)
+[![Chat](https://img.shields.io/badge/Telegram-Chat-blue.svg?logo=telegram)](https://t.me/MiuiHome_Xposed)
 ![Launcher](https://github.com/qqlittleice/MiuiHome/blob/main/Pic/MiuiHome.png)
 
 </div>
