@@ -2,8 +2,7 @@
 
 <h1>MiuiHomeR</h1>
 
-<b>Make MiuiHome Great Again - Xposed![badge](https://user-images.githubusercontent.com/70465933/191899416-3213f736-8cb4-4c46-b944-e8c81357c6e5.svg)
-
+<b>Make MiuiHome Great Again - Xposed
 
 [![Android CI](https://github.com/qqlittleice/MiuiHome_R/actions/workflows/android.yml/badge.svg)](https://github.com/qqlittleice/MiuiHome_R/actions/workflows/android.yml) 
 [![Crowdin](https://badges.crowdin.net/miuihomer/localized.svg)](https://crowdin.com/project/miuihomer)
