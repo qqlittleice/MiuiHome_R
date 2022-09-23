@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc">MiuiHome را دوباره بهتر کنید.</string>
+    <string name="xposed_desc">MiuiHome را بهتر از قبل کنید.</string>
     <string name="backup">پشتیبان‌گیری تنظیمات ماژول</string>
     <string name="restore">بازیابی تنظیمات ماژول</string>
     <string name="reboot_home">راه‌اندازی مجدد لانچر</string>
@@ -18,7 +18,7 @@
     <string name="app_name_distance_task_view_card">فاصله نام برنامه با کارت در لیست برنامه‌های اخیر</string>
     <string name="task_view_card_rounded_corners">گوشه‌های گردِ کارت در لیست برنامه‌های اخیر</string>
     <string name="anim_speed">سرعت انیمیشن</string>
-    <string name="recent">اخیرأ مشاهد شده</string>
+    <string name="recent">اخیراً مشاهد شده</string>
     <string name="widget">ویجت</string>
     <string name="hide_widget_title">پنهان کردن تایتل ویجت</string>
     <string name="allow_moved_to_minus_one_screen">اجازه دهید ویجت‌های کلاسیک به صفحه \"1-\" \"App Vault\" منتقل شوند</string>
@@ -53,7 +53,7 @@
     <string name="folder">پوشه‌ها</string>
     <string name="dock_icon_title">نشان دادن نام برنامه ها در پیشخوان</string>
     <string name="blur_radius_summary">فقط محدوده MiuiHome</string>
-    <string name="home_folder_columns">ستون ها %d</string>
+    <string name="home_folder_columns">%d ستون</string>
     <string name="infinite_scroll">پیمایش بی‌نهایت لانچر</string>
     <string name="infinite_scroll_summary">ادامه دادن با کشیدن به سمت راست از آخرین صفحه، شما را به صفحه اول بازمی‌گرداند</string>
     <string name="hide_seek_point">حذف کردن شاخص صفحه</string>
@@ -62,7 +62,11 @@
     <string name="hide_category_paging_edit">پنهان کردن دکمه \"ویرایش\" در صفحه بندی کشوی برنامه‌ها</string>
     <string name="hide_clean_up">دکمه \"بستن همه\" را مخفی کنید</string>
     <string name="hide_small_window">دکمه \"پنجره های شناور\" را حذف کنید</string>
-    <string name="github">مخزن Github</string>
+    <string name="github">Github Repository
+__________________
+#مهسا_امینی
+#OpIran
+🇮🇷</string>
     <string name="close_folder">بسته شدن خودکار پوشه</string>
     <string name="close_folder_summary">هنگام راه‌اندازی برنامه‌ای از پوشه، پوشه را ببندید</string>
     <string name="folder_anim">حالت انیمیشن</string>
