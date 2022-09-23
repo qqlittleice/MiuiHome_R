@@ -7,6 +7,7 @@ import com.yuk.miuiHomeR.mPrefsMap
 
 object BlurLevel : BaseHook() {
     override fun init() {
+
         val blurLevel = mPrefsMap.getStringAsInt("recent_blur", 0)
         if (blurLevel == 4) {
             findMethod("com.miui.home.launcher.common.BlurUtils") {
@@ -33,7 +34,6 @@ object BlurLevel : BaseHook() {
                 }
             }
         }
-
     }
 }
 
