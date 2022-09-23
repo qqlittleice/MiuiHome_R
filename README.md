@@ -2,9 +2,10 @@
 
 <h1>MiuiHomeR</h1>
 
-<b>Make MiuiHome Great Again - Xposed
+<b>Make MiuiHome Great Again - Xposed![badge](https://user-images.githubusercontent.com/70465933/191899416-3213f736-8cb4-4c46-b944-e8c81357c6e5.svg)
 
-[![Android CI](https://github.com/qqlittleice/MiuiHome_R/actions/workflows/android.yml/badge.svg)](https://github.com/qqlittleice/MiuiHome/actions/workflows/android.yml) 
+
+[![Android CI](https://github.com/qqlittleice/MiuiHome_R/actions/workflows/android.yml/badge.svg)](https://github.com/qqlittleice/MiuiHome_R/actions/workflows/android.yml) 
 [![Crowdin](https://badges.crowdin.net/miuihomer/localized.svg)](https://crowdin.com/project/miuihomer)
 [![Chat](https://img.shields.io/badge/Telegram-Chat-blue.svg?logo=telegram)](https://t.me/MiuiHome_Xposed)
 ![Launcher](https://github.com/qqlittleice/MiuiHome/blob/main/Pic/MiuiHome.png)
