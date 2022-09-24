@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc">Make MiuiHome Great Again.</string>
-    <string name="backup">Backup Module Settings</string>
-    <string name="restore">Restore Module Settings</string>
-    <string name="reboot_home">Reboot Launcher</string>
-    <string name="about">About</string>
-    <string name="show_icon">Show Icon</string>
-    <string name="hide_icon">Hide Icon</string>
-    <string name="complete_blur">CompleteBlur</string>
-    <string name="test_blur">Test Blur</string>
-    <string name="simple_blur">Simple Blur</string>
-    <string name="none_blur">None Blur</string>
-    <string name="none_blur_simple_anim">None Blur&amp;Simple Anim</string>
-    <string name="blur_level">Blur Level</string>
-    <string name="cancel_wallpaper_dimming">Cancel Wallpaper Dimming</string>
+    <string name="xposed_desc">MiuiHome\'u Yeniden Harika Hale Getirin.</string>
+    <string name="backup">Modül Ayarlarını Yedekle</string>
+    <string name="restore">Modül Ayarlarını Geri Yükle</string>
+    <string name="reboot_home">Başlatıcıyı Yeniden Başlat</string>
+    <string name="about">Hakkında</string>
+    <string name="show_icon">Simgeyi Göster</string>
+    <string name="hide_icon">Simgeyi Gizle</string>
+    <string name="complete_blur">Tamamen Bulanık</string>
+    <string name="test_blur">Test Bulanıklığı</string>
+    <string name="simple_blur">Basit Bulanıklık</string>
+    <string name="none_blur">Bulanıklık Yok</string>
+    <string name="none_blur_simple_anim">Bulanıklık Yok&amp;Basit Animasyon</string>
+    <string name="blur_level">Bulanıklık Seviyesi</string>
+    <string name="cancel_wallpaper_dimming">Duvar Kağıdı Karartmayı İptal Et</string>
     <string name="hide_status_bar_in_task_view">Hide Status Bar When In Task View</string>
     <string name="app_name_distance_task_view_card">App name distance task view card</string>
     <string name="task_view_card_rounded_corners">Task view card rounded corners</string>
