@@ -2,15 +2,71 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory
+        android:key="prefs_key_about_version"
         android:layout="@layout/activity_about"
-        android:title="@string/app_name" />
+        android:summary="@string/xposed_desc" />
 
-    <PreferenceCategory>
-        <Preference android:title="@string/github">
+    <PreferenceCategory android:title="@string/developer">
+
+        <Preference
+            android:icon="@drawable/ic_yukonga"
+            android:layout="@layout/preference_round_layout"
+            android:title="YuKongA" />
+
+        <Preference
+            android:icon="@drawable/ic_moralnorm"
+            android:layout="@layout/preference_round_layout"
+            android:title="MoralNorm" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/translator">
+
+        <Preference
+            android:title="@string/translators"
+            android:summary="@string/language"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/discussion">
+
+        <Preference
+            android:key="prefs_key_about_join_qq_group"
+            android:title="@string/qq_group" />
+
+        <Preference android:title="@string/tg_chat">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/MiuiHome_Xposed" />
+        </Preference>
+
+        <Preference android:title="@string/tg_channel">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/MiuiHome_Xposed_build" />
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/other_features">
+
+        <Preference
+            android:summary="@string/repo_summary"
+            android:title="@string/github">
+
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://github.com/qqlittleice/MiuiHome_R" />
         </Preference>
+
+        <Preference
+            android:summary="@string/translate"
+            android:title="@string/translation">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://crwd.in/miuihomer" />
+        </Preference>
+
     </PreferenceCategory>
 
 </PreferenceScreen>
