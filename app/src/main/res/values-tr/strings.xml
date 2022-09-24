@@ -14,7 +14,7 @@
     <string name="none_blur_simple_anim">Bulanıklık Yok&amp;Basit Animasyon</string>
     <string name="blur_level">Bulanıklık Seviyesi</string>
     <string name="cancel_wallpaper_dimming">Duvar Kağıdı Karartmayı İptal Et</string>
-    <string name="hide_status_bar_in_task_view">Hide Status Bar When In Task View</string>
+    <string name="hide_status_bar_in_task_view">Son Uygulamalardayken Durum Çubuğunu Gizle</string>
     <string name="app_name_distance_task_view_card">App name distance task view card</string>
     <string name="task_view_card_rounded_corners">Task view card rounded corners</string>
     <string name="anim_speed">Animation speed</string>
