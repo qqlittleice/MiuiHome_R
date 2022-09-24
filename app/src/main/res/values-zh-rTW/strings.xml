@@ -80,4 +80,15 @@
     <string name="overlap_mode">Fold2 樣式智慧助理</string>
     <string name="overlap_mode_summary">配合 WINI 使用更佳</string>
     <string name="module_settings">模組設定</string>
+    <string name="tg_chat">Telegram Chat</string>
+    <string name="tg_channel">Telegram Channel</string>
+    <string name="qq_group">QQ Group</string>
+    <string name="discussion">Discussion</string>
+    <string name="repo_summary">Welcome more developers to participate in the development</string>
+    <string name="translate">Help us translate the app to your language</string>
+    <string name="translator">Translator</string>
+    <string name="developer">Developer</string>
+    <string name="translation">Crowdin</string>
+    <string name="translators">YuKongA</string>
+    <string name="language">English</string>
 </resources>

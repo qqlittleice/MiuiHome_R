@@ -4,64 +4,67 @@
     <PreferenceCategory
         android:key="prefs_key_about_version"
         android:layout="@layout/activity_about"
-        android:summary="针对 Miui 桌面的自定义扩展 - Xposed"/>
+        android:summary="@string/xposed_desc" />
 
-    <PreferenceCategory
-        android:title="开发者 &amp; 致谢">
-
-        <Preference
-            android:layout="@layout/preference_round_layout"
-            android:icon="@drawable/ic_yukong"
-            android:title="余空"/>
+    <PreferenceCategory android:title="@string/developer">
 
         <Preference
+            android:icon="@drawable/ic_yukonga"
             android:layout="@layout/preference_round_layout"
+            android:title="YuKongA" />
+
+        <Preference
             android:icon="@drawable/ic_moralnorm"
-            android:title="MoralNorm"/>
+            android:layout="@layout/preference_round_layout"
+            android:title="MoralNorm" />
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="讨论">
+    <PreferenceCategory android:title="@string/translator">
 
         <Preference
-            android:title="@string/qq_group"
-            android:key="prefs_key_about_join_qq_group">
-        </Preference>
+            android:title="@string/translators"
+            android:summary="@string/language"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/discussion">
 
         <Preference
-            android:title="TG群组">
+            android:key="prefs_key_about_join_qq_group"
+            android:title="@string/qq_group" />
+
+        <Preference android:title="@string/tg_chat">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/MiuiHome_Xposed" />
         </Preference>
 
-        <Preference
-            android:title="TG频道">
+        <Preference android:title="@string/tg_channel">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/MiuiHome_Xposed_build" />
         </Preference>
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:title="@string/other_features">
+    <PreferenceCategory android:title="@string/other_features">
 
         <Preference
-            android:title="@string/github"
-            android:summary="欢迎更多开发者共同参与开发">
+            android:summary="@string/repo_summary"
+            android:title="@string/github">
 
             <intent
-                android:data="https://github.com/qqlittleice/MiuiHome_R"
-                android:action="android.intent.action.VIEW" />
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/qqlittleice/MiuiHome_R" />
         </Preference>
 
         <Preference
-            android:title="参与翻译"
-            android:summary="帮助我们将应用翻译成你的语言">
+            android:summary="@string/translate"
+            android:title="@string/translation">
 
             <intent
-                android:data="https://crwd.in/miuihomer"
-                android:action="android.intent.action.VIEW" />
+                android:action="android.intent.action.VIEW"
+                android:data="https://crwd.in/miuihomer" />
         </Preference>
 
     </PreferenceCategory>
