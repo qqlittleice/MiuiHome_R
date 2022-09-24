@@ -31,11 +31,11 @@
     <string name="number_of_icons_in_folder_iew">Número de linhas de ícones na visualização de pastas</string>
     <string name="dock_settings">Doca</string>
     <string name="enable_dock">Ativar desfoque da doca</string>
-    <string name="bottom_margin_of_dock_icon">Bottom margin of dock icon</string>
-    <string name="bottom_margin_of_home_icon">Bottom margin of page indicator</string>
+    <string name="bottom_margin_of_dock_icon">Margem inferior do ícone da doca</string>
+    <string name="bottom_margin_of_home_icon">Margem inferior do indicador de página</string>
     <string name="height_of_dock_view">Altura da visualização da doca</string>
     <string name="margins_on_both_sides_of_dock_view">Margens em ambos os lados da vista da doca</string>
-    <string name="top_margin_of_dock_icon">Top margin of the dock icon</string>
+    <string name="top_margin_of_dock_icon">Margem superior do ícone da doca</string>
     <string name="bottom_margin_of_dock_view">Margem superior da vista da doca</string>
     <string name="corner_radius_of_dock_view">Raio dos cantos da visão da doca</string>
     <string name="other_features">Outros</string>
@@ -85,13 +85,13 @@
     <string name="module_settings">Configurações do módulo</string>
     <string name="tg_chat">Chat do Telegram</string>
     <string name="tg_channel">Canal do Telegram</string>
-    <string name="qq_group">QQ Group</string>
+    <string name="qq_group">Grupo do QQ</string>
     <string name="discussion">Tópicos e discussões</string>
-    <string name="repo_summary">Welcome more developers to participate in the development</string>
-    <string name="translate">Help us translate the app to your language</string>
-    <string name="translator">Translator</string>
-    <string name="developer">Developer</string>
+    <string name="repo_summary">Bem-vindo a mais desenvolvedores para participar do desenvolvimento</string>
+    <string name="translate">Nos ajude a traduzir o app para o seu idioma</string>
+    <string name="translator">Tradutores</string>
+    <string name="developer">Desenvolvedor</string>
     <string name="translation">Crowdin</string>
-    <string name="translators">YuKongA</string>
+    <string name="translators">Hélio Castilho 🇧🇷</string>
     <string name="language">Inglês</string>
 </resources>
