@@ -2,15 +2,71 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory
+        android:key="prefs_key_about_version"
         android:layout="@layout/activity_about"
-        android:title="@string/app_name" />
+        android:summary="针对 Miui 桌面的自定义扩展 - Xposed"/>
 
-    <PreferenceCategory>
-        <Preference android:title="@string/github">
+    <PreferenceCategory
+        android:title="开发者 &amp; 致谢">
+
+        <Preference
+            android:layout="@layout/preference_round_layout"
+            android:icon="@drawable/ic_yukong"
+            android:title="余空"/>
+
+        <Preference
+            android:layout="@layout/preference_round_layout"
+            android:icon="@drawable/ic_moralnorm"
+            android:title="MoralNorm"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="讨论">
+
+        <Preference
+            android:title="@string/qq_group"
+            android:key="prefs_key_about_join_qq_group">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://github.com/qqlittleice/MiuiHome_R" />
         </Preference>
+
+        <Preference
+            android:title="TG群组">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/MiuiHome_Xposed" />
+        </Preference>
+
+        <Preference
+            android:title="TG频道">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/MiuiHome_Xposed_build" />
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/other_features">
+
+        <Preference
+            android:title="@string/github"
+            android:summary="欢迎更多开发者共同参与开发">
+
+            <intent
+                android:data="https://github.com/qqlittleice/MiuiHome_R"
+                android:action="android.intent.action.VIEW" />
+        </Preference>
+
+        <Preference
+            android:title="参与翻译"
+            android:summary="帮助我们将应用翻译成你的语言">
+
+            <intent
+                android:data="https://crwd.in/miuihomer"
+                android:action="android.intent.action.VIEW" />
+        </Preference>
+
     </PreferenceCategory>
 
 </PreferenceScreen>

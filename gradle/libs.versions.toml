@@ -6,9 +6,9 @@ gradle = { id = "gradle", version = "7.2.2" }
 
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.7.10" }
 
-com-android-application = { id = "com.android.application", version = "7.3.0" }
+com-android-application = { id = "com.android.application", version = "7.2.1" }
 
-com-android-library = { id = "com.android.library", version = "7.3.0" }
+com-android-library = { id = "com.android.library", version = "7.2.1" }
 
 [versions]
 
@@ -42,7 +42,7 @@ ezxhelper = "com.github.kyuubiran:EzXHelper:1.0.3"
 
 hiddenapibypass = "org.lsposed.hiddenapibypass:hiddenapibypass:4.3"
 
-com-android-tools-build-gradle = "com.android.tools.build:gradle:7.3.0"
+com-android-tools-build-gradle = "com.android.tools.build:gradle:7.2.1"
 
 androidx-core-core = { group = "androidx.core", name = "core", version.ref = "androidx-core" }
 
