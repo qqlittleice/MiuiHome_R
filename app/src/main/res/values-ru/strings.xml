@@ -83,4 +83,5 @@
     <string name="overlap_mode">Лента виджетов в стиле Mix Fold 2</string>
     <string name="overlap_mode_summary">Работает лучше с WINI</string>
     <string name="module_settings">Настройки модуля</string>
+    <string name="qq_group">QQ Group</string>
 </resources>
