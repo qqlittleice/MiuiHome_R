@@ -1,6 +1,10 @@
 package com.yuk.miuiHomeR.hook
 
-import com.github.kyuubiran.ezxhelper.utils.*
+import com.github.kyuubiran.ezxhelper.utils.findMethod
+import com.github.kyuubiran.ezxhelper.utils.getObject
+import com.github.kyuubiran.ezxhelper.utils.hookAfter
+import com.github.kyuubiran.ezxhelper.utils.hookBefore
+import com.github.kyuubiran.ezxhelper.utils.putObject
 import com.yuk.miuiHomeR.mPrefsMap
 
 object AnimDurationRatio : BaseHook() {

@@ -31,10 +31,8 @@
     <string name="number_of_icons_in_folder_iew">Jumlah baris ikon dalam tampilan folder</string>
     <string name="dock_settings">Dok</string>
     <string name="enable_dock">Aktifkan blur dok</string>
-    <string name="bottom_margin_of_icon">Margin bawah ikon</string>
     <string name="height_of_dock_view">Ketinggian tampilan dok</string>
     <string name="margins_on_both_sides_of_dock_view">Margin di kedua sisi tampilan dok</string>
-    <string name="top_margin_of_dock_view">Margin atas tampilan dok</string>
     <string name="bottom_margin_of_dock_view">Margin bawah tampilan dok</string>
     <string name="corner_radius_of_dock_view">Radius sudut tampilan dok</string>
     <string name="other_features">Lainya</string>

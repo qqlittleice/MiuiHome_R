@@ -4,7 +4,11 @@ import android.app.Activity
 import android.os.Bundle
 import android.view.View
 import com.yuk.miuiHomeR.mPrefsMap
-import com.yuk.miuiHomeR.utils.ktx.*
+import com.yuk.miuiHomeR.utils.ktx.callStaticMethod
+import com.yuk.miuiHomeR.utils.ktx.findClass
+import com.yuk.miuiHomeR.utils.ktx.hookAfterMethod
+import com.yuk.miuiHomeR.utils.ktx.hookBeforeMethod
+import com.yuk.miuiHomeR.utils.ktx.isAlpha
 
 object EnableBlurWhenOpenFolder : BaseHook() {
     override fun init() {

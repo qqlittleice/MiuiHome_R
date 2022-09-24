@@ -10,7 +10,13 @@ import com.github.kyuubiran.ezxhelper.init.InitFields.appContext
 import com.github.kyuubiran.ezxhelper.init.InitFields.moduleRes
 import com.yuk.miuiHomeR.R
 import com.yuk.miuiHomeR.mPrefsMap
-import com.yuk.miuiHomeR.utils.ktx.*
+import com.yuk.miuiHomeR.utils.ktx.callMethod
+import com.yuk.miuiHomeR.utils.ktx.callStaticMethod
+import com.yuk.miuiHomeR.utils.ktx.findClass
+import com.yuk.miuiHomeR.utils.ktx.getStaticObjectField
+import com.yuk.miuiHomeR.utils.ktx.hookAfterAllMethods
+import com.yuk.miuiHomeR.utils.ktx.hookBeforeMethod
+import com.yuk.miuiHomeR.utils.ktx.setStaticObjectField
 import de.robv.android.xposed.XposedHelpers
 
 @SuppressLint("StaticFieldLeak", "DiscouragedApi")

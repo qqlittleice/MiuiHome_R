@@ -3,7 +3,7 @@
 
     <style name="AppTheme" parent="Theme.AppCompat.DayNight" />
 
-    <style name="AppTheme.Dark" parent="Theme.AppCompat.Dark" >
+    <style name="AppTheme.Dark" parent="Theme.AppCompat.Dark">
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.Dark</item>
         <item name="android:forceDarkAllowed">false</item>
     </style>

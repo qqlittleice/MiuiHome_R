@@ -4,7 +4,11 @@ import android.util.TypedValue
 import android.view.View
 import android.widget.TextView
 import com.yuk.miuiHomeR.mPrefsMap
-import com.yuk.miuiHomeR.utils.ktx.*
+import com.yuk.miuiHomeR.utils.ktx.findClass
+import com.yuk.miuiHomeR.utils.ktx.getObjectField
+import com.yuk.miuiHomeR.utils.ktx.hookAfterAllConstructors
+import com.yuk.miuiHomeR.utils.ktx.hookAfterMethod
+import com.yuk.miuiHomeR.utils.ktx.setIntField
 
 object Recent : BaseHook() {
     override fun init() {

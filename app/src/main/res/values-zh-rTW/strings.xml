@@ -31,10 +31,8 @@
     <string name="number_of_icons_in_folder_iew">文件夾視圖內圖標的排數</string>
     <string name="dock_settings">底欄</string>
     <string name="enable_dock">啟用底欄模糊</string>
-    <string name="bottom_margin_of_icon">圖標下邊距</string>
     <string name="height_of_dock_view">底欄高度</string>
     <string name="margins_on_both_sides_of_dock_view">底欄兩側邊距</string>
-    <string name="top_margin_of_dock_view">底欄上邊距</string>
     <string name="bottom_margin_of_dock_view">底欄下邊距</string>
     <string name="corner_radius_of_dock_view">底欄圓角半徑</string>
     <string name="other_features">其它</string>

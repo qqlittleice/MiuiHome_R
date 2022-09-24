@@ -23,6 +23,7 @@ class DoubleTapController internal constructor(mContext: Context) {
                 mActionDownRawY = motionEvent.rawY
                 false
             }
+
             action != MotionEvent.ACTION_UP -> false
             else -> {
                 val rawX = motionEvent.rawX

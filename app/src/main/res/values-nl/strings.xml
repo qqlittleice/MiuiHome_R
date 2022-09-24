@@ -31,10 +31,8 @@
     <string name="number_of_icons_in_folder_iew">Aantal rijen van app iconen in mapweergave</string>
     <string name="dock_settings">Dock</string>
     <string name="enable_dock">Dock-vervaging inschakelen</string>
-    <string name="bottom_margin_of_icon">Afstand onder app iconen</string>
     <string name="height_of_dock_view">Hoogte van dock</string>
     <string name="margins_on_both_sides_of_dock_view">Marges aan beide zijden van dock</string>
-    <string name="top_margin_of_dock_view">Bovenste marge van dock</string>
     <string name="bottom_margin_of_dock_view">Onderste marge van dock</string>
     <string name="corner_radius_of_dock_view">Afronding van de hoeken van dock</string>
     <string name="other_features">Overig</string>

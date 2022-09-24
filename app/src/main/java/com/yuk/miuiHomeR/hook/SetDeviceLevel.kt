@@ -10,9 +10,7 @@ object SetDeviceLevel : BaseHook() {
             "com.miui.home.launcher.common.DeviceLevelUtils".hookBeforeMethod("getDeviceLevel") {
                 it.result = 2
             }
-            "com.miui.home.launcher.common.CpuLevelUtils".hookBeforeMethod(
-                "getQualcommCpuLevel", String::class.java
-            ) {
+            "com.miui.home.launcher.common.CpuLevelUtils".hookBeforeMethod("getQualcommCpuLevel", String::class.java) {
                 it.result = 2
             }
             "com.miui.home.launcher.DeviceConfig".hookBeforeMethod("isSupportCompleteAnimation") {
@@ -29,6 +27,9 @@ object SetDeviceLevel : BaseHook() {
             }
             "com.miui.home.launcher.util.noword.NoWordSettingHelperKt".hookBeforeMethod("isNoWordAvailable") {
                 it.result = true
+            }
+            "android.os.SystemProperties".hookBeforeMethod("getBoolean", String::class.java, Boolean::class.java) {
+                if (it.args[0] == "ro.config.low_ram.threshold_gb") it.result = false
             }
         } catch (e: Throwable) {
             Log.ex(e)

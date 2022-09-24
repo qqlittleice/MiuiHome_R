@@ -31,10 +31,8 @@
     <string name="number_of_icons_in_folder_iew">Số cột trong thư mục</string>
     <string name="dock_settings">Thanh đế</string>
     <string name="enable_dock">Bật mờ đế</string>
-    <string name="bottom_margin_of_icon">Căn lề dưới của biểu tượng</string>
     <string name="height_of_dock_view">Chiều cao đế</string>
     <string name="margins_on_both_sides_of_dock_view">Căn lề 2 bên đế</string>
-    <string name="top_margin_of_dock_view">Căn lề trên đế</string>
     <string name="bottom_margin_of_dock_view">Căn lề dưới đế</string>
     <string name="corner_radius_of_dock_view">Bo góc đế</string>
     <string name="other_features">Khác</string>

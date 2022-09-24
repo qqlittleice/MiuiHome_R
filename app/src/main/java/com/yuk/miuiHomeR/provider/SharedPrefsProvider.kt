@@ -40,19 +40,23 @@ class SharedPrefsProvider : ContentProvider() {
                 cursor.newRow().add("data", prefs!!.getString(parts[1], ""))
                 return cursor
             }
+
             1 -> {
                 cursor.newRow().add("data", prefs!!.getString(parts[1], parts[2]))
                 return cursor
             }
+
             2 -> {
                 cursor.newRow().add("data", prefs!!.getInt(parts[1], parts[2].toInt()))
                 return cursor
             }
+
             3 -> {
                 cursor.newRow()
                     .add("data", if (prefs!!.getBoolean(parts[1], parts[2].toInt() == 1)) 1 else 0)
                 return cursor
             }
+
             4 -> {
                 val strings = prefs!!.getStringSet(parts[1], LinkedHashSet())
                 for (str in strings!!) cursor.newRow().add("data", str)

@@ -31,10 +31,8 @@
     <string name="number_of_icons_in_folder_iew">Número de filas de iconos en la vista de carpeta</string>
     <string name="dock_settings">Barra de aplicaciones</string>
     <string name="enable_dock">Habilitar desenfoque en la barra de aplicaciones</string>
-    <string name="bottom_margin_of_icon">Margen inferior del icono</string>
     <string name="height_of_dock_view">Altura de la barra de aplicaciones</string>
     <string name="margins_on_both_sides_of_dock_view">Márgenes en ambos lados de la barra de aplicaciones</string>
-    <string name="top_margin_of_dock_view">Margen superior de la barra de aplicaciones</string>
     <string name="bottom_margin_of_dock_view">Margen inferior de la barra de aplicaciones</string>
     <string name="corner_radius_of_dock_view">Radio de la esquina de la barra de notificaciones</string>
     <string name="other_features">Otro</string>

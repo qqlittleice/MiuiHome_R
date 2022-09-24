@@ -102,15 +102,19 @@ class MainActivity : BaseAppCompatActivity() {
                 )
                 Shell.cmd("am force-stop com.yuk.miuiHomeR").exec()
             }
+
             R.id.backup -> {
                 BackupUtils.backup(this, PrefsUtils.mSharedPreferences)
             }
+
             R.id.restore -> {
                 BackupUtils.recovery(this, PrefsUtils.mSharedPreferences)
             }
+
             R.id.reboot_home -> {
                 Shell.cmd("am force-stop com.miui.home", "am force-stop com.yuk.miuiHomeR").exec()
             }
+
             R.id.about -> {
                 startActivity(this, AboutActivity::class.java)
             }

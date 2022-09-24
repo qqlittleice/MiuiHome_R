@@ -9,16 +9,26 @@
             android:key="prefs_key_home_dock_blur"
             android:title="@string/enable_dock" />
 
+        <!-- 页面指示器下边距 -->
+        <SeekBarPreference
+            android:defaultValue="110"
+            android:key="prefs_key_home_icon_bottom_margin"
+            android:title="@string/bottom_margin_of_home_icon"
+            app:format="%d dp"
+            app:maxValue="200"
+            app:showSeekBarValue="true" />
+
+        <!-- 底栏图标下边距 -->
         <SeekBarPreference
             android:defaultValue="-8"
-            android:dependency="prefs_key_home_dock_blur"
             android:key="prefs_key_home_dock_icon_bottom_margin"
-            android:title="@string/bottom_margin_of_icon"
+            android:title="@string/bottom_margin_of_dock_icon"
             app:format="%d dp"
             app:maxValue="100"
             app:minValue="-20"
             app:showSeekBarValue="true" />
 
+        <!-- 底栏高度 -->
         <SeekBarPreference
             android:defaultValue="98"
             android:dependency="prefs_key_home_dock_blur"
@@ -28,6 +38,7 @@
             app:maxValue="200"
             app:showSeekBarValue="true" />
 
+        <!-- 底栏两侧边距 -->
         <SeekBarPreference
             android:defaultValue="10"
             android:dependency="prefs_key_home_dock_blur"
@@ -37,16 +48,17 @@
             app:maxValue="100"
             app:showSeekBarValue="true" />
 
+        <!-- 底栏图标上边距 -->
         <SeekBarPreference
-            android:defaultValue="30"
-            android:dependency="prefs_key_home_dock_blur"
+            android:defaultValue="20"
             android:key="prefs_key_home_dock_top_margin"
-            android:title="@string/top_margin_of_dock_view"
+            android:title="@string/top_margin_of_dock_icon"
             app:format="%d dp"
             app:maxValue="100"
             app:minValue="-20"
             app:showSeekBarValue="true" />
 
+        <!-- 底栏下边距 -->
         <SeekBarPreference
             android:defaultValue="13"
             android:dependency="prefs_key_home_dock_blur"
@@ -57,6 +69,7 @@
             app:minValue="-20"
             app:showSeekBarValue="true" />
 
+        <!-- 底栏圆角半径 -->
         <SeekBarPreference
             android:defaultValue="25"
             android:dependency="prefs_key_home_dock_blur"

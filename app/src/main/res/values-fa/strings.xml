@@ -31,10 +31,8 @@
     <string name="number_of_icons_in_folder_iew">تعداد ردیف آیکون‌ها در نمای پوشه</string>
     <string name="dock_settings">پیشخوان</string>
     <string name="enable_dock">تار کردن پیشخوان</string>
-    <string name="bottom_margin_of_icon">حاشیه پایین آیکون ها</string>
     <string name="height_of_dock_view">ارتفاع نمای پیشخوان</string>
     <string name="margins_on_both_sides_of_dock_view">حاشیه در دو طرف نمای پیشخوان</string>
-    <string name="top_margin_of_dock_view">حاشیه بالای نمای پیشخوان</string>
     <string name="bottom_margin_of_dock_view">حاشیه پایین نمای پیشخوان</string>
     <string name="corner_radius_of_dock_view">شعاع گوشه‌های نمای پیشخوان</string>
     <string name="other_features">بیشتر</string>

@@ -31,10 +31,11 @@
     <string name="number_of_icons_in_folder_iew">Number of rows of icons in the folder view</string>
     <string name="dock_settings">Dock</string>
     <string name="enable_dock">Enable dock blur</string>
-    <string name="bottom_margin_of_icon">Bottom margin of icon</string>
+    <string name="bottom_margin_of_dock_icon">Bottom margin of dock icon</string>
+    <string name="bottom_margin_of_home_icon">Bottom margin of page indicator</string>
     <string name="height_of_dock_view">Height of dock view</string>
     <string name="margins_on_both_sides_of_dock_view">Margins on both sides of the dock view</string>
-    <string name="top_margin_of_dock_view">Top margin of the dock view</string>
+    <string name="top_margin_of_dock_icon">Top margin of the dock icon</string>
     <string name="bottom_margin_of_dock_view">Bottom margin of the dock view</string>
     <string name="corner_radius_of_dock_view">Corner radius of the dock view</string>
     <string name="other_features">Other</string>

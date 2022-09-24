@@ -3,7 +3,11 @@ package com.yuk.miuiHomeR.hook
 import android.content.Context
 import android.content.Intent
 import android.view.MotionEvent
-import com.github.kyuubiran.ezxhelper.utils.*
+import com.github.kyuubiran.ezxhelper.utils.findMethod
+import com.github.kyuubiran.ezxhelper.utils.getObject
+import com.github.kyuubiran.ezxhelper.utils.hookAllConstructorAfter
+import com.github.kyuubiran.ezxhelper.utils.hookBefore
+import com.github.kyuubiran.ezxhelper.utils.invokeMethodAuto
 import com.yuk.miuiHomeR.mPrefsMap
 import de.robv.android.xposed.XposedHelpers
 
