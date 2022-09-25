@@ -94,4 +94,5 @@
     <string name="translation">Crowdin</string>
     <string name="translators">TG: @majestics_translation</string>
     <string name="language">Русский</string>
+    <string name="anim_speed_recent">Animation speed in and out of recent tasks</string>
 </resources>
