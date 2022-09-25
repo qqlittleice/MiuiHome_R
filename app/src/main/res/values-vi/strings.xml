@@ -94,4 +94,5 @@
     <string name="translation">Crowdin</string>
     <string name="translators">Bntt19</string>
     <string name="language">Tiếng Việt</string>
+    <string name="anim_speed_recent">Animation speed in and out of recent tasks</string>
 </resources>
