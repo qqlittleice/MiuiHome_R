@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc">Miui Home wird wieder grossartig.</string>
+    <string name="xposed_desc">Miui Home wird wieder großartig.</string>
     <string name="backup">Modul Einstellungen für Backup</string>
     <string name="restore">Module Einstellungen wiederherstellen</string>
     <string name="reboot_home">Launcher neustarten</string>
