@@ -17,7 +17,7 @@
     <string name="hide_status_bar_in_task_view">在最近任务隐藏状态栏</string>
     <string name="app_name_distance_task_view_card">应用名称距卡片</string>
     <string name="task_view_card_rounded_corners">卡片圆角大小</string>
-    <string name="anim_speed">动画速度</string>
+    <string name="anim_speed">动画速度「开关应用」</string>
     <string name="recent">最近任务</string>
     <string name="widget">小部件</string>
     <string name="hide_widget_title">隐藏小部件标题</string>
@@ -94,4 +94,5 @@
     <string name="translation">Crowdin 翻译</string>
     <string name="translators">YuKongA</string>
     <string name="language">简体中文</string>
+    <string name="anim_speed_recent">动画速度「进出后台」</string>
 </resources>

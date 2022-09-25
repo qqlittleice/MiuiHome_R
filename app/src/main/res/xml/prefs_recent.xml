@@ -32,6 +32,14 @@
             android:title="@string/hide_status_bar_in_task_view" />
 
         <SeekBarPreference
+            android:defaultValue="20"
+            android:key="prefs_key_task_view_corners"
+            android:title="@string/task_view_card_rounded_corners"
+            app:format="%d dp"
+            app:maxValue="100"
+            app:showSeekBarValue="true" />
+
+        <SeekBarPreference
             android:defaultValue="40"
             android:key="prefs_key_task_view_header_height"
             android:title="@string/app_name_distance_task_view_card"
@@ -40,11 +48,12 @@
             app:showSeekBarValue="true" />
 
         <SeekBarPreference
-            android:defaultValue="20"
-            android:key="prefs_key_task_view_corners"
-            android:title="@string/task_view_card_rounded_corners"
-            app:format="%d dp"
-            app:maxValue="100"
+            android:defaultValue="130"
+            android:key="prefs_key_home_anim_ratio_recent"
+            android:title="@string/anim_speed_recent"
+            app:format="%d / 100 f"
+            app:maxValue="500"
+            app:minValue="10"
             app:showSeekBarValue="true" />
 
         <SeekBarPreference

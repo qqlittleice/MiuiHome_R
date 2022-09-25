@@ -9,7 +9,6 @@ import com.yuk.miuiHomeR.ui.base.BaseAppCompatActivity
 import com.yuk.miuiHomeR.ui.base.SubFragment
 import moralnorm.preference.Preference
 
-
 class AboutActivity : BaseAppCompatActivity() {
 
     override fun initFragment(): Fragment {

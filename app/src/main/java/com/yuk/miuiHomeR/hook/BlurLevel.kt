@@ -4,6 +4,7 @@ import com.github.kyuubiran.ezxhelper.utils.findMethod
 import com.github.kyuubiran.ezxhelper.utils.hookBefore
 import com.github.kyuubiran.ezxhelper.utils.hookReturnConstant
 import com.yuk.miuiHomeR.mPrefsMap
+import com.yuk.miuiHomeR.utils.ktx.hookBeforeMethod
 
 object BlurLevel : BaseHook() {
     override fun init() {
@@ -15,6 +16,9 @@ object BlurLevel : BaseHook() {
             findMethod("com.miui.home.launcher.common.BlurUtils") {
                 name == "isUseCompleteBlurOnDev"
             }.hookReturnConstant(false)
+            "com.miui.home.launcher.common.DeviceLevelUtils".hookBeforeMethod("isUseSimpleAnim") {
+                it.result = true
+            }
         } else {
             findMethod("com.miui.home.launcher.common.BlurUtils") {
                 name == "getBlurType"
