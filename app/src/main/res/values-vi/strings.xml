@@ -31,8 +31,11 @@
     <string name="number_of_icons_in_folder_iew">Số cột trong thư mục</string>
     <string name="dock_settings">Thanh đế</string>
     <string name="enable_dock">Bật mờ đế</string>
+    <string name="bottom_margin_of_dock_icon">Căn lề dưới đế</string>
+    <string name="bottom_margin_of_home_icon">Căn lề dưới chỉ báo trang</string>
     <string name="height_of_dock_view">Chiều cao đế</string>
     <string name="margins_on_both_sides_of_dock_view">Căn lề 2 bên đế</string>
+    <string name="top_margin_of_dock_icon">Căn lề trên đế</string>
     <string name="bottom_margin_of_dock_view">Căn lề dưới đế</string>
     <string name="corner_radius_of_dock_view">Bo góc đế</string>
     <string name="other_features">Khác</string>
@@ -80,15 +83,15 @@
     <string name="overlap_mode">App Vault kiểu Fold2</string>
     <string name="overlap_mode_summary">Hoạt động tốt với WINI</string>
     <string name="module_settings">Cài đặt mô-đun</string>
-    <string name="tg_chat">Telegram Chat</string>
-    <string name="tg_channel">Telegram Channel</string>
-    <string name="qq_group">QQ Group</string>
-    <string name="discussion">Discussion</string>
-    <string name="repo_summary">Welcome more developers to participate in the development</string>
-    <string name="translate">Help us translate the app to your language</string>
-    <string name="translator">Translator</string>
-    <string name="developer">Developer</string>
+    <string name="tg_chat">Nhóm Telegram</string>
+    <string name="tg_channel">Kênh Telegram</string>
+    <string name="qq_group">Nhóm QQ</string>
+    <string name="discussion">Thảo luận</string>
+    <string name="repo_summary">Chào mừng các nhà phát triển tham gia vào quá trình phát triển</string>
+    <string name="translate">Giúp chúng tôi dịch ứng dụng sang ngôn ngữ của bạn</string>
+    <string name="translator">Người phiên dịch</string>
+    <string name="developer">Nhà phát triển</string>
     <string name="translation">Crowdin</string>
-    <string name="translators">YuKongA</string>
-    <string name="language">English</string>
+    <string name="translators">Bntt19</string>
+    <string name="language">Tiếng Việt</string>
 </resources>

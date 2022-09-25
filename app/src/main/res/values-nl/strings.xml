@@ -31,8 +31,11 @@
     <string name="number_of_icons_in_folder_iew">Aantal rijen van app iconen in mapweergave</string>
     <string name="dock_settings">Dock</string>
     <string name="enable_dock">Dock-vervaging inschakelen</string>
+    <string name="bottom_margin_of_dock_icon">Afstand onder dock iconen</string>
+    <string name="bottom_margin_of_home_icon">Ondermarge van pagina indicator</string>
     <string name="height_of_dock_view">Hoogte van dock</string>
     <string name="margins_on_both_sides_of_dock_view">Marges aan beide zijden van dock</string>
+    <string name="top_margin_of_dock_icon">Bovenste marge van dock iconen</string>
     <string name="bottom_margin_of_dock_view">Onderste marge van dock</string>
     <string name="corner_radius_of_dock_view">Afronding van de hoeken van dock</string>
     <string name="other_features">Overig</string>
@@ -81,14 +84,14 @@
     <string name="overlap_mode_summary">Werkt beter met WINI</string>
     <string name="module_settings">Module-instellingen</string>
     <string name="tg_chat">Telegram Chat</string>
-    <string name="tg_channel">Telegram Channel</string>
-    <string name="qq_group">QQ Group</string>
-    <string name="discussion">Discussion</string>
-    <string name="repo_summary">Welcome more developers to participate in the development</string>
-    <string name="translate">Help us translate the app to your language</string>
-    <string name="translator">Translator</string>
-    <string name="developer">Developer</string>
+    <string name="tg_channel">Telegram Kanaal</string>
+    <string name="qq_group">QQ Groep</string>
+    <string name="discussion">Discussie</string>
+    <string name="repo_summary">Welkom meer ontwikkelaars om deel te nemen in de ontwikkeling</string>
+    <string name="translate">Help ons de app te vertalen naar uw taal</string>
+    <string name="translator">Vertaler</string>
+    <string name="developer">Ontwikkelaar</string>
     <string name="translation">Crowdin</string>
-    <string name="translators">YuKongA</string>
-    <string name="language">English</string>
+    <string name="translators">FurriousFox</string>
+    <string name="language">Nederlands</string>
 </resources>

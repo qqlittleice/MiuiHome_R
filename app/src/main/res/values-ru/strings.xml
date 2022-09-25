@@ -31,8 +31,11 @@
     <string name="number_of_icons_in_folder_iew">Количество строк иконок в папке</string>
     <string name="dock_settings">Док-бар</string>
     <string name="enable_dock">Включить размытие док-бара</string>
+    <string name="bottom_margin_of_dock_icon">Bottom margin of dock icon</string>
+    <string name="bottom_margin_of_home_icon">Bottom margin of page indicator</string>
     <string name="height_of_dock_view">Высота док-бара</string>
     <string name="margins_on_both_sides_of_dock_view">Отступы с обоих сторон док-бара</string>
+    <string name="top_margin_of_dock_icon">Top margin of the dock icon</string>
     <string name="bottom_margin_of_dock_view">Отступ снизу док-бара</string>
     <string name="corner_radius_of_dock_view">Радиус скругления док-бара</string>
     <string name="other_features">Прочее</string>
