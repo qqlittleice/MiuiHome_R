@@ -17,7 +17,7 @@
     <string name="hide_status_bar_in_task_view">Son Uygulamalardayken Durum Çubuğunu Gizle</string>
     <string name="app_name_distance_task_view_card">Uygulama adı mesafe görev görünümü kartı</string>
     <string name="task_view_card_rounded_corners">Görev görünümü kartı yuvarlatılmış köşeler</string>
-    <string name="anim_speed">Animasyon hızı</string>
+    <string name="anim_speed">Animation speed</string>
     <string name="recent">Son Görünüm</string>
     <string name="widget">Widget</string>
     <string name="hide_widget_title">Widget etiketlerini gizle</string>
@@ -94,4 +94,5 @@
     <string name="translation">Crowdin</string>
     <string name="translators">Buğra Çağlar</string>
     <string name="language">Türkçe</string>
+    <string name="anim_speed_recent">Animation speed in and out of recent tasks</string>
 </resources>
