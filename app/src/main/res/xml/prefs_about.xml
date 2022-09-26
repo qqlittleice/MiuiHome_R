@@ -11,20 +11,30 @@
         <Preference
             android:icon="@drawable/ic_yukonga"
             android:layout="@layout/preference_round_layout"
-            android:title="YuKongA" />
+            android:summary="Hook、App Icon"
+            android:title="YuKongA">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/YuKongA" />
+        </Preference>
 
         <Preference
             android:icon="@drawable/ic_moralnorm"
             android:layout="@layout/preference_round_layout"
-            android:title="MoralNorm" />
+            android:summary="UI Design、Hook"
+            android:title="MoralNorm">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/MoralNorm" />
+        </Preference>
 
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/translator">
 
-        <Preference
-            android:title="@string/translators"
-            android:summary="@string/language"/>
+        <ValuePreference
+            android:text="@string/language"
+            android:title="@string/translators" />
 
     </PreferenceCategory>
 

@@ -100,7 +100,7 @@ class MainActivity : BaseAppCompatActivity() {
                     else PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
                     PackageManager.DONT_KILL_APP
                 )
-                Shell.cmd("am force-stop com.yuk.miuiHomeR").exec()
+                Shell.cmd("am force-stop com.miui.home", "am force-stop com.yuk.miuiHomeR").exec()
             }
 
             R.id.backup -> {
