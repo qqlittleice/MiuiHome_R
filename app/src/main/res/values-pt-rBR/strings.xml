@@ -94,5 +94,5 @@
     <string name="translation">Crowdin</string>
     <string name="translators">Hélio Castilho 🇧🇷</string>
     <string name="language">Inglês</string>
-    <string name="anim_speed_recent">Animation speed in and out of recent tasks</string>
+    <string name="anim_speed_recent">Velocidade de animação dentro e fora de tarefas recentes</string>
 </resources>
