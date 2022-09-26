@@ -29,7 +29,7 @@
     <string name="blurred_background_when_opening_folder_view">資料夾開啟時背景模糊</string>
     <string name="using_full_width_of_folder_view">利用整個資料夾視圖的寬度</string>
     <string name="number_of_icons_in_folder_iew">資料夾視圖內圖示的列數</string>
-    <string name="dock_settings">底欄</string>
+    <string name="dock_settings">Dock</string>
     <string name="enable_dock">啟用 Dock 模糊</string>
     <string name="bottom_margin_of_dock_icon">Dock 圖示下邊距</string>
     <string name="bottom_margin_of_home_icon">頁面指示器下邊距</string>
@@ -38,7 +38,7 @@
     <string name="top_margin_of_dock_icon">Dock 圖示上邊距</string>
     <string name="bottom_margin_of_dock_view">Dock 下邊距</string>
     <string name="corner_radius_of_dock_view">Dock 圓角半徑</string>
-    <string name="other_features">其它</string>
+    <string name="other_features">其他</string>
     <string name="always_show_status_bar_clock">始終顯示狀態列時鐘</string>
     <string name="double_tap_to_lock_screen">輕觸兩下桌面空白處鎖定螢幕</string>
     <string name="shortcut_menu_background_view_blur">快捷選單背景模糊</string>
@@ -58,7 +58,7 @@
     <string name="infinite_scroll">無限捲動</string>
     <string name="infinite_scroll_summary">從最後一頁繼續右滑將回到第一頁，如不開啟智慧助理則反之亦然</string>
     <string name="hide_seek_point">移除頁面指示器</string>
-    <string name="app_drawer">應用程式導覽匣</string>
+    <string name="app_drawer">導覽匣</string>
     <string name="hide_category_all">隱藏應用程式分組中的「全部」</string>
     <string name="hide_category_paging_edit">隱藏分類頁面內的「編輯」按鈕</string>
     <string name="hide_clean_up">隱藏「清理全部任務」按鈕</string>
