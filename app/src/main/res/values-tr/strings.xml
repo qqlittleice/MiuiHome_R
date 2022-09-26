@@ -94,5 +94,5 @@
     <string name="translation">Crowdin</string>
     <string name="translators">Buğra Çağlar</string>
     <string name="language">Türkçe</string>
-    <string name="anim_speed_recent">Animation speed in and out of recent tasks</string>
+    <string name="anim_speed_recent">Son uygulamaların giriş ve çıkış animasyon hızı</string>
 </resources>
