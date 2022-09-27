@@ -56,7 +56,7 @@
     <string name="blur_radius_summary">僅生效於 MIUI Home 範圍內</string>
     <string name="home_folder_columns">%d 欄</string>
     <string name="infinite_scroll">無限捲動</string>
-    <string name="infinite_scroll_summary">從最後一頁繼續右滑將回到第一頁，如不開啟智慧助理則反之亦然</string>
+    <string name="infinite_scroll_summary">從最後一頁繼續右滑將回到第一頁，如不開啟智慧助理或Google探索則反之亦然</string>
     <string name="hide_seek_point">移除頁面指示器</string>
     <string name="app_drawer">導覽匣</string>
     <string name="hide_category_all">隱藏應用程式分組中的「全部」</string>
