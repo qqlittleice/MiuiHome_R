@@ -20,7 +20,8 @@ import com.yuk.miuiHomeR.utils.BackupUtils
 import com.yuk.miuiHomeR.utils.Helpers
 import com.yuk.miuiHomeR.utils.PrefsUtils
 import com.yuk.miuiHomeR.utils.ktx.execShell
-
+import com.yuk.miuiHomeR.utils.ktx.getLocale
+import com.yuk.miuiHomeR.utils.ktx.setLocale
 
 class MainActivity : BaseAppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,13 +42,16 @@ class MainActivity : BaseAppCompatActivity() {
                 is Int -> path = "integer/"
                 is Boolean -> path = "boolean/"
             }
-            contentResolver.notifyChange(Uri.parse("content://" + SharedPrefsProvider.AUTHORITY + "/" + path + s), null)
+            contentResolver.notifyChange(
+                Uri.parse("content://" + SharedPrefsProvider.AUTHORITY + "/" + path + s), null
+            )
             if (path != "") contentResolver.notifyChange(
-                Uri.parse("content://" + SharedPrefsProvider.AUTHORITY + "/pref/" + path + s),
-                null
+                Uri.parse("content://" + SharedPrefsProvider.AUTHORITY + "/pref/" + path + s), null
             )
         }
-        PrefsUtils.mSharedPreferences.registerOnSharedPreferenceChangeListener(mPreferenceChangeListener)
+        PrefsUtils.mSharedPreferences.registerOnSharedPreferenceChangeListener(
+            mPreferenceChangeListener
+        )
         Helpers.fixPermissionsAsync(applicationContext)
         try {
             val fileObserver: FileObserver = object : FileObserver(PrefsUtils.getSharedPrefsPath(), CLOSE_WRITE) {
@@ -75,7 +79,11 @@ class MainActivity : BaseAppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
-        val state = packageManager.getComponentEnabledSetting(ComponentName(this, this.javaClass.name + "Alias"))
+        val state = packageManager.getComponentEnabledSetting(
+            ComponentName(
+                this, this.javaClass.name + "Alias"
+            )
+        )
         menu.findItem(R.id.icon).title = when (state) {
             PackageManager.COMPONENT_ENABLED_STATE_DISABLED -> {
                 getString(R.string.show_icon)
@@ -95,10 +103,10 @@ class MainActivity : BaseAppCompatActivity() {
         when (item.itemId) {
             R.id.icon -> {
                 packageManager.setComponentEnabledSetting(
-                    ComponentName(this, this.javaClass.name + "Alias"),
-                    if (item.title == getString(R.string.hide_icon)) PackageManager.COMPONENT_ENABLED_STATE_DISABLED
-                    else PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
-                    PackageManager.DONT_KILL_APP
+                    ComponentName(
+                        this, this.javaClass.name + "Alias"
+                    ), if (item.title == getString(R.string.hide_icon)) PackageManager.COMPONENT_ENABLED_STATE_DISABLED
+                    else PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP
                 )
                 execShell("am force-stop com.miui.home && am force-stop com.yuk.miuiHomeR")
             }
@@ -126,6 +134,7 @@ class MainActivity : BaseAppCompatActivity() {
     @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+        setLocale(resources, getLocale(applicationContext))
         if (data == null) return
         when (requestCode) {
             BackupUtils.CREATE_DOCUMENT_CODE -> {

@@ -10,8 +10,8 @@ import com.yuk.miuiHomeR.hook.*
 import com.yuk.miuiHomeR.utils.Helpers
 import com.yuk.miuiHomeR.utils.PrefsMap
 import com.yuk.miuiHomeR.utils.PrefsUtils
+import com.yuk.miuiHomeR.utils.ktx.atLeastAndroidS
 import com.yuk.miuiHomeR.utils.ktx.hookBeforeMethod
-import com.yuk.miuiHomeR.utils.ktx.isLegacyAndroid
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.IXposedHookZygoteInit
 import de.robv.android.xposed.XSharedPreferences
@@ -68,7 +68,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         ShortcutItemCount,
                         AllAppsContainerViewBlur
                     )
-                    if (!isLegacyAndroid()) {
+                    if (atLeastAndroidS()) {
                         initHooks(
                             Dock,
                             EnableFolderIconBlur,
@@ -88,7 +88,8 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
         if (mPrefsMap.size == 0) {
             var mXSharedPreferences: XSharedPreferences? = null
             try {
-                mXSharedPreferences = XSharedPreferences(Helpers.mAppModulePkg, PrefsUtils.mPrefsName)
+                mXSharedPreferences =
+                    XSharedPreferences(Helpers.mAppModulePkg, PrefsUtils.mPrefsName)
                 mXSharedPreferences.makeWorldReadable()
             } catch (t: Throwable) {
                 XposedBridge.log(t)
