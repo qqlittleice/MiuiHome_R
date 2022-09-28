@@ -10,6 +10,8 @@ com-android-application = { id = "com.android.application", version = "7.3.0" }
 
 com-android-library = { id = "com.android.library", version = "7.3.0" }
 
+dev-rikka-tools-autoresconfig = { id = "dev.rikka.tools.autoresconfig", version = "1.2.1" }
+
 [versions]
 
 kotlin = "1.7.10"
@@ -36,7 +38,7 @@ org-jacoco-ant = "org.jacoco:org.jacoco.ant:0.8.8"
 
 api = "de.robv.android.xposed:api:82"
 
-com-github-topjohnwu-libsu-core = "com.github.topjohnwu.libsu:core:5.0.3"
+com-github-topjohnwu-libsu-core = "com.github.topjohnwu.libsu:core:5.0.2"
 
 ezxhelper = "com.github.kyuubiran:EzXHelper:1.0.3"
 
@@ -55,6 +57,7 @@ com-android-tools-build-gradle = "com.android.tools.build:gradle:7.3.0"
 ##                                                           ⬆ :7.4.0-alpha10"
 ##                                                           ⬆ :7.4.0-beta01"
 ##                                                           ⬆ :8.0.0-alpha01"
+##                                                           ⬆ :8.0.0-alpha02"
 
 androidx-core-core = { group = "androidx.core", name = "core", version.ref = "androidx-core" }
 

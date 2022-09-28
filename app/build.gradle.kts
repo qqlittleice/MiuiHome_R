@@ -1,9 +1,10 @@
 import com.android.build.gradle.internal.api.BaseVariantOutputImpl
-import java.util.Properties
+import java.util.*
 
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("dev.rikka.tools.autoresconfig")
 }
 
 android {
@@ -73,12 +74,18 @@ android {
         }
         applicationVariants.all {
             outputs.all {
-                (this as BaseVariantOutputImpl).outputFileName = "MiuiHomeR-$versionName($versionCode)-$name.apk"
+                (this as BaseVariantOutputImpl).outputFileName =
+                    "MiuiHomeR-$versionName($versionCode)-$name.apk"
             }
         }
     }
 }
-
+autoResConfig {
+    generatedClassFullName.set("com.yuk.miuiHomeR.utils.Locales")
+    generateRes.set(false)
+    generatedArrayFirstItem.set("SYSTEM")
+    generateLocaleConfig.set(true)
+}
 fun getGitHeadRefsSuffix(project: Project): String {
     // .git/HEAD描述当前目录所指向的分支信息，内容示例："ref: refs/heads/master\n"
     val headFile = File(project.rootProject.projectDir, ".git" + File.separator + "HEAD")
@@ -116,6 +123,7 @@ dependencies {
     implementation(AndroidX.lifecycle.common)
     implementation(AndroidX.vectorDrawable)
     implementation(AndroidX.vectorDrawable.animated)
+    implementation(AndroidX.appCompat)
 
     implementation(libs.com.github.topjohnwu.libsu.core)
     implementation(libs.ezxhelper)
