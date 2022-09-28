@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+<moralnorm.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory>
+    <moralnorm.preference.PreferenceCategory>
 
         <SwitchPreference
             android:defaultValue="false"
@@ -29,5 +29,9 @@
             app:maxValue="500"
             app:showSeekBarValue="true" />
 
-    </PreferenceCategory>
-</PreferenceScreen>
+        <ListPreference
+            android:defaultValue="SYSTEM"
+            android:key="prefs_key_language"
+            android:title="@string/settings_language" />
+    </moralnorm.preference.PreferenceCategory>
+</moralnorm.preference.PreferenceScreen>

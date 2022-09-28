@@ -10,6 +10,8 @@ com-android-application = { id = "com.android.application", version = "7.3.1" }
 
 com-android-library = { id = "com.android.library", version = "7.3.1" }
 
+dev-rikka-tools-autoresconfig = { id = "dev.rikka.tools.autoresconfig", version = "1.2.2" }
+
 [versions]
 
 kotlin = "1.7.20"
