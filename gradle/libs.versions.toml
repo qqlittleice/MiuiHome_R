@@ -4,7 +4,7 @@
 
 gradle = { id = "gradle", version = "7.3.0" }
 
-org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.7.10" }
+org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.7.20" }
 
 com-android-application = { id = "com.android.application", version = "7.3.0" }
 
@@ -12,13 +12,13 @@ com-android-library = { id = "com.android.library", version = "7.3.0" }
 
 [versions]
 
-kotlin = "1.7.10"
+kotlin = "1.7.20"
 
 androidx-core = "1.9.0"
 
 androidx-recyclerview = "1.2.1"
 
-androidx-fragment = "1.5.2"
+androidx-fragment = "1.5.3"
 
 androidx-collection = "1.2.0"
 
@@ -28,12 +28,11 @@ androidx-vectordrawable = "1.1.0"
 
 androidx-vectordrawable-animated = "1.1.0"
 
-androidx-annotation = "1.4.0"
+androidx-annotation = "1.5.0"
 
 [libraries]
 
 org-jacoco-ant = "org.jacoco:org.jacoco.ant:0.8.8"
-
 api = "de.robv.android.xposed:api:82"
 
 com-github-topjohnwu-libsu-core = "com.github.topjohnwu.libsu:core:5.0.3"
@@ -55,6 +54,7 @@ com-android-tools-build-gradle = "com.android.tools.build:gradle:7.3.0"
 ##                                                           ⬆ :7.4.0-alpha10"
 ##                                                           ⬆ :7.4.0-beta01"
 ##                                                           ⬆ :8.0.0-alpha01"
+##                                                           ⬆ :8.0.0-alpha02"
 
 androidx-core-core = { group = "androidx.core", name = "core", version.ref = "androidx-core" }
 
