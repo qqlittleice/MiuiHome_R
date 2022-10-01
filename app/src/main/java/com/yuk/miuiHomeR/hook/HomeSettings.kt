@@ -31,6 +31,7 @@ object HomeSettings : BaseHook() {
                     override fun onClick(v: View) {
                         val intent = Intent()
                         intent.component = ComponentName("com.yuk.miuiHomeR", "com.yuk.miuiHomeR.ui.MainActivity")
+                        intent.putExtra("homeAsUpEnabled", true);
                         v.context.startActivity(intent)
                     }
                 })

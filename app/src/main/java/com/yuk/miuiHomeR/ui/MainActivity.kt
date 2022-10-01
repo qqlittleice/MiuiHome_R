@@ -26,7 +26,7 @@ class MainActivity : BaseAppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setImmersionMenuEnabled(true)
-        appCompatActionBar.setDisplayHomeAsUpEnabled(false)
+        appCompatActionBar.setDisplayHomeAsUpEnabled(intent.getBooleanExtra("homeAsUpEnabled", false));
         initData()
     }
 

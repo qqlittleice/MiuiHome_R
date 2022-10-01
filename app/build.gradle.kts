@@ -132,5 +132,7 @@ dependencies {
     implementation(files("libs/preference-alpha.aar"))
     implementation(files("libs/springback-alpha.aar"))
     implementation(files("libs/blur-alpha.aar"))
+    implementation(files("libs/common-alpha.aar"))
+    implementation(files("libs/Smooth-alpha.aar"))
 
 }
