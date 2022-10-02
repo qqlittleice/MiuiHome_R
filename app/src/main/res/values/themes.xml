@@ -7,4 +7,32 @@
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.Dark</item>
         <item name="android:forceDarkAllowed">false</item>
     </style>
+
+    <style name="Theme.AppCompat.Translucent" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+    </style>
+
+    <style name="Theme.AppCompat.Translucent.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowActionBarOverlay">false</item>
+    </style>
+
+    <style name="Theme.AppCompat.Translucent.NoActionBar.NoAnimation">
+        <item name="android:windowAnimationStyle">@style/ActivityNoAnimation</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="Theme.AppCompat.Translucent.NoActionBar.NoAnimation.Dark">
+        <item name="android:windowAnimationStyle">@style/ActivityNoAnimation</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.Dark</item>
+    </style>
 </resources>

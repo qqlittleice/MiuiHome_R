@@ -2,16 +2,28 @@ package com.yuk.miuiHomeR.ui
 
 import android.content.Intent
 import android.net.Uri
+import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.yuk.miuiHomeR.BuildConfig
 import com.yuk.miuiHomeR.R
 import com.yuk.miuiHomeR.ui.base.BaseAppCompatActivity
 import com.yuk.miuiHomeR.ui.base.SubFragment
+import moralnorm.common.app.PickerDragActivity
+import moralnorm.internal.utils.ViewUtils
 import moralnorm.preference.Preference
 
-class AboutActivity : BaseAppCompatActivity() {
+class AboutActivity : PickerDragActivity() {
 
-    override fun initFragment(): Fragment {
+    override fun onCreate(bundle: Bundle?) {
+        setTheme(if (ViewUtils.isNightMode(this)) R.style.Theme_AppCompat_Translucent_NoActionBar_NoAnimation_Dark else R.style.Theme_AppCompat_Translucent_NoActionBar_NoAnimation)
+        super.onCreate(bundle)
+        setDragContentView(R.layout.activity_main)
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, initFragment())
+            .commit()
+    }
+
+    fun initFragment(): Fragment {
         return AboutFragment()
     }
 
