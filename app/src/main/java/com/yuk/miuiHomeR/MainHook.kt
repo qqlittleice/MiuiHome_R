@@ -23,6 +23,7 @@ import com.yuk.miuiHomeR.hook.EnableBlurWhenOpenFolder
 import com.yuk.miuiHomeR.hook.EnableFolderIconBlur
 import com.yuk.miuiHomeR.hook.FolderAnim
 import com.yuk.miuiHomeR.hook.FolderColumnsCount
+import com.yuk.miuiHomeR.hook.FoldDeviceDock
 import com.yuk.miuiHomeR.hook.HideSeekPoint
 import com.yuk.miuiHomeR.hook.HideStatusBarWhenEnterRecent
 import com.yuk.miuiHomeR.hook.HideWidgetTitles
@@ -99,6 +100,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         IconTitleColor,
                         IconTitleScrolling,
                         OverlapMode,
+                        FoldDeviceDock
                     )
                     if (!isLegacyAndroid()) {
                         initHooks(

@@ -1,6 +1,8 @@
 package com.yuk.miuiHomeR.hook
 
 import com.github.kyuubiran.ezxhelper.utils.Log
+import com.github.kyuubiran.ezxhelper.utils.findMethod
+import com.github.kyuubiran.ezxhelper.utils.hookReturnConstant
 import com.yuk.miuiHomeR.utils.ktx.checkVersionCode
 import com.yuk.miuiHomeR.utils.ktx.findClass
 import com.yuk.miuiHomeR.utils.ktx.hookBeforeMethod
@@ -13,9 +15,15 @@ object SetDeviceLevel : BaseHook() {
             "com.miui.home.launcher.common.DeviceLevelUtils".hookBeforeMethod("getDeviceLevel") {
                 it.result = 2
             }
-            "com.miui.home.launcher.common.CpuLevelUtils".hookBeforeMethod("getQualcommCpuLevel", String::class.java) {
-                it.result = 2
-            }
+            try {
+                findMethod("com.miui.home.launcher.common.CpuLevelUtils") {
+                    name == "getQualcommCpuLevel" && parameterCount == 1
+                }
+            } catch (e: Exception) {
+                findMethod("miuix.animation.utils.DeviceUtils") {
+                    name == "getQualcommCpuLevel" && parameterCount == 1
+                }
+            }.hookReturnConstant(2)
             "com.miui.home.launcher.DeviceConfig".hookBeforeMethod("isSupportCompleteAnimation") {
                 it.result = true
             }
