@@ -95,4 +95,5 @@
     <string name="translators">FurriousFox</string>
     <string name="language">Nederlands</string>
     <string name="anim_speed_recent">Animation speed in and out of recent tasks</string>
+    <string name="home_fold_dock">Dock for folded devices</string>
 </resources>
