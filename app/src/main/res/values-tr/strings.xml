@@ -95,4 +95,5 @@
     <string name="translators">Buğra Çağlar</string>
     <string name="language">Türkçe</string>
     <string name="anim_speed_recent">Son uygulamaların giriş ve çıkış animasyon hızı</string>
+    <string name="home_fold_dock">Dock for folded devices</string>
 </resources>
