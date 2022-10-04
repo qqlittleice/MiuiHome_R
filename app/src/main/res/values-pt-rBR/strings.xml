@@ -95,4 +95,5 @@
     <string name="translators">Hélio Castilho 🇧🇷</string>
     <string name="language">Inglês</string>
     <string name="anim_speed_recent">Velocidade de animação dentro e fora de tarefas recentes</string>
+    <string name="home_fold_dock">Dock for folded devices</string>
 </resources>
