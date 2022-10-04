@@ -12,7 +12,6 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
-import com.topjohnwu.superuser.Shell
 import com.yuk.miuiHomeR.R
 import com.yuk.miuiHomeR.provider.SharedPrefsProvider
 import com.yuk.miuiHomeR.ui.base.BaseAppCompatActivity
@@ -20,13 +19,14 @@ import com.yuk.miuiHomeR.ui.base.SubFragment
 import com.yuk.miuiHomeR.utils.BackupUtils
 import com.yuk.miuiHomeR.utils.Helpers
 import com.yuk.miuiHomeR.utils.PrefsUtils
+import com.yuk.miuiHomeR.utils.ktx.execShell
 
 
 class MainActivity : BaseAppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setImmersionMenuEnabled(true)
-        appCompatActionBar.setDisplayHomeAsUpEnabled(intent.getBooleanExtra("homeAsUpEnabled", false));
+        appCompatActionBar.setDisplayHomeAsUpEnabled(intent.getBooleanExtra("homeAsUpEnabled", false))
         initData()
     }
 
@@ -100,7 +100,7 @@ class MainActivity : BaseAppCompatActivity() {
                     else PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
                     PackageManager.DONT_KILL_APP
                 )
-                Shell.cmd("am force-stop com.miui.home", "am force-stop com.yuk.miuiHomeR").exec()
+                execShell("am force-stop com.miui.home && am force-stop com.yuk.miuiHomeR")
             }
 
             R.id.backup -> {
@@ -112,7 +112,7 @@ class MainActivity : BaseAppCompatActivity() {
             }
 
             R.id.reboot_home -> {
-                Shell.cmd("am force-stop com.miui.home", "am force-stop com.yuk.miuiHomeR").exec()
+                execShell("am force-stop com.miui.home && am force-stop com.yuk.miuiHomeR")
             }
 
             R.id.about -> {
@@ -123,6 +123,7 @@ class MainActivity : BaseAppCompatActivity() {
     }
 
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (data == null) return

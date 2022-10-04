@@ -117,7 +117,6 @@ dependencies {
     implementation(AndroidX.vectorDrawable)
     implementation(AndroidX.vectorDrawable.animated)
 
-    implementation(libs.com.github.topjohnwu.libsu.core)
     implementation(libs.ezxhelper)
     implementation(libs.hiddenapibypass)
 
