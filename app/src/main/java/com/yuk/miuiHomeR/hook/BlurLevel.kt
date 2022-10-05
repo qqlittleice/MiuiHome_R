@@ -20,6 +20,9 @@ object BlurLevel : BaseHook() {
                 it.result = true
             }
         } else {
+            "com.miui.home.launcher.common.DeviceLevelUtils".hookBeforeMethod("isUseSimpleAnim") {
+                it.result = false
+            }
             findMethod("com.miui.home.launcher.common.BlurUtils") {
                 name == "getBlurType"
             }.hookBefore {
