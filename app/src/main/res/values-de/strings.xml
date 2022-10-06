@@ -73,7 +73,7 @@
     <string name="folder_anim_4">Schließgeschwindigkeit 2</string>
     <string name="optimize_unlock_anim">Entsperranimation optimieren</string>
     <string name="shortcut_small_window">Kleines Fenster im Tastenkürzel hinzufügen</string>
-    <string name="shortcut_remove_restrictions">Remove restrictions on shortcuts</string>
+    <string name="shortcut_remove_restrictions">Einschränkungen für Verknüpfungen entfernen</string>
     <string name="small_window">kleines Fenster</string>
     <string name="icon_title_font_color">Schriftfarbe für Icon-Labels</string>
     <string name="recents_card_bg_color">Miniaturansicht Hintergrundfarbe für kleine Fenster-Apps anpassen</string>
@@ -96,5 +96,5 @@
     <string name="translators">YuKongA</string>
     <string name="language">Englisch</string>
     <string name="anim_speed_recent">Animationsgeschwindigkeit in und aus den letzten Aufgaben</string>
-    <string name="home_fold_dock">Dock for folded devices</string>
+    <string name="home_fold_dock">Dock Stil für Fold Geräte</string>
 </resources>
