@@ -73,7 +73,7 @@
     <string name="folder_anim_4">Kapanış hızı 2</string>
     <string name="optimize_unlock_anim">Kilit açma animasyonunu optimize edin</string>
     <string name="shortcut_small_window">Kısayolda küçük pencere ekle</string>
-    <string name="shortcut_remove_restrictions">Remove restrictions on shortcuts</string>
+    <string name="shortcut_remove_restrictions">Kısayollardaki kısıtlamaları kaldır</string>
     <string name="small_window">küçük pencere</string>
     <string name="icon_title_font_color">Simge Etiketleri Yazı Tipi Rengi</string>
     <string name="recents_card_bg_color">Küçük pencere uygulamaları için küçük resim arka plan rengini özelleştirin</string>
@@ -96,5 +96,5 @@
     <string name="translators">Buğra Çağlar</string>
     <string name="language">Türkçe</string>
     <string name="anim_speed_recent">Son uygulamaların giriş ve çıkış animasyon hızı</string>
-    <string name="home_fold_dock">Dock for folded devices</string>
+    <string name="home_fold_dock">Katlanabilir cihazlar için Dock</string>
 </resources>
