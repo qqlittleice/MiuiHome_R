@@ -73,6 +73,7 @@
     <string name="folder_anim_4">Kecepatan Menutup 2</string>
     <string name="optimize_unlock_anim">Optimalkan buka kunci anime</string>
     <string name="shortcut_small_window">Tambahkan jendela kecil di Pintasan</string>
+    <string name="shortcut_remove_restrictions">Remove restrictions on shortcuts</string>
     <string name="small_window">jendela kecil</string>
     <string name="icon_title_font_color">Warna Font Label Ikon</string>
     <string name="recents_card_bg_color">Sesuaikan warna latar belakang gambar mini untuk aplikasi jendela kecil</string>
