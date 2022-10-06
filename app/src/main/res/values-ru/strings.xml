@@ -73,6 +73,7 @@
     <string name="folder_anim_4">Скорость закрытия 2</string>
     <string name="optimize_unlock_anim">Оптимизация анимации разблокировки</string>
     <string name="shortcut_small_window">Добавить маленькое окно в ярлык</string>
+    <string name="shortcut_remove_restrictions">Remove restrictions on shortcuts</string>
     <string name="small_window">Маленькое окно</string>
     <string name="icon_title_font_color">Цвет шрифта подписи иконок</string>
     <string name="recents_card_bg_color">Настройка цвета фона миниатюр для приложений с плавающими окнами</string>
