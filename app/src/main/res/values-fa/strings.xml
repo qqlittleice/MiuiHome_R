@@ -77,6 +77,7 @@ __________________
     <string name="folder_anim_4">سرعت بسته شدن ۲</string>
     <string name="optimize_unlock_anim">انیمیشن باز کردن قفل را بهینه کنید</string>
     <string name="shortcut_small_window">اضافه کردن پنجره کوچک در میانبر</string>
+    <string name="shortcut_remove_restrictions">Remove restrictions on shortcuts</string>
     <string name="small_window">پنجره کوچک</string>
     <string name="icon_title_font_color">اندازه فونت آیکون ها</string>
     <string name="recents_card_bg_color">رنگ پس زمینه تصویر کوچک را برای برنامه های پنجره کوچک سفارشی کنید</string>
