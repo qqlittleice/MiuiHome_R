@@ -73,7 +73,7 @@
     <string name="folder_anim_4">關閉速度 2</string>
     <string name="optimize_unlock_anim">最佳化解鎖動畫</string>
     <string name="shortcut_small_window">快捷選單增加小窗應用程式</string>
-    <string name="shortcut_remove_restrictions">Remove restrictions on shortcuts</string>
+    <string name="shortcut_remove_restrictions">解除快捷方式數量限制</string>
     <string name="small_window">小窗應用程式</string>
     <string name="icon_title_font_color">應用程式標題文字色彩</string>
     <string name="recents_card_bg_color">小窗應用程式縮圖背景色彩</string>
@@ -93,8 +93,8 @@
     <string name="translator">翻譯人員</string>
     <string name="developer">開發人員</string>
     <string name="translation">Crowdin 翻譯</string>
-    <string name="translators">聖小熊</string>
+    <string name="translators">聖小熊 (Github: @a406010503)</string>
     <string name="language">繁體中文</string>
     <string name="anim_speed_recent">動畫速度「進出最近任務畫面」</string>
-    <string name="home_fold_dock">Dock for folded devices</string>
+    <string name="home_fold_dock">可摺疊裝置樣式的 Dock</string>
 </resources>
