@@ -73,6 +73,7 @@
     <string name="folder_anim_4">Kapanış hızı 2</string>
     <string name="optimize_unlock_anim">Kilit açma animasyonunu optimize edin</string>
     <string name="shortcut_small_window">Kısayolda küçük pencere ekle</string>
+    <string name="shortcut_remove_restrictions">Remove restrictions on shortcuts</string>
     <string name="small_window">küçük pencere</string>
     <string name="icon_title_font_color">Simge Etiketleri Yazı Tipi Rengi</string>
     <string name="recents_card_bg_color">Küçük pencere uygulamaları için küçük resim arka plan rengini özelleştirin</string>
