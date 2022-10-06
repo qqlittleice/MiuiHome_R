@@ -73,6 +73,7 @@
     <string name="folder_anim_4">ความเร็วอนิเมชั่นในตอนออกจากโฟลเดอร 2</string>
     <string name="optimize_unlock_anim">เพิ่มประสิทธิภาพการปลดล็อกแอนิเมชั่น</string>
     <string name="shortcut_small_window">เมนูทางลัด เพิ่มหน้าต่างขนาดเล็ก</string>
+    <string name="shortcut_remove_restrictions">Remove restrictions on shortcuts</string>
     <string name="small_window">หน้าต่างเล็ก</string>
     <string name="icon_title_font_color">ใช้สีข้อความชื่อ</string>
     <string name="recents_card_bg_color">สีพื้นหลังของการ์ดแอปพลิเคชัน</string>
