@@ -95,5 +95,5 @@
     <string name="translators">聖小熊</string>
     <string name="language">繁體中文</string>
     <string name="anim_speed_recent">動畫速度「進出最近任務畫面」</string>
-    <string name="home_fold_dock">Dock for folded devices</string>
+    <string name="home_fold_dock">可摺疊裝置樣式的 Dock</string>
 </resources>
