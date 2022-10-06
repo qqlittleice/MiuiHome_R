@@ -73,6 +73,7 @@
     <string name="folder_anim_4">Tốc độ đóng 2</string>
     <string name="optimize_unlock_anim">Tối ưu hóa hoạt ảnh mở khóa</string>
     <string name="shortcut_small_window">Thêm cửa sổ nhỏ trong Phím tắt</string>
+    <string name="shortcut_remove_restrictions">Remove restrictions on shortcuts</string>
     <string name="small_window">cửa sổ nhỏ</string>
     <string name="icon_title_font_color">Màu tiêu đề</string>
     <string name="recents_card_bg_color">Tùy chỉnh màu nền hình thu nhỏ cho các ứng dụng cửa sổ nhỏ</string>
