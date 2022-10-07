@@ -67,10 +67,10 @@
     <string name="close_folder">自动关闭文件夹</string>
     <string name="close_folder_summary">从文件夹启动应用时关闭文件夹</string>
     <string name="folder_anim">动画修改</string>
-    <string name="folder_anim_1">打开速度1</string>
-    <string name="folder_anim_2">打开速度2</string>
-    <string name="folder_anim_3">关闭速度1</string>
-    <string name="folder_anim_4">关闭速度2</string>
+    <string name="folder_anim_1">文件夹打开回弹(越小越明显)</string>
+    <string name="folder_anim_2">打开快慢(越大越慢)</string>
+    <string name="folder_anim_3">文件夹关闭回弹(越小越明显)</string>
+    <string name="folder_anim_4">关闭快慢(越大越慢)</string>
     <string name="optimize_unlock_anim">优化解锁动画</string>
     <string name="shortcut_small_window">快捷菜单添加小窗</string>
     <string name="shortcut_remove_restrictions">Remove restrictions on shortcuts</string>
