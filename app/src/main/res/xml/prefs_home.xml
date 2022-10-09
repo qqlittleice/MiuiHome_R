@@ -22,6 +22,11 @@
 
         <SwitchPreference
             android:defaultValue="false"
+            android:key="prefs_key_shortcut_remove_restrictions"
+            android:title="@string/shortcut_remove_restrictions" />
+
+        <SwitchPreference
+            android:defaultValue="false"
             android:key="prefs_key_shortcut_small_window"
             android:title="@string/shortcut_small_window" />
 

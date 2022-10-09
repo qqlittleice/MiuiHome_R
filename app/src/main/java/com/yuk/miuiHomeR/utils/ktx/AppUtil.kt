@@ -6,15 +6,12 @@ import android.os.Build
 import android.util.TypedValue
 import com.github.kyuubiran.ezxhelper.init.InitFields
 import moralnorm.internal.utils.DeviceHelper
+import java.io.DataOutputStream
 
-fun dp2px(dpValue: Float): Int = TypedValue.applyDimension(
-    TypedValue.COMPLEX_UNIT_DIP,
-    dpValue,
-    InitFields.appContext.resources.displayMetrics
-).toInt()
+fun dp2px(dpValue: Float): Int =
+    TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpValue, InitFields.appContext.resources.displayMetrics).toInt()
 
-fun px2dp(pxValue: Int): Int =
-    (pxValue / InitFields.appContext.resources.displayMetrics.density + 0.5f).toInt()
+fun px2dp(pxValue: Int): Int = (pxValue / InitFields.appContext.resources.displayMetrics.density + 0.5f).toInt()
 
 fun getDensityDpi(): Int =
     (InitFields.appContext.resources.displayMetrics.widthPixels / InitFields.appContext.resources.displayMetrics.density).toInt()
@@ -30,20 +27,18 @@ fun getProp(mKey: String): String =
 
 @SuppressLint("PrivateApi")
 fun getProp(mKey: String, defaultValue: Boolean): Boolean =
-    Class.forName("android.os.SystemProperties")
-        .getMethod("getBoolean", String::class.java, Boolean::class.javaPrimitiveType)
+    Class.forName("android.os.SystemProperties").getMethod("getBoolean", String::class.java, Boolean::class.javaPrimitiveType)
         .invoke(Class.forName("android.os.SystemProperties"), mKey, defaultValue) as Boolean
 
-fun checkVersionName(): String = InitFields.appContext.packageManager.getPackageInfo(
-    InitFields.appContext.packageName, 0
-).versionName
+fun checkVersionName(): String = InitFields.appContext.packageManager.getPackageInfo(InitFields.appContext.packageName, 0).versionName
 
-fun isAlpha(): Boolean = InitFields.appContext.packageManager.getPackageInfo(
-    InitFields.appContext.packageName, 0
-).versionName.contains("ALPHA", ignoreCase = true)
+fun isAlpha(): Boolean =
+    InitFields.appContext.packageManager.getPackageInfo(InitFields.appContext.packageName, 0).versionName.contains("ALPHA", ignoreCase = true)
 
 fun isPadDevice(): Boolean = DeviceHelper.isTablet() || DeviceHelper.isFoldDevice()
+
 fun isLegacyAndroid(): Boolean = Build.VERSION.SDK_INT < Build.VERSION_CODES.S
+
 fun checkVersionCode(): Long = InitFields.appContext.packageManager.getPackageInfo(
     InitFields.appContext.packageName, 0
 ).longVersionCode
@@ -58,3 +53,21 @@ fun checkMiuiVersion(): String = when (getProp("ro.miui.ui.version.name")) {
 }
 
 fun checkAndroidVersion(): String = getProp("ro.build.version.release")
+
+/**
+ * 执行 Shell 命令
+ * @param command Shell 命令
+ */
+fun execShell(command: String) {
+    try {
+        val p = Runtime.getRuntime().exec("su")
+        val outputStream = p.outputStream
+        val dataOutputStream = DataOutputStream(outputStream)
+        dataOutputStream.writeBytes(command)
+        dataOutputStream.flush()
+        dataOutputStream.close()
+        outputStream.close()
+    } catch (t: Throwable) {
+        t.printStackTrace()
+    }
+}
