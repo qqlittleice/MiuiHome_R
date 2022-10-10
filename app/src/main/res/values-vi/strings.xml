@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc">Làm cho MiuiHome tốt hơn.</string>
+    <string name="xposed_desc">Make MiuiHome Great Again.</string>
     <string name="backup">Sao lưu cài đặt</string>
     <string name="restore">Khôi phục cài đặt</string>
     <string name="reboot_home">Khởi động lại Trình khởi chạy</string>
@@ -73,6 +73,7 @@
     <string name="folder_anim_4">Tốc độ đóng 2</string>
     <string name="optimize_unlock_anim">Tối ưu hóa hoạt ảnh mở khóa</string>
     <string name="shortcut_small_window">Thêm cửa sổ nhỏ trong Phím tắt</string>
+    <string name="shortcut_remove_restrictions">Loại bỏ giới hạn phím tắt</string>
     <string name="small_window">cửa sổ nhỏ</string>
     <string name="icon_title_font_color">Màu tiêu đề</string>
     <string name="recents_card_bg_color">Tùy chỉnh màu nền hình thu nhỏ cho các ứng dụng cửa sổ nhỏ</string>
@@ -95,4 +96,5 @@
     <string name="translators">Bntt19</string>
     <string name="language">Việt Nam</string>
     <string name="anim_speed_recent">Tốc độ hoạt ảnh trong và ngoài màn hình gần đây</string>
+    <string name="home_fold_dock">Thanh đế cho màn hình gập</string>
 </resources>

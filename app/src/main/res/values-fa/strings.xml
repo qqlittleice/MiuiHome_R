@@ -17,8 +17,8 @@
     <string name="hide_status_bar_in_task_view">پنهان کردن نوار وضعیت هنگام تسک‌ویو \"لیست برنامه‌های اخیر\"</string>
     <string name="app_name_distance_task_view_card">فاصله نام برنامه با کارت در لیست برنامه‌های اخیر</string>
     <string name="task_view_card_rounded_corners">گوشه‌های گردِ کارت در لیست برنامه‌های اخیر</string>
-    <string name="anim_speed">سرعت انیمیشن</string>
-    <string name="recent">اخیراً مشاهد شده</string>
+    <string name="anim_speed">سرعت انیمیشن تغییر اپلیکیشن ها</string>
+    <string name="recent">لیست برنامه های اخیر</string>
     <string name="widget">ویجت</string>
     <string name="hide_widget_title">پنهان کردن تایتل ویجت</string>
     <string name="allow_moved_to_minus_one_screen">اجازه دهید ویجت‌های کلاسیک به صفحه \"1-\" \"App Vault\" منتقل شوند</string>
@@ -77,6 +77,7 @@ __________________
     <string name="folder_anim_4">سرعت بسته شدن ۲</string>
     <string name="optimize_unlock_anim">انیمیشن باز کردن قفل را بهینه کنید</string>
     <string name="shortcut_small_window">اضافه کردن پنجره کوچک در میانبر</string>
+    <string name="shortcut_remove_restrictions">Remove restrictions on shortcuts</string>
     <string name="small_window">پنجره کوچک</string>
     <string name="icon_title_font_color">اندازه فونت آیکون ها</string>
     <string name="recents_card_bg_color">رنگ پس زمینه تصویر کوچک را برای برنامه های پنجره کوچک سفارشی کنید</string>
@@ -98,5 +99,6 @@ __________________
     <string name="translation">Crowdin</string>
     <string name="translators">YuKongA</string>
     <string name="language">انگلیسی \"En\"</string>
-    <string name="anim_speed_recent">Animation speed in and out of recent tasks</string>
+    <string name="anim_speed_recent">سرعت انیمیشن در باز و بستن برنامه ها از وظایف اخیر</string>
+    <string name="home_fold_dock">Dock for folded devices</string>
 </resources>

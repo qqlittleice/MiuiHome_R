@@ -73,6 +73,7 @@
     <string name="folder_anim_4">Velocidade de encerramento 2</string>
     <string name="optimize_unlock_anim">Otimizar animação de desbloqueio</string>
     <string name="shortcut_small_window">Adicionar janela pequena no atalho</string>
+    <string name="shortcut_remove_restrictions">Remove restrictions on shortcuts</string>
     <string name="small_window">janelas pequenas</string>
     <string name="icon_title_font_color">Cor da fonte dos rótulos dos ícones</string>
     <string name="recents_card_bg_color">Personalizar a cor de fundo das miniaturas para aplicativos de janela pequena</string>
@@ -95,4 +96,5 @@
     <string name="translators">Hélio Castilho 🇧🇷</string>
     <string name="language">Inglês</string>
     <string name="anim_speed_recent">Velocidade de animação dentro e fora de tarefas recentes</string>
+    <string name="home_fold_dock">Dock for folded devices</string>
 </resources>
