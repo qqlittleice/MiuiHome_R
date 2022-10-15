@@ -30,9 +30,6 @@ object SetDeviceLevel : BaseHook() {
             "com.miui.home.launcher.common.DeviceLevelUtils".hookBeforeMethod("isLowLevelOrLiteDevice") {
                 it.result = false
             }
-            "com.miui.home.launcher.DeviceConfig".hookBeforeMethod("isDefaultIcon") {
-                it.result = true
-            }
             "com.miui.home.launcher.DeviceConfig".hookBeforeMethod("isMiuiLiteVersion") {
                 it.result = false
             }
