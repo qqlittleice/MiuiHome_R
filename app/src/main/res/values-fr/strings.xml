@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc">Make MiuiHome Great Again.</string>
-    <string name="backup">Backup Module Settings</string>
-    <string name="restore">Restore Module Settings</string>
-    <string name="reboot_home">Reboot Launcher</string>
-    <string name="about">About</string>
-    <string name="show_icon">Show Icon</string>
-    <string name="hide_icon">Hide Icon</string>
-    <string name="complete_blur">CompleteBlur</string>
-    <string name="test_blur">Test Blur</string>
-    <string name="simple_blur">Simple Blur</string>
-    <string name="none_blur">None Blur</string>
-    <string name="none_blur_simple_anim">None Blur&amp;Simple Anim</string>
-    <string name="blur_level">Blur Level</string>
-    <string name="cancel_wallpaper_dimming">Cancel Wallpaper Dimming</string>
-    <string name="hide_status_bar_in_task_view">Hide Status Bar When In Task View</string>
-    <string name="app_name_distance_task_view_card">App name distance task view card</string>
+    <string name="xposed_desc">Rendez MiuiHome génial de nouveau.</string>
+    <string name="backup">Sauvegarder les paramètres du module</string>
+    <string name="restore">Restaurer les paramètres du module</string>
+    <string name="reboot_home">Redémarrer le Launcher</string>
+    <string name="about">À propos</string>
+    <string name="show_icon">Montrer icône</string>
+    <string name="hide_icon">Masquer l\'icône</string>
+    <string name="complete_blur">Flou complet</string>
+    <string name="test_blur">Flou de test</string>
+    <string name="simple_blur">Flou simple</string>
+    <string name="none_blur">Aucun flou</string>
+    <string name="none_blur_simple_anim">Aucun flou et animation simple</string>
+    <string name="blur_level">Niveau de flou</string>
+    <string name="cancel_wallpaper_dimming">Pas d\'assombrissement du fond d\'écran</string>
+    <string name="hide_status_bar_in_task_view">Masquer la barre de statue dans les applications récentes</string>
+    <string name="app_name_distance_task_view_card">Distance entre le nom de l\'app et la carte</string>
     <string name="task_view_card_rounded_corners">Task view card rounded corners</string>
     <string name="anim_speed">Animation speed</string>
     <string name="recent">Recent View</string>
