@@ -2,13 +2,10 @@ package com.yuk.miuiHomeR.ui
 
 import android.content.ComponentName
 import android.content.Intent
-import android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP
-import android.os.Process
 import android.text.TextUtils
 import android.widget.Toast
 import androidx.core.text.HtmlCompat
 import androidx.fragment.app.Fragment
-import com.github.kyuubiran.ezxhelper.init.InitFields.appContext
 import com.yuk.miuiHomeR.R
 import com.yuk.miuiHomeR.ui.base.BaseAppCompatActivity
 import com.yuk.miuiHomeR.ui.base.SubFragment
