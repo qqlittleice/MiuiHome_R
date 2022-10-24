@@ -20,7 +20,6 @@ class AppDrawerActivity : BaseAppCompatActivity() {
 
         override fun initPrefs() {
             val mAllAppsBlurVisible = findPreference<Preference>("prefs_key_home_all_apps_blur")
-            mAllAppsBlurVisible.isVisible = !atLeastAndroidS()
             mAllAppsBlurVisible.isVisible = atLeastAndroidS()
             mAllAppsBlurVisible.isEnabled = mAllAppsBlurVisible.isVisible
         }
