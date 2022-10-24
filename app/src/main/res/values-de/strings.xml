@@ -97,6 +97,6 @@
     <string name="language">Englisch</string>
     <string name="anim_speed_recent">Animationsgeschwindigkeit in und aus den letzten Aufgaben</string>
     <string name="home_fold_dock">Dock Stil für Fold Geräte</string>
-    <string name="home_all_apps_blur">Enable All Apps Container View Blur</string>
-    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature.Also this is a very early test feature, because refresh issues blur very easily turned into a black screen</string>
+    <string name="home_all_apps_blur">Aktiviere alle Apps Container View Unschärfe</string>
+    <string name="home_all_apps_blur_summary">Bitte setzen Sie die Hintergrundtransparenz der App auf 100 % um diese Funktion nutzen zu können. Dies ist eine sehr frühe Test-Funktion, da das Aktualisieren von Problemen die Unschärfe sehr leicht in einen schwarzen Bildschirm verwandeln kann</string>
 </resources>
