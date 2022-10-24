@@ -95,8 +95,8 @@
     <string name="translation">Crowdin</string>
     <string name="translators">YuKongA</string>
     <string name="language">Englisch</string>
-    <string name="settings_language">Language</string>
-    <string name="follow_system">Follow system</string>
+    <string name="settings_language">Sprache</string>
+    <string name="follow_system">System folgen</string>
     <string name="anim_speed_recent">Animationsgeschwindigkeit in und aus den letzten Aufgaben</string>
     <string name="home_fold_dock">Dock Stil für Fold Geräte</string>
     <string name="home_all_apps_blur">Aktiviere alle Apps Container View Unschärfe</string>
