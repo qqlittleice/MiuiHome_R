@@ -95,6 +95,8 @@
     <string name="translation">Crowdin</string>
     <string name="translators">TG: @majestics_translation</string>
     <string name="language">Русский</string>
+    <string name="settings_language">Language</string>
+    <string name="follow_system">Follow system</string>
     <string name="anim_speed_recent">Animation speed in and out of recent tasks</string>
     <string name="home_fold_dock">Dock for folded devices</string>
     <string name="home_all_apps_blur">Enable All Apps Container View Blur</string>
