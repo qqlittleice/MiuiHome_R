@@ -17,7 +17,7 @@ import java.util.function.Consumer
 class SystemBlurController(
     private val view: View,
     backgroundColour: Int = Color.TRANSPARENT,
-    blurRadius: Int = mPrefsMap.getInt("prefs_key_home_blur_radius", 100),
+    blurRadius: Int = mPrefsMap.getInt("home_blur_radius", 100),
     cornerRadius: CornersRadius = CornersRadius.all(0f),
 ) : View.OnAttachStateChangeListener {
 

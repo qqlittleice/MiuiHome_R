@@ -1,12 +1,21 @@
 package com.yuk.miuiHomeR.utils.ktx
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.res.Configuration
+import android.content.res.Resources
 import android.os.Build
+import android.text.TextUtils
+import android.util.Log
 import android.util.TypedValue
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.app.LocaleManagerCompat
+import androidx.core.os.LocaleListCompat
 import com.github.kyuubiran.ezxhelper.init.InitFields
+import com.yuk.miuiHomeR.utils.PrefsUtils.getSharedPrefs
 import moralnorm.internal.utils.DeviceHelper
 import java.io.DataOutputStream
+import java.util.Locale
 
 fun dp2px(dpValue: Float): Int =
     TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpValue, InitFields.appContext.resources.displayMetrics).toInt()
@@ -22,8 +31,8 @@ fun isDarkMode(): Boolean =
 @SuppressLint("PrivateApi")
 @Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 fun getProp(mKey: String): String =
-    Class.forName("android.os.SystemProperties").getMethod("get", String::class.java)
-        .invoke(Class.forName("android.os.SystemProperties"), mKey).toString()
+    Class.forName("android.os.SystemProperties").getMethod("get", String::class.java).invoke(Class.forName("android.os.SystemProperties"), mKey)
+        .toString()
 
 @SuppressLint("PrivateApi")
 fun getProp(mKey: String, defaultValue: Boolean): Boolean =
@@ -36,8 +45,8 @@ fun isAlpha(): Boolean =
     InitFields.appContext.packageManager.getPackageInfo(InitFields.appContext.packageName, 0).versionName.contains("ALPHA", ignoreCase = true)
 
 fun isPadDevice(): Boolean = DeviceHelper.isTablet() || DeviceHelper.isFoldDevice()
-
-fun isLegacyAndroid(): Boolean = Build.VERSION.SDK_INT < Build.VERSION_CODES.S
+fun atLeastAndroidS(): Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
+fun atLeastAndroidT(): Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
 
 fun checkVersionCode(): Long = InitFields.appContext.packageManager.getPackageInfo(
     InitFields.appContext.packageName, 0
@@ -70,4 +79,49 @@ fun execShell(command: String) {
     } catch (t: Throwable) {
         t.printStackTrace()
     }
+}
+
+@SuppressLint("DiscouragedApi")
+fun getCornerRadiusTop(): Int {
+    val resourceId = InitFields.appContext.resources.getIdentifier("rounded_corner_radius_top", "dimen", "android")
+    return if (resourceId > 0) {
+        InitFields.appContext.resources.getDimensionPixelSize(resourceId)
+    } else 100
+}
+
+fun setLocale(resources: Resources, locale: Locale) {
+    if ("und" == locale.toLanguageTag()) {
+        return
+    }
+    Log.d("AppUtil", "setLocale: ${locale.toLanguageTag()}")
+    val config = resources.configuration
+    config.setLocale(locale)
+    Locale.setDefault(locale)
+    resources.updateConfiguration(config, resources.displayMetrics)
+    if (atLeastAndroidT())
+        AppCompatDelegate.setApplicationLocales(
+            LocaleListCompat.forLanguageTags(
+                locale.toLanguageTag()
+            )
+        )
+}
+
+fun getLocale(tag: String, context: Context): Locale {
+    return if (TextUtils.isEmpty(tag) || "SYSTEM" == tag) {
+        val syslang = LocaleManagerCompat.getSystemLocales(context)
+            .toLanguageTags().trim()
+        Log.d("AppUtil", "syslang=$syslang")
+        Locale(syslang)
+    } else
+        Locale.forLanguageTag(tag)
+}
+
+fun getLocale(context: Context): Locale {
+    val pref = getSharedPrefs(context, true)
+    val tag: String? = pref.getString("prefs_key_language", null)
+    Log.d("AppUtil", "getLocale: $tag")
+    if (tag != null) {
+        return getLocale(tag, context)
+    }
+    return getLocale("", context)
 }

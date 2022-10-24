@@ -21,4 +21,3 @@ dependencyResolutionManagement {
 
 include(":app", ":hidden-api")
 rootProject.name = "MiuiHomeR"
-
