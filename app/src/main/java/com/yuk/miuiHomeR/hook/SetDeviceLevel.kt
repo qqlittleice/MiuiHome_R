@@ -42,6 +42,9 @@ object SetDeviceLevel : BaseHook() {
             "android.os.SystemProperties".hookBeforeMethod("getBoolean", String::class.java, Boolean::class.java) {
                 if (it.args[0] == "ro.miui.backdrop_sampling_enabled") it.result = true
             }
+            "com.miui.home.launcher.common.Utilities".hookBeforeMethod("canLockTaskView") {
+                it.result = true
+            }
         } catch (e: Throwable) {
             Log.ex(e)
         }

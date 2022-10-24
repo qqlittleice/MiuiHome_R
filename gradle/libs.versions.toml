@@ -2,13 +2,13 @@
 
 [plugins]
 
-gradle = { id = "gradle", version = "7.3.0" }
+gradle = { id = "gradle", version = "7.3.1" }
 
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.7.20" }
 
-com-android-application = { id = "com.android.application", version = "7.3.0" }
+com-android-application = { id = "com.android.application", version = "7.3.1" }
 
-com-android-library = { id = "com.android.library", version = "7.3.0" }
+com-android-library = { id = "com.android.library", version = "7.3.1" }
 
 [versions]
 
@@ -57,6 +57,7 @@ com-android-tools-build-gradle = "com.android.tools.build:gradle:7.3.1"
 ##                                                           ⬆ :8.0.0-alpha02"
 ##                                                           ⬆ :8.0.0-alpha03"
 ##                                                           ⬆ :8.0.0-alpha04"
+##                                                           ⬆ :8.0.0-alpha05"
 
 androidx-core-core = { group = "androidx.core", name = "core", version.ref = "androidx-core" }
 

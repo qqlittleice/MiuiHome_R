@@ -65,7 +65,8 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         IconTitleScrolling,
                         OverlapMode,
                         FoldDeviceDock,
-                        ShortcutItemCount
+                        ShortcutItemCount,
+                        AllAppsContainerViewBlur
                     )
                     if (!isLegacyAndroid()) {
                         initHooks(

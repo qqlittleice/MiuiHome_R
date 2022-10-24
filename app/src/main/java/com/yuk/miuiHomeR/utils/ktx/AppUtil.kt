@@ -22,8 +22,8 @@ fun isDarkMode(): Boolean =
 @SuppressLint("PrivateApi")
 @Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 fun getProp(mKey: String): String =
-    Class.forName("android.os.SystemProperties").getMethod("get", String::class.java)
-        .invoke(Class.forName("android.os.SystemProperties"), mKey).toString()
+    Class.forName("android.os.SystemProperties").getMethod("get", String::class.java).invoke(Class.forName("android.os.SystemProperties"), mKey)
+        .toString()
 
 @SuppressLint("PrivateApi")
 fun getProp(mKey: String, defaultValue: Boolean): Boolean =
@@ -70,4 +70,12 @@ fun execShell(command: String) {
     } catch (t: Throwable) {
         t.printStackTrace()
     }
+}
+
+@SuppressLint("DiscouragedApi")
+fun getCornerRadiusTop(): Int {
+    val resourceId = InitFields.appContext.resources.getIdentifier("rounded_corner_radius_top", "dimen", "android")
+    return if (resourceId > 0) {
+        InitFields.appContext.resources.getDimensionPixelSize(resourceId)
+    } else 100
 }
