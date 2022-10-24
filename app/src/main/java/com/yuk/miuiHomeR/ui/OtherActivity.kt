@@ -3,6 +3,7 @@ package com.yuk.miuiHomeR.ui
 import android.content.ComponentName
 import android.content.Intent
 import android.text.TextUtils
+import android.widget.Toast
 import androidx.core.text.HtmlCompat
 import androidx.fragment.app.Fragment
 import com.yuk.miuiHomeR.R
@@ -27,21 +28,24 @@ class OtherActivity : BaseAppCompatActivity() {
         }
 
         override fun initPrefs() {
-            languagePreference = findPreference("prefs_key_language")
+            languagePreference = findPreference("prefs_key_language") as ListPreference
             languagePreference.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _, newValue ->
-
 
                 if (newValue is String) {
                     val appLocale: Locale = if ("SYSTEM" == newValue) {
-                        Locale(resources.configuration.locale.toLanguageTag())
+                        Locale.forLanguageTag(Locale.getDefault().language + "-" + Locale.getDefault().country)
                     } else {
                         Locale.forLanguageTag(newValue)
                     }
                     setLocale(resources, appLocale)
-                    val intent = Intent()
-                    intent.component = ComponentName("com.yuk.miuiHomeR", "com.yuk.miuiHomeR.ui.MainActivity")
-                    activity?.finishAffinity()
-                    activity?.startActivity(intent)
+                    if ("SYSTEM" != newValue) {
+                        val intent = Intent()
+                        intent.component = ComponentName("com.yuk.miuiHomeR", "com.yuk.miuiHomeR.ui.MainActivity")
+                        activity?.finishAffinity()
+                        activity?.startActivity(intent)
+                    } else {
+                        Toast.makeText(requireContext(), getString(R.string.tip_restart), Toast.LENGTH_LONG).show()
+                    }
                 }
                 true
             }

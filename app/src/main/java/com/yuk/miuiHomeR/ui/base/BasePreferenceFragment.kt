@@ -3,6 +3,8 @@ package com.yuk.miuiHomeR.ui.base
 import android.content.Context
 import android.os.Bundle
 import com.yuk.miuiHomeR.utils.PrefsUtils
+import com.yuk.miuiHomeR.utils.ktx.getLocale
+import com.yuk.miuiHomeR.utils.ktx.setLocale
 import moralnorm.preference.PreferenceFragmentCompat
 import moralnorm.preference.PreferenceManager
 
@@ -10,6 +12,7 @@ open class BasePreferenceFragment : PreferenceFragmentCompat() {
 
     fun onCreate(savedInstanceState: Bundle?, prefs_default: Int) {
         super.onCreate(savedInstanceState)
+        setLocale(resources, getLocale(requireContext()))
         try {
             preferenceManager.sharedPreferencesName = PrefsUtils.mPrefsName
             preferenceManager.sharedPreferencesMode = Context.MODE_PRIVATE
