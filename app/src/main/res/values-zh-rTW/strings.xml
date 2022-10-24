@@ -95,6 +95,8 @@
     <string name="translation">Crowdin 翻譯</string>
     <string name="translators">聖小熊 (Github: @a406010503)</string>
     <string name="language">繁體中文</string>
+    <string name="settings_language">語言</string>
+    <string name="follow_system">跟隨系統</string>
     <string name="anim_speed_recent">動畫速度「進出最近任務畫面」</string>
     <string name="home_fold_dock">可摺疊裝置樣式的 Dock</string>
     <string name="home_all_apps_blur">啟用應用程式導覽匣模糊</string>
