@@ -95,6 +95,8 @@
     <string name="translation">Crowdin</string>
     <string name="translators">YuKongA</string>
     <string name="language">Angielski</string>
+    <string name="settings_language">Language</string>
+    <string name="follow_system">Follow system</string>
     <string name="anim_speed_recent">Szybkość animacji do i z ostatnich zadań</string>
     <string name="home_fold_dock">Dock dla składanych urządzeń</string>
     <string name="home_all_apps_blur">Enable All Apps Container View Blur</string>
