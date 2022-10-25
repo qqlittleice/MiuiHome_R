@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc">Miui Home wird wieder großartig.</string>
+    <string name="xposed_desc">MIUI Home wird wieder großartig.</string>
     <string name="backup">Modul Einstellungen für Backup</string>
     <string name="restore">Module Einstellungen wiederherstellen</string>
     <string name="reboot_home">Launcher neustarten</string>
@@ -101,5 +101,5 @@
     <string name="home_fold_dock">Dock Stil für Fold Geräte</string>
     <string name="home_all_apps_blur">Aktiviere alle Apps Container View Unschärfe</string>
     <string name="home_all_apps_blur_summary">Bitte setzen Sie die Hintergrundtransparenz der App auf 100 % um diese Funktion nutzen zu können. Dies ist eine sehr frühe Test-Funktion, da das Aktualisieren von Problemen die Unschärfe sehr leicht in einen schwarzen Bildschirm verwandeln kann</string>
-    <string name="tip_restart">Please restart the App yourself to follow the system language</string>
+    <string name="tip_restart">Bitte starte die App selbst neu, um der Systemsprache zu folgen</string>
 </resources>
