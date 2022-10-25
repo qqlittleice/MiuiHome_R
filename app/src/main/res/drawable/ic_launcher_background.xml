@@ -7,7 +7,7 @@
     <group
         android:scaleX="0.2"
         android:scaleY="0.2">
-        <path android:pathData="M179.44,180.92h720v720h-720z">
+        <path android:pathData="M0,0h1080v1080h-1080z">
             <aapt:attr name="android:fillColor">
                 <gradient
                     android:endX="870.87"
