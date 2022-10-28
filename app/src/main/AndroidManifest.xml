@@ -67,6 +67,9 @@
             android:directBootAware="true"
             android:exported="false"
             android:grantUriPermissions="true" />
+
+        <service android:name=".service.KillSelfService" />
+
         <service
             android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
             android:enabled="false"

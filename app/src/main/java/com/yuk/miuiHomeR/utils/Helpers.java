@@ -1,12 +1,14 @@
 package com.yuk.miuiHomeR.utils;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
 
 import com.yuk.miuiHomeR.BuildConfig;
 
 import java.io.File;
+import java.util.Locale;
 
 public class Helpers {
 
@@ -21,6 +23,19 @@ public class Helpers {
             Context mContext = context.isDeviceProtectedStorage() ? context : context.createDeviceProtectedStorageContext();
             return config == null ? mContext : mContext.createConfigurationContext(config);
         } catch (Throwable t) {
+            return context;
+        }
+    }
+
+    public static synchronized Context getLocaleContext(Context context) throws Throwable {
+        SharedPreferences mSharedPreferences = PrefsUtils.mSharedPreferences;
+        if (mSharedPreferences != null) {
+            String locale = mSharedPreferences.getString("prefs_key_language", "SYSTEM");
+            if (locale == null || "SYSTEM".equals(locale) || "1".equals(locale)) return context;
+            Configuration config = context.getResources().getConfiguration();
+            config.setLocale(Locale.forLanguageTag(locale));
+            return context.createConfigurationContext(config);
+        } else {
             return context;
         }
     }

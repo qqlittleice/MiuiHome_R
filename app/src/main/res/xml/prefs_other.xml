@@ -29,7 +29,7 @@
             app:maxValue="500"
             app:showSeekBarValue="true" />
 
-        <ListPreference
+        <DropDownPreference
             android:defaultValue="SYSTEM"
             android:key="prefs_key_language"
             android:title="@string/settings_language" />
