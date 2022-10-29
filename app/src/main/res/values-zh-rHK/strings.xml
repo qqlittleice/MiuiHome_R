@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="xposed_desc">針對 MIUI Home 的自訂擴充</string>
+    <string name="backup_and_restore">Backup and Restore</string>
     <string name="backup">備份模組設定</string>
     <string name="restore">還原模組設定</string>
     <string name="reboot_home">重啟桌面</string>
