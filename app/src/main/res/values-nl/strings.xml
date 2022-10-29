@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="xposed_desc">Maak MiuiHome weer geweldig.</string>
+    <string name="backup_and_restore">Backup and Restore</string>
     <string name="backup">Back-up module instellingen</string>
     <string name="restore">MiuiHomeR instellingen herstellen (van back-up bestand)</string>
     <string name="reboot_home">Herstart launcher</string>
