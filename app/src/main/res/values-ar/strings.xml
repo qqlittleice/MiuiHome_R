@@ -102,4 +102,7 @@
     <string name="home_all_apps_blur">تفعيل ضبابية درج التطبيقات</string>
     <string name="home_all_apps_blur_summary">الرجاء تعيين شفافية خلفية درج التطبيقات إلى 100% لاستخدام هذه الميزة. هذه ميزة اختبار مبكرة جداً، لأن مشكلات التحديث تحوله بسهولة إلى شاشة سوداء</string>
     <string name="tip_restart">Please restart the App yourself to follow the system language</string>
+    <string name="settings">Settings</string>
+    <string name="system_default">Default</string>
+    <string name="launcher_icon">Launcher Icon</string>
 </resources>
