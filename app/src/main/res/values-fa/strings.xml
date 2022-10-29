@@ -106,4 +106,7 @@ __________________
     <string name="home_all_apps_blur">فعال کردن تاری بکگراند برای کشوی برنامه ها</string>
     <string name="home_all_apps_blur_summary">لطفاً برای استفاده از این ویژگی شفافیت پس‌زمینه کشوی برنامه را روی 100٪ تنظیم کنید. همچنین این یک ویژگی آزمایشی بسیار اولیه است، زیرا مسائل Refresh به راحتی به صفحه سیاه تبدیل می‌شوند</string>
     <string name="tip_restart">لطفاً خودتان برنامه را مجدداً راه‌اندازی کنید تا زبان سیستم را دنبال کند</string>
+    <string name="settings">Settings</string>
+    <string name="system_default">Default</string>
+    <string name="launcher_icon">Launcher Icon</string>
 </resources>
