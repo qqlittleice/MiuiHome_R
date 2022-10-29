@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="xposed_desc">Make MiuiHome Great Again.</string>
+    <string name="backup_and_restore">Backup and Restore</string>
     <string name="backup">Sao lưu cài đặt</string>
     <string name="restore">Khôi phục cài đặt</string>
     <string name="reboot_home">Khởi động lại Trình khởi chạy</string>
