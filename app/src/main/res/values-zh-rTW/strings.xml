@@ -102,4 +102,7 @@
     <string name="home_all_apps_blur">啟用應用程式導覽匣模糊</string>
     <string name="home_all_apps_blur_summary">請將應用程式導覽匣透明度設定為 100% 以使用此功能。這是一個測試版功能，因為重新整理問題的模糊很容易導致黑畫面。</string>
     <string name="tip_restart">請重新啟動應用程式以跟隨系統語言</string>
+    <string name="settings">Settings</string>
+    <string name="system_default">Default</string>
+    <string name="launcher_icon">Launcher Icon</string>
 </resources>
