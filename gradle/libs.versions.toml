@@ -55,11 +55,13 @@ com-android-tools-build-gradle = "com.android.tools.build:gradle:7.3.1"
 ##                                                           ⬆ :7.4.0-alpha10"
 ##                                                           ⬆ :7.4.0-beta01"
 ##                                                           ⬆ :7.4.0-beta02"
+##                                                           ⬆ :7.4.0-beta03"
 ##                                                           ⬆ :8.0.0-alpha01"
 ##                                                           ⬆ :8.0.0-alpha02"
 ##                                                           ⬆ :8.0.0-alpha03"
 ##                                                           ⬆ :8.0.0-alpha04"
 ##                                                           ⬆ :8.0.0-alpha05"
+##                                                           ⬆ :8.0.0-alpha06"
 
 androidx-core-core = { group = "androidx.core", name = "core", version.ref = "androidx-core" }
 
