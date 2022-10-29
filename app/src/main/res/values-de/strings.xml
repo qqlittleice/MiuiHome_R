@@ -102,4 +102,7 @@
     <string name="home_all_apps_blur">Aktiviere alle Apps Container View Unschärfe</string>
     <string name="home_all_apps_blur_summary">Bitte setzen Sie die Hintergrundtransparenz der App auf 100 % um diese Funktion nutzen zu können. Dies ist eine sehr frühe Test-Funktion, da das Aktualisieren von Problemen die Unschärfe sehr leicht in einen schwarzen Bildschirm verwandeln kann</string>
     <string name="tip_restart">Bitte starte die App selbst neu, um der Systemsprache zu folgen</string>
+    <string name="settings">Settings</string>
+    <string name="system_default">Default</string>
+    <string name="launcher_icon">Launcher Icon</string>
 </resources>
