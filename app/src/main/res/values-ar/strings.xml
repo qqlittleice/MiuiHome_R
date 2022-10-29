@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="xposed_desc">اجعل MiuiHome عظيم مرة أخرى.</string>
+    <string name="backup_and_restore">Backup and Restore</string>
     <string name="backup">نسخ احتياطي لإعدادات الإضافة</string>
     <string name="restore">إستعادة إعدادات الإضافة</string>
     <string name="reboot_home">إعادة تشغيل مشغل التطبيقات</string>
