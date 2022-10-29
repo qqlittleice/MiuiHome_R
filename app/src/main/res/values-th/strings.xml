@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="xposed_desc">ส่วนขยายที่สำหรับ MiuiHome</string>
+    <string name="backup_and_restore">Backup and Restore</string>
     <string name="backup">การตั้งค่าโมดูลสำรอง</string>
     <string name="restore">เรียกคืนการตั้งค่าโมดูล</string>
     <string name="reboot_home">รีบูตหน้าแรก</string>
