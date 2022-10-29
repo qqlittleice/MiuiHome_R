@@ -1,11 +1,13 @@
 package com.yuk.miuiHomeR.ui;
 
+import static com.yuk.miuiHomeR.utils.ktx.AppUtilKt.restart;
+
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.text.SpannableString;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.yuk.miuiHomeR.R;
@@ -13,10 +15,10 @@ import com.yuk.miuiHomeR.service.KillSelfService;
 import com.yuk.miuiHomeR.ui.base.BaseAppCompatActivity;
 import com.yuk.miuiHomeR.ui.base.SubFragment;
 import com.yuk.miuiHomeR.utils.BackupUtils;
+import com.yuk.miuiHomeR.utils.Locales;
 import com.yuk.miuiHomeR.utils.PrefsUtils;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Locale;
 
 import moralnorm.preference.DropDownPreference;
@@ -25,6 +27,7 @@ import moralnorm.preference.SwitchPreference;
 
 public class SettingsActivity extends BaseAppCompatActivity {
 
+    @NonNull
     @Override
     public Fragment initFragment() {
         setTitle(R.string.settings);
@@ -39,8 +42,6 @@ public class SettingsActivity extends BaseAppCompatActivity {
         Preference mBackupSettings;
         Preference mRestoreSettings;
 
-        String[] locales = new String[] {"zh-CN", "zh-TW", "zh-HK", "af", "ar", "ca", "cs", "da", "de", "el", "en", "es", "fa", "fi", "fr", "he", "hu", "id", "it", "ja", "ka", "ko", "nl", "no", "pl", "pt", "pt-BR", "ro", "ru", "ru-RU", "sr", "sv", "th", "tr", "uk", "uz", "vi"};
-        ArrayList<String> mLocale = new ArrayList<>(Arrays.asList(locales));
         ArrayList<String> mLocaleName = new ArrayList<>();
 
         @Override
@@ -50,14 +51,20 @@ public class SettingsActivity extends BaseAppCompatActivity {
 
         @Override
         public void initPrefs() {
-            getLocales();
             mHideIcon = findPreference("prefs_key_settings_hide_icon");
             mLocaleSelector = findPreference("prefs_key_settings_language");
             mBackupSettings = findPreference("prefs_key_settings_backup");
             mRestoreSettings = findPreference("prefs_key_settings_restore");
-
+            var displayLocaleTags = Locales.DISPLAY_LOCALES;
+            for (var displayLocale : displayLocaleTags) {
+                if (displayLocale.equals("SYSTEM")) {
+                    mLocaleName.add(0, getString(R.string.system_default));
+                    continue;
+                }
+                var localizedLocale = Locale.forLanguageTag(displayLocale);
+                mLocaleName.add(localizedLocale.getDisplayName(localizedLocale));
+            }
             mLocaleSelector.setEntries(mLocaleName.toArray(new CharSequence[0]));
-            mLocaleSelector.setEntryValues(mLocale.toArray(new CharSequence[0]));
 
             mHideIcon.setOnPreferenceChangeListener(this);
             mLocaleSelector.setOnPreferenceChangeListener(this);
@@ -80,47 +87,29 @@ public class SettingsActivity extends BaseAppCompatActivity {
             if (preference == mHideIcon) {
                 PackageManager pm = getActivity().getPackageManager();
                 int mComponentEnabledState;
-                if ((Boolean)o) {
+                if ((Boolean) o) {
                     mComponentEnabledState = PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
                 } else {
-                    mComponentEnabledState =  PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
+                    mComponentEnabledState = PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
                 }
-                pm.setComponentEnabledSetting(new ComponentName(getActivity(), MainActivity.class.getName() + "Alias"), mComponentEnabledState, PackageManager.DONT_KILL_APP);
+                pm.setComponentEnabledSetting(new ComponentName(getActivity(),
+                                MainActivity.class.getName() + "Alias"), mComponentEnabledState,
+                        PackageManager.DONT_KILL_APP);
             } else if (preference == mLocaleSelector) {
-                restartApp(getContext(), (String) o, 10L);
+                restart(getContext(), requireActivity());
             }
             return true;
         }
 
-        public void getLocales() {
-            for (String locale : mLocale) try {
-                Locale loc = Locale.forLanguageTag(locale);
-                String locStr;
-                /*if (locale.equals("zh-CN")) {
-                    locStr = "简体中文_中国";
-                } else if (locale.equals("zh-TW")) {
-                    locStr = "繁体中文_中国台湾";
-                } else {
-                    locStr = loc.getDisplayName(loc);
-                }*/
-                locStr = loc.getDisplayName(loc);
-                mLocaleName.add(locStr);
-            } catch (Throwable t) {
-                mLocaleName.add(Locale.getDefault().getDisplayLanguage(Locale.getDefault()));
-            }
-
-            mLocale.add(0, "SYSTEM");
-            mLocaleName.add(0, getString(R.string.system_default));
-        }
-
         /**
          * 重启整个APP
-         * @param context
+         *
+         * @param context App context
          * @param delayed 延迟多少毫秒
          */
         private void restartApp(Context context, String locale, Long delayed) {
             //开启一个新的服务，用来重启本APP
-            Intent intent = new  Intent(context, KillSelfService.class);
+            Intent intent = new Intent(context, KillSelfService.class);
             intent.putExtra("PackageName", context.getPackageName());
             intent.putExtra("Locale", locale);
             intent.putExtra("Delayed", delayed);
@@ -133,11 +122,11 @@ public class SettingsActivity extends BaseAppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (data == null) return;
         switch (requestCode) {
-            case BackupUtils.CREATE_DOCUMENT_CODE :
+            case BackupUtils.CREATE_DOCUMENT_CODE:
                 BackupUtils.INSTANCE.handleCreateDocument(this, data.getData());
                 break;
 
-            case BackupUtils.OPEN_DOCUMENT_CODE :
+            case BackupUtils.OPEN_DOCUMENT_CODE:
                 BackupUtils.INSTANCE.handleReadDocument(this, data.getData());
                 break;
         }
