@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="xposed_desc">Haz que MiuiHome vuelva a ser genial.</string>
+    <string name="backup_and_restore">Backup and Restore</string>
     <string name="backup">Respaldar ajustes del módulo</string>
     <string name="restore">Restaurar ajustes del módulo</string>
     <string name="reboot_home">Reiniciar el escritorio</string>
