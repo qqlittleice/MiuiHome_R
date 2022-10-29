@@ -8,6 +8,7 @@ import android.os.FileObserver;
 import android.util.Log;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.yuk.miuiHomeR.R;
@@ -44,9 +45,8 @@ public class MainActivity extends BaseAppCompatActivity {
         ActionBar actionBar = getAppCompatActionBar();
         actionBar.setEndView(mActionBarMoreView);
 
-        mActionBarMoreView.setOnClickListener(view -> {
-            startActivity(new Intent(this, SettingsActivity.class));
-        });
+        mActionBarMoreView.setOnClickListener(view -> startActivity(new Intent(this,
+                SettingsActivity.class)));
     }
 
     private void initData() {
@@ -82,6 +82,7 @@ public class MainActivity extends BaseAppCompatActivity {
         }
     }
 
+    @NonNull
     @Override
     public Fragment initFragment() {
         return new MainFragment();
@@ -110,5 +111,4 @@ public class MainActivity extends BaseAppCompatActivity {
             return false;
         }
     }
-
 }

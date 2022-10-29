@@ -104,7 +104,13 @@ fun getGitHeadRefsSuffix(project: Project): String {
         return ""
     }
 }
-
+autoResConfig {
+    generateClass.set(true)
+    generatedClassFullName.set("com.yuk.miuiHomeR.utils.Locales")
+    generateRes.set(true)
+    generatedArrayFirstItem.set("SYSTEM")
+    generateLocaleConfig.set(true)
+}
 dependencies {
     //  To find available updates, run this:
     //  ./gradlew refreshVersions

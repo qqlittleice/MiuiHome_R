@@ -1,7 +1,9 @@
 package com.yuk.miuiHomeR.utils.ktx
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.content.res.Configuration
 import android.content.res.Resources
 import android.os.Build
@@ -15,7 +17,7 @@ import com.github.kyuubiran.ezxhelper.init.InitFields
 import com.yuk.miuiHomeR.utils.PrefsUtils.getSharedPrefs
 import moralnorm.internal.utils.DeviceHelper
 import java.io.DataOutputStream
-import java.util.Locale
+import java.util.*
 
 fun dp2px(dpValue: Float): Int =
     TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpValue, InitFields.appContext.resources.displayMetrics).toInt()
@@ -90,18 +92,19 @@ fun getCornerRadiusTop(): Int {
 }
 
 fun setLocale(resources: Resources, locale: Locale) {
-    if ("und" == locale.toLanguageTag()) {
-        return
+    var setLocal:Locale = locale
+    if ("und" == locale.toLanguageTag() || "system" == locale.toLanguageTag()) {
+        setLocal = Locale.getDefault()
     }
-    Log.d("AppUtil", "setLocale: ${locale.toLanguageTag()}")
+    Log.d("AppUtil", "setLocale: ${setLocal.toLanguageTag()}")
     val config = resources.configuration
-    config.setLocale(locale)
-    Locale.setDefault(locale)
+    config.setLocale(setLocal)
+    Locale.setDefault(setLocal)
     resources.updateConfiguration(config, resources.displayMetrics)
     if (atLeastAndroidT())
         AppCompatDelegate.setApplicationLocales(
             LocaleListCompat.forLanguageTags(
-                locale.toLanguageTag()
+                setLocal.toLanguageTag()
             )
         )
 }
@@ -124,4 +127,20 @@ fun getLocale(context: Context): Locale {
         return getLocale(tag, context)
     }
     return getLocale("", context)
+}
+
+fun restart(context: Context?,activity: Activity) {
+    if (atLeastAndroidS()) {
+        activity.recreate()
+    } else {
+        try {
+            activity.finish()
+            activity.startActivity(Intent(context, activity.javaClass))
+            activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            activity.recreate()
+        } catch (e: Throwable) {
+            Log.e("MIUIHomeR", "Failed to restart", e)
+            activity.recreate()
+        }
+    }
 }
