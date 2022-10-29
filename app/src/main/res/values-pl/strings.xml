@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="xposed_desc">Spraw, aby MiuiHome znów był świetny.</string>
+    <string name="backup_and_restore">Backup and Restore</string>
     <string name="backup">Kopia zapasowa ustawieni modułu</string>
     <string name="restore">Przywróć ustawienia domyślne modułu</string>
     <string name="reboot_home">Restartuj Launcher</string>
