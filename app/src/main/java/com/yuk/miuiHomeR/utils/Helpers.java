@@ -30,11 +30,14 @@ public class Helpers {
     public static synchronized Context getLocaleContext(Context context) throws Throwable {
         SharedPreferences mSharedPreferences = PrefsUtils.mSharedPreferences;
         if (mSharedPreferences != null) {
-            String locale = mSharedPreferences.getString("prefs_key_language", "SYSTEM");
-            if (locale == null || "SYSTEM".equals(locale) || "1".equals(locale)) return context;
-            Configuration config = context.getResources().getConfiguration();
-            config.setLocale(Locale.forLanguageTag(locale));
-            return context.createConfigurationContext(config);
+            String locale = mSharedPreferences.getString("prefs_key_settings_language", "SYSTEM");
+            if (locale == null || "SYSTEM".equals(locale) || "1".equals(locale)) {
+                return context;
+            } else {
+                Configuration config = context.getResources().getConfiguration();
+                config.setLocale(Locale.forLanguageTag(locale));
+                return context.createConfigurationContext(config);
+            }
         } else {
             return context;
         }

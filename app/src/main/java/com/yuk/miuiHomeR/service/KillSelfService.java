@@ -17,7 +17,7 @@ public class KillSelfService extends Service {
     private static long stopDelayed = 50;
 
     public KillSelfService() {
-        PrefsUtils.mSharedPreferences.edit().putString("prefs_key_language", mLocale);
+        PrefsUtils.mSharedPreferences.edit().putString("prefs_key_settings_language", mLocale);
         mHandler = new Handler();
     }
 

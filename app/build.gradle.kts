@@ -80,12 +80,7 @@ android {
         }
     }
 }
-autoResConfig {
-    generatedClassFullName.set("com.yuk.miuiHomeR.utils.Locales")
-    generateRes.set(false)
-    generatedArrayFirstItem.set("SYSTEM")
-    generateLocaleConfig.set(true)
-}
+
 fun getGitHeadRefsSuffix(project: Project): String {
     // .git/HEAD描述当前目录所指向的分支信息，内容示例："ref: refs/heads/master\n"
     val headFile = File(project.rootProject.projectDir, ".git" + File.separator + "HEAD")

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory>
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="prefs_key_settings_hide_icon"
+            android:title="@string/launcher_icon" />
+
+        <DropDownPreference
+            android:defaultValue="SYSTEM"
+            android:key="prefs_key_settings_language"
+            android:title="@string/settings_language" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="备份与恢复">
+
+        <Preference
+            android:key="prefs_key_settings_backup"
+            android:title="@string/backup" />
+
+        <Preference
+            android:key="prefs_key_settings_restore"
+            android:title="@string/restore" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

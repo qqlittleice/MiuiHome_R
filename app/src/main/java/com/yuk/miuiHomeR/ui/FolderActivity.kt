@@ -10,6 +10,7 @@ import moralnorm.preference.Preference
 class FolderActivity : BaseAppCompatActivity() {
 
     override fun initFragment(): Fragment {
+        setTitle(R.string.folder)
         return FolderFragment()
     }
 

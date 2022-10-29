@@ -11,6 +11,7 @@ import moralnorm.preference.Preference
 class DockActivity : BaseAppCompatActivity() {
 
     override fun initFragment(): Fragment {
+        setTitle(R.string.dock_settings)
         return DockFragment()
     }
 

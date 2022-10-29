@@ -8,6 +8,7 @@ import com.yuk.miuiHomeR.ui.base.SubFragment
 class HomeActivity : BaseAppCompatActivity() {
 
     override fun initFragment(): Fragment {
+        setTitle(R.string.home)
         return HomeFragment()
     }
 

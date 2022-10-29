@@ -118,7 +118,7 @@ fun getLocale(tag: String, context: Context): Locale {
 
 fun getLocale(context: Context): Locale {
     val pref = getSharedPrefs(context, true)
-    val tag: String? = pref.getString("prefs_key_language", null)
+    val tag: String? = pref.getString("prefs_key_settings_language", null)
     Log.d("AppUtil", "getLocale: $tag")
     if (tag != null) {
         return getLocale(tag, context)

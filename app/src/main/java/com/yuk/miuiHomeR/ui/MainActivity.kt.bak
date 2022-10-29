@@ -24,9 +24,9 @@ import com.yuk.miuiHomeR.utils.ktx.getLocale
 import com.yuk.miuiHomeR.utils.ktx.setLocale
 
 class MainActivity : BaseAppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setImmersionMenuEnabled(true)
         appCompatActionBar.setDisplayHomeAsUpEnabled(intent.getBooleanExtra("homeAsUpEnabled", false))
         initData()
     }
@@ -70,11 +70,14 @@ class MainActivity : BaseAppCompatActivity() {
     }
 
     class MainFragment : SubFragment() {
+
         override fun getContentResId(): Int {
             return R.xml.prefs_main
         }
 
-        override fun initPrefs() {}
+        override fun initPrefs() {
+
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

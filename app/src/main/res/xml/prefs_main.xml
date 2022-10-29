@@ -47,4 +47,16 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory android:title="@string/other_features">
+
+        <Preference
+            android:key="reboot_home"
+            android:title="@string/reboot_home" />
+
+        <Preference android:title="@string/about">
+            <intent android:action="yuk.intent.action.About"/>
+        </Preference>
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

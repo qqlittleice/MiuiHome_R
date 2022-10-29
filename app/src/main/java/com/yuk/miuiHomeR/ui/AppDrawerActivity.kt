@@ -10,6 +10,7 @@ import moralnorm.preference.Preference
 class AppDrawerActivity : BaseAppCompatActivity() {
 
     override fun initFragment(): Fragment {
+        setTitle(R.string.app_drawer)
         return AppDrawerFragment()
     }
 

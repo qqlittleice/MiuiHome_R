@@ -56,10 +56,20 @@
             android:name=".ui.OtherActivity"
             android:label="@string/other_features" />
 
+        <activity android:name=".ui.SettingsActivity"
+            android:label="设置"/>
+
         <activity
             android:theme="@style/Theme.AppCompat.Translucent.NoActionBar.NoAnimation"
             android:name=".ui.AboutActivity"
-            android:label="@string/about" />
+            android:label="@string/about"
+            android:exported="false">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="yuk.intent.action.About"/>
+            </intent-filter>
+
+        </activity>
 
         <provider
             android:name=".provider.SharedPrefsProvider"

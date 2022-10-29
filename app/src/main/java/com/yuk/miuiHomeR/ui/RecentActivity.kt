@@ -8,6 +8,7 @@ import com.yuk.miuiHomeR.ui.base.SubFragment
 class RecentActivity : BaseAppCompatActivity() {
 
     override fun initFragment(): Fragment {
+        setTitle(R.string.recent)
         return RecentFragment()
     }
 

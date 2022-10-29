@@ -28,10 +28,5 @@
             app:format="%d / 100 f"
             app:maxValue="500"
             app:showSeekBarValue="true" />
-
-        <DropDownPreference
-            android:defaultValue="SYSTEM"
-            android:key="prefs_key_language"
-            android:title="@string/settings_language" />
     </moralnorm.preference.PreferenceCategory>
 </moralnorm.preference.PreferenceScreen>
