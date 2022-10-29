@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="xposed_desc">MiuiHome را بهتر از قبل کنید.</string>
+    <string name="backup_and_restore">Backup and Restore</string>
     <string name="backup">پشتیبان‌گیری تنظیمات ماژول</string>
     <string name="restore">بازیابی تنظیمات</string>
     <string name="reboot_home">راه‌اندازی مجدد لانچر</string>
