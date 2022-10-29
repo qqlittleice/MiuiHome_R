@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="xposed_desc">Сделайте MiuiHome снова великим.</string>
+    <string name="backup_and_restore">Backup and Restore</string>
     <string name="backup">Сохранить настройки модуля</string>
     <string name="restore">Восстановить настройки модуля</string>
     <string name="reboot_home">Перезагрузить раб. стол</string>
