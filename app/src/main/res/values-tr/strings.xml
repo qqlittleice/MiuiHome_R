@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="xposed_desc">MiuiHome\'u Yeniden Harika Hale Getirin.</string>
+    <string name="backup_and_restore">Backup and Restore</string>
     <string name="backup">Modül Ayarlarını Yedekle</string>
     <string name="restore">Modül Ayarlarını Geri Yükle</string>
     <string name="reboot_home">Başlatıcıyı Yeniden Başlat</string>
