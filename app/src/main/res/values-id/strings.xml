@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="xposed_desc">Jadikan MIUIHome Hebat Lagi.</string>
+    <string name="backup_and_restore">Backup and Restore</string>
     <string name="backup">Pengaturan Modul Cadangan</string>
     <string name="restore">Kembalikan Pengaturan Modul</string>
     <string name="reboot_home">Nyalakan Ulang Peluncur</string>
