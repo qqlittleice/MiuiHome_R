@@ -17,7 +17,7 @@ public class AppManager {
     }
 
     public static class SingleApp {
-        public static AppManager INSTANCE = new AppManager();
+        public static final AppManager INSTANCE = new AppManager();
     }
 
     /**
@@ -25,7 +25,7 @@ public class AppManager {
      */
     public void addActivity(Activity activity) {
         if (activityStack == null) {
-            activityStack = new Stack<Activity>();
+            activityStack = new Stack<>();
         }
         activityStack.add(activity);
     }
@@ -54,8 +54,7 @@ public class AppManager {
      * 获取当前显示Activity（堆栈中最后一个传入的activity）
      */
     public Activity getLastActivity() {
-        Activity activity = activityStack.lastElement();
-        return activity;
+        return activityStack.lastElement();
     }
 
     /**
@@ -121,7 +120,7 @@ public class AppManager {
             finishAllActivity();
             android.os.Process.killProcess(android.os.Process.myPid());// 杀死该应用进程
             System.exit(0);
-        } catch (Exception e) {
+        } catch (Exception ignore) {
         }
     }
 }

@@ -18,13 +18,15 @@ import android.net.Uri;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
+import androidx.appcompat.widget.AppCompatImageView;
+
 import com.yuk.miuiHomeR.R;
 
 import moralnorm.annotation.ColorInt;
 import moralnorm.annotation.ColorRes;
 import moralnorm.annotation.DrawableRes;
 
-public class CircleImageView extends ImageView {
+public class CircleImageView extends AppCompatImageView {
 
     private static final ScaleType SCALE_TYPE = ScaleType.CENTER_CROP;
 
@@ -150,7 +152,7 @@ public class CircleImageView extends ImageView {
     }
 
     public void setBorderColorResource(@ColorRes int borderColorRes) {
-        setBorderColor(getContext().getResources().getColor(borderColorRes));
+        setBorderColor(getContext().getResources().getColor(borderColorRes, null));
     }
 
     public int getFillColor() {
@@ -168,7 +170,7 @@ public class CircleImageView extends ImageView {
     }
 
     public void setFillColorResource(@ColorRes int fillColorRes) {
-        setFillColor(getContext().getResources().getColor(fillColorRes));
+        setFillColor(getContext().getResources().getColor(fillColorRes, null));
     }
 
     public int getBorderWidth() {

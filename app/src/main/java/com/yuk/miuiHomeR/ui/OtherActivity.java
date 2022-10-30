@@ -1,5 +1,6 @@
 package com.yuk.miuiHomeR.ui;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.yuk.miuiHomeR.R;
@@ -8,6 +9,7 @@ import com.yuk.miuiHomeR.ui.base.SubFragment;
 
 public class OtherActivity extends BaseAppCompatActivity {
 
+    @NonNull
     @Override
     public Fragment initFragment() {
         setTitle(R.string.other_features);

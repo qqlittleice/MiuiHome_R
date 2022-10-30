@@ -19,6 +19,7 @@ import com.yuk.miuiHomeR.utils.Helpers;
 import com.yuk.miuiHomeR.utils.PrefsUtils;
 import com.yuk.miuiHomeR.utils.ktx.AppUtilKt;
 
+import java.io.File;
 import java.util.Set;
 
 import moralnorm.appcompat.app.ActionBar;
@@ -70,7 +71,7 @@ public class MainActivity extends BaseAppCompatActivity {
         Helpers.fixPermissionsAsync(getApplicationContext());
 
         try {
-            fileObserver = new FileObserver(PrefsUtils.getSharedPrefsPath(), FileObserver.CLOSE_WRITE) {
+            fileObserver = new FileObserver(new File(PrefsUtils.getSharedPrefsPath()), FileObserver.CLOSE_WRITE) {
                 @Override
                 public void onEvent(int event, String path) {
                     Helpers.fixPermissionsAsync(getApplicationContext());
