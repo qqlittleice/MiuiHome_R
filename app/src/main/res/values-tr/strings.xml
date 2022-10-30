@@ -5,8 +5,6 @@
     <string name="restore">Modül Ayarlarını Geri Yükle</string>
     <string name="reboot_home">Başlatıcıyı Yeniden Başlat</string>
     <string name="about">Hakkında</string>
-    <string name="show_icon">Simgeyi Göster</string>
-    <string name="hide_icon">Simgeyi Gizle</string>
     <string name="complete_blur">Tamamen Bulanık</string>
     <string name="test_blur">Test Bulanıklığı</string>
     <string name="simple_blur">Basit Bulanıklık</string>
@@ -96,10 +94,8 @@
     <string name="translators">Buğra Çağlar</string>
     <string name="language">Türkçe</string>
     <string name="settings_language">Language</string>
-    <string name="follow_system">Follow system</string>
     <string name="anim_speed_recent">Son uygulamaların giriş ve çıkış animasyon hızı</string>
     <string name="home_fold_dock">Katlanabilir cihazlar için Dock</string>
     <string name="home_all_apps_blur">Enable All Apps Container View Blur</string>
     <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature.Also this is a very early test feature, because refresh issues blur very easily turned into a black screen</string>
-    <string name="tip_restart">Please restart the App yourself to follow the system language</string>
 </resources>

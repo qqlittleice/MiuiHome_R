@@ -5,8 +5,6 @@
     <string name="restore">Восстановить настройки модуля</string>
     <string name="reboot_home">Перезагрузить раб. стол</string>
     <string name="about">О программе</string>
-    <string name="show_icon">Показывать иконку</string>
-    <string name="hide_icon">Скрыть иконку</string>
     <string name="complete_blur">Полное размытие</string>
     <string name="test_blur">Тестовое размытие</string>
     <string name="simple_blur">Простое размытие</string>

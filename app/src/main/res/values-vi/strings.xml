@@ -5,8 +5,6 @@
     <string name="restore">Khôi phục cài đặt</string>
     <string name="reboot_home">Khởi động lại Trình khởi chạy</string>
     <string name="about">Giới thiệu</string>
-    <string name="show_icon">Hiện biểu tượng</string>
-    <string name="hide_icon">Ẩn biểu tượng</string>
     <string name="complete_blur">Làm mờ hoàn toàn</string>
     <string name="test_blur">Làm mờ một phần</string>
     <string name="simple_blur">Làm mờ đơn giản</string>
@@ -96,10 +94,8 @@
     <string name="translators">Bntt19</string>
     <string name="language">Việt Nam</string>
     <string name="settings_language">Language</string>
-    <string name="follow_system">Follow system</string>
     <string name="anim_speed_recent">Tốc độ hoạt ảnh trong và ngoài màn hình gần đây</string>
     <string name="home_fold_dock">Thanh đế cho màn hình gập</string>
     <string name="home_all_apps_blur">Enable All Apps Container View Blur</string>
     <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature.Also this is a very early test feature, because refresh issues blur very easily turned into a black screen</string>
-    <string name="tip_restart">Please restart the App yourself to follow the system language</string>
 </resources>
