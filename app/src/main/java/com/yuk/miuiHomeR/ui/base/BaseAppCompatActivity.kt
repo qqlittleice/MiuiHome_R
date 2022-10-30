@@ -29,7 +29,6 @@ abstract class BaseAppCompatActivity : AppCompatActivity() {
         val locale: Locale = getLocale(this)
         if (locale != mCurrentLocale) {
             mCurrentLocale = locale
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             recreate()
         }
     }

@@ -133,7 +133,6 @@ fun restart(context: Context?,activity: Activity) {
     try {
         activity.finish()
         activity.startActivity(Intent(context, activity.javaClass))
-        activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         activity.recreate()
     } catch (e: Throwable) {
         Log.e("MIUIHomeR", "Failed to restart", e)
