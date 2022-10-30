@@ -6,8 +6,6 @@
     <string name="restore">Restaurer les paramètres du module</string>
     <string name="reboot_home">Redémarrer le Launcher</string>
     <string name="about">À propos</string>
-    <string name="show_icon">Montrer icône</string>
-    <string name="hide_icon">Masquer l\'icône</string>
     <string name="complete_blur">Flou complet</string>
     <string name="test_blur">Flou de test</string>
     <string name="simple_blur">Flou simple</string>
@@ -97,12 +95,10 @@
     <string name="translators">YuKongA</string>
     <string name="language">Anglais</string>
     <string name="settings_language">Language</string>
-    <string name="follow_system">Follow system</string>
     <string name="anim_speed_recent">Vitesse d\'animation ouverture fermeture des applications récentes</string>
     <string name="home_fold_dock">Dock pour les appareils pliables (pliants)</string>
     <string name="home_all_apps_blur">Enable All Apps Container View Blur</string>
     <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature.Also this is a very early test feature, because refresh issues blur very easily turned into a black screen</string>
-    <string name="tip_restart">Please restart the App yourself to follow the system language</string>
     <string name="settings">Settings</string>
     <string name="system_default">Default</string>
     <string name="launcher_icon">Launcher Icon</string>
