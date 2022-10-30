@@ -19,9 +19,12 @@ import java.io.DataOutputStream
 import java.util.*
 
 fun dp2px(dpValue: Float): Int =
-    TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpValue, InitFields.appContext.resources.displayMetrics).toInt()
+    TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+        dpValue,
+        InitFields.appContext.resources.displayMetrics).toInt()
 
-fun px2dp(pxValue: Int): Int = (pxValue / InitFields.appContext.resources.displayMetrics.density + 0.5f).toInt()
+fun px2dp(pxValue: Int): Int =
+    (pxValue / InitFields.appContext.resources.displayMetrics.density + 0.5f).toInt()
 
 fun getDensityDpi(): Int =
     (InitFields.appContext.resources.displayMetrics.widthPixels / InitFields.appContext.resources.displayMetrics.density).toInt()
@@ -32,18 +35,23 @@ fun isDarkMode(): Boolean =
 @SuppressLint("PrivateApi")
 @Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 fun getProp(mKey: String): String =
-    Class.forName("android.os.SystemProperties").getMethod("get", String::class.java).invoke(Class.forName("android.os.SystemProperties"), mKey)
+    Class.forName("android.os.SystemProperties").getMethod("get", String::class.java)
+        .invoke(Class.forName("android.os.SystemProperties"), mKey)
         .toString()
 
 @SuppressLint("PrivateApi")
 fun getProp(mKey: String, defaultValue: Boolean): Boolean =
-    Class.forName("android.os.SystemProperties").getMethod("getBoolean", String::class.java, Boolean::class.javaPrimitiveType)
+    Class.forName("android.os.SystemProperties")
+        .getMethod("getBoolean", String::class.java, Boolean::class.javaPrimitiveType)
         .invoke(Class.forName("android.os.SystemProperties"), mKey, defaultValue) as Boolean
 
-fun checkVersionName(): String = InitFields.appContext.packageManager.getPackageInfo(InitFields.appContext.packageName, 0).versionName
+fun checkVersionName(): String =
+    InitFields.appContext.packageManager.getPackageInfo(InitFields.appContext.packageName,
+        0).versionName
 
 fun isAlpha(): Boolean =
-    InitFields.appContext.packageManager.getPackageInfo(InitFields.appContext.packageName, 0).versionName.contains("ALPHA", ignoreCase = true)
+    InitFields.appContext.packageManager.getPackageInfo(InitFields.appContext.packageName,
+        0).versionName.contains("ALPHA", ignoreCase = true)
 
 fun isPadDevice(): Boolean = DeviceHelper.isTablet() || DeviceHelper.isFoldDevice()
 fun atLeastAndroidS(): Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
@@ -84,7 +92,9 @@ fun execShell(command: String) {
 
 @SuppressLint("DiscouragedApi")
 fun getCornerRadiusTop(): Int {
-    val resourceId = InitFields.appContext.resources.getIdentifier("rounded_corner_radius_top", "dimen", "android")
+    val resourceId = InitFields.appContext.resources.getIdentifier("rounded_corner_radius_top",
+        "dimen",
+        "android")
     return if (resourceId > 0) {
         InitFields.appContext.resources.getDimensionPixelSize(resourceId)
     } else 100
@@ -98,14 +108,13 @@ fun setLocale(resources: Resources, locale: Locale) {
     Log.d("AppUtil", "setLocale: ${setLocal.toLanguageTag()}")
     val config = resources.configuration
     config.setLocale(setLocal)
-    Locale.setDefault(setLocal)
     resources.updateConfiguration(config, resources.displayMetrics)
     if (atLeastAndroidT()) {
         AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(setLocal.toLanguageTag()))
     }
 }
 
-fun getLocaleByTag(tag: String?): Locale {
+fun getLocaleByTag(tag: String?, context: Context): Locale {
     return if (tag == null || TextUtils.isEmpty(tag) || "SYSTEM" == tag) {
         val sysLang = Locale.getDefault()
         Log.d("AppUtil", "getLocaleByTag: sysLang=$sysLang")
@@ -117,7 +126,7 @@ fun getLocale(context: Context): Locale {
     val pref = getSharedPrefs(context, true)
     val tag: String? = pref.getString("prefs_key_settings_language", "SYSTEM")
     Log.d("AppUtil", "getLocale: $tag")
-    return getLocaleByTag(tag)
+    return getLocaleByTag(tag, context)
 }
 
 fun restart(context: Context?, activity: Activity) {
