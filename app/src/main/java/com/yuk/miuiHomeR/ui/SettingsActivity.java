@@ -3,7 +3,6 @@ package com.yuk.miuiHomeR.ui;
 import static com.yuk.miuiHomeR.utils.ktx.AppUtilKt.restart;
 
 import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 
@@ -11,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.yuk.miuiHomeR.R;
-import com.yuk.miuiHomeR.service.KillSelfService;
 import com.yuk.miuiHomeR.ui.base.BaseAppCompatActivity;
 import com.yuk.miuiHomeR.ui.base.SubFragment;
 import com.yuk.miuiHomeR.utils.BackupUtils;
@@ -101,20 +99,6 @@ public class SettingsActivity extends BaseAppCompatActivity {
             return true;
         }
 
-        /**
-         * 重启整个APP
-         *
-         * @param context App context
-         * @param delayed 延迟多少毫秒
-         */
-        private void restartApp(Context context, String locale, Long delayed) {
-            //开启一个新的服务，用来重启本APP
-            Intent intent = new Intent(context, KillSelfService.class);
-            intent.putExtra("PackageName", context.getPackageName());
-            intent.putExtra("Locale", locale);
-            intent.putExtra("Delayed", delayed);
-            context.startService(intent);
-        }
     }
 
     @Override

@@ -18,8 +18,9 @@ import moralnorm.internal.utils.DeviceHelper
 import java.io.DataOutputStream
 import java.util.*
 
-fun dp2px(dpValue: Float): Int =
-    TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpValue, InitFields.appContext.resources.displayMetrics).toInt()
+fun dp2px(dpValue: Float): Int = TypedValue.applyDimension(
+    TypedValue.COMPLEX_UNIT_DIP, dpValue, InitFields.appContext.resources.displayMetrics
+).toInt()
 
 fun px2dp(pxValue: Int): Int = (pxValue / InitFields.appContext.resources.displayMetrics.density + 0.5f).toInt()
 
@@ -40,10 +41,13 @@ fun getProp(mKey: String, defaultValue: Boolean): Boolean =
     Class.forName("android.os.SystemProperties").getMethod("getBoolean", String::class.java, Boolean::class.javaPrimitiveType)
         .invoke(Class.forName("android.os.SystemProperties"), mKey, defaultValue) as Boolean
 
-fun checkVersionName(): String = InitFields.appContext.packageManager.getPackageInfo(InitFields.appContext.packageName, 0).versionName
+fun checkVersionName(): String = InitFields.appContext.packageManager.getPackageInfo(
+    InitFields.appContext.packageName, 0
+).versionName
 
-fun isAlpha(): Boolean =
-    InitFields.appContext.packageManager.getPackageInfo(InitFields.appContext.packageName, 0).versionName.contains("ALPHA", ignoreCase = true)
+fun isAlpha(): Boolean = InitFields.appContext.packageManager.getPackageInfo(
+    InitFields.appContext.packageName, 0
+).versionName.contains("ALPHA", ignoreCase = true)
 
 fun isPadDevice(): Boolean = DeviceHelper.isTablet() || DeviceHelper.isFoldDevice()
 fun atLeastAndroidS(): Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
@@ -84,7 +88,9 @@ fun execShell(command: String) {
 
 @SuppressLint("DiscouragedApi")
 fun getCornerRadiusTop(): Int {
-    val resourceId = InitFields.appContext.resources.getIdentifier("rounded_corner_radius_top", "dimen", "android")
+    val resourceId = InitFields.appContext.resources.getIdentifier(
+        "rounded_corner_radius_top", "dimen", "android"
+    )
     return if (resourceId > 0) {
         InitFields.appContext.resources.getDimensionPixelSize(resourceId)
     } else 100
@@ -98,7 +104,6 @@ fun setLocale(resources: Resources, locale: Locale) {
     Log.d("AppUtil", "setLocale: ${setLocal.toLanguageTag()}")
     val config = resources.configuration
     config.setLocale(setLocal)
-    Locale.setDefault(setLocal)
     resources.updateConfiguration(config, resources.displayMetrics)
     if (atLeastAndroidT()) {
         AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(setLocal.toLanguageTag()))
@@ -107,9 +112,9 @@ fun setLocale(resources: Resources, locale: Locale) {
 
 fun getLocaleByTag(tag: String?): Locale {
     return if (tag == null || TextUtils.isEmpty(tag) || "SYSTEM" == tag) {
-        val sysLang = Locale.getDefault()
+        val sysLang = getProp("persist.sys.locale")
         Log.d("AppUtil", "getLocaleByTag: sysLang=$sysLang")
-        return sysLang
+        Locale.forLanguageTag(sysLang)
     } else Locale.forLanguageTag(tag)
 }
 
