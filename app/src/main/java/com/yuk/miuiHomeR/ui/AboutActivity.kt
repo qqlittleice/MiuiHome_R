@@ -1,5 +1,6 @@
 package com.yuk.miuiHomeR.ui
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -7,6 +8,8 @@ import androidx.fragment.app.Fragment
 import com.yuk.miuiHomeR.BuildConfig
 import com.yuk.miuiHomeR.R
 import com.yuk.miuiHomeR.ui.base.SubFragment
+import com.yuk.miuiHomeR.utils.ktx.getLocale
+import com.yuk.miuiHomeR.utils.ktx.setLocale
 import moralnorm.common.app.PickerDragActivity
 import moralnorm.internal.utils.ViewUtils
 import moralnorm.preference.Preference
@@ -24,6 +27,9 @@ class AboutActivity : PickerDragActivity() {
         return AboutFragment()
     }
 
+    override fun attachBaseContext(base: Context) {
+        super.attachBaseContext(setLocale(base, getLocale(base)))
+    }
     class AboutFragment : SubFragment() {
         override fun getContentResId(): Int {
             return R.xml.prefs_about

@@ -11,9 +11,9 @@ class Application : android.app.Application() {
     override fun attachBaseContext(base: Context?) {
         PrefsUtils.mSharedPreferences = getSharedPrefs(base, false)
         val locale: String? = PrefsUtils.mSharedPreferences.getString("prefs_key_settings_language", "SYSTEM")
-        if (locale != null) if (base != null) {
-            setLocale(base.resources, Locale.forLanguageTag(locale))
-        }
-        super.attachBaseContext(base)
+        if (locale != null) {
+            if (base != null)
+                super.attachBaseContext(setLocale(base, Locale.forLanguageTag(locale)))
+        } else super.attachBaseContext(base)
     }
 }

@@ -1,7 +1,5 @@
 package com.yuk.miuiHomeR.ui;
 
-import static com.yuk.miuiHomeR.utils.ktx.AppUtilKt.restart;
-
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -32,15 +30,12 @@ public class SettingsActivity extends BaseAppCompatActivity {
         return new SettingsFragment();
     }
 
-    public static class SettingsFragment extends SubFragment implements Preference.OnPreferenceClickListener,
-            Preference.OnPreferenceChangeListener {
+    public static class SettingsFragment extends SubFragment implements Preference.OnPreferenceClickListener, Preference.OnPreferenceChangeListener {
 
         SwitchPreference mHideIcon;
         DropDownPreference mLocaleSelector;
         Preference mBackupSettings;
         Preference mRestoreSettings;
-
-        ArrayList<String> mLocaleName = new ArrayList<>();
 
         @Override
         public int getContentResId() {
@@ -49,6 +44,7 @@ public class SettingsActivity extends BaseAppCompatActivity {
 
         @Override
         public void initPrefs() {
+            ArrayList<String> mLocaleName = new ArrayList<>();
             mHideIcon = findPreference("prefs_key_settings_hide_icon");
             mLocaleSelector = findPreference("prefs_key_settings_language");
             mBackupSettings = findPreference("prefs_key_settings_backup");
@@ -73,9 +69,9 @@ public class SettingsActivity extends BaseAppCompatActivity {
         @Override
         public boolean onPreferenceClick(Preference preference) {
             if (preference == mBackupSettings) {
-                BackupUtils.INSTANCE.backup(getActivity(), PrefsUtils.mSharedPreferences);
+                BackupUtils.INSTANCE.backup(requireActivity(), PrefsUtils.mSharedPreferences);
             } else if (preference == mRestoreSettings) {
-                BackupUtils.INSTANCE.recovery(getActivity(), PrefsUtils.mSharedPreferences);
+                BackupUtils.INSTANCE.recovery(requireActivity(), PrefsUtils.mSharedPreferences);
             }
             return true;
         }
@@ -83,7 +79,7 @@ public class SettingsActivity extends BaseAppCompatActivity {
         @Override
         public boolean onPreferenceChange(Preference preference, Object o) {
             if (preference == mHideIcon) {
-                PackageManager pm = getActivity().getPackageManager();
+                PackageManager pm = requireActivity().getPackageManager();
                 int mComponentEnabledState;
                 if ((Boolean) o) {
                     mComponentEnabledState = PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
@@ -91,10 +87,10 @@ public class SettingsActivity extends BaseAppCompatActivity {
                     mComponentEnabledState = PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
                 }
                 pm.setComponentEnabledSetting(new ComponentName(getActivity(),
-                                MainActivity.class.getName() + "Alias"), mComponentEnabledState,
+                        MainActivity.class.getName() + "Alias"), mComponentEnabledState,
                         PackageManager.DONT_KILL_APP);
             } else if (preference == mLocaleSelector) {
-                restart(getContext(), requireActivity());
+                requireActivity().recreate();
             }
             return true;
         }

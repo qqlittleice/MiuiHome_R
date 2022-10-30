@@ -1,18 +1,17 @@
 package com.yuk.miuiHomeR.utils;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
 
 import com.yuk.miuiHomeR.BuildConfig;
 
 import java.io.File;
-import java.util.Locale;
 
 public class Helpers {
 
-    public static String mAppModulePkg = BuildConfig.APPLICATION_ID;
+    public static final String mAppModulePkg = BuildConfig.APPLICATION_ID;
 
     public static synchronized Context getProtectedContext(Context context) {
         return getProtectedContext(context, null);
@@ -27,6 +26,7 @@ public class Helpers {
         }
     }
 
+    @SuppressLint({"SetWorldReadable", "SetWorldWritable"})
     public static void fixPermissionsAsync(Context context) {
         AsyncTask.execute(() -> {
             try {
