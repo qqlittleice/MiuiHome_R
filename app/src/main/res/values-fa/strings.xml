@@ -102,7 +102,7 @@ __________________
     <string name="anim_speed_recent">سرعت انیمیشن در باز و بستن برنامه ها از وظایف اخیر</string>
     <string name="home_fold_dock">پیشخوان برای تبلت ها</string>
     <string name="home_all_apps_blur">فعال کردن تاری بکگراند برای کشوی برنامه ها</string>
-    <string name="home_all_apps_blur_summary">لطفاً برای استفاده از این ویژگی شفافیت پس‌زمینه کشوی برنامه را روی 100٪ تنظیم کنید. همچنین این یک ویژگی آزمایشی بسیار اولیه است، زیرا مسائل Refresh به راحتی به صفحه سیاه تبدیل می‌شوند</string>
+    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature.Also this is a very early test feature, because refresh issues blur very easily turned into a black screen</string>
     <string name="settings">Settings</string>
     <string name="system_default">Default</string>
     <string name="launcher_icon">Launcher Icon</string>
