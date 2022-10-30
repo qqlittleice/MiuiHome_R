@@ -6,17 +6,12 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.yuk.miuiHomeR.R
 import com.yuk.miuiHomeR.utils.AppManager
-import com.yuk.miuiHomeR.utils.Helpers
 import com.yuk.miuiHomeR.utils.ktx.getLocale
 import moralnorm.appcompat.app.AppCompatActivity
 import moralnorm.internal.utils.ViewUtils
 import java.util.*
 
 abstract class BaseAppCompatActivity : AppCompatActivity() {
-
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(Helpers.getLocaleContext(newBase))
-    }
 
     private var mCurrentLocale: Locale? = null
     override fun onStart() {
