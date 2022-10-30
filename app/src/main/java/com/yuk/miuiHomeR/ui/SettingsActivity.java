@@ -96,7 +96,7 @@ public class SettingsActivity extends BaseAppCompatActivity {
                                 MainActivity.class.getName() + "Alias"), mComponentEnabledState,
                         PackageManager.DONT_KILL_APP);
             } else if (preference == mLocaleSelector) {
-                restart(getContext(), requireActivity());
+                requireActivity().recreate();
             }
             return true;
         }
