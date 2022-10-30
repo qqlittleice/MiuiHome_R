@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="xposed_desc">Make MiuiHome Great Again.</string>
-    <string name="backup_and_restore">Backup and Restore</string>
+    <string name="backup_and_restore">Sao lưu và khôi phục</string>
     <string name="backup">Sao lưu cài đặt</string>
     <string name="restore">Khôi phục cài đặt</string>
     <string name="reboot_home">Khởi động lại Trình khởi chạy</string>
@@ -96,14 +96,14 @@
     <string name="translation">Crowdin</string>
     <string name="translators">Bntt19</string>
     <string name="language">Việt Nam</string>
-    <string name="settings_language">Language</string>
-    <string name="follow_system">Follow system</string>
+    <string name="settings_language">Ngôn ngữ</string>
+    <string name="follow_system">Theo hệ thống</string>
     <string name="anim_speed_recent">Tốc độ hoạt ảnh trong và ngoài màn hình gần đây</string>
     <string name="home_fold_dock">Thanh đế cho màn hình gập</string>
-    <string name="home_all_apps_blur">Enable All Apps Container View Blur</string>
-    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature.Also this is a very early test feature, because refresh issues blur very easily turned into a black screen</string>
-    <string name="tip_restart">Please restart the App yourself to follow the system language</string>
-    <string name="settings">Settings</string>
-    <string name="system_default">Default</string>
-    <string name="launcher_icon">Launcher Icon</string>
+    <string name="home_all_apps_blur">Làm mờ Ngăn chứa ứng dụng</string>
+    <string name="home_all_apps_blur_summary">Vui lòng đặt độ trong suốt của nền ngăn ứng dụng thành 100% để sử dụng tính năng này</string>
+    <string name="tip_restart">Vui lòng khởi động lại ứng dụng</string>
+    <string name="settings">Cài đặt</string>
+    <string name="system_default">Mặc định</string>
+    <string name="launcher_icon">Biểu tượng</string>
 </resources>
