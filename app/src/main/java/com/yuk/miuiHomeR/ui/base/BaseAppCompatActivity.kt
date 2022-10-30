@@ -9,7 +9,7 @@ import com.yuk.miuiHomeR.utils.ktx.getLocale
 import com.yuk.miuiHomeR.utils.ktx.setLocale
 import moralnorm.appcompat.app.AppCompatActivity
 import moralnorm.internal.utils.ViewUtils
-import java.util.*
+import java.util.Locale
 
 abstract class BaseAppCompatActivity : AppCompatActivity() {
 
@@ -34,6 +34,9 @@ abstract class BaseAppCompatActivity : AppCompatActivity() {
         setLocale(resources, getLocale(baseContext))
         AppManager.getInstance().addActivity(this)
         setContentView(R.layout.activity_main)
+        val res = resources
+        val conf = res.configuration
+        window.decorView.layoutDirection = conf.layoutDirection
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, initFragment())
             .commit()
