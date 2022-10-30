@@ -6,8 +6,6 @@
     <string name="restore">Khôi phục cài đặt</string>
     <string name="reboot_home">Khởi động lại Trình khởi chạy</string>
     <string name="about">Giới thiệu</string>
-    <string name="show_icon">Hiện biểu tượng</string>
-    <string name="hide_icon">Ẩn biểu tượng</string>
     <string name="complete_blur">Làm mờ hoàn toàn</string>
     <string name="test_blur">Làm mờ một phần</string>
     <string name="simple_blur">Làm mờ đơn giản</string>
@@ -97,12 +95,10 @@
     <string name="translators">Bntt19</string>
     <string name="language">Việt Nam</string>
     <string name="settings_language">Ngôn ngữ</string>
-    <string name="follow_system">Theo hệ thống</string>
     <string name="anim_speed_recent">Tốc độ hoạt ảnh trong và ngoài màn hình gần đây</string>
     <string name="home_fold_dock">Thanh đế cho màn hình gập</string>
     <string name="home_all_apps_blur">Làm mờ Ngăn chứa ứng dụng</string>
     <string name="home_all_apps_blur_summary">Vui lòng đặt độ trong suốt của nền ngăn ứng dụng thành 100% để sử dụng tính năng này</string>
-    <string name="tip_restart">Vui lòng khởi động lại ứng dụng</string>
     <string name="settings">Cài đặt</string>
     <string name="system_default">Mặc định</string>
     <string name="launcher_icon">Biểu tượng</string>
