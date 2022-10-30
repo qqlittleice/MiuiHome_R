@@ -1,9 +1,7 @@
 package com.yuk.miuiHomeR.utils.ktx
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Context
-import android.content.Intent
 import android.content.res.Configuration
 import android.content.res.Resources
 import android.os.Build
@@ -96,43 +94,27 @@ fun getCornerRadiusTop(): Int {
     } else 100
 }
 
-fun setLocale(resources: Resources, locale: Locale) {
-    var setLocal: Locale = locale
+fun setLocale(context: Context, locale: Locale) : Context {
+    var tmpLocale: Locale = locale
     if ("und" == locale.toLanguageTag() || "system" == locale.toLanguageTag()) {
-        setLocal = Locale.getDefault()
+        tmpLocale = Resources.getSystem().configuration.locales[0]
     }
-    Log.d("AppUtil", "setLocale: ${setLocal.toLanguageTag()}")
-    val config = resources.configuration
-    config.setLocale(setLocal)
-    resources.updateConfiguration(config, resources.displayMetrics)
+    val configuration = context.resources.configuration
+    configuration.setLocale(tmpLocale)
+    Log.d("AppUtil", "setLocale: ${tmpLocale.toLanguageTag()}")
     if (atLeastAndroidT()) {
-        AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(setLocal.toLanguageTag()))
+        AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(tmpLocale.toLanguageTag()))
     }
-}
-
-fun getLocaleByTag(tag: String?): Locale {
-    return if (tag == null || TextUtils.isEmpty(tag) || "SYSTEM" == tag) {
-        val sysLang = getProp("persist.sys.locale")
-        Log.d("AppUtil", "getLocaleByTag: sysLang=$sysLang")
-        Locale.forLanguageTag(sysLang)
-    } else Locale.forLanguageTag(tag)
+    return context.createConfigurationContext(configuration)
 }
 
 fun getLocale(context: Context): Locale {
     val pref = getSharedPrefs(context, true)
     val tag: String? = pref.getString("prefs_key_settings_language", "SYSTEM")
-    Log.d("AppUtil", "getLocale: $tag")
-    return getLocaleByTag(tag)
-}
-
-fun restart(context: Context?, activity: Activity) {
-    try {
-        activity.finish()
-        activity.startActivity(Intent(context, activity.javaClass))
-        activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-        activity.recreate()
-    } catch (e: Throwable) {
-        Log.e("MIUIHomeR", "Failed to restart", e)
-        activity.recreate()
-    }
+    Log.d("AppUtil", "getLocale: tag=$tag")
+    return if (tag == null || TextUtils.isEmpty(tag) || "SYSTEM" == tag) {
+        val sysLang = Resources.getSystem().configuration.locales[0].toLanguageTag().trim()
+        Log.d("AppUtil", "getLocale: sysLang=$sysLang")
+        Locale.forLanguageTag(sysLang)
+    } else Locale.forLanguageTag(tag)
 }

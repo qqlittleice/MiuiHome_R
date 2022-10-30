@@ -6,11 +6,7 @@ import android.view.View
 import com.github.kyuubiran.ezxhelper.init.InitFields.appContext
 import com.github.kyuubiran.ezxhelper.init.InitFields.moduleRes
 import com.yuk.miuiHomeR.R
-import com.yuk.miuiHomeR.utils.ktx.callMethod
-import com.yuk.miuiHomeR.utils.ktx.findClass
-import com.yuk.miuiHomeR.utils.ktx.getObjectField
-import com.yuk.miuiHomeR.utils.ktx.hookAfterAllMethods
-import com.yuk.miuiHomeR.utils.ktx.setObjectField
+import com.yuk.miuiHomeR.utils.ktx.*
 import de.robv.android.xposed.XposedHelpers
 
 object HomeSettings : BaseHook() {
@@ -31,7 +27,7 @@ object HomeSettings : BaseHook() {
                     override fun onClick(v: View) {
                         val intent = Intent()
                         intent.component = ComponentName("com.yuk.miuiHomeR", "com.yuk.miuiHomeR.ui.MainActivity")
-                        intent.putExtra("homeAsUpEnabled", true);
+                        intent.putExtra("homeAsUpEnabled", true)
                         v.context.startActivity(intent)
                     }
                 })

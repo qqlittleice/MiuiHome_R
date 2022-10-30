@@ -10,9 +10,12 @@ import moralnorm.preference.PreferenceManager
 
 open class BasePreferenceFragment : PreferenceFragmentCompat() {
 
+    override fun onAttach(context: Context) {
+        super.onAttach(setLocale(context, getLocale(context)))
+    }
+
     fun onCreate(savedInstanceState: Bundle?, prefs_default: Int) {
         super.onCreate(savedInstanceState)
-        setLocale(resources, getLocale(requireContext()))
         try {
             preferenceManager.sharedPreferencesName = PrefsUtils.mPrefsName
             preferenceManager.sharedPreferencesMode = Context.MODE_PRIVATE

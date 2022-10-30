@@ -1,7 +1,6 @@
 package com.yuk.miuiHomeR.hook
 
 
-import android.util.Log
 import com.github.kyuubiran.ezxhelper.utils.findMethod
 import com.github.kyuubiran.ezxhelper.utils.hookAfter
 import com.yuk.miuiHomeR.mPrefsMap

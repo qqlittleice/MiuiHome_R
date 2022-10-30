@@ -9,12 +9,12 @@ import java.lang.reflect.Field;
 
 public class PrefsUtils {
 
-    public static String mPrefsName = "MiuiHome_Config";
+    public static final String mPrefsName = "MiuiHome_Config";
     public static String mPrefsPathCurrent = null;
     public static String mPrefsFileCurrent = null;
     public static SharedPreferences mSharedPreferences = null;
-    public static String mPrefsPath = "/data/user_de/0/" + Helpers.mAppModulePkg + "/shared_prefs";
-    public static String mPrefsFile = mPrefsPath + "/" + mPrefsName + ".xml";
+    public static final String mPrefsPath = "/data/user_de/0/" + Helpers.mAppModulePkg + "/shared_prefs";
+    public static final String mPrefsFile = mPrefsPath + "/" + mPrefsName + ".xml";
 
     @SuppressLint("WorldReadableFiles")
     public static SharedPreferences getSharedPrefs(Context context, boolean protectedStorage, boolean multiProcess) {
