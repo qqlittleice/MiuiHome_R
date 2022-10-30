@@ -6,8 +6,6 @@
     <string name="restore">還原模組設定</string>
     <string name="reboot_home">重啟桌面</string>
     <string name="about">關於</string>
-    <string name="show_icon">顯示圖示</string>
-    <string name="hide_icon">隱藏圖示</string>
     <string name="complete_blur">完整模糊</string>
     <string name="test_blur">測試模糊</string>
     <string name="simple_blur">簡單模糊</string>
@@ -97,12 +95,10 @@
     <string name="translators">聖小熊 (Github: @a406010503)</string>
     <string name="language">繁體中文（香港）</string>
     <string name="settings_language">語言</string>
-    <string name="follow_system">跟隨系統</string>
     <string name="anim_speed_recent">動畫速度「進出最近任務畫面」</string>
     <string name="home_fold_dock">可摺疊裝置樣式的 Dock</string>
     <string name="home_all_apps_blur">Enable All Apps Container View Blur</string>
     <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature.Also this is a very early test feature, because refresh issues blur very easily turned into a black screen</string>
-    <string name="tip_restart">Please restart the App yourself to follow the system language</string>
     <string name="settings">Settings</string>
     <string name="system_default">Default</string>
     <string name="launcher_icon">Launcher Icon</string>
