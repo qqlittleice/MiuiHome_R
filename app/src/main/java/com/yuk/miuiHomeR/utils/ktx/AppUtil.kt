@@ -130,17 +130,13 @@ fun getLocale(context: Context): Locale {
 }
 
 fun restart(context: Context?,activity: Activity) {
-    if (atLeastAndroidS()) {
+    try {
+        activity.finish()
+        activity.startActivity(Intent(context, activity.javaClass))
+        activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         activity.recreate()
-    } else {
-        try {
-            activity.finish()
-            activity.startActivity(Intent(context, activity.javaClass))
-            activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-            activity.recreate()
-        } catch (e: Throwable) {
-            Log.e("MIUIHomeR", "Failed to restart", e)
-            activity.recreate()
-        }
+    } catch (e: Throwable) {
+        Log.e("MIUIHomeR", "Failed to restart", e)
+        activity.recreate()
     }
 }
