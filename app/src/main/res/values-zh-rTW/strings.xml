@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="xposed_desc">針對 MIUI Home 的自訂擴充</string>
+    <string name="backup_and_restore">備份與還原</string>
     <string name="backup">備份模組設定</string>
     <string name="restore">還原模組設定</string>
     <string name="reboot_home">重啟桌面</string>
@@ -98,4 +99,7 @@
     <string name="home_fold_dock">可摺疊裝置樣式的 Dock</string>
     <string name="home_all_apps_blur">啟用應用程式導覽匣模糊</string>
     <string name="home_all_apps_blur_summary">請將應用程式導覽匣透明度設定為 100% 以使用此功能。聯發科設備使用該功能時壁紙很容易變成純黑屏</string>
+    <string name="settings">設定</string>
+    <string name="system_default">預設</string>
+    <string name="launcher_icon">啟動器圖示</string>
 </resources>

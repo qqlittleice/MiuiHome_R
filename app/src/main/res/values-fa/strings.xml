@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="xposed_desc">MiuiHome را بهتر از قبل کنید.</string>
-    <string name="backup">پشتیبان‌گیری تنظیمات ماژول</string>
-    <string name="restore">بازیابی تنظیمات ماژول</string>
-    <string name="reboot_home">راه‌اندازی مجدد لانچر</string>
-    <string name="about">درباره</string>
+    <string name="backup_and_restore">پشتیبان گیری و بازیابی</string>
+    <string name="backup">پشتیبان‌گیری تنظیمات</string>
+    <string name="restore">بازیابی تنظیمات</string>
+    <string name="reboot_home">🔃 راه‌اندازی مجدد لانچر</string>
+    <string name="about">ℹ️ درباره</string>
     <string name="complete_blur">تاریِ کامل</string>
     <string name="test_blur">آزمایش تاری</string>
     <string name="simple_blur">تاری ساده</string>
@@ -40,7 +41,7 @@
     <string name="always_show_status_bar_clock">همیشه ساعت در نوار وضعیت نشان داده شود</string>
     <string name="double_tap_to_lock_screen">برای قفل کردن صفحه، دو ضربه سریع بزنید</string>
     <string name="shortcut_menu_background_view_blur">میانبر تاری نمای پس زمینه</string>
-    <string name="unlock_launcher_icon_grids">ترتیب آیکون لانچر را باز کنید</string>
+    <string name="unlock_launcher_icon_grids">ترتیب آیکون های لانچر را باز کنید</string>
     <string name="Always_blur_launcher_wallpaper">تصویر زمینه لانچر را همیشه تار کنید</string>
     <string name="blur_radius">مقدار تاری</string>
     <string name="unlock_hotseat">محدودیت شماره آیکون را از پیشخوان بردارید</string>
@@ -61,11 +62,7 @@
     <string name="hide_category_paging_edit">پنهان کردن دکمه \"ویرایش\" در صفحه بندی کشوی برنامه‌ها</string>
     <string name="hide_clean_up">دکمه \"بستن همه\" را مخفی کنید</string>
     <string name="hide_small_window">دکمه \"پنجره های شناور\" را حذف کنید</string>
-    <string name="github">Github Repository
-__________________
-#مهسا_امینی
-#OpIran
-🇮🇷</string>
+    <string name="github">منبع Github</string>
     <string name="close_folder">بسته شدن خودکار پوشه</string>
     <string name="close_folder_summary">هنگام راه‌اندازی برنامه‌ای از پوشه، پوشه را ببندید</string>
     <string name="folder_anim">حالت انیمیشن</string>
@@ -75,7 +72,7 @@ __________________
     <string name="folder_anim_4">سرعت بسته شدن ۲</string>
     <string name="optimize_unlock_anim">انیمیشن باز کردن قفل را بهینه کنید</string>
     <string name="shortcut_small_window">اضافه کردن پنجره کوچک در میانبر</string>
-    <string name="shortcut_remove_restrictions">Remove restrictions on shortcuts</string>
+    <string name="shortcut_remove_restrictions">محدودیت های میانبرها را بردارید</string>
     <string name="small_window">پنجره کوچک</string>
     <string name="icon_title_font_color">اندازه فونت آیکون ها</string>
     <string name="recents_card_bg_color">رنگ پس زمینه تصویر کوچک را برای برنامه های پنجره کوچک سفارشی کنید</string>
@@ -89,17 +86,20 @@ __________________
     <string name="tg_chat">گفت‌وگو در تلگرام</string>
     <string name="tg_channel">کانال تلگرام</string>
     <string name="qq_group">گروه QQ</string>
-    <string name="discussion">بحث</string>
+    <string name="discussion">📨 بحث و گفتگو</string>
     <string name="repo_summary">از توسعه دهندگان بیشتری برای مشارکت در توسعه استقبال کنید</string>
-    <string name="translate">مترجم: oMoXoNo</string>
+    <string name="translate">مترجم: 𓆩𝚘𝙼𝚘𝚇𝚘𝙽𝚘𓆪</string>
     <string name="translator">مترجم</string>
     <string name="developer">توسعه‌ دهنده</string>
     <string name="translation">Crowdin</string>
-    <string name="translators">YuKongA</string>
-    <string name="language">انگلیسی \"En\"</string>
-    <string name="settings_language">Language</string>
+    <string name="translators">𓆩𝚘𝙼𝚘𝚇𝚘𝙽𝚘𓆪</string>
+    <string name="language">فارسی 🇮🇷 [Persian]</string>
+    <string name="settings_language">🌐 زبان ها</string>
     <string name="anim_speed_recent">سرعت انیمیشن در باز و بستن برنامه ها از وظایف اخیر</string>
-    <string name="home_fold_dock">Dock for folded devices</string>
-    <string name="home_all_apps_blur">Enable All Apps Container View Blur</string>
-    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature.Also this is a very early test feature, because refresh issues blur very easily turned into a black screen</string>
+    <string name="home_fold_dock">پیشخوان برای تبلت ها</string>
+    <string name="home_all_apps_blur">فعال کردن تاری بکگراند برای کشوی برنامه ها</string>
+    <string name="home_all_apps_blur_summary">لطفاً برای استفاده از این ویژگی، شفافیت پس‌زمینه کشوی برنامه را روی 100٪ تنظیم کنید. دستگاه های مدیاتک از این ویژگی استفاده می کنند، تصویر زمینه به راحتی می تواند به یک صفحه سیاه خالص تبدیل شود</string>
+    <string name="settings">⚙️ تنظیمات</string>
+    <string name="system_default">پیش‌فرض</string>
+    <string name="launcher_icon">آیکون لانچر</string>
 </resources>

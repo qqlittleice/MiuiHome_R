@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="xposed_desc">Spraw, aby MiuiHome znów był świetny.</string>
+    <string name="backup_and_restore">Backup and Restore</string>
     <string name="backup">Kopia zapasowa ustawieni modułu</string>
     <string name="restore">Przywróć ustawienia domyślne modułu</string>
     <string name="reboot_home">Restartuj Launcher</string>
@@ -98,4 +99,7 @@
     <string name="home_fold_dock">Dock dla składanych urządzeń</string>
     <string name="home_all_apps_blur">Enable All Apps Container View Blur</string>
     <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature.Also this is a very early test feature, because refresh issues blur very easily turned into a black screen</string>
+    <string name="settings">Settings</string>
+    <string name="system_default">Default</string>
+    <string name="launcher_icon">Launcher Icon</string>
 </resources>
