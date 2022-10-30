@@ -6,8 +6,6 @@
     <string name="restore">إستعادة إعدادات الإضافة</string>
     <string name="reboot_home">إعادة تشغيل مشغل التطبيقات</string>
     <string name="about">عن التطبيق</string>
-    <string name="show_icon">إظهار الأيقونة</string>
-    <string name="hide_icon">إخفاء الأيقونة</string>
     <string name="complete_blur">ضبابية كاملة</string>
     <string name="test_blur">ضبابية تجريبية</string>
     <string name="simple_blur">ضبابية بسيطة</string>
@@ -97,12 +95,10 @@
     <string name="translators">YuKongA</string>
     <string name="language">الإنجليزية</string>
     <string name="settings_language">اللغة</string>
-    <string name="follow_system">اتبع النظام</string>
     <string name="anim_speed_recent">سرعة الرسوم المتحركة في الدخول الي والخروج من التطبيقات الأخيرة</string>
     <string name="home_fold_dock">حوض التطبيقات للاجهزة القابلة للطي</string>
     <string name="home_all_apps_blur">تفعيل ضبابية درج التطبيقات</string>
     <string name="home_all_apps_blur_summary">الرجاء تعيين شفافية خلفية درج التطبيقات إلى 100% لاستخدام هذه الميزة. هذه ميزة اختبار مبكرة جداً، لأن مشكلات التحديث تحوله بسهولة إلى شاشة سوداء</string>
-    <string name="tip_restart">Please restart the App yourself to follow the system language</string>
     <string name="settings">Settings</string>
     <string name="system_default">Default</string>
     <string name="launcher_icon">Launcher Icon</string>
