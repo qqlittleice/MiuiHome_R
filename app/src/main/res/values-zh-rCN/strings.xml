@@ -102,4 +102,5 @@
     <string name="settings">设置</string>
     <string name="system_default">默认</string>
     <string name="launcher_icon">桌面图标</string>
+    <string name="recents_card_remove_anim">修改划卡动画</string>
 </resources>

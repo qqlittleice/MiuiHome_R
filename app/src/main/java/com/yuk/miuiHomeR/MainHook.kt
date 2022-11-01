@@ -66,12 +66,13 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         OverlapMode,
                         FoldDeviceDock,
                         ShortcutItemCount,
-                        AllAppsContainerViewBlur
+                        RemoveCardAnim,
                     )
                     if (atLeastAndroidS()) {
                         initHooks(
                             Dock,
                             EnableFolderIconBlur,
+                            AllAppsContainerViewBlur
                         )
                     }
                 }
