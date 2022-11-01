@@ -30,7 +30,7 @@ object RemoveCardAnim : BaseHook() {
             val view = it.args[0] as View
             val getScreenHeight = "com.miui.home.launcher.DeviceConfig".findClass().callStaticMethod("getScreenHeight") as Int
             val ofFloat = ObjectAnimator.ofFloat(view, View.TRANSLATION_Y, view.translationY, -getScreenHeight * 1.1484375f)
-            ofFloat.duration = 234
+            ofFloat.duration = 200
             return@replaceMethod ofFloat
         }
 
