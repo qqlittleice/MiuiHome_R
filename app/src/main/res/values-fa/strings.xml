@@ -102,4 +102,5 @@
     <string name="settings">⚙️ تنظیمات</string>
     <string name="system_default">پیش‌فرض</string>
     <string name="launcher_icon">آیکون لانچر</string>
+    <string name="recents_card_remove_anim">Modify the anim for removing cards</string>
 </resources>
