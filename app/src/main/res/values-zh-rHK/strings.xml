@@ -102,4 +102,5 @@
     <string name="settings">設定</string>
     <string name="system_default">預設</string>
     <string name="launcher_icon">啟動器圖示</string>
+    <string name="recents_card_remove_anim">Modify the anim for removing cards</string>
 </resources>
