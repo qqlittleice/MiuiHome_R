@@ -102,5 +102,5 @@
     <string name="settings">Einstellungen</string>
     <string name="system_default">Standardwerte</string>
     <string name="launcher_icon">Startbildschirm Symbol</string>
-    <string name="recents_card_remove_anim">Modify the anim for removing cards</string>
+    <string name="recents_card_remove_anim">Ändern der Animation zum Entfernen der Karten</string>
 </resources>
