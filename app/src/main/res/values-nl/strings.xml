@@ -102,4 +102,5 @@
     <string name="settings">Settings</string>
     <string name="system_default">Default</string>
     <string name="launcher_icon">Launcher Icon</string>
+    <string name="recents_card_remove_anim">Modify the anim for removing cards</string>
 </resources>
