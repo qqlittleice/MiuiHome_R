@@ -100,7 +100,7 @@
     <string name="home_all_apps_blur">تفعيل ضبابية درج التطبيقات</string>
     <string name="home_all_apps_blur_summary">الرجاء تعيين شفافية خلفية درج التطبيقات إلى 100% لاستخدام هذه الميزة. هذه ميزة اختبار مبكرة جداً، لأن مشكلات التحديث تحوله بسهولة إلى شاشة سوداء</string>
     <string name="settings">الإعدادات</string>
-    <string name="system_default">Default</string>
-    <string name="launcher_icon">Launcher Icon</string>
-    <string name="recents_card_remove_anim">Modify the anim for removing cards</string>
+    <string name="system_default">الافتراضي</string>
+    <string name="launcher_icon">الأيقونة في مشغل التطبيقات</string>
+    <string name="recents_card_remove_anim">تعديل سرعة الرسوم المتحركة لإزالة التطبيقات</string>
 </resources>
