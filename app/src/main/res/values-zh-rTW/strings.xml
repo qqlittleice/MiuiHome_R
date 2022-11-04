@@ -103,5 +103,5 @@
     <string name="system_default">預設</string>
     <string name="launcher_icon">啟動器圖示</string>
     <string name="recents_card_remove_anim">修改移除卡片動畫</string>
-    <string name="recents_icon">Hide App Icon</string>
+    <string name="recents_icon">隱藏應用程式圖示</string>
 </resources>
