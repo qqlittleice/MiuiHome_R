@@ -2,6 +2,7 @@ package com.yuk.miuiHomeR.hook
 
 import android.util.TypedValue
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import com.yuk.miuiHomeR.mPrefsMap
 import com.yuk.miuiHomeR.utils.ktx.findClass
@@ -46,6 +47,7 @@ object Recent : BaseHook() {
             ) {
                 val mTitle = it.thisObject.getObjectField("mTitleView") as TextView
                 mTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, recentTextSize.toFloat())
+                if (recentTextSize == 0) mTitle.visibility = View.GONE
             }
         }
 
@@ -59,5 +61,15 @@ object Recent : BaseHook() {
                 mTitle.setTextColor(recentTextColor)
             }
         }
+
+        if (mPrefsMap.getBoolean("recents_icon")) {
+            "com.miui.home.recents.views.TaskViewHeader".hookAfterMethod(
+                "onFinishInflate"
+            ) {
+                val mImage = it.thisObject.getObjectField("mIconView") as ImageView
+                mImage.visibility = View.GONE
+            }
+        }
+
     }
 }

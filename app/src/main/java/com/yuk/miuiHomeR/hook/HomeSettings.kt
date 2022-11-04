@@ -6,7 +6,11 @@ import android.view.View
 import com.github.kyuubiran.ezxhelper.init.InitFields.appContext
 import com.github.kyuubiran.ezxhelper.init.InitFields.moduleRes
 import com.yuk.miuiHomeR.R
-import com.yuk.miuiHomeR.utils.ktx.*
+import com.yuk.miuiHomeR.utils.ktx.callMethod
+import com.yuk.miuiHomeR.utils.ktx.findClass
+import com.yuk.miuiHomeR.utils.ktx.getObjectField
+import com.yuk.miuiHomeR.utils.ktx.hookAfterAllMethods
+import com.yuk.miuiHomeR.utils.ktx.setObjectField
 import de.robv.android.xposed.XposedHelpers
 
 object HomeSettings : BaseHook() {

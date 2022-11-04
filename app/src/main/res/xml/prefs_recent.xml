@@ -23,6 +23,11 @@
 
         <SwitchPreference
             android:defaultValue="false"
+            android:key="prefs_key_recents_icon"
+            android:title="@string/recents_icon" />
+
+        <SwitchPreference
+            android:defaultValue="false"
             android:key="prefs_key_home_hide_clean_up"
             android:title="@string/hide_clean_up" />
 
