@@ -103,4 +103,5 @@
     <string name="system_default">Mặc định</string>
     <string name="launcher_icon">Biểu tượng</string>
     <string name="recents_card_remove_anim">Modify the anim for removing cards</string>
+    <string name="recents_icon">Hide App Icon</string>
 </resources>
