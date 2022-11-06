@@ -27,7 +27,7 @@
     <string name="small_folder_blur_background_size">小資料夾模糊視圖背景大小</string>
     <string name="blurred_background_when_opening_folder_view">資料夾開啟時背景模糊</string>
     <string name="using_full_width_of_folder_view">利用整個資料夾視圖的寬度</string>
-    <string name="number_of_icons_in_folder_iew">資料夾視圖內圖示的列數</string>
+    <string name="number_of_icons_in_folder_iew">資料夾視圖內圖示的欄數</string>
     <string name="dock_settings">底欄</string>
     <string name="enable_dock">啟用 Dock 模糊</string>
     <string name="bottom_margin_of_dock_icon">Dock 圖示下邊距</string>
