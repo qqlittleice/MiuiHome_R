@@ -4,7 +4,7 @@
 
 gradle = { id = "gradle", version = "7.3.1" }
 
-org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.7.20" }
+org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.7.21" }
 
 com-android-application = { id = "com.android.application", version = "7.3.1" }
 
@@ -14,7 +14,7 @@ dev-rikka-tools-autoresconfig = { id = "dev.rikka.tools.autoresconfig", version 
 
 [versions]
 
-kotlin = "1.7.20"
+kotlin = "1.7.21"
 
 androidx-core = "1.9.0"
 
@@ -56,12 +56,16 @@ com-android-tools-build-gradle = "com.android.tools.build:gradle:7.3.1"
 ##                                                           ⬆ :7.4.0-beta01"
 ##                                                           ⬆ :7.4.0-beta02"
 ##                                                           ⬆ :7.4.0-beta03"
+##                                                           ⬆ :7.4.0-beta04"
+##                                                           ⬆ :7.4.0-beta05"
 ##                                                           ⬆ :8.0.0-alpha01"
 ##                                                           ⬆ :8.0.0-alpha02"
 ##                                                           ⬆ :8.0.0-alpha03"
 ##                                                           ⬆ :8.0.0-alpha04"
 ##                                                           ⬆ :8.0.0-alpha05"
 ##                                                           ⬆ :8.0.0-alpha06"
+##                                                           ⬆ :8.0.0-alpha07"
+##                                                           ⬆ :8.0.0-alpha08"
 
 androidx-core-core = { group = "androidx.core", name = "core", version.ref = "androidx-core" }
 
