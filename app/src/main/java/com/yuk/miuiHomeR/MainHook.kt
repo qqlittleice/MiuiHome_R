@@ -67,10 +67,10 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         FoldDeviceDock,
                         ShortcutItemCount,
                         RemoveCardAnim,
+                        Dock
                     )
                     if (atLeastAndroidS()) {
                         initHooks(
-                            Dock,
                             EnableFolderIconBlur,
                             AllAppsContainerViewBlur
                         )
