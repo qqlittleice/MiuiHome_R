@@ -29,6 +29,7 @@
     <string name="using_full_width_of_folder_view">Menggunakan lebar penuh tampilan folder</string>
     <string name="number_of_icons_in_folder_iew">Jumlah baris ikon dalam tampilan folder</string>
     <string name="dock_settings">Dok</string>
+    <string name="enable_dock_hook">Enable dock hook</string>
     <string name="enable_dock">Aktifkan blur dok</string>
     <string name="bottom_margin_of_dock_icon">Margin bawah icon dok</string>
     <string name="bottom_margin_of_home_icon">Margin bawah indikator halaman</string>
