@@ -29,6 +29,7 @@
     <string name="using_full_width_of_folder_view">Utiliser toute l\'espace d\'affichage du dossier</string>
     <string name="number_of_icons_in_folder_iew">Nombre de lignes d\'icônes dans le dossier</string>
     <string name="dock_settings">Dock</string>
+    <string name="enable_dock_hook">Enable dock hook</string>
     <string name="enable_dock">Activer le flou du dock</string>
     <string name="bottom_margin_of_dock_icon">Marge inférieur des icônes du Dock</string>
     <string name="bottom_margin_of_home_icon">Marge inférieur de l\'indicateur de page</string>
