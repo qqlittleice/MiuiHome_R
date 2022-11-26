@@ -103,4 +103,5 @@
     <string name="system_default">По умолчанию</string>
     <string name="launcher_icon">Иконка лаунчера</string>
     <string name="recents_card_remove_anim">Изменение анимации миниатюр в меню недавних</string>
+    <string name="recents_icon">Скрыть иконку приложения</string>
 </resources>

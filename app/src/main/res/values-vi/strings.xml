@@ -102,5 +102,6 @@
     <string name="settings">Cài đặt</string>
     <string name="system_default">Mặc định</string>
     <string name="launcher_icon">Biểu tượng</string>
-    <string name="recents_card_remove_anim">Modify the anim for removing cards</string>
+    <string name="recents_card_remove_anim">Sửa đổi hoạt ảnh xóa thẻ</string>
+    <string name="recents_icon">Ẩn biểu tượng ứng dụng</string>
 </resources>

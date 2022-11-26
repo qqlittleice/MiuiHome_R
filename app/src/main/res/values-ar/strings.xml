@@ -103,4 +103,5 @@
     <string name="system_default">الافتراضي</string>
     <string name="launcher_icon">الأيقونة في مشغل التطبيقات</string>
     <string name="recents_card_remove_anim">تعديل سرعة الرسوم المتحركة لإزالة التطبيقات</string>
+    <string name="recents_icon">Hide App Icon</string>
 </resources>
