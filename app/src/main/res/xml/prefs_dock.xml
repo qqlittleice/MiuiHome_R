@@ -6,12 +6,19 @@
 
         <SwitchPreference
             android:defaultValue="false"
+            android:key="prefs_key_dock_hook_enabled"
+            android:title="@string/enable_dock_hook" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:dependency="prefs_key_dock_hook_enabled"
             android:key="prefs_key_home_dock_blur"
             android:title="@string/enable_dock" />
 
         <!-- 页面指示器下边距 -->
         <SeekBarPreference
             android:defaultValue="110"
+            android:dependency="prefs_key_dock_hook_enabled"
             android:key="prefs_key_home_icon_bottom_margin"
             android:title="@string/bottom_margin_of_home_icon"
             app:format="%d dp"
@@ -21,6 +28,7 @@
         <!-- 底栏图标下边距 -->
         <SeekBarPreference
             android:defaultValue="-8"
+            android:dependency="prefs_key_dock_hook_enabled"
             android:key="prefs_key_home_dock_icon_bottom_margin"
             android:title="@string/bottom_margin_of_dock_icon"
             app:format="%d dp"
@@ -51,6 +59,7 @@
         <!-- 底栏图标上边距 -->
         <SeekBarPreference
             android:defaultValue="20"
+            android:dependency="prefs_key_dock_hook_enabled"
             android:key="prefs_key_home_dock_top_margin"
             android:title="@string/top_margin_of_dock_icon"
             app:format="%d dp"
