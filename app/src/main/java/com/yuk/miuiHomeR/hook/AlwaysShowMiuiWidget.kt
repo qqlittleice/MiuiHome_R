@@ -1,10 +1,6 @@
 package com.yuk.miuiHomeR.hook
 
-import com.github.kyuubiran.ezxhelper.utils.findMethod
-import com.github.kyuubiran.ezxhelper.utils.hookAfter
-import com.github.kyuubiran.ezxhelper.utils.hookBefore
-import com.github.kyuubiran.ezxhelper.utils.hookMethod
-import com.github.kyuubiran.ezxhelper.utils.putObject
+import com.github.kyuubiran.ezxhelper.utils.*
 import com.yuk.miuiHomeR.mPrefsMap
 import de.robv.android.xposed.XC_MethodHook
 
@@ -40,7 +36,5 @@ object AlwaysShowMiuiWidget : BaseHook() {
                 hook2?.unhook()
             }
         }
-
     }
 }
-

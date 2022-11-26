@@ -36,13 +36,20 @@ object SetDeviceLevel : BaseHook() {
             "com.miui.home.launcher.util.noword.NoWordSettingHelperKt".hookBeforeMethod("isNoWordAvailable") {
                 it.result = true
             }
-            "android.os.SystemProperties".hookBeforeMethod("getBoolean", String::class.java, Boolean::class.java) {
+            "android.os.SystemProperties".hookBeforeMethod("getBoolean",
+                String::class.java,
+                Boolean::class.java) {
                 if (it.args[0] == "ro.config.low_ram.threshold_gb") it.result = false
             }
-            "android.os.SystemProperties".hookBeforeMethod("getBoolean", String::class.java, Boolean::class.java) {
+            "android.os.SystemProperties".hookBeforeMethod("getBoolean",
+                String::class.java,
+                Boolean::class.java) {
                 if (it.args[0] == "ro.miui.backdrop_sampling_enabled") it.result = true
             }
             "com.miui.home.launcher.common.Utilities".hookBeforeMethod("canLockTaskView") {
+                it.result = true
+            }
+            "com.miui.home.launcher.MIUIWidgetUtil".hookBeforeMethod("isMIUIWidgetSupport") {
                 it.result = true
             }
         } catch (e: Throwable) {
