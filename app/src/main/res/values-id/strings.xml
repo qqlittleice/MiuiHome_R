@@ -31,11 +31,11 @@
     <string name="dock_settings">Dok</string>
     <string name="enable_dock_hook">Aktifkan kail dok</string>
     <string name="enable_dock">Aktifkan blur dok</string>
-    <string name="bottom_margin_of_dock_icon">Margin bawah icon dok</string>
+    <string name="bottom_margin_of_dock_icon">Margin bawah ikon dok</string>
     <string name="bottom_margin_of_home_icon">Margin bawah indikator halaman</string>
     <string name="height_of_dock_view">Ketinggian tampilan dok</string>
     <string name="margins_on_both_sides_of_dock_view">Margin di kedua sisi tampilan dok</string>
-    <string name="top_margin_of_dock_icon">Margin atas tampilan dok</string>
+    <string name="top_margin_of_dock_icon">Margin atas ikon dok</string>
     <string name="bottom_margin_of_dock_view">Margin bawah tampilan dok</string>
     <string name="corner_radius_of_dock_view">Radius sudut tampilan dok</string>
     <string name="other_features">Lainya</string>
@@ -96,13 +96,13 @@
     <string name="translators">YuKongA</string>
     <string name="language">Bhs. Indonesia</string>
     <string name="settings_language">Bahasa</string>
-    <string name="anim_speed_recent">Kecepatan animasi keluar masuk tugas baru-baru ini</string>
+    <string name="anim_speed_recent">Kecepatan animasi keluar masuk tugas terbaru</string>
     <string name="home_fold_dock">Dock untuk perangkat lipat</string>
-    <string name="home_all_apps_blur">Aktifkan Semua Aplikasi Tampilan Kontainer Blur</string>
-    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature.Also this is a very early test feature, because refresh issues blur very easily turned into a black screen</string>
+    <string name="home_all_apps_blur">Aktifkan Semua Tampilan Buram Wadah Aplikasi</string>
+    <string name="home_all_apps_blur_summary">Mohon atur kebeningan latar belakang laci aplikasi ke 100% untuk fitur ini. Perangkat MediaTek menggunakan fitur ini, agar gambar latarnya tidak jadi hitam pekat</string>
     <string name="settings">Pengaturan</string>
     <string name="system_default">Bawaan</string>
-    <string name="launcher_icon">Ikon Launcher</string>
-    <string name="recents_card_remove_anim">Ubah tujuan untuk mengeluarkan kartu</string>
+    <string name="launcher_icon">Ikon Peluncur</string>
+    <string name="recents_card_remove_anim">Mengubah animasi saat mengeluarkan kartu</string>
     <string name="recents_icon">Sembunyikan ikon aplikasi</string>
 </resources>
