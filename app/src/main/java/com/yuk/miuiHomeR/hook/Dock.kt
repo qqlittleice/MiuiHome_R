@@ -16,7 +16,7 @@ import de.robv.android.xposed.XposedHelpers
 
 object Dock : BaseHook() {
     override fun init() {
-
+        if (!mPrefsMap.getBoolean("dock_hook_enabled")) return
         var isShowEditPanel = false
         var isFolderShowing = false
         val launcherClass = "com.miui.home.launcher.Launcher".findClass()
