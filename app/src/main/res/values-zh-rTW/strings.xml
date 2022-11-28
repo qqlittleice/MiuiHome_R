@@ -29,6 +29,7 @@
     <string name="using_full_width_of_folder_view">利用整個資料夾視圖的寬度</string>
     <string name="number_of_icons_in_folder_iew">資料夾視圖內圖示的欄數</string>
     <string name="dock_settings">Dock</string>
+    <string name="enable_dock_hook">啟用 Dock 勾點</string>
     <string name="enable_dock">啟用 Dock 模糊</string>
     <string name="bottom_margin_of_dock_icon">Dock 圖示下邊距</string>
     <string name="bottom_margin_of_home_icon">頁面指示器下邊距</string>

@@ -29,6 +29,7 @@
     <string name="using_full_width_of_folder_view">Użyj pełnej szerokości widoku folderu</string>
     <string name="number_of_icons_in_folder_iew">Liczba wierszy ikon w widoku folderu</string>
     <string name="dock_settings">Ustawienia doku</string>
+    <string name="enable_dock_hook">Enable dock hook</string>
     <string name="enable_dock">Włącz rozmycie doku</string>
     <string name="bottom_margin_of_dock_icon">Dolny margines ikon doku</string>
     <string name="bottom_margin_of_home_icon">Dolny margines znacznika strony</string>

@@ -29,6 +29,7 @@
     <string name="using_full_width_of_folder_view">Использовать всю ширину папки</string>
     <string name="number_of_icons_in_folder_iew">Количество строк иконок в папке</string>
     <string name="dock_settings">Док-бар</string>
+    <string name="enable_dock_hook">Включить хук док-бара</string>
     <string name="enable_dock">Включить размытие док-бара</string>
     <string name="bottom_margin_of_dock_icon">Нижний отступ от иконок</string>
     <string name="bottom_margin_of_home_icon">Отступ снизу от индикатора страниц</string>

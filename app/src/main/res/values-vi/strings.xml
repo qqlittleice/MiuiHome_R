@@ -29,6 +29,7 @@
     <string name="using_full_width_of_folder_view">Sử dụng toàn bộ chiều rộng của thư mục</string>
     <string name="number_of_icons_in_folder_iew">Số cột trong thư mục</string>
     <string name="dock_settings">Thanh đế</string>
+    <string name="enable_dock_hook">Enable dock hook</string>
     <string name="enable_dock">Bật mờ đế</string>
     <string name="bottom_margin_of_dock_icon">Căn lề dưới đế</string>
     <string name="bottom_margin_of_home_icon">Căn lề dưới chỉ báo trang</string>

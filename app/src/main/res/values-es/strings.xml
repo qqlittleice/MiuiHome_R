@@ -29,6 +29,7 @@
     <string name="using_full_width_of_folder_view">Utilizando el ancho completo de la carpeta</string>
     <string name="number_of_icons_in_folder_iew">Número de filas de iconos en la vista de carpeta</string>
     <string name="dock_settings">Barra de aplicaciones</string>
+    <string name="enable_dock_hook">Enable dock hook</string>
     <string name="enable_dock">Habilitar desenfoque en la barra de aplicaciones</string>
     <string name="bottom_margin_of_dock_icon">Bottom margin of dock icon</string>
     <string name="bottom_margin_of_home_icon">Bottom margin of page indicator</string>

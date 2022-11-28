@@ -29,6 +29,7 @@
     <string name="using_full_width_of_folder_view">De volledige breedte van de mapweergave gebruiken</string>
     <string name="number_of_icons_in_folder_iew">Aantal rijen van app iconen in mapweergave</string>
     <string name="dock_settings">Dock</string>
+    <string name="enable_dock_hook">Enable dock hook</string>
     <string name="enable_dock">Dock-vervaging inschakelen</string>
     <string name="bottom_margin_of_dock_icon">Afstand onder dock iconen</string>
     <string name="bottom_margin_of_home_icon">Ondermarge van pagina indicator</string>
