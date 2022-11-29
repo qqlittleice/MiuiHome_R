@@ -4,7 +4,7 @@
 
 gradle = { id = "gradle", version = "7.3.1" }
 
-org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.7.21" }
+org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.7.22" }
 
 com-android-application = { id = "com.android.application", version = "7.3.1" }
 
@@ -14,7 +14,7 @@ dev-rikka-tools-autoresconfig = { id = "dev.rikka.tools.autoresconfig", version 
 
 [versions]
 
-kotlin = "1.7.21"
+kotlin = "1.7.22"
 
 androidx-core = "1.9.0"
 
