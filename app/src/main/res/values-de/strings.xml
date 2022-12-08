@@ -105,6 +105,6 @@
     <string name="launcher_icon">Startbildschirm Symbol</string>
     <string name="recents_card_remove_anim">Ändern der Animation zum Entfernen der Karten</string>
     <string name="recents_icon">Verstecke App Icon</string>
-    <string name="recent_text">Text displayed when no recent task</string>
-    <string name="recent_text_summary">Also you can type a space to remove the text</string>
+    <string name="recent_text">Text, der angezeigt wird, wenn keine neue Aufgabe existiert</string>
+    <string name="recent_text_summary">Sie können auch ein Leerzeichen eingeben um den Text zu löschen</string>
 </resources>
