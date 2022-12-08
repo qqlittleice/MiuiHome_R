@@ -105,4 +105,6 @@
     <string name="launcher_icon">啟動器圖示</string>
     <string name="recents_card_remove_anim">修改移除卡片動畫</string>
     <string name="recents_icon">隱藏應用程式圖示</string>
+    <string name="recent_text">Text displayed when no recent task</string>
+    <string name="recent_text_summary">Also you can type a space to remove the text</string>
 </resources>
