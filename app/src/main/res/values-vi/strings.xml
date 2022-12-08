@@ -105,4 +105,6 @@
     <string name="launcher_icon">Biểu tượng</string>
     <string name="recents_card_remove_anim">Sửa đổi hoạt ảnh xóa thẻ</string>
     <string name="recents_icon">Ẩn biểu tượng ứng dụng</string>
+    <string name="recent_text">Text displayed when no recent task</string>
+    <string name="recent_text_summary">Also you can type a space to remove the text</string>
 </resources>
