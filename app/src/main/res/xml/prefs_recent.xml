@@ -41,6 +41,11 @@
             android:key="prefs_key_home_hide_status"
             android:title="@string/hide_status_bar_in_task_view" />
 
+        <EditTextPreference
+            android:key="prefs_key_recent_text"
+            android:summary="@string/recent_text_summary"
+            android:title="@string/recent_text" />
+
         <SeekBarPreference
             android:defaultValue="20"
             android:key="prefs_key_task_view_corners"

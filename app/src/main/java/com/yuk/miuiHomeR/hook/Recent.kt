@@ -62,6 +62,17 @@ object Recent : BaseHook() {
             }
         }
 
+        val emptyViewText = mPrefsMap.getString("recent_text", "")
+        if (emptyViewText != "") {
+            "com.miui.home.recents.views.RecentsView".hookAfterMethod(
+                "showEmptyView", Int::class.javaPrimitiveType
+            ) {
+                (it.thisObject.getObjectField("mEmptyView") as TextView).apply {
+                    this.text = emptyViewText
+                }
+            }
+        }
+
         if (mPrefsMap.getBoolean("recents_icon")) {
             "com.miui.home.recents.views.TaskViewHeader".hookAfterMethod(
                 "onFinishInflate"
