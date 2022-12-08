@@ -105,4 +105,6 @@
     <string name="launcher_icon">Ikon Peluncur</string>
     <string name="recents_card_remove_anim">Mengubah animasi saat mengeluarkan kartu</string>
     <string name="recents_icon">Sembunyikan ikon aplikasi</string>
+    <string name="recent_text">Text displayed when no recent task</string>
+    <string name="recent_text_summary">Also you can type a space to remove the text</string>
 </resources>
