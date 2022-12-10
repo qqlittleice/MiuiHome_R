@@ -20,9 +20,9 @@ object AllAppsContainerViewBlur : BaseHook() {
     override fun init() {
 
         if (!mPrefsMap.getBoolean("home_all_apps_blur")) return
-        val value = mPrefsMap.getInt("home_blur_radius", 100)
-        findMethod("com.miui.home.launcher.allapps.BaseAllAppsContainerView".findClass(), true)
-        { name == "onFinishInflate" }.hookAfter { hookParam ->
+        findMethod("com.miui.home.launcher.allapps.BaseAllAppsContainerView".findClass(), true) {
+            name == "onFinishInflate"
+        }.hookAfter { hookParam ->
             val mCategoryContainer = hookParam.thisObject.getObjectField("mCategoryContainer") as ViewSwitcher
             val appsView = mCategoryContainer.parent as RelativeLayout
             val blur = BlurFrameLayout(mCategoryContainer.context)
@@ -37,8 +37,9 @@ object AllAppsContainerViewBlur : BaseHook() {
                 height = FrameLayout.LayoutParams.MATCH_PARENT
             }
             appsView.addView(blur, 0)
-            findMethod("com.miui.home.launcher.allapps.BaseAllAppsContainerView".findClass(), true)
-            { name == "onResume" }.hookAfter {
+            findMethod("com.miui.home.launcher.allapps.BaseAllAppsContainerView".findClass(), true) {
+                name == "onResume"
+            }.hookAfter {
                 blur.refreshDrawableState()
             }
         }

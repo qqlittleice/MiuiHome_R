@@ -105,6 +105,6 @@
     <string name="launcher_icon">桌面图标</string>
     <string name="recents_card_remove_anim">修改划卡动画</string>
     <string name="recents_icon">移除应用图标</string>
-    <string name="recent_text">Text displayed when no recent task</string>
-    <string name="recent_text_summary">Also you can type a space to remove the text</string>
+    <string name="recent_text">无后台时显示的文本</string>
+    <string name="recent_text_summary">你也可以键入一个空格来删除该文本展示</string>
 </resources>

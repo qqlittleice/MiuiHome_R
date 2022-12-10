@@ -17,7 +17,6 @@ android {
         versionCode = 15
         versionName = "1.0.5" + (getGitHeadRefsSuffix(rootProject))
     }
-
     val properties = Properties()
     runCatching { properties.load(project.rootProject.file("local.properties").inputStream()) }
     val keystorePath = properties.getProperty("KEYSTORE_PATH") ?: System.getenv("KEYSTORE_PATH")
@@ -35,7 +34,6 @@ android {
             }
         }
     }
-
     buildTypes {
         release {
             isMinifyEnabled = true
@@ -74,13 +72,11 @@ android {
         }
         applicationVariants.all {
             outputs.all {
-                (this as BaseVariantOutputImpl).outputFileName =
-                    "MiuiHomeR-$versionName($versionCode)-$name.apk"
+                (this as BaseVariantOutputImpl).outputFileName = "MiuiHomeR-$versionName($versionCode)-$name.apk"
             }
         }
     }
 }
-
 fun getGitHeadRefsSuffix(project: Project): String {
     // .git/HEAD描述当前目录所指向的分支信息，内容示例："ref: refs/heads/master\n"
     val headFile = File(project.rootProject.projectDir, ".git" + File.separator + "HEAD")
@@ -112,23 +108,18 @@ autoResConfig {
     generateLocaleConfig.set(true)
 }
 dependencies {
-    //  To find available updates, run this:
-    //  ./gradlew refreshVersions
     compileOnly(project(":hidden-api"))
-    compileOnly(libs.api)
-
-    implementation(AndroidX.core)
-    implementation(AndroidX.recyclerView)
-    implementation(AndroidX.fragment)
-    implementation(AndroidX.collection)
-    implementation(AndroidX.lifecycle.common)
-    implementation(AndroidX.vectorDrawable)
-    implementation(AndroidX.vectorDrawable.animated)
-    implementation(AndroidX.appCompat)
-
-    implementation(libs.ezxhelper)
-    implementation(libs.hiddenapibypass)
-
+    compileOnly("de.robv.android.xposed:api:82")
+    implementation("androidx.appcompat:appcompat:1.7.0-alpha01")
+    implementation("androidx.collection:collection:1.2.0")
+    implementation("androidx.core:core:1.9.0")
+    implementation("androidx.fragment:fragment:1.5.5")
+    implementation("androidx.lifecycle:lifecycle-common:2.5.1")
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
+    implementation("androidx.vectordrawable:vectordrawable:1.1.0")
+    implementation("androidx.vectordrawable:vectordrawable-animated:1.1.0")
+    implementation("com.github.kyuubiran:EzXHelper:1.0.3")
+    implementation("org.lsposed.hiddenapibypass:hiddenapibypass:4.3")
     implementation(files("libs/animation-alpha.aar"))
     implementation(files("libs/appcompat-alpha.aar"))
     implementation(files("libs/annotation-alpha.aar"))
@@ -142,5 +133,4 @@ dependencies {
     implementation(files("libs/blur-alpha.aar"))
     implementation(files("libs/common-alpha.aar"))
     implementation(files("libs/Smooth-alpha.aar"))
-
 }
