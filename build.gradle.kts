@@ -1,7 +1,8 @@
 plugins {
-    id("com.android.application") apply false
-    id("com.android.library") apply false
-    id("org.jetbrains.kotlin.android") apply false
+    id("com.android.application") version "7.3.1" apply false
+    id("com.android.library") version "7.3.1" apply false
+    id("org.jetbrains.kotlin.android") version "1.7.22" apply false
+    id("dev.rikka.tools.autoresconfig") version "1.2.2" apply false
 }
 
 tasks.register<Delete>("clean").configure {
