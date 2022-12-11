@@ -107,4 +107,5 @@
     <string name="recents_icon">Hide App Icon</string>
     <string name="recent_text">Text displayed when no recent task</string>
     <string name="recent_text_summary">Also you can type a space to remove the text</string>
+    <string name="big_icon_corner">Medium icon round corner follow</string>
 </resources>
