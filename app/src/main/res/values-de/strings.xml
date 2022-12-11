@@ -107,5 +107,5 @@
     <string name="recents_icon">Verstecke App Icon</string>
     <string name="recent_text">Text, der angezeigt wird, wenn keine neue Aufgabe existiert</string>
     <string name="recent_text_summary">Sie können auch ein Leerzeichen eingeben um den Text zu löschen</string>
-    <string name="big_icon_corner">Medium icon round corner follow</string>
+    <string name="big_icon_corner">Mittleres Symbol mit runden Ecken</string>
 </resources>
