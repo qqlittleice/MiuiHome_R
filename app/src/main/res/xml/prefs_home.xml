@@ -22,13 +22,13 @@
 
         <SwitchPreference
             android:defaultValue="false"
-            android:key="prefs_key_shortcut_remove_restrictions"
-            android:title="@string/shortcut_remove_restrictions" />
+            android:key="prefs_key_shortcut_small_window"
+            android:title="@string/shortcut_small_window" />
 
         <SwitchPreference
             android:defaultValue="false"
-            android:key="prefs_key_shortcut_small_window"
-            android:title="@string/shortcut_small_window" />
+            android:key="prefs_key_big_icon_corner"
+            android:title="@string/big_icon_corner" />
 
         <SwitchPreference
             android:defaultValue="false"
@@ -49,6 +49,11 @@
             android:defaultValue="false"
             android:key="prefs_key_home_unlock_grids"
             android:title="@string/unlock_launcher_icon_grids" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefs_key_shortcut_remove_restrictions"
+            android:title="@string/shortcut_remove_restrictions" />
 
         <SeekBarPreference
             android:defaultValue="150"
