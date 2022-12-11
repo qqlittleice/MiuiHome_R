@@ -11,7 +11,7 @@
     <string name="simple_blur">تاری ساده</string>
     <string name="none_blur">بدون تاری</string>
     <string name="none_blur_simple_anim">بدون تاری&amp;انیمیشن ساده</string>
-    <string name="blur_level">سطح تاری</string>
+    <string name="blur_level">مقدار تاری</string>
     <string name="cancel_wallpaper_dimming">لغو کم نور شدن والپیپر</string>
     <string name="hide_status_bar_in_task_view">پنهان کردن نوار وضعیت هنگام تسک‌ویو \"لیست برنامه‌های اخیر\"</string>
     <string name="app_name_distance_task_view_card">فاصله نام برنامه با کارت در لیست برنامه‌های اخیر</string>
@@ -24,12 +24,12 @@
     <string name="Show_MIUI_widget">ویجت‌های MIUI را در صفحه ابزارک‌های کلاسیک نشان دهید</string>
     <string name="small_folder_blur">تاریِ آیکون پوشه ها</string>
     <string name="small_folder_blur_corner_radius">گِردی گوشه‌های آیکون پوشه ها</string>
-    <string name="small_folder_blur_background_size">اندازه تاری آیکون پوشه ها</string>
+    <string name="small_folder_blur_background_size">سایز آیکون پوشه ها</string>
     <string name="blurred_background_when_opening_folder_view">بکگراند تار هنگام باز شدن پوشه</string>
     <string name="using_full_width_of_folder_view">استفاده از عرض کامل نمای پوشه ها</string>
     <string name="number_of_icons_in_folder_iew">تعداد ردیف آیکون‌ها در نمای پوشه</string>
     <string name="dock_settings">پیشخوان</string>
-    <string name="enable_dock_hook">Enable dock hook</string>
+    <string name="enable_dock_hook">فعال کردن پیشخوان</string>
     <string name="enable_dock">تار کردن پیشخوان</string>
     <string name="bottom_margin_of_dock_icon">حاشیه پایین آیکون، پیشخوان</string>
     <string name="bottom_margin_of_home_icon">نشانگر حاشیه پایین صفحه</string>
@@ -40,7 +40,7 @@
     <string name="corner_radius_of_dock_view">شعاع گوشه‌های نمای پیشخوان</string>
     <string name="other_features">بیشتر</string>
     <string name="always_show_status_bar_clock">همیشه ساعت در نوار وضعیت نشان داده شود</string>
-    <string name="double_tap_to_lock_screen">برای قفل کردن صفحه، دو ضربه سریع بزنید</string>
+    <string name="double_tap_to_lock_screen">برای قفل کردن صفحه، سریع دو ضربه بزنید</string>
     <string name="shortcut_menu_background_view_blur">میانبر تاری نمای پس زمینه</string>
     <string name="unlock_launcher_icon_grids">ترتیب آیکون های لانچر را باز کنید</string>
     <string name="Always_blur_launcher_wallpaper">تصویر زمینه لانچر را همیشه تار کنید</string>
@@ -103,8 +103,8 @@
     <string name="settings">⚙️ تنظیمات</string>
     <string name="system_default">پیش‌فرض</string>
     <string name="launcher_icon">آیکون لانچر</string>
-    <string name="recents_card_remove_anim">Modify the anim for removing cards</string>
-    <string name="recents_icon">Hide App Icon</string>
-    <string name="recent_text">Text displayed when no recent task</string>
-    <string name="recent_text_summary">Also you can type a space to remove the text</string>
+    <string name="recents_card_remove_anim">انیمیشن را برای حذف کارت ها تغییر دهید</string>
+    <string name="recents_icon">پنهان کردن آیکون برنامه‌ها</string>
+    <string name="recent_text">زمانی که کار اخیری وجود نداشته باشد، متن نمایش داده می شود</string>
+    <string name="recent_text_summary">همچنین می توانید یک فاصله برای حذف متن تایپ کنید</string>
 </resources>
