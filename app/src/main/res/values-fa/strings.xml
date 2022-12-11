@@ -107,4 +107,5 @@
     <string name="recents_icon">پنهان کردن آیکون برنامه‌ها</string>
     <string name="recent_text">زمانی که کار اخیری وجود نداشته باشد، متن نمایش داده می شود</string>
     <string name="recent_text_summary">همچنین می توانید یک فاصله برای حذف متن تایپ کنید</string>
+    <string name="big_icon_corner">Medium icon round corner follow</string>
 </resources>
