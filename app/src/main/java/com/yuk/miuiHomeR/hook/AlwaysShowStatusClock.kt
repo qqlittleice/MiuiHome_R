@@ -8,8 +8,14 @@ object AlwaysShowStatusClock : BaseHook() {
     override fun init() {
 
         if (!mPrefsMap.getBoolean("home_show_status_clock")) return
-        findMethod("com.miui.home.launcher.Workspace") {
-            name == "isScreenHasClockGadget" && parameterCount == 1
+        try {
+            findMethod("com.miui.home.launcher.Workspace") {
+                name == "isScreenHasClockGadget" && parameterCount == 1
+            }
+        } catch (e: Exception) {
+            findMethod("com.miui.home.launcher.Workspace") {
+                name == "isScreenHasClockWidget" && parameterCount == 1
+            }
         }.hookReturnConstant(false)
 
     }
