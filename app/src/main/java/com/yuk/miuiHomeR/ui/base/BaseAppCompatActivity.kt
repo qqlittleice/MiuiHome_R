@@ -2,7 +2,9 @@ package com.yuk.miuiHomeR.ui.base
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.Fragment
 import com.yuk.miuiHomeR.R
 import com.yuk.miuiHomeR.utils.AppManager
@@ -10,7 +12,7 @@ import com.yuk.miuiHomeR.utils.ktx.getLocale
 import com.yuk.miuiHomeR.utils.ktx.setLocale
 import moralnorm.appcompat.app.AppCompatActivity
 import moralnorm.internal.utils.ViewUtils
-import java.util.*
+import java.util.Locale
 
 abstract class BaseAppCompatActivity : AppCompatActivity() {
 
@@ -41,9 +43,9 @@ abstract class BaseAppCompatActivity : AppCompatActivity() {
         val res = resources
         val conf = res.configuration
         window.decorView.layoutDirection = conf.layoutDirection
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, initFragment())
-            .commit()
+        window.statusBarColor = Color.parseColor("#00000000")
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, initFragment()).commit()
     }
 
     abstract fun initFragment(): Fragment
