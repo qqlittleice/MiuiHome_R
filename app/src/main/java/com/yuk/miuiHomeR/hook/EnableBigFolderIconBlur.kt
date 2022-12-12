@@ -25,8 +25,9 @@ object EnableBigFolderIconBlur : BaseHook() {
     override fun init() {
         if (!mPrefsMap.getBoolean("big_folder_blur")) return
         var isShowEditPanel = false
-        val value = mPrefsMap.getInt("big_folder_corner", 60).toFloat()
-        val value1 = mPrefsMap.getInt("big_folder_side", 250)
+        val value = mPrefsMap.getInt("big_folder_corner", 58).toFloat()
+        val value1 = mPrefsMap.getInt("big_folder_width", 650)
+        val value2 = mPrefsMap.getInt("big_folder_height", 585)
         val launcherClass = "com.miui.home.launcher.Launcher".findClass()
         val launcherStateClass = "com.miui.home.launcher.LauncherState".findClass()
         val folderInfo = "com.miui.home.launcher.FolderInfo".findClass()
@@ -59,8 +60,8 @@ object EnableBigFolderIconBlur : BaseHook() {
             mIconContainer.addView(mDockBlur, 0)
             val lp1 = mDockBlur.layoutParams as FrameLayout.LayoutParams
             lp1.gravity = Gravity.CENTER
-            lp1.height = value1
             lp1.width = value1
+            lp1.height = value2
             launcherClass.hookAfterMethod("showEditPanel", Boolean::class.java) { hookParam ->
                 isShowEditPanel = hookParam.args[0] as Boolean
                 if (isShowEditPanel) {

@@ -30,7 +30,7 @@ object EnableFolderIconBlur : BaseHook() {
     override fun init() {
         if (!mPrefsMap.getBoolean("small_folder_blur")) return
         var isShowEditPanel = false
-        val value = mPrefsMap.getInt("small_folder_corner", 60).toFloat()
+        val value = mPrefsMap.getInt("small_folder_corner", 58).toFloat()
         val value1 = mPrefsMap.getInt("small_folder_side", 250)
         val value2 = mPrefsMap.getInt("small_folder_drag", 10)
         val launcherClass = "com.miui.home.launcher.Launcher".findClass()

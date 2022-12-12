@@ -55,7 +55,7 @@
             android:title="@string/small_folder_blur" />
 
         <SeekBarPreference
-            android:defaultValue="60"
+            android:defaultValue="58"
             android:dependency="prefs_key_small_folder_blur"
             android:key="prefs_key_small_folder_corner"
             android:title="@string/small_folder_blur_corner_radius"
@@ -87,7 +87,7 @@
             android:title="@string/big_folder_blur" />
 
         <SeekBarPreference
-            android:defaultValue="60"
+            android:defaultValue="58"
             android:dependency="prefs_key_big_folder_blur"
             android:key="prefs_key_big_folder_corner"
             android:title="@string/big_folder_blur_corner_radius"
@@ -98,8 +98,17 @@
         <SeekBarPreference
             android:defaultValue="650"
             android:dependency="prefs_key_big_folder_blur"
-            android:key="prefs_key_big_folder_side"
-            android:title="@string/big_folder_blur_background_size"
+            android:key="prefs_key_big_folder_height"
+            android:title="@string/big_folder_blur_background_height"
+            app:format="%d dp"
+            app:maxValue="900"
+            app:showSeekBarValue="true" />
+
+        <SeekBarPreference
+            android:defaultValue="585"
+            android:dependency="prefs_key_big_folder_blur"
+            android:key="prefs_key_big_folder_width"
+            android:title="@string/big_folder_blur_background_width"
             app:format="%d dp"
             app:maxValue="900"
             app:showSeekBarValue="true" />

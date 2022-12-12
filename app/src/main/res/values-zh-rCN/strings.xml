@@ -110,5 +110,6 @@
     <string name="big_icon_corner">中等图标圆角跟随</string>
     <string name="big_folder_blur">大文件夹模糊</string>
     <string name="big_folder_blur_corner_radius">大文件夹模糊圆角半径</string>
-    <string name="big_folder_blur_background_size">大文件夹模糊视图背景大小</string>
+    <string name="big_folder_blur_background_width">大文件夹模糊视图背景宽度</string>
+    <string name="big_folder_blur_background_height">大文件夹模糊视图背景高度</string>
 </resources>
