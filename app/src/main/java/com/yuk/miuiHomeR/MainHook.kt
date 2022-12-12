@@ -73,6 +73,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                     if (atLeastAndroidS()) {
                         initHooks(
                             EnableFolderIconBlur,
+                            EnableBigFolderIconBlur,
                             AllAppsContainerViewBlur,
                         )
                     }

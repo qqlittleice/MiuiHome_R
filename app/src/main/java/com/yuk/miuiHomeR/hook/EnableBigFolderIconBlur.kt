@@ -1,7 +1,6 @@
 package com.yuk.miuiHomeR.hook
 
 import android.graphics.Color
-import android.graphics.drawable.LayerDrawable
 import android.os.Build
 import android.view.Gravity
 import android.view.View
@@ -14,25 +13,20 @@ import com.github.kyuubiran.ezxhelper.utils.hookAfter
 import com.github.kyuubiran.ezxhelper.utils.hookAllConstructorAfter
 import com.github.kyuubiran.ezxhelper.utils.loadClass
 import com.yuk.miuiHomeR.mPrefsMap
-import com.yuk.miuiHomeR.utils.ktx.callMethod
 import com.yuk.miuiHomeR.utils.ktx.findClass
-import com.yuk.miuiHomeR.utils.ktx.getObjectField
 import com.yuk.miuiHomeR.utils.ktx.getObjectFieldAs
-import com.yuk.miuiHomeR.utils.ktx.hookAfterAllMethods
 import com.yuk.miuiHomeR.utils.ktx.hookAfterMethod
 import com.zhenxiang.blur.BlurFrameLayout
-import com.zhenxiang.blur.createBackgroundBlurDrawable
 import com.zhenxiang.blur.model.CornersRadius
 import de.robv.android.xposed.XposedHelpers
 
 @RequiresApi(Build.VERSION_CODES.S)
-object EnableFolderIconBlur : BaseHook() {
+object EnableBigFolderIconBlur : BaseHook() {
     override fun init() {
-        if (!mPrefsMap.getBoolean("small_folder_blur")) return
+        if (!mPrefsMap.getBoolean("big_folder_blur")) return
         var isShowEditPanel = false
-        val value = mPrefsMap.getInt("small_folder_corner", 60).toFloat()
-        val value1 = mPrefsMap.getInt("small_folder_side", 250)
-        val value2 = mPrefsMap.getInt("small_folder_drag", 10)
+        val value = mPrefsMap.getInt("big_folder_corner", 60).toFloat()
+        val value1 = mPrefsMap.getInt("big_folder_side", 250)
         val launcherClass = "com.miui.home.launcher.Launcher".findClass()
         val launcherStateClass = "com.miui.home.launcher.LauncherState".findClass()
         val folderInfo = "com.miui.home.launcher.FolderInfo".findClass()
@@ -45,18 +39,14 @@ object EnableFolderIconBlur : BaseHook() {
         //小文件夹模糊
         try {
             findMethod(
-                loadClass("com.miui.home.launcher.folder.FolderIcon1x1"), true
+                loadClass("com.miui.home.launcher.folder.FolderIcon2x2_4"), true
             ) { name == "onFinishInflate" }
         } catch (e: Exception) {
             findMethod(
                 loadClass("com.miui.home.launcher.FolderIcon"), true
             ) { name == "onFinishInflate" }
         }.hookAfter {
-            val mIconImageView = try {
-                it.thisObject.getObjectFieldAs<ImageView>("mIconImageView")
-            } catch (e: Exception) {
-                it.thisObject.getObjectFieldAs<ImageView>("mImageView")
-            }
+            val mIconImageView = it.thisObject.getObjectFieldAs<ImageView>("mImageView")
             val mIconContainer = mIconImageView.parent as FrameLayout
             val mDockBlur = XposedHelpers.getAdditionalInstanceField(it.thisObject, "mDockBlur") as BlurFrameLayout
             val view = FrameLayout(mIconImageView.context)
@@ -90,28 +80,6 @@ object EnableFolderIconBlur : BaseHook() {
             launcherClass.hookAfterMethod("onStateSetStart", launcherStateClass) { hookParam ->
                 if ("LauncherState" == hookParam.args[0].javaClass.simpleName) mDockBlur.visibility = View.VISIBLE
                 else mDockBlur.visibility = View.GONE
-            }
-        }
-
-        val dragViewClass = "com.miui.home.launcher.DragView".findClass()
-        dragViewClass.hookAfterAllMethods("showWithAnim") {
-            val dragView = it.thisObject as View
-            dragView.setLayerType(View.LAYER_TYPE_HARDWARE, null)
-            val mDragInfo = it.thisObject.getObjectField("mDragInfo") ?: return@hookAfterAllMethods
-            val itemType = mDragInfo.getObjectField("itemType") as Int
-            val mLauncher = it.thisObject.getObjectField("mLauncher")
-            val isFolderShowing = mLauncher?.callMethod("isFolderShowing") as Boolean
-            if (!isFolderShowing && itemType == 2) {
-                val blurDrawable = dragView.createBackgroundBlurDrawable()
-                blurDrawable?.callMethod("setColor", Color.parseColor("#44FFFFFF"))
-                blurDrawable?.callMethod("setBlurRadius", 100)
-                blurDrawable?.callMethod("setCornerRadius", value, value, value, value)
-                val backgroundDrawable = LayerDrawable(arrayOf(blurDrawable))
-                backgroundDrawable.setLayerHeight(0, value1)
-                backgroundDrawable.setLayerWidth(0, value1)
-                backgroundDrawable.setLayerGravity(0, Gravity.CENTER_HORIZONTAL)
-                backgroundDrawable.setLayerInsetTop(0, value2)
-                dragView.background = backgroundDrawable
             }
         }
     }
