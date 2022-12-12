@@ -108,4 +108,7 @@
     <string name="recent_text">زمانی که کار اخیری وجود نداشته باشد، متن نمایش داده می شود</string>
     <string name="recent_text_summary">همچنین می توانید یک فاصله برای حذف متن تایپ کنید</string>
     <string name="big_icon_corner">Medium icon round corner follow</string>
+    <string name="big_folder_blur">Big folder blur</string>
+    <string name="big_folder_blur_corner_radius">Big folder blur corner radius</string>
+    <string name="big_folder_blur_background_size">Big folder blur view background size</string>
 </resources>
