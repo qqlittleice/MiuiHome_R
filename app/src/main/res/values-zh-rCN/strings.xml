@@ -113,4 +113,5 @@
     <string name="big_folder_blur_background_width">大文件夹模糊视图背景宽度</string>
     <string name="big_folder_blur_background_height">大文件夹模糊视图背景高度</string>
     <string name="big_folder_blur_drag_offset">大文件夹拖动视图模糊顶部偏移</string>
+    <string name="mtk_warning">联发科设备开启该功能可能导致手势动画卡顿</string>
 </resources>

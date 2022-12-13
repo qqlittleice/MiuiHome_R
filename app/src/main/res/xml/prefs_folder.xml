@@ -52,6 +52,7 @@
         <SwitchPreference
             android:defaultValue="false"
             android:key="prefs_key_small_folder_blur"
+            android:summary="@string/mtk_warning"
             android:title="@string/small_folder_blur" />
 
         <SeekBarPreference
@@ -84,6 +85,7 @@
         <SwitchPreference
             android:defaultValue="false"
             android:key="prefs_key_big_folder_blur"
+            android:summary="@string/mtk_warning"
             android:title="@string/big_folder_blur" />
 
         <SeekBarPreference

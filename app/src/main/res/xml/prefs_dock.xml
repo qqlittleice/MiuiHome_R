@@ -13,6 +13,7 @@
             android:defaultValue="false"
             android:dependency="prefs_key_dock_hook_enabled"
             android:key="prefs_key_home_dock_blur"
+            android:summary="@string/mtk_warning"
             android:title="@string/enable_dock" />
 
         <!-- 页面指示器下边距 -->
