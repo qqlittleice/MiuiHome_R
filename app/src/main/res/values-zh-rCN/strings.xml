@@ -99,7 +99,7 @@
     <string name="anim_speed_recent">动画速度「进出后台」</string>
     <string name="home_fold_dock">折叠屏底栏样式</string>
     <string name="home_all_apps_blur">抽屉模糊</string>
-    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature. MediaTek devices use this feature when the wallpaper can easily become pure black</string>
+    <string name="home_all_apps_blur_summary">请将应用程序抽屉的背景透明度设置为100%以使用此功能。联发科设备使用该功能时壁纸很容易变成纯黑屏</string>
     <string name="settings">设置</string>
     <string name="system_default">默认</string>
     <string name="launcher_icon">桌面图标</string>
@@ -107,12 +107,12 @@
     <string name="recents_icon">移除应用图标</string>
     <string name="recent_text">无后台时显示的文本</string>
     <string name="recent_text_summary">你也可以键入一个空格来删除该文本展示</string>
-    <string name="big_icon_corner">Medium icon round corner follow</string>
-    <string name="big_folder_blur">Big folder blur</string>
-    <string name="big_folder_blur_corner_radius">Big folder blur corner radius</string>
-    <string name="big_folder_blur_background_width">Big folder blur view background width</string>
-    <string name="big_folder_blur_background_height">Big folder blur view background height</string>
-    <string name="big_folder_blur_drag_offset">Big folder drag view blur top offset</string>
-    <string name="mtk_warning">MediaTek devices use this feature may cause gesture animation lag</string>
-    <string name="mtk_warning1">MediaTek devices use complete blur may cause gesture animation lag</string>
+    <string name="big_icon_corner">中等图标圆角跟随</string>
+    <string name="big_folder_blur">大文件夹模糊</string>
+    <string name="big_folder_blur_corner_radius">大文件夹模糊圆角半径</string>
+    <string name="big_folder_blur_background_width">大文件夹模糊视图背景宽度</string>
+    <string name="big_folder_blur_background_height">大文件夹模糊视图背景高度</string>
+    <string name="big_folder_blur_drag_offset">大文件夹拖动视图模糊顶部偏移</string>
+    <string name="mtk_warning">联发科技设备使用此功能可能导致手势动画滞后</string>
+    <string name="mtk_warning1">联发科技设备使用完全模糊可能导致手势动画滞后</string>
 </resources>
