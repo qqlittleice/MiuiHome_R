@@ -30,6 +30,7 @@ class AboutActivity : PickerDragActivity() {
     override fun attachBaseContext(base: Context) {
         super.attachBaseContext(setLocale(base, getLocale(base)))
     }
+
     class AboutFragment : SubFragment() {
         override fun getContentResId(): Int {
             return R.xml.prefs_about

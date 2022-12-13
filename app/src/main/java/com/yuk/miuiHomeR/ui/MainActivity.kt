@@ -20,9 +20,11 @@ import moralnorm.preference.Preference
 import java.io.File
 
 class MainActivity : BaseAppCompatActivity() {
+
     private var fileObserver: FileObserver? = null
     private var mPreferenceChangeListener: OnSharedPreferenceChangeListener? = null
     private var mActionBarMoreView: ImageView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         appCompatActionBar.setDisplayHomeAsUpEnabled(intent.getBooleanExtra("homeAsUpEnabled", false))
@@ -52,10 +54,10 @@ class MainActivity : BaseAppCompatActivity() {
             contentResolver.notifyChange(Uri.parse("content://" + SharedPrefsProvider.AUTHORITY + "/" + path + s), null)
             if (path != "") contentResolver.notifyChange(Uri.parse("content://" + SharedPrefsProvider.AUTHORITY + "/pref/" + path + s), null)
         }
-        PrefsUtils.mSharedPreferences.registerOnSharedPreferenceChangeListener(mPreferenceChangeListener)
+        PrefsUtils.mSharedPreferences?.registerOnSharedPreferenceChangeListener(mPreferenceChangeListener)
         Helpers.fixPermissionsAsync(applicationContext)
         try {
-            fileObserver = object : FileObserver(File(PrefsUtils.getSharedPrefsPath()), CLOSE_WRITE) {
+            fileObserver = object : FileObserver(File(PrefsUtils.sharedPrefsPath), CLOSE_WRITE) {
                 override fun onEvent(event: Int, path: String?) {
                     Helpers.fixPermissionsAsync(applicationContext)
                 }

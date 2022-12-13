@@ -56,6 +56,7 @@ fun checkVersionCode(): Long = InitFields.appContext.packageManager.getPackageIn
 ).longVersionCode
 
 fun checkMiuiVersion(): String = when (getProp("ro.miui.ui.version.name")) {
+    "V140" -> "14"
     "V130" -> "13"
     "V125" -> "12.5"
     "V12" -> "12"
@@ -94,7 +95,7 @@ fun getCornerRadiusTop(): Int {
     } else 100
 }
 
-fun setLocale(context: Context, locale: Locale) : Context {
+fun setLocale(context: Context, locale: Locale): Context {
     var tmpLocale: Locale = locale
     if ("und" == locale.toLanguageTag() || "system" == locale.toLanguageTag()) {
         tmpLocale = Resources.getSystem().configuration.locales[0]

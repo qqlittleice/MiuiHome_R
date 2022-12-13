@@ -9,7 +9,12 @@ import android.widget.FrameLayout
 import com.github.kyuubiran.ezxhelper.init.InitFields.appContext
 import com.github.kyuubiran.ezxhelper.utils.hookAllConstructorAfter
 import com.yuk.miuiHomeR.mPrefsMap
-import com.yuk.miuiHomeR.utils.ktx.*
+import com.yuk.miuiHomeR.utils.ktx.atLeastAndroidS
+import com.yuk.miuiHomeR.utils.ktx.callMethod
+import com.yuk.miuiHomeR.utils.ktx.dp2px
+import com.yuk.miuiHomeR.utils.ktx.findClass
+import com.yuk.miuiHomeR.utils.ktx.hookAfterMethod
+import com.yuk.miuiHomeR.utils.ktx.hookBeforeMethod
 import com.zhenxiang.blur.BlurFrameLayout
 import com.zhenxiang.blur.model.CornersRadius
 import de.robv.android.xposed.XposedHelpers

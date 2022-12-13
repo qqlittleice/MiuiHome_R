@@ -41,12 +41,11 @@ public class AppManager {
      * 获取指定的Activity
      */
     public static Activity getActivity(Class<?> cls) {
-        if (activityStack != null)
-            for (Activity activity : activityStack) {
-                if (activity.getClass().equals(cls)) {
-                    return activity;
-                }
+        if (activityStack != null) for (Activity activity : activityStack) {
+            if (activity.getClass().equals(cls)) {
+                return activity;
             }
+        }
         return null;
     }
 
@@ -92,22 +91,20 @@ public class AppManager {
      * 结束除当前传入以外所有Activity
      */
     public void finishOthersActivity(Class<?> cls) {
-        if (activityStack != null)
-            for (Activity activity : activityStack) {
-                if (!activity.getClass().equals(cls)) {
-                    activity.finish();
-                }
+        if (activityStack != null) for (Activity activity : activityStack) {
+            if (!activity.getClass().equals(cls)) {
+                activity.finish();
             }
+        }
     }
 
     /**
      * 结束所有Activity
      */
     public void finishAllActivity() {
-        if (activityStack != null)
-            for (Activity activity : activityStack) {
-                activity.finish();
-            }
+        if (activityStack != null) for (Activity activity : activityStack) {
+            activity.finish();
+        }
         activityStack.clear();
     }
 

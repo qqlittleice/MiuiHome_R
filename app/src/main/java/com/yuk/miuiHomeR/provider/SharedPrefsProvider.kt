@@ -19,7 +19,7 @@ class SharedPrefsProvider : ContentProvider() {
     private var prefs: SharedPreferences? = null
     override fun onCreate(): Boolean {
         return try {
-            prefs = PrefsUtils.getSharedPrefs(context, true)
+            prefs = context?.let { PrefsUtils.getSharedPrefs(it, true) }
             true
         } catch (throwable: Throwable) {
             false
@@ -27,11 +27,7 @@ class SharedPrefsProvider : ContentProvider() {
     }
 
     override fun query(
-        uri: Uri,
-        projection: Array<String>?,
-        selection: String?,
-        selectionArgs: Array<String>?,
-        sortOrder: String?
+        uri: Uri, projection: Array<String>?, selection: String?, selectionArgs: Array<String>?, sortOrder: String?
     ): Cursor? {
         val parts = uri.pathSegments
         val cursor = MatrixCursor(arrayOf("data"))
@@ -52,8 +48,7 @@ class SharedPrefsProvider : ContentProvider() {
             }
 
             3 -> {
-                cursor.newRow()
-                    .add("data", if (prefs!!.getBoolean(parts[1], parts[2].toInt() == 1)) 1 else 0)
+                cursor.newRow().add("data", if (prefs!!.getBoolean(parts[1], parts[2].toInt() == 1)) 1 else 0)
                 return cursor
             }
 
@@ -72,10 +67,8 @@ class SharedPrefsProvider : ContentProvider() {
         val parts = uri.pathSegments
         if (uriMatcher.match(uri) == 5) {
             var filename: String? = null
-            if ("0" == parts[1]) filename = "test0.png" else if ("1" == parts[1]) filename =
-                "test1.mp3" else if ("2" == parts[1]) filename =
-                "test2.mp4" else if ("3" == parts[1] || "5" == parts[1]) filename =
-                "test3.txt" else if ("4" == parts[1]) filename = "test4.zip"
+            if ("0" == parts[1]) filename = "test0.png" else if ("1" == parts[1]) filename = "test1.mp3" else if ("2" == parts[1]) filename =
+                "test2.mp4" else if ("3" == parts[1] || "5" == parts[1]) filename = "test3.txt" else if ("4" == parts[1]) filename = "test4.zip"
             var afd: AssetFileDescriptor? = null
             if (filename != null) try {
                 afd = context!!.assets.openFd(filename)
@@ -84,9 +77,8 @@ class SharedPrefsProvider : ContentProvider() {
             }
             return afd
         } else if (uriMatcher.match(uri) == 6) {
-            val context = Helpers.getProtectedContext(context)
-            val file =
-                File(context.filesDir.toString() + "/shortcuts/" + parts[1] + "_shortcut.png")
+            val context = Helpers.getProtectedContext(context!!)
+            val file = File(context.filesDir.toString() + "/shortcuts/" + parts[1] + "_shortcut.png")
             return if (!file.exists()) null else AssetFileDescriptor(
                 ParcelFileDescriptor.open(
                     file, ParcelFileDescriptor.MODE_READ_ONLY

@@ -62,13 +62,9 @@ object BackupUtils {
                         while (key.hasNext()) {
                             val keys = key.next()
                             when (val value = get(keys)) {
-                                is String -> {
-                                    if (value.startsWith("Float:")) {
-                                        edit.putFloat(keys, value.substring(value.indexOf("Float:")).toFloat() / 1000)
-                                    } else {
-                                        edit.putString(keys, value)
-                                    }
-                                }
+                                is String -> if (value.startsWith("Float:")) edit.putFloat(
+                                    keys, value.substring(value.indexOf("Float:")).toFloat() / 1000
+                                ) else edit.putString(keys, value)
 
                                 is Boolean -> edit.putBoolean(keys, value)
                                 is Int -> edit.putInt(keys, value)
@@ -92,7 +88,7 @@ object BackupUtils {
                         for (entry: Map.Entry<String, *> in sharedPreferences.all) {
                             when (entry.value) {
                                 Float -> it.put(entry.key, "Float:" + (entry.value as Float * 1000).toInt().toString())
-                                else -> it.put(entry.key, entry.value)
+                                else -> if (entry.key != "prefs_key_settings_hide_icon") it.put(entry.key, entry.value)
                             }
                         }
                     }.toString())
@@ -100,7 +96,6 @@ object BackupUtils {
                 }
             }
         } catch (_: Throwable) {
-
         }
     }
 
