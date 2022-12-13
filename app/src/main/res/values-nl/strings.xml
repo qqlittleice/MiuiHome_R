@@ -114,4 +114,5 @@
     <string name="big_folder_blur_background_height">Big folder blur view background height</string>
     <string name="big_folder_blur_drag_offset">Big folder drag view blur top offset</string>
     <string name="mtk_warning">MediaTek devices use this feature may cause gesture animation lag</string>
+    <string name="mtk_warning1">MediaTek devices use complete blur may cause gesture animation lag</string>
 </resources>
