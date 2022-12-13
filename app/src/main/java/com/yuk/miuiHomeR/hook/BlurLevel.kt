@@ -8,7 +8,7 @@ import com.yuk.miuiHomeR.utils.ktx.hookBeforeMethod
 
 object BlurLevel : BaseHook() {
     override fun init() {
-        val blurLevel = mPrefsMap.getStringAsInt("recent_blur", 0)
+        val blurLevel = mPrefsMap.getStringAsInt("recent_blur", 2)
         if (blurLevel == 4) {
             findMethod("com.miui.home.launcher.common.BlurUtils") {
                 name == "getBlurType"
