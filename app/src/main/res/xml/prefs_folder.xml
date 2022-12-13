@@ -73,7 +73,7 @@
             app:showSeekBarValue="true" />
 
         <SeekBarPreference
-            android:defaultValue="22"
+            android:defaultValue="25"
             android:dependency="prefs_key_small_folder_blur"
             android:key="prefs_key_small_folder_drag"
             android:title="@string/small_folder_blur_drag_offset"
@@ -111,6 +111,15 @@
             android:title="@string/big_folder_blur_background_width"
             app:format="%d dp"
             app:maxValue="900"
+            app:showSeekBarValue="true" />
+
+        <SeekBarPreference
+            android:defaultValue="27"
+            android:dependency="prefs_key_big_folder_blur"
+            android:key="prefs_key_big_folder_drag"
+            android:title="@string/big_folder_blur_drag_offset"
+            app:format="%d dp"
+            app:maxValue="100"
             app:showSeekBarValue="true" />
 
         <SwitchPreference
