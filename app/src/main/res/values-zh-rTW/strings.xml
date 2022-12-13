@@ -112,4 +112,5 @@
     <string name="big_folder_blur_corner_radius">Big folder blur corner radius</string>
     <string name="big_folder_blur_background_width">Big folder blur view background width</string>
     <string name="big_folder_blur_background_height">Big folder blur view background height</string>
+    <string name="big_folder_blur_drag_offset">Big folder drag view blur top offset</string>
 </resources>
