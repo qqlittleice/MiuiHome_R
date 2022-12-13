@@ -99,7 +99,7 @@
     <string name="anim_speed_recent">動畫速度「進出最近任務畫面」</string>
     <string name="home_fold_dock">可摺疊裝置樣式的 Dock</string>
     <string name="home_all_apps_blur">啟用應用程式導覽匣模糊</string>
-    <string name="home_all_apps_blur_summary">請將應用程式導覽匣透明度設定為 100% 以使用此功能。聯發科設備使用該功能時壁紙很容易變成純黑屏</string>
+    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature. MediaTek devices use this feature when the wallpaper can easily become pure black</string>
     <string name="settings">設定</string>
     <string name="system_default">預設</string>
     <string name="launcher_icon">啟動器圖示</string>
@@ -113,4 +113,5 @@
     <string name="big_folder_blur_background_width">Big folder blur view background width</string>
     <string name="big_folder_blur_background_height">Big folder blur view background height</string>
     <string name="big_folder_blur_drag_offset">Big folder drag view blur top offset</string>
+    <string name="mtk_warning">MediaTek devices use this feature may cause gesture animation lag</string>
 </resources>
