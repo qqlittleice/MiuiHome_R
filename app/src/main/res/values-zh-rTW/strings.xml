@@ -106,13 +106,13 @@
     <string name="recents_card_remove_anim">修改移除卡片動畫</string>
     <string name="recents_icon">隱藏應用程式圖示</string>
     <string name="recent_text">無後台應用程式時顯示的文字</string>
-    <string name="recent_text_summary">你也可以輸入一個空格來刪除該文字展示</string>
+    <string name="recent_text_summary">您也可以輸入空格以移除文字</string>
     <string name="big_icon_corner">中型圖示圓角跟隨</string>
     <string name="big_folder_blur">大資料夾模糊</string>
     <string name="big_folder_blur_corner_radius">大資料夾模糊圓角半徑</string>
     <string name="big_folder_blur_background_width">大資料夾模糊視圖背景寬度</string>
     <string name="big_folder_blur_background_height">大資料夾模糊視圖背景高度</string>
     <string name="big_folder_blur_drag_offset">大資料夾拖曳視圖模糊頂部偏移</string>
-    <string name="mtk_warning">聯發科技裝置使用此功能可能導致手勢動畫卡頓</string>
-    <string name="mtk_warning1">聯發科技裝置使用完全模糊可能導致手勢動畫卡頓</string>
+    <string name="mtk_warning">聯發科技裝置使用此功能可能導致手勢動畫延遲</string>
+    <string name="mtk_warning1">聯發科技裝置使用完全模糊可能導致手勢動畫延遲</string>
 </resources>
