@@ -99,7 +99,7 @@
     <string name="anim_speed_recent">Animationsgeschwindigkeit in und aus den letzten Aufgaben</string>
     <string name="home_fold_dock">Dock Stil für Fold Geräte</string>
     <string name="home_all_apps_blur">Aktiviere alle Apps Container View Unschärfe</string>
-    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature. MediaTek devices use this feature when the wallpaper can easily become pure black</string>
+    <string name="home_all_apps_blur_summary">Bitte setzen Sie die Hintergrundtransparenz der App auf 100 % um diese Funktion nutzen zu können. Media Tek Devices können ein schwarzes Hintergrundbild bekommen.</string>
     <string name="settings">Einstellungen</string>
     <string name="system_default">Standardwerte</string>
     <string name="launcher_icon">Startbildschirm Symbol</string>
@@ -108,11 +108,11 @@
     <string name="recent_text">Text, der angezeigt wird, wenn keine neue Aufgabe existiert</string>
     <string name="recent_text_summary">Sie können auch ein Leerzeichen eingeben um den Text zu löschen</string>
     <string name="big_icon_corner">Mittleres Symbol mit runden Ecken</string>
-    <string name="big_folder_blur">Big folder blur</string>
-    <string name="big_folder_blur_corner_radius">Big folder blur corner radius</string>
-    <string name="big_folder_blur_background_width">Big folder blur view background width</string>
-    <string name="big_folder_blur_background_height">Big folder blur view background height</string>
-    <string name="big_folder_blur_drag_offset">Big folder drag view blur top offset</string>
-    <string name="mtk_warning">MediaTek devices use this feature may cause gesture animation lag</string>
-    <string name="mtk_warning1">MediaTek devices use complete blur may cause gesture animation lag</string>
+    <string name="big_folder_blur">Großer Ordner Unschärfe</string>
+    <string name="big_folder_blur_corner_radius">Großer Ordner-Unschärfe-Eckradius</string>
+    <string name="big_folder_blur_background_width">Große Ordnerunschärfe-Ansicht Hintergrundbreite</string>
+    <string name="big_folder_blur_background_height">Großer Ordnerunschärfe Hintergrundgröße</string>
+    <string name="big_folder_blur_drag_offset">Großer Ordner ziehen Ansicht Unschärfe oberer Versatz</string>
+    <string name="mtk_warning">MediaTek Geräte die dieses Feature verwenden, können eine Verzögerung in der Gesten Animation haben</string>
+    <string name="mtk_warning1">MediaTek Geräte die eine vollständige Unschärfe verwenden können eine Verzögerung der Gesten haben</string>
 </resources>
