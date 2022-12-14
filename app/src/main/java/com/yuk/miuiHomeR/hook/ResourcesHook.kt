@@ -1,6 +1,5 @@
 package com.yuk.miuiHomeR.hook
 
-import android.content.Context
 import android.content.res.Resources
 import com.github.kyuubiran.ezxhelper.init.InitFields.appContext
 import com.yuk.miuiHomeR.mPrefsMap
@@ -8,7 +7,6 @@ import com.yuk.miuiHomeR.utils.ResourcesHookData
 import com.yuk.miuiHomeR.utils.ResourcesHookMap
 import com.yuk.miuiHomeR.utils.ktx.dp2px
 import com.yuk.miuiHomeR.utils.ktx.findClass
-import com.yuk.miuiHomeR.utils.ktx.hookAfterMethod
 import com.yuk.miuiHomeR.utils.ktx.hookBeforeAllMethods
 import com.yuk.miuiHomeR.utils.ktx.hookBeforeMethod
 import de.robv.android.xposed.XC_MethodHook
@@ -40,9 +38,6 @@ object ResourcesHook : BaseHook() {
 
         if (mPrefsMap.getBoolean("home_unlock_grids")) {
             val deviceClass = "com.miui.home.launcher.compat.LauncherCellCountCompatDevice".findClass()
-            "com.miui.home.launcher.ScreenUtils".hookBeforeMethod("getScreenCellsSizeOptions", Context::class.java) {
-                "com.miui.home.launcher.common.Utilities".hookAfterMethod("isNoWordModel") { it.result = false }
-            }
             deviceClass.hookBeforeAllMethods("shouldUseDeviceValue") { it.result = false }
             hookMap["config_cell_count_x"] = ResourcesHookData("integer", 3)
             hookMap["config_cell_count_y"] = ResourcesHookData("integer", 4)
