@@ -87,6 +87,7 @@
     <string name="tg_chat">Nhóm Telegram</string>
     <string name="tg_channel">Kênh Telegram</string>
     <string name="qq_group">Nhóm QQ</string>
+    <string name="qq_channel">QQ Channel</string>
     <string name="discussion">Thảo luận</string>
     <string name="repo_summary">Chào mừng các nhà phát triển tham gia vào quá trình phát triển</string>
     <string name="translate">Giúp chúng tôi dịch ứng dụng sang ngôn ngữ của bạn</string>
