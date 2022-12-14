@@ -20,7 +20,7 @@ object IconTitleSize : BaseHook() {
         val value = mPrefsMap.getInt("icon_title_font_size", -1).toFloat()
         val launcherClass = "com.miui.home.launcher.Launcher".findClass()
         val shortcutInfoClass = "com.miui.home.launcher.ShortcutInfo".findClass()
-        if (value == -1f || value == 12f) return
+        if (value == -1f) return
         try {
             "com.miui.home.launcher.ItemIcon".hookAfterMethod(
                 "onFinishInflate"
@@ -61,11 +61,7 @@ object IconTitleSize : BaseHook() {
                 mTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, value)
             }
             "com.miui.home.launcher.common.Utilities".hookAfterMethod(
-                "adaptTitleStyleToWallpaper",
-                Context::class.java,
-                TextView::class.java,
-                Int::class.javaPrimitiveType,
-                Int::class.javaPrimitiveType
+                "adaptTitleStyleToWallpaper", Context::class.java, TextView::class.java, Int::class.javaPrimitiveType, Int::class.javaPrimitiveType
             ) {
                 val mTitle = it.args[1] as TextView
                 if (mTitle.id == mTitle.resources.getIdentifier("icon_title", "id", "com.miui.home")) {

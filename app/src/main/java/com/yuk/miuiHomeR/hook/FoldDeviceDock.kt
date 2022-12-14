@@ -1,7 +1,8 @@
 package com.yuk.miuiHomeR.hook
 
 import android.content.Context
-import android.os.Message
+import com.github.kyuubiran.ezxhelper.utils.findMethod
+import com.github.kyuubiran.ezxhelper.utils.hookMethod
 import com.yuk.miuiHomeR.mPrefsMap
 import com.yuk.miuiHomeR.utils.ktx.hookAfterMethod
 import com.yuk.miuiHomeR.utils.ktx.hookBeforeMethod
@@ -13,39 +14,69 @@ object FoldDeviceDock : BaseHook() {
         var hook1: XC_MethodHook.Unhook? = null
         var hook2: XC_MethodHook.Unhook? = null
         var hook3: XC_MethodHook.Unhook? = null
-        "com.miui.home.launcher.hotseats.HotSeats".hookBeforeMethod("initContent") {
-            hook1 = "com.miui.home.launcher.DeviceConfig".hookBeforeMethod(
-                "isFoldDevice"
-            ) {
-                it.result = true
+        findMethod("com.miui.home.launcher.hotseats.HotSeats") {
+            name == "initContent"
+        }.hookMethod {
+            before {
+                hook1 = "com.miui.home.launcher.DeviceConfig".hookBeforeMethod(
+                    "isFoldDevice"
+                ) { hookParam ->
+                    hookParam.result = true
+                }
             }
-        }
-        "com.miui.home.launcher.hotseats.HotSeats".hookBeforeMethod("updateContentView") {
-            hook2 = "com.miui.home.launcher.Application".hookBeforeMethod(
-                "isInFoldLargeScreen"
-            ) {
-                it.result = true
-            }
-        }
-
-        "com.miui.home.launcher.hotseats.HotSeatsListRecentsAppProvider\$1".hookBeforeMethod("handleMessage", Message::class.java) {
-            hook3 = "com.miui.home.launcher.Application".hookBeforeMethod(
-                "isInFoldLargeScreen"
-            ) {
-                it.result = true
+            after {
+                hook1?.unhook()
             }
         }
 
-        "com.miui.home.launcher.hotseats.HotSeats".hookAfterMethod("initContent") {
-            hook1?.unhook()
+        try {
+            findMethod("com.miui.home.launcher.hotseats.HotSeats") {
+                name == "updateContent"
+            }
+        } catch (e: Exception) {
+            findMethod("com.miui.home.launcher.hotseats.HotSeats") {
+                name == "updateContentView"
+            }
+        }.hookMethod {
+            before {
+                hook2 = "com.miui.home.launcher.Application".hookBeforeMethod(
+                    "isInFoldLargeScreen"
+                ) { hookParam ->
+                    hookParam.result = true
+                }
+            }
+            after {
+                hook2?.unhook()
+
+            }
         }
 
-        "com.miui.home.launcher.hotseats.HotSeats".hookAfterMethod("updateContentView") {
-            hook2?.unhook()
+        findMethod("com.miui.home.launcher.hotseats.HotSeats") {
+            name == "isNeedUpdateItemInfo"
+        }.hookMethod {
+            before {
+                hook2 = "com.miui.home.launcher.Application".hookBeforeMethod(
+                    "isInFoldLargeScreen"
+                ) { hookParam ->
+                    hookParam.result = true
+                }
+            }
+            after {
+                hook2?.unhook()
+            }
         }
 
-        "com.miui.home.launcher.hotseats.HotSeatsListRecentsAppProvider\$1".hookAfterMethod("handleMessage", Message::class.java) {
-            hook3?.unhook()
+        findMethod("com.miui.home.launcher.hotseats.HotSeatsListRecentsAppProvider\$1") {
+            name == "handleMessage" && parameterCount == 1
+        }.hookMethod {
+            before {
+                hook3 = "com.miui.home.launcher.Application".hookBeforeMethod(
+                    "isInFoldLargeScreen"
+                ) { hookParam ->
+                    hookParam.result = true
+                }
+            }
+            after { hook3?.unhook() }
         }
 
         "com.miui.home.launcher.DeviceConfig".hookAfterMethod("getHotseatMaxCount") {
@@ -58,7 +89,9 @@ object FoldDeviceDock : BaseHook() {
             }
         }
 
-        "com.miui.home.launcher.allapps.LauncherMode".hookBeforeMethod("isHomeSupportSearchBar", Context::class.java) {
+        "com.miui.home.launcher.allapps.LauncherMode".hookBeforeMethod(
+            "isHomeSupportSearchBar", Context::class.java
+        ) {
             it.result = false
         }
 
