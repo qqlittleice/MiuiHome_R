@@ -87,6 +87,7 @@
     <string name="tg_chat">Chat Telegram</string>
     <string name="tg_channel">Canal Telegram</string>
     <string name="qq_group">Groupe QQ</string>
+    <string name="qq_channel">QQ Channel</string>
     <string name="discussion">Discussion</string>
     <string name="repo_summary">Les autres développeurs sont les bienvenus pour participer au développement </string>
     <string name="translate">Aidez-nous à traduire dans votre langue</string>
