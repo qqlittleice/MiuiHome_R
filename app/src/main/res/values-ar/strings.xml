@@ -87,6 +87,7 @@
     <string name="tg_chat">محادثة تيليجرام</string>
     <string name="tg_channel">قناة تليجرام</string>
     <string name="qq_group">مجموعة QQ</string>
+    <string name="qq_channel">QQ Channel</string>
     <string name="discussion">المناقشة</string>
     <string name="repo_summary">نرحب بالمزيد من المطورين للمشاركة في التطوير</string>
     <string name="translate">ساعدها لترجمة التطبيق الى لغتك</string>
