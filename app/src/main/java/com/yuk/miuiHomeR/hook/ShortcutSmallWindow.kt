@@ -29,8 +29,7 @@ object ShortcutSmallWindow : BaseHook() {
         val mSystemShortcutMenuItem = ("com.miui.home.launcher.shortcuts.SystemShortcutMenuItem").findClass()
         val mAppShortcutMenu = ("com.miui.home.launcher.shortcuts.AppShortcutMenu").findClass()
         val mShortcutMenuItem = ("com.miui.home.launcher.shortcuts.ShortcutMenuItem").findClass()
-        val mAppDetailsShortcutMenuItem =
-            ("com.miui.home.launcher.shortcuts.SystemShortcutMenuItem\$AppDetailsShortcutMenuItem").findClass()
+        val mAppDetailsShortcutMenuItem = ("com.miui.home.launcher.shortcuts.SystemShortcutMenuItem\$AppDetailsShortcutMenuItem").findClass()
         val mActivityUtilsCompat = ("com.miui.launcher.utils.ActivityUtilsCompat").findClass()
         mViewDarkModeHelper.hookAfterAllMethods("onConfigurationChanged") {
             mSystemShortcutMenuItem.callStaticMethod("createAllSystemShortcutMenuItems")
@@ -52,8 +51,7 @@ object ShortcutSmallWindow : BaseHook() {
                 intent.addCategory("android.intent.category.DEFAULT")
                 intent.component = mComponentName
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                val callStaticMethod =
-                    mActivityUtilsCompat.callStaticMethod("makeFreeformActivityOptions", view.context, mComponentName.packageName)
+                val callStaticMethod = mActivityUtilsCompat.callStaticMethod("makeFreeformActivityOptions", view.context, mComponentName.packageName)
                 if (callStaticMethod != null) {
                     view.context.startActivity(intent, callStaticMethod.callMethod("toBundle") as Bundle)
                 }

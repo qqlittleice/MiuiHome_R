@@ -44,6 +44,12 @@
             android:key="prefs_key_about_join_qq_group"
             android:title="@string/qq_group" />
 
+        <Preference android:title="@string/qq_channel">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://qun.qq.com/qqweb/qunpro/share?_wv=3&amp;_wwv=128&amp;appChannel=share&amp;inviteCode=1XeJKKt6pwY&amp;businessType=9&amp;from=246610&amp;biz=ka" />
+        </Preference>
+
         <Preference android:title="@string/tg_chat">
             <intent
                 android:action="android.intent.action.VIEW"
