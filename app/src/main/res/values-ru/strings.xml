@@ -87,6 +87,7 @@
     <string name="tg_chat">Чат в Telegram</string>
     <string name="tg_channel">Telegram Канал</string>
     <string name="qq_group">QQ-группа</string>
+    <string name="qq_channel">QQ Channel</string>
     <string name="discussion">Обсуждение модуля</string>
     <string name="repo_summary">Приглашаем разработчиков принять участие в улучшении проекта</string>
     <string name="translate">Помогите нам перевести приложение на ваш язык</string>
