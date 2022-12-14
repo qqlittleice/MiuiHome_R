@@ -87,6 +87,7 @@
     <string name="tg_chat">گفت‌وگو در تلگرام</string>
     <string name="tg_channel">کانال تلگرام</string>
     <string name="qq_group">گروه QQ</string>
+    <string name="qq_channel">QQ Channel</string>
     <string name="discussion">📨 بحث و گفتگو</string>
     <string name="repo_summary">از توسعه دهندگان بیشتری برای مشارکت در توسعه استقبال کنید</string>
     <string name="translate">مترجم</string>
