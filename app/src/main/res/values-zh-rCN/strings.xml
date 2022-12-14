@@ -87,6 +87,7 @@
     <string name="tg_chat">Telegram 组群</string>
     <string name="tg_channel">Telegram 频道</string>
     <string name="qq_group">QQ 群</string>
+    <string name="qq_channel">QQ Channel</string>
     <string name="discussion">讨论</string>
     <string name="repo_summary">欢迎更多开发者参与</string>
     <string name="translate">帮助我们将应用翻译到你的语言</string>
