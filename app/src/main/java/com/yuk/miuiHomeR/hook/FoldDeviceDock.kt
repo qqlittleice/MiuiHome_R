@@ -70,28 +70,20 @@ object FoldDeviceDock : BaseHook() {
             name == "handleMessage" && parameterCount == 1
         }.hookMethod {
             before {
-                hook3 = "com.miui.home.launcher.Application".hookBeforeMethod(
-                    "isInFoldLargeScreen"
-                ) { hookParam ->
-                    hookParam.result = true
-                }
+                hook3 = "com.miui.home.launcher.Application".hookBeforeMethod("isInFoldLargeScreen") { hookParam -> hookParam.result = true }
             }
             after { hook3?.unhook() }
         }
 
         "com.miui.home.launcher.DeviceConfig".hookAfterMethod("getHotseatMaxCount") {
-            it.result = 2
+            it.result = mPrefsMap.getInt("home_fold_dock_hotseat", 3)
         }
 
         "com.miui.home.launcher.hotseats.HotSeatsListRecentsAppProvider".hookBeforeMethod("getLimitCount") {
-            "com.miui.home.launcher.hotseats.HotSeatsList".hookAfterMethod("shouldShowSearchIcon", Context::class.java) { hookParam ->
-                it.result = if (hookParam.result as Boolean) 2 else 3
-            }
+            it.result = mPrefsMap.getInt("home_fold_dock_run", 2)
         }
 
-        "com.miui.home.launcher.allapps.LauncherMode".hookBeforeMethod(
-            "isHomeSupportSearchBar", Context::class.java
-        ) {
+        "com.miui.home.launcher.allapps.LauncherMode".hookBeforeMethod("isHomeSupportSearchBar", Context::class.java) {
             it.result = false
         }
 

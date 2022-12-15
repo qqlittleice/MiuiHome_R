@@ -116,4 +116,7 @@
     <string name="big_folder_blur_drag_offset">大文件夹拖动视图模糊顶部偏移</string>
     <string name="mtk_warning">联发科开启该功能可能导致手势动画卡顿</string>
     <string name="mtk_warning1">联发科使用完整模糊可能导致手势动画卡顿</string>
+    <string name="fold_dock_num">%d 个</string>
+    <string name="fold_dock_hotseat">固定应用个数</string>
+    <string name="fold_dock_run">运行应用个数</string>
 </resources>

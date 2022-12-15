@@ -31,7 +31,7 @@ object EnableBigFolderIconBlur : BaseHook() {
         if (!mPrefsMap.getBoolean("big_folder_blur")) return
         var isShowEditPanel = false
         val value = mPrefsMap.getInt("big_folder_corner", 58).toFloat()
-        val value1 = mPrefsMap.getInt("big_folder_width", 650)
+        val value1 = mPrefsMap.getInt("big_folder_width", 660)
         val value2 = mPrefsMap.getInt("big_folder_height", 585)
         val value3 = mPrefsMap.getInt("big_folder_drag", 27)
         val launcherClass = "com.miui.home.launcher.Launcher".findClass()

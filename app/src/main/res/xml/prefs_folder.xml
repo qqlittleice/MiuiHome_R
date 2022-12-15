@@ -98,7 +98,7 @@
             app:showSeekBarValue="true" />
 
         <SeekBarPreference
-            android:defaultValue="650"
+            android:defaultValue="660"
             android:dependency="prefs_key_big_folder_blur"
             android:key="prefs_key_big_folder_height"
             android:title="@string/big_folder_blur_background_height"
