@@ -94,7 +94,7 @@
     <string name="translator">翻譯人員</string>
     <string name="developer">開發人員</string>
     <string name="translation">Crowdin 翻譯</string>
-    <string name="translators">聖小熊 (Telegram: @HolyBearHome)</string>
+    <string name="translators">聖小熊 (Github: @a406010503)</string>
     <string name="language">繁體中文</string>
     <string name="settings_language">語言</string>
     <string name="anim_speed_recent">動畫速度「進出最近任務畫面」</string>
@@ -116,4 +116,7 @@
     <string name="big_folder_blur_drag_offset">大資料夾拖曳視圖模糊頂部偏移</string>
     <string name="mtk_warning">聯發科技裝置使用此功能可能導致手勢動畫延遲</string>
     <string name="mtk_warning1">聯發科技裝置使用完全模糊可能導致手勢動畫延遲</string>
+    <string name="fold_dock_num">%d Num</string>
+    <string name="fold_dock_hotseat">Number of fixed Apps</string>
+    <string name="fold_dock_run">Number of running Apps</string>
 </resources>
