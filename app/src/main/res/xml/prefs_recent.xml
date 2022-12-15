@@ -7,9 +7,9 @@
         <DropDownPreference
             android:defaultValue="2"
             android:key="prefs_key_recent_blur"
+            android:summary="@string/mtk_warning1"
             android:title="@string/blur_level"
             app:entries="@array/recent_blur"
-            android:summary="@string/mtk_warning1"
             app:entryValues="@array/recent_blur_value" />
 
         <SwitchPreference

@@ -27,6 +27,7 @@ import com.yuk.miuiHomeR.hook.EnableFolderIconBlur
 import com.yuk.miuiHomeR.hook.FoldDeviceDock
 import com.yuk.miuiHomeR.hook.FolderAnim
 import com.yuk.miuiHomeR.hook.FolderColumnsCount
+import com.yuk.miuiHomeR.hook.HapticFeedback
 import com.yuk.miuiHomeR.hook.HideSeekPoint
 import com.yuk.miuiHomeR.hook.HideStatusBarWhenEnterRecent
 import com.yuk.miuiHomeR.hook.HideWidgetTitles
@@ -109,7 +110,8 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         ShortcutItemCount,
                         RemoveCardAnim,
                         Dock,
-                        BigIconCorner
+                        BigIconCorner,
+                        HapticFeedback,
                     )
                     if (atLeastAndroidS()) {
                         initHooks(

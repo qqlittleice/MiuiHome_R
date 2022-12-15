@@ -19,7 +19,9 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
+
 import androidx.core.widget.NestedScrollView;
+
 import moralnorm.internal.utils.DisplayUtils;
 import moralnorm.preference.R;
 import moralnorm.preference.drawable.AlphaPatternDrawable;
@@ -67,10 +69,6 @@ public class ColorPickerView extends NestedScrollView {
     private Point startTouchPoint;
     private float val;
     private Shader valShader;
-
-    public interface OnColorChangedListener {
-        void onColorChanged(int i);
-    }
 
     public ColorPickerView(Context context) {
         this(context, null);
@@ -605,27 +603,18 @@ public class ColorPickerView extends NestedScrollView {
         invalidate();
     }
 
+    public String getAlphaSliderText() {
+        return this.alphaSliderText;
+    }
+
     public void setAlphaSliderText(int res) {
         String text = getContext().getString(res);
         setAlphaSliderText(text);
     }
 
-    public String getAlphaSliderText() {
-        return this.alphaSliderText;
-    }
-
     public void setAlphaSliderText(String text) {
         this.alphaSliderText = text;
         invalidate();
-    }
-
-    private class BitmapCache {
-        public Bitmap bitmap;
-        public Canvas canvas;
-        public float value;
-
-        private BitmapCache() {
-        }
     }
 
     public boolean dispatchTouchEvent(MotionEvent event) {
@@ -635,5 +624,18 @@ public class ColorPickerView extends NestedScrollView {
                 break;
         }
         return super.dispatchTouchEvent(event);
+    }
+
+    public interface OnColorChangedListener {
+        void onColorChanged(int i);
+    }
+
+    private class BitmapCache {
+        public Bitmap bitmap;
+        public Canvas canvas;
+        public float value;
+
+        private BitmapCache() {
+        }
     }
 }

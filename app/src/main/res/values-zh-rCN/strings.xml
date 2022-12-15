@@ -119,4 +119,8 @@
     <string name="fold_dock_num">%d 个</string>
     <string name="fold_dock_hotseat">固定应用个数</string>
     <string name="fold_dock_run">运行应用个数</string>
+    <string name="haptic_feedback">修改侧滑返回震动反馈</string>
+    <string name="haptic_feedback_summary">官方使用的分别为162/163。预设2为打字的震动反馈，您可以自己尝试其他触觉反馈</string>
+    <string name="haptic_Back_ReadyBack">1.准备返回时</string>
+    <string name="haptic_Back_HandUp">2.完成返回时</string>
 </resources>

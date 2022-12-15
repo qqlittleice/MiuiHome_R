@@ -16,8 +16,16 @@ public class AppManager {
         return SingleApp.INSTANCE;
     }
 
-    public static class SingleApp {
-        public static final AppManager INSTANCE = new AppManager();
+    /**
+     * 获取指定的Activity
+     */
+    public static Activity getActivity(Class<?> cls) {
+        if (activityStack != null) for (Activity activity : activityStack) {
+            if (activity.getClass().equals(cls)) {
+                return activity;
+            }
+        }
+        return null;
     }
 
     /**
@@ -35,18 +43,6 @@ public class AppManager {
      */
     public void removeActivity(Activity activity) {
         activityStack.remove(activity);
-    }
-
-    /**
-     * 获取指定的Activity
-     */
-    public static Activity getActivity(Class<?> cls) {
-        if (activityStack != null) for (Activity activity : activityStack) {
-            if (activity.getClass().equals(cls)) {
-                return activity;
-            }
-        }
-        return null;
     }
 
     /**
@@ -108,7 +104,6 @@ public class AppManager {
         activityStack.clear();
     }
 
-
     /**
      * 退出应用程序
      */
@@ -119,5 +114,9 @@ public class AppManager {
             System.exit(0);
         } catch (Exception ignore) {
         }
+    }
+
+    public static class SingleApp {
+        public static final AppManager INSTANCE = new AppManager();
     }
 }
