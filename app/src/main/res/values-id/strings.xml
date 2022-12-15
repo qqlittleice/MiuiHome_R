@@ -100,7 +100,7 @@
     <string name="anim_speed_recent">Kecepatan animasi keluar masuk tugas terbaru</string>
     <string name="home_fold_dock">Dock untuk perangkat lipat</string>
     <string name="home_all_apps_blur">Aktifkan Semua Tampilan Buram Wadah Aplikasi</string>
-    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature. MediaTek devices use this feature when the wallpaper can easily become pure black</string>
+    <string name="home_all_apps_blur_summary">Mohon atur kebeningan latar belakang laci aplikasi ke 100% untuk fitur ini. Perangkat MediaTek menggunakan fitur ini, agar gambar latarnya tidak jadi hitam pekat</string>
     <string name="settings">Pengaturan</string>
     <string name="system_default">Bawaan</string>
     <string name="launcher_icon">Ikon Peluncur</string>
@@ -116,4 +116,7 @@
     <string name="big_folder_blur_drag_offset">Big folder drag view blur top offset</string>
     <string name="mtk_warning">MediaTek devices use this feature may cause gesture animation lag</string>
     <string name="mtk_warning1">MediaTek devices use complete blur may cause gesture animation lag</string>
+    <string name="fold_dock_num">%d Num</string>
+    <string name="fold_dock_hotseat">Number of fixed Apps</string>
+    <string name="fold_dock_run">Number of running Apps</string>
 </resources>
