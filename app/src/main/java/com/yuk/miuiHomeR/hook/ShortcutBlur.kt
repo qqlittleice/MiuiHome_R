@@ -17,7 +17,6 @@ object ShortcutBlur : BaseHook() {
             "onCreate", Bundle::class.java
         ) {
             val activity = it.thisObject as Activity
-
             launcherClass.hookAfterMethod("isInShortcutMenuState") { hookParam ->
                 val isInShortcutMenuState = hookParam.result as Boolean
                 if (isInShortcutMenuState) {
