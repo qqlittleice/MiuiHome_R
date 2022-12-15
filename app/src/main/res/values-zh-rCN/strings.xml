@@ -119,4 +119,8 @@
     <string name="fold_dock_num">%d 个</string>
     <string name="fold_dock_hotseat">固定应用个数</string>
     <string name="fold_dock_run">运行应用个数</string>
+    <string name="haptic_feedback">Haptic feedback for side-slide return</string>
+    <string name="haptic_feedback_summary">The Official use is 162/163 respectively. Preset 2 is the vibration feedback during typing, you can try other haptic feedback yourself</string>
+    <string name="haptic_Back_ReadyBack">1. Ready Back</string>
+    <string name="haptic_Back_HandUp">2. Hand Up</string>
 </resources>
