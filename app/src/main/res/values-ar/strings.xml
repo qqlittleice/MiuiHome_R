@@ -100,7 +100,7 @@
     <string name="anim_speed_recent">سرعة الرسوم المتحركة في الدخول الي والخروج من التطبيقات الأخيرة</string>
     <string name="home_fold_dock">حوض التطبيقات للاجهزة القابلة للطي</string>
     <string name="home_all_apps_blur">تفعيل ضبابية درج التطبيقات</string>
-    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature. MediaTek devices use this feature when the wallpaper can easily become pure black</string>
+    <string name="home_all_apps_blur_summary">الرجاء تعيين شفافية خلفية درج التطبيقات إلى 100% لاستخدام هذه الميزة. هذه ميزة اختبار مبكرة جداً، لأن مشكلات التحديث تحوله بسهولة إلى شاشة سوداء</string>
     <string name="settings">الإعدادات</string>
     <string name="system_default">الافتراضي</string>
     <string name="launcher_icon">الأيقونة في مشغل التطبيقات</string>
@@ -116,4 +116,7 @@
     <string name="big_folder_blur_drag_offset">Big folder drag view blur top offset</string>
     <string name="mtk_warning">MediaTek devices use this feature may cause gesture animation lag</string>
     <string name="mtk_warning1">MediaTek devices use complete blur may cause gesture animation lag</string>
+    <string name="fold_dock_num">%d Num</string>
+    <string name="fold_dock_hotseat">Number of fixed Apps</string>
+    <string name="fold_dock_run">Number of running Apps</string>
 </resources>
