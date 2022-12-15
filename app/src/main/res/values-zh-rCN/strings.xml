@@ -87,7 +87,7 @@
     <string name="tg_chat">Telegram 组群</string>
     <string name="tg_channel">Telegram 频道</string>
     <string name="qq_group">QQ 群</string>
-    <string name="qq_channel">QQ Channel</string>
+    <string name="qq_channel">QQ 频道</string>
     <string name="discussion">讨论</string>
     <string name="repo_summary">欢迎更多开发者参与</string>
     <string name="translate">帮助我们将应用翻译到你的语言</string>
@@ -114,6 +114,9 @@
     <string name="big_folder_blur_background_width">大文件夹模糊视图背景宽度</string>
     <string name="big_folder_blur_background_height">大文件夹模糊视图背景高度</string>
     <string name="big_folder_blur_drag_offset">大文件夹拖动视图模糊顶部偏移</string>
-    <string name="mtk_warning">联发科技设备使用此功能可能导致手势动画滞后</string>
-    <string name="mtk_warning1">联发科技设备使用完全模糊可能导致手势动画滞后</string>
+    <string name="mtk_warning">联发科开启该功能可能导致手势动画卡顿</string>
+    <string name="mtk_warning1">联发科使用完整模糊可能导致手势动画卡顿</string>
+    <string name="fold_dock_num">%d 个</string>
+    <string name="fold_dock_hotseat">固定应用个数</string>
+    <string name="fold_dock_run">运行应用个数</string>
 </resources>
