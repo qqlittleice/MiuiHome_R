@@ -62,7 +62,6 @@
     <string name="hide_category_all">移除应用分组中的「全部」</string>
     <string name="hide_category_paging_edit">移除应用分页内的「编辑」按钮</string>
     <string name="hide_clean_up">移除「清理」按钮</string>
-    <string name="hide_small_window">移除「小窗应用」按钮</string>
     <string name="github">项目地址</string>
     <string name="close_folder">自动关闭文件夹</string>
     <string name="close_folder_summary">从文件夹启动应用时关闭文件夹</string>
@@ -100,7 +99,7 @@
     <string name="anim_speed_recent">动画速度「进出后台」</string>
     <string name="home_fold_dock">折叠屏底栏样式</string>
     <string name="home_all_apps_blur">抽屉模糊</string>
-    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature</string>
+    <string name="home_all_apps_blur_summary">请将应用程序抽屉的背景透明度设置为 100% 以使用此功能</string>
     <string name="settings">设置</string>
     <string name="system_default">默认</string>
     <string name="launcher_icon">桌面图标</string>
@@ -117,10 +116,10 @@
     <string name="fold_dock_num">%d 个</string>
     <string name="fold_dock_hotseat">固定应用个数</string>
     <string name="fold_dock_run">运行应用个数</string>
-    <string name="haptic_feedback">侧滑返回时的振动反馈</string>
-    <string name="haptic_feedback_summary">官方使用分别为 162/163。默认键入 2 个振动反馈，您可以尝试其他的数值</string>
-    <string name="haptic_Back_ReadyBack">1. Ready Back</string>
-    <string name="haptic_Back_HandUp">2. Hand Up</string>
-    <string name="blur_view_color">Blur view background color</string>
+    <string name="haptic_feedback">修改侧滑返回震动反馈</string>
+    <string name="haptic_feedback_summary">官方使用的分别为 162/163。预设 2 为打字的震动反馈，您可以自己尝试其他触觉反馈</string>
+    <string name="haptic_Back_ReadyBack">1. 准备返回时</string>
+    <string name="haptic_Back_HandUp">2. 完成返回时</string>
+    <string name="blur_view_color">模糊视图背景色</string>
     <string name="mtk_warning">联发科开启该功能可能导致手势动画卡顿</string>
 </resources>
