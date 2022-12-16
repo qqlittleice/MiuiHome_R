@@ -100,7 +100,7 @@
     <string name="anim_speed_recent">سرعت انیمیشن در باز و بستن برنامه ها از وظایف اخیر</string>
     <string name="home_fold_dock">پیشخوان برای تبلت ها</string>
     <string name="home_all_apps_blur">فعال کردن تاری بکگراند برای کشوی برنامه ها</string>
-    <string name="home_all_apps_blur_summary">لطفاً برای استفاده از این ویژگی، شفافیت پس‌زمینه کشوی برنامه را روی 100٪ تنظیم کنید. دستگاه های مدیاتک از این ویژگی استفاده می کنند، تصویر زمینه به راحتی می تواند به یک صفحه سیاه خالص تبدیل شود</string>
+    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature</string>
     <string name="settings">⚙️ تنظیمات</string>
     <string name="system_default">پیش‌فرض</string>
     <string name="launcher_icon">آیکون لانچر</string>
@@ -114,8 +114,6 @@
     <string name="big_folder_blur_background_width">Big folder blur view background width</string>
     <string name="big_folder_blur_background_height">Big folder blur view background height</string>
     <string name="big_folder_blur_drag_offset">Big folder drag view blur top offset</string>
-    <string name="mtk_warning">MediaTek devices use this feature may cause gesture animation lag</string>
-    <string name="mtk_warning1">MediaTek devices use complete blur may cause gesture animation lag</string>
     <string name="fold_dock_num">%d Num</string>
     <string name="fold_dock_hotseat">Number of fixed Apps</string>
     <string name="fold_dock_run">Number of running Apps</string>
@@ -124,4 +122,5 @@
     <string name="haptic_Back_ReadyBack">1. Ready Back</string>
     <string name="haptic_Back_HandUp">2. Hand Up</string>
     <string name="blur_view_color">Blur view background color</string>
+    <string name="mtk_warning">MediaTek devices use this feature may cause gesture animation lag</string>
 </resources>
