@@ -62,7 +62,6 @@
     <string name="hide_category_all">隱藏應用程式分組中的「全部」</string>
     <string name="hide_category_paging_edit">隱藏分類頁面內的「編輯」按鈕</string>
     <string name="hide_clean_up">隱藏「清理全部任務」按鈕</string>
-    <string name="hide_small_window">隱藏「小窗應用程式」按鈕</string>
     <string name="github">Github 存放庫</string>
     <string name="close_folder">自動關閉資料夾</string>
     <string name="close_folder_summary">從資料夾啟動應用程式時關閉資料夾</string>
@@ -100,7 +99,7 @@
     <string name="anim_speed_recent">動畫速度「進出最近任務畫面」</string>
     <string name="home_fold_dock">可摺疊裝置樣式的 Dock</string>
     <string name="home_all_apps_blur">啟用應用程式導覽匣模糊</string>
-    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature</string>
+    <string name="home_all_apps_blur_summary">請將應用程式導覽匣透明度設定為 100% 以使用此功能</string>
     <string name="settings">設定</string>
     <string name="system_default">預設</string>
     <string name="launcher_icon">啟動器圖示</string>
