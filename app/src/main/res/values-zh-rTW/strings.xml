@@ -116,11 +116,12 @@
     <string name="big_folder_blur_drag_offset">大資料夾拖曳視圖模糊頂部偏移</string>
     <string name="mtk_warning">聯發科技裝置使用此功能可能導致手勢動畫延遲</string>
     <string name="mtk_warning1">聯發科技裝置使用完全模糊可能導致手勢動畫延遲</string>
-    <string name="fold_dock_num">%d Num</string>
-    <string name="fold_dock_hotseat">Number of fixed Apps</string>
-    <string name="fold_dock_run">Number of running Apps</string>
-    <string name="haptic_feedback">Haptic feedback for side-slide return</string>
+    <string name="fold_dock_num">%d 個</string>
+    <string name="fold_dock_hotseat">固定應用個數</string>
+    <string name="fold_dock_run">運作應用個數</string>
+    <string name="haptic_feedback">側滑返回時的震動回饋</string>
     <string name="haptic_feedback_summary">The Official use is 162/163 respectively. Preset 2 is the vibration feedback during typing, you can try other haptic feedback yourself</string>
     <string name="haptic_Back_ReadyBack">1. Ready Back</string>
     <string name="haptic_Back_HandUp">2. Hand Up</string>
+    <string name="blur_view_color">Blur view background color</string>
 </resources>
