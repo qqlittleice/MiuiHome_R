@@ -86,6 +86,7 @@
     <string name="tg_chat">Obrolan telegram</string>
     <string name="tg_channel">Saluran Telegram</string>
     <string name="qq_group">Grup QQ</string>
+    <string name="qq_channel">QQ Channel</string>
     <string name="discussion">Diskusi</string>
     <string name="repo_summary">Selamat datang lebih banyak developer untuk berpartisipasi dalam pengembangan</string>
     <string name="translate">Bantu kami terjemahkan aplikasi ke dalam bahasa Anda</string>
@@ -106,4 +107,19 @@
     <string name="recents_icon">Sembunyikan ikon aplikasi</string>
     <string name="recent_text">Text displayed when no recent task</string>
     <string name="recent_text_summary">Also you can type a space to remove the text</string>
+    <string name="big_icon_corner">Medium icon round corner follow</string>
+    <string name="big_folder_blur">Big folder blur</string>
+    <string name="big_folder_blur_corner_radius">Big folder blur corner radius</string>
+    <string name="big_folder_blur_background_width">Big folder blur view background width</string>
+    <string name="big_folder_blur_background_height">Big folder blur view background height</string>
+    <string name="big_folder_blur_drag_offset">Big folder drag view blur top offset</string>
+    <string name="fold_dock_num">%d Num</string>
+    <string name="fold_dock_hotseat">Number of fixed Apps</string>
+    <string name="fold_dock_run">Number of running Apps</string>
+    <string name="haptic_feedback">Haptic feedback for side-slide return</string>
+    <string name="haptic_feedback_summary">The Official use is 162/163 respectively. Preset 2 is the vibration feedback during typing, you can try other haptic feedback yourself</string>
+    <string name="haptic_Back_ReadyBack">1. Ready Back</string>
+    <string name="haptic_Back_HandUp">2. Hand Up</string>
+    <string name="blur_view_color">Blur view background color</string>
+    <string name="mtk_warning">MediaTek devices use this feature may cause gesture animation lag</string>
 </resources>

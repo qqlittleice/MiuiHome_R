@@ -86,6 +86,7 @@
     <string name="tg_chat">Telegram-Chat</string>
     <string name="tg_channel">Telegram Channel</string>
     <string name="qq_group">QQ-Gruppe</string>
+    <string name="qq_channel">QQ-Kanal</string>
     <string name="discussion">Diskussion</string>
     <string name="repo_summary">Mehr Entwickler zur Teilnahme an der Entwicklung willkommen heißen</string>
     <string name="translate">Hilf uns, die App in deine Sprache zu übersetzen</string>
@@ -106,4 +107,19 @@
     <string name="recents_icon">Verstecke App Icon</string>
     <string name="recent_text">Text, der angezeigt wird, wenn keine neue Aufgabe existiert</string>
     <string name="recent_text_summary">Sie können auch ein Leerzeichen eingeben um den Text zu löschen</string>
+    <string name="big_icon_corner">Mittleres Symbol mit runden Ecken</string>
+    <string name="big_folder_blur">Großer Ordner Unschärfe</string>
+    <string name="big_folder_blur_corner_radius">Großer Ordner-Unschärfe-Eckradius</string>
+    <string name="big_folder_blur_background_width">Große Ordnerunschärfe-Ansicht Hintergrundbreite</string>
+    <string name="big_folder_blur_background_height">Großer Ordnerunschärfe Hintergrundgröße</string>
+    <string name="big_folder_blur_drag_offset">Großer Ordner ziehen Ansicht Unschärfe oberer Versatz</string>
+    <string name="fold_dock_num">%d Num</string>
+    <string name="fold_dock_hotseat">Anzahl der festen Apps</string>
+    <string name="fold_dock_run">Anzahl laufender Apps</string>
+    <string name="haptic_feedback">Haptisches Feedback für Slide-Slide-Return</string>
+    <string name="haptic_feedback_summary">The Official use is 162/163 respectively. Preset 2 is the vibration feedback during typing, you can try other haptic feedback yourself</string>
+    <string name="haptic_Back_ReadyBack">1. Ready Back</string>
+    <string name="haptic_Back_HandUp">2. Hand Up</string>
+    <string name="blur_view_color">Blur view background color</string>
+    <string name="mtk_warning">MediaTek Geräte die dieses Feature verwenden, können eine Verzögerung in der Gesten Animation haben</string>
 </resources>

@@ -29,7 +29,7 @@
     <string name="using_full_width_of_folder_view">利用整個資料夾視圖的寬度</string>
     <string name="number_of_icons_in_folder_iew">資料夾視圖內圖示的欄數</string>
     <string name="dock_settings">底欄</string>
-    <string name="enable_dock_hook">Enable dock hook</string>
+    <string name="enable_dock_hook">啟用 Dock 模糊</string>
     <string name="enable_dock">啟用 Dock 模糊</string>
     <string name="bottom_margin_of_dock_icon">Dock 圖示下邊距</string>
     <string name="bottom_margin_of_home_icon">頁面指示器下邊距</string>
@@ -86,6 +86,7 @@
     <string name="tg_chat">Telegram 聊天室</string>
     <string name="tg_channel">Telegram 頻道</string>
     <string name="qq_group">QQ 群組</string>
+    <string name="qq_channel">QQ 頻道</string>
     <string name="discussion">討論</string>
     <string name="repo_summary">歡迎更多開發人員共同參與</string>
     <string name="translate">協助我們將這個應用程式翻譯為您的語言</string>
@@ -104,6 +105,21 @@
     <string name="launcher_icon">啟動器圖示</string>
     <string name="recents_card_remove_anim">修改移除卡片動畫</string>
     <string name="recents_icon">隱藏應用程式圖示</string>
-    <string name="recent_text">Text displayed when no recent task</string>
-    <string name="recent_text_summary">Also you can type a space to remove the text</string>
+    <string name="recent_text">無後台應用程式時顯示的文字</string>
+    <string name="recent_text_summary">你也可以輸入一個空格來刪除該文字展示</string>
+    <string name="big_icon_corner">中型圖示圓角跟隨</string>
+    <string name="big_folder_blur">大資料夾模糊</string>
+    <string name="big_folder_blur_corner_radius">大資料夾模糊圓角半徑</string>
+    <string name="big_folder_blur_background_width">大資料夾模糊視圖背景寬度</string>
+    <string name="big_folder_blur_background_height">大資料夾模糊視圖背景高度</string>
+    <string name="big_folder_blur_drag_offset">大資料夾拖曳視圖模糊頂部偏移</string>
+    <string name="fold_dock_num">%d 個</string>
+    <string name="fold_dock_hotseat">固定應用個數</string>
+    <string name="fold_dock_run">運作應用個數</string>
+    <string name="haptic_feedback">側滑返回時的震動回饋</string>
+    <string name="haptic_feedback_summary">官方使用分別為 162/163。 預設輸入 2 個震動回饋，您可以嘗試其他的數值</string>
+    <string name="haptic_Back_ReadyBack">1. Ready Back</string>
+    <string name="haptic_Back_HandUp">2. Hand Up</string>
+    <string name="blur_view_color">Blur view background color</string>
+    <string name="mtk_warning">聯發科技裝置使用此功能可能導致手勢動畫卡頓</string>
 </resources>
