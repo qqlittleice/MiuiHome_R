@@ -99,7 +99,7 @@
     <string name="anim_speed_recent">動畫速度「進出最近任務畫面」</string>
     <string name="home_fold_dock">可摺疊裝置樣式的 Dock</string>
     <string name="home_all_apps_blur">啟用應用程式導覽匣模糊</string>
-    <string name="home_all_apps_blur_summary">請將應用程式導覽匣透明度設定為 100% 以使用此功能。聯發科技裝置使用此功能時桌布可能會出現純黑畫面</string>
+    <string name="home_all_apps_blur_summary">請將應用程式導覽匣透明度設定為 100% 以使用此功能</string>
     <string name="settings">設定</string>
     <string name="system_default">預設</string>
     <string name="launcher_icon">啟動器圖示</string>
