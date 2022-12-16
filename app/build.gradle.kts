@@ -14,8 +14,8 @@ android {
         applicationId = namespace
         minSdk = 30
         targetSdk = 33
-        versionCode = 15
-        versionName = "1.0.5" + (getGitHeadRefsSuffix(rootProject))
+        versionCode = 16
+        versionName = "1.0.6" + (getGitHeadRefsSuffix(rootProject))
     }
     val properties = Properties()
     runCatching { properties.load(project.rootProject.file("local.properties").inputStream()) }
