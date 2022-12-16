@@ -100,7 +100,7 @@
     <string name="anim_speed_recent">Szybkość animacji do i z ostatnich zadań</string>
     <string name="home_fold_dock">Dock dla składanych urządzeń</string>
     <string name="home_all_apps_blur">Enable All Apps Container View Blur</string>
-    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature.Also this is a very early test feature, because refresh issues blur very easily turned into a black screen</string>
+    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature</string>
     <string name="settings">Settings</string>
     <string name="system_default">Default</string>
     <string name="launcher_icon">Launcher Icon</string>
@@ -114,8 +114,6 @@
     <string name="big_folder_blur_background_width">Big folder blur view background width</string>
     <string name="big_folder_blur_background_height">Big folder blur view background height</string>
     <string name="big_folder_blur_drag_offset">Big folder drag view blur top offset</string>
-    <string name="mtk_warning">MediaTek devices use this feature may cause gesture animation lag</string>
-    <string name="mtk_warning1">MediaTek devices use complete blur may cause gesture animation lag</string>
     <string name="fold_dock_num">%d Num</string>
     <string name="fold_dock_hotseat">Number of fixed Apps</string>
     <string name="fold_dock_run">Number of running Apps</string>
@@ -124,4 +122,5 @@
     <string name="haptic_Back_ReadyBack">1. Ready Back</string>
     <string name="haptic_Back_HandUp">2. Hand Up</string>
     <string name="blur_view_color">Blur view background color</string>
+    <string name="mtk_warning">MediaTek devices use this feature may cause gesture animation lag</string>
 </resources>
