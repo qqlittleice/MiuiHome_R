@@ -100,7 +100,7 @@
     <string name="anim_speed_recent">Animationsgeschwindigkeit in und aus den letzten Aufgaben</string>
     <string name="home_fold_dock">Dock Stil für Fold Geräte</string>
     <string name="home_all_apps_blur">Aktiviere alle Apps Container View Unschärfe</string>
-    <string name="home_all_apps_blur_summary">Bitte setzen Sie die Hintergrundtransparenz der App auf 100 % um diese Funktion nutzen zu können. Dies ist eine sehr frühe Test-Funktion, da das Aktualisieren von Problemen die Unschärfe sehr leicht in einen schwarzen Bildschirm verwandeln kann</string>
+    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature</string>
     <string name="settings">Einstellungen</string>
     <string name="system_default">Standardwerte</string>
     <string name="launcher_icon">Startbildschirm Symbol</string>
@@ -114,8 +114,6 @@
     <string name="big_folder_blur_background_width">Große Ordnerunschärfe-Ansicht Hintergrundbreite</string>
     <string name="big_folder_blur_background_height">Großer Ordnerunschärfe Hintergrundgröße</string>
     <string name="big_folder_blur_drag_offset">Großer Ordner ziehen Ansicht Unschärfe oberer Versatz</string>
-    <string name="mtk_warning">MediaTek Geräte die dieses Feature verwenden, können eine Verzögerung in der Gesten Animation haben</string>
-    <string name="mtk_warning1">MediaTek Geräte die eine vollständige Unschärfe verwenden können eine Verzögerung der Gesten haben</string>
     <string name="fold_dock_num">%d Num</string>
     <string name="fold_dock_hotseat">Anzahl der festen Apps</string>
     <string name="fold_dock_run">Anzahl laufender Apps</string>
@@ -124,4 +122,5 @@
     <string name="haptic_Back_ReadyBack">1. Ready Back</string>
     <string name="haptic_Back_HandUp">2. Hand Up</string>
     <string name="blur_view_color">Blur view background color</string>
+    <string name="mtk_warning">MediaTek Geräte die dieses Feature verwenden, können eine Verzögerung in der Gesten Animation haben</string>
 </resources>
