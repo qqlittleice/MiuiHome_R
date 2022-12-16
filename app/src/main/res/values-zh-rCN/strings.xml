@@ -100,7 +100,7 @@
     <string name="anim_speed_recent">动画速度「进出后台」</string>
     <string name="home_fold_dock">折叠屏底栏样式</string>
     <string name="home_all_apps_blur">抽屉模糊</string>
-    <string name="home_all_apps_blur_summary">请将应用程序抽屉的背景透明度设置为100%以使用此功能。联发科设备使用该功能时壁纸很容易变成纯黑屏</string>
+    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature</string>
     <string name="settings">设置</string>
     <string name="system_default">默认</string>
     <string name="launcher_icon">桌面图标</string>
@@ -114,14 +114,13 @@
     <string name="big_folder_blur_background_width">大文件夹模糊视图背景宽度</string>
     <string name="big_folder_blur_background_height">大文件夹模糊视图背景高度</string>
     <string name="big_folder_blur_drag_offset">大文件夹拖动视图模糊顶部偏移</string>
-    <string name="mtk_warning">联发科开启该功能可能导致手势动画卡顿</string>
-    <string name="mtk_warning1">联发科使用完整模糊可能导致手势动画卡顿</string>
     <string name="fold_dock_num">%d 个</string>
     <string name="fold_dock_hotseat">固定应用个数</string>
     <string name="fold_dock_run">运行应用个数</string>
     <string name="haptic_feedback">侧滑返回时的振动反馈</string>
-    <string name="haptic_feedback_summary">The Official use is 162/163 respectively. Preset 2 is the vibration feedback during typing, you can try other haptic feedback yourself</string>
+    <string name="haptic_feedback_summary">官方使用分别为 162/163。默认键入 2 个振动反馈，您可以尝试其他的数值</string>
     <string name="haptic_Back_ReadyBack">1. Ready Back</string>
     <string name="haptic_Back_HandUp">2. Hand Up</string>
     <string name="blur_view_color">Blur view background color</string>
+    <string name="mtk_warning">联发科开启该功能可能导致手势动画卡顿</string>
 </resources>
