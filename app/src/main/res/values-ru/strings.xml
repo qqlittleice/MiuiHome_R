@@ -62,7 +62,6 @@
     <string name="hide_category_all">Скрыть \"Все\" в категориях приложений</string>
     <string name="hide_category_paging_edit">Скрыть \"Редактировать\" в меню категорий приложений</string>
     <string name="hide_clean_up">Скрыть кнопку очистки приложений</string>
-    <string name="hide_small_window">Удалить кнопку \"Плавающие окна\"</string>
     <string name="github">Репозиторий Github</string>
     <string name="close_folder">Автозакрытие папки</string>
     <string name="close_folder_summary">Закрывать папку, когда приложение было запущено</string>
@@ -100,7 +99,7 @@
     <string name="anim_speed_recent">Скорость анимации в недавних задачах и вне них</string>
     <string name="home_fold_dock">Док-бар для FOLD уст-в</string>
     <string name="home_all_apps_blur">Размытие контейнера всех приложений</string>
-    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature</string>
+    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature.Also this is a very early test feature, because refresh issues blur very easily turned into a black screen</string>
     <string name="settings">Настройки</string>
     <string name="system_default">По умолчанию</string>
     <string name="launcher_icon">Иконка лаунчера</string>
