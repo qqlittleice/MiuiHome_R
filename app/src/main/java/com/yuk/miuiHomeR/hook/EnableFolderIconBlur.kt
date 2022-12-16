@@ -61,7 +61,6 @@ object EnableFolderIconBlur : BaseHook() {
             val mDockBlur = XposedHelpers.getAdditionalInstanceField(it.thisObject, "mDockBlur") as BlurFrameLayout
             val view = FrameLayout(mIconImageView.context)
             mDockBlur.blurController.apply {
-                backgroundColour = Color.parseColor("#44FFFFFF")
                 cornerRadius = CornersRadius.all(value)
             }
             mIconImageView.visibility = View.GONE
@@ -103,7 +102,10 @@ object EnableFolderIconBlur : BaseHook() {
             val isFolderShowing = mLauncher?.callMethod("isFolderShowing") as Boolean
             if (!isFolderShowing && itemType == 2) {
                 val blurDrawable = dragView.createBackgroundBlurDrawable()
-                blurDrawable?.callMethod("setColor", Color.parseColor("#44FFFFFF"))
+                blurDrawable?.callMethod(
+                    "setColor",
+                    if (mPrefsMap.getInt("blur_view_color", -1) != -1) mPrefsMap.getInt("blur_view_color", -1) else Color.parseColor("#44FFFFFF")
+                )
                 blurDrawable?.callMethod("setBlurRadius", 100)
                 blurDrawable?.callMethod("setCornerRadius", value, value, value, value)
                 val backgroundDrawable = LayerDrawable(arrayOf(blurDrawable))

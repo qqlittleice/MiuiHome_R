@@ -16,7 +16,8 @@ import java.util.function.Consumer
 @RequiresApi(Build.VERSION_CODES.S)
 class SystemBlurController(
     private val view: View,
-    backgroundColour: Int = Color.TRANSPARENT,
+    backgroundColour: Int = if (mPrefsMap.getInt("blur_view_color", -1) != -1) mPrefsMap.getInt("blur_view_color", -1)
+    else Color.parseColor("#44FFFFFF"),
     blurRadius: Int = mPrefsMap.getInt("home_blur_radius", 100),
     cornerRadius: CornersRadius = CornersRadius.all(0f),
 ) : View.OnAttachStateChangeListener {
@@ -104,10 +105,7 @@ class SystemBlurController(
 
     private fun setCornerRadius(blurDrawable: BackgroundBlurDrawable, corners: CornersRadius) {
         blurDrawable.setCornerRadius(
-            corners.topLeft,
-            corners.topRight,
-            corners.bottomLeft,
-            corners.bottomRight
+            corners.topLeft, corners.topRight, corners.bottomLeft, corners.bottomRight
         )
     }
 

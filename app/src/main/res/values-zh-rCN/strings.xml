@@ -123,4 +123,5 @@
     <string name="haptic_feedback_summary">官方使用的分别为162/163。预设2为打字的震动反馈，您可以自己尝试其他触觉反馈</string>
     <string name="haptic_Back_ReadyBack">1. 准备返回时</string>
     <string name="haptic_Back_HandUp">2. 完成返回时</string>
+    <string name="blur_view_color">模糊视图背景色</string>
 </resources>

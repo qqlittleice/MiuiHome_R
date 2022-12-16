@@ -65,9 +65,7 @@ object Dock : BaseHook() {
                 lp.gravity = Gravity.BOTTOM
                 lp.setMargins(mDockMargin, 0, mDockMargin, mDockBottomMargin)
                 mDockBlur.blurController.apply {
-                    backgroundColour = Color.parseColor("#44FFFFFF")
                     cornerRadius = CornersRadius.all(mDockCorner.toFloat())
-                    blurRadius = mPrefsMap.getInt("home_blur_radius", 100)
                 }
                 mDockBlur.layoutParams = lp
                 mSearchEdgeLayout.addView(mDockBlur, 0)
