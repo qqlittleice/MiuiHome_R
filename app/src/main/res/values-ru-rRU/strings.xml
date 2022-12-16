@@ -57,7 +57,6 @@
     <string name="hide_category_all">Скрыть \"Все\" в категориях приложений</string>
     <string name="hide_category_paging_edit">Скрыть \"Редактировать\" в меню категорий приложений</string>
     <string name="hide_clean_up">Скрыть кнопку очистки приложений</string>
-    <string name="hide_small_window">Удалить кнопку \"Плавающие окна\"</string>
     <string name="github">Репозиторий Github</string>
     <string name="close_folder">Автозакрытие папки</string>
     <string name="close_folder_summary">Закрывать папку, когда приложение было запущено</string>

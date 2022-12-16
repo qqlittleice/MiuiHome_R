@@ -62,7 +62,6 @@
     <string name="hide_category_all">Ocultar \"Todos\" en el cajón de aplicaciones</string>
     <string name="hide_category_paging_edit">Ocultar el botón \"Editar\" en el cajón de aplicaciones</string>
     <string name="hide_clean_up">Ocultar el botón Limpiar Todo</string>
-    <string name="hide_small_window">Eliminar el botón \"Ventanas flotantes\"</string>
     <string name="github">Repositorio de Github</string>
     <string name="close_folder">Cerrar carpeta automáticamente</string>
     <string name="close_folder_summary">Cerrar carpeta al iniciar la aplicación desde la carpeta</string>

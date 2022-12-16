@@ -62,7 +62,6 @@
     <string name="hide_category_all">Verberg \"Alle\" in de App Lade</string>
     <string name="hide_category_paging_edit">Verberg de \"Bewerk\" knop in de App Lade pagina\'s</string>
     <string name="hide_clean_up">Verberg de \"Clean All\" Knop</string>
-    <string name="hide_small_window">Verwijder de \"Zwevende vensters\" knop</string>
     <string name="github">Github Repository</string>
     <string name="close_folder">Map automatisch sluiten</string>
     <string name="close_folder_summary">Map sluiten wanneer app uit map wordt gestart</string>

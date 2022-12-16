@@ -62,7 +62,6 @@
     <string name="hide_category_all">Ukryj \"Wszystkie\" w menu aplikacji</string>
     <string name="hide_category_paging_edit">Ukryj przycisk „Edytuj” w szufladzie aplikacji</string>
     <string name="hide_clean_up">Ukryj przycisk \"Wyczyść wszystko\"</string>
-    <string name="hide_small_window">Usuń przycisk \"Pływające okna\"</string>
     <string name="github">Repozytorium GitHub</string>
     <string name="close_folder">Automatyczne zamykanie folderu</string>
     <string name="close_folder_summary">Zamknij folder podczas uruchamiania aplikacji z folderu</string>

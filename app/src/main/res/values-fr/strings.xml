@@ -62,7 +62,6 @@
     <string name="hide_category_all">Masquer la rubrique \"toutes\" dans le tiroir d\'application</string>
     <string name="hide_category_paging_edit">Masquer le bouton \"éditer\" dans le tiroir d\'application</string>
     <string name="hide_clean_up">Masquer le bouton \"effacer tout\"</string>
-    <string name="hide_small_window">Retirer le bouton \"fenêtre flottante\"</string>
     <string name="github">Page Guithub</string>
     <string name="close_folder">Fermeture automatique des dossiers</string>
     <string name="close_folder_summary">Fermer le dossier une fois l\'application lancer</string>

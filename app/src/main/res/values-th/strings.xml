@@ -62,7 +62,6 @@
     <string name="hide_category_all">ลบ \'all\' ในกลุ่มแอป</string>
     <string name="hide_category_paging_edit">ลบปุ่มแก้ไขในหน้าแอป</string>
     <string name="hide_clean_up">ปุ่มล้างทั้งหมด</string>
-    <string name="hide_small_window">ลบปุ่ม หน้าต่างลอย</string>
     <string name="github">ที่เก็บบน github</string>
     <string name="close_folder">ปิดโฟลเดอร์อัตโนมัติ</string>
     <string name="close_folder_summary">ปิดโฟลเดอร์เมื่อเปิดแอปจากโฟลเดอร์</string>

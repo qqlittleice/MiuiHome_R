@@ -62,7 +62,6 @@
     <string name="hide_category_all">Ẩn \"Tất cả\" trong ngăn ứng dụng</string>
     <string name="hide_category_paging_edit">Ẩn \"Chỉnh sửa\" trong ngăn ứng dụng</string>
     <string name="hide_clean_up">Ẩn nút xóa tất cả</string>
-    <string name="hide_small_window">Ẩn nút \"Cửa sổ nổi\"</string>
     <string name="github">Nguồn Github</string>
     <string name="close_folder">Tự động đóng thư mục</string>
     <string name="close_folder_summary">Tự động đóng thư mục khi chạy ứng dụng</string>

@@ -62,7 +62,6 @@
     <string name="hide_category_all">隱藏應用程式分組中的「全部」</string>
     <string name="hide_category_paging_edit">隱藏分類頁面內的「編輯」按鈕</string>
     <string name="hide_clean_up">隱藏「清理全部任務」按鈕</string>
-    <string name="hide_small_window">隱藏「小窗應用程式」按鈕</string>
     <string name="github">Github 存放庫</string>
     <string name="close_folder">自動關閉資料夾</string>
     <string name="close_folder_summary">從資料夾啟動應用程式時關閉資料夾</string>
