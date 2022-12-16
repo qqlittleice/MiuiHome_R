@@ -62,7 +62,6 @@
     <string name="hide_category_all">Ẩn \"Tất cả\" trong ngăn ứng dụng</string>
     <string name="hide_category_paging_edit">Ẩn \"Chỉnh sửa\" trong ngăn ứng dụng</string>
     <string name="hide_clean_up">Ẩn nút xóa tất cả</string>
-    <string name="hide_small_window">Ẩn nút \"Cửa sổ nổi\"</string>
     <string name="github">Nguồn Github</string>
     <string name="close_folder">Tự động đóng thư mục</string>
     <string name="close_folder_summary">Tự động đóng thư mục khi chạy ứng dụng</string>
@@ -100,7 +99,7 @@
     <string name="anim_speed_recent">Tốc độ hoạt ảnh trong và ngoài màn hình gần đây</string>
     <string name="home_fold_dock">Thanh đế cho màn hình gập</string>
     <string name="home_all_apps_blur">Làm mờ Ngăn chứa ứng dụng</string>
-    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature</string>
+    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature.Also this is a very early test feature, because refresh issues blur very easily turned into a black screen</string>
     <string name="settings">Cài đặt</string>
     <string name="system_default">Mặc định</string>
     <string name="launcher_icon">Biểu tượng</string>
