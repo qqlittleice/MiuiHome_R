@@ -89,7 +89,6 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         FolderColumnsCount,
                         EnableBlurWhenOpenFolder,
                         SetDeviceLevel,
-                        ShortcutBlur,
                         UnlockHotseatIcon,
                         TaskViewHorizontal,
                         TaskViewVertical,
@@ -115,6 +114,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                     )
                     if (atLeastAndroidS()) {
                         initHooks(
+                            ShortcutBlur,
                             EnableFolderIconBlur,
                             EnableBigFolderIconBlur,
                             AllAppsContainerViewBlur,
@@ -134,8 +134,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
         if (mPrefsMap.size == 0) {
             var mXSharedPreferences: XSharedPreferences? = null
             try {
-                mXSharedPreferences =
-                    XSharedPreferences(Helpers.mAppModulePkg, PrefsUtils.mPrefsName)
+                mXSharedPreferences = XSharedPreferences(Helpers.mAppModulePkg, PrefsUtils.mPrefsName)
                 mXSharedPreferences.makeWorldReadable()
             } catch (t: Throwable) {
                 XposedBridge.log(t)
