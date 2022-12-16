@@ -62,7 +62,6 @@
     <string name="hide_category_all">Masquer la rubrique \"toutes\" dans le tiroir d\'application</string>
     <string name="hide_category_paging_edit">Masquer le bouton \"éditer\" dans le tiroir d\'application</string>
     <string name="hide_clean_up">Masquer le bouton \"effacer tout\"</string>
-    <string name="hide_small_window">Retirer le bouton \"fenêtre flottante\"</string>
     <string name="github">Page Guithub</string>
     <string name="close_folder">Fermeture automatique des dossiers</string>
     <string name="close_folder_summary">Fermer le dossier une fois l\'application lancer</string>
@@ -100,7 +99,7 @@
     <string name="anim_speed_recent">Vitesse d\'animation ouverture fermeture des applications récentes</string>
     <string name="home_fold_dock">Dock pour les appareils pliables (pliants)</string>
     <string name="home_all_apps_blur">Enable All Apps Container View Blur</string>
-    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature</string>
+    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature.Also this is a very early test feature, because refresh issues blur very easily turned into a black screen</string>
     <string name="settings">Settings</string>
     <string name="system_default">Default</string>
     <string name="launcher_icon">Launcher Icon</string>
