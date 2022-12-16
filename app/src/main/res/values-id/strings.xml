@@ -62,7 +62,6 @@
     <string name="hide_category_all">Sembunyikan \"Semua\" Di Dalam Laci Aplikasi</string>
     <string name="hide_category_paging_edit">Sembunyikan \"Edit\" Tombol di Laci Aplikasi\'s Halaman</string>
     <string name="hide_clean_up">Sembunyikan Tombol Bersihkan Semua</string>
-    <string name="hide_small_window">Hapus \"Jendela Mengambang\" Tombol</string>
     <string name="github">Github Repository</string>
     <string name="close_folder">Tutup otomatis folder</string>
     <string name="close_folder_summary">Tutup folder saat meluncurkan aplikasi dari folder</string>
@@ -100,7 +99,7 @@
     <string name="anim_speed_recent">Kecepatan animasi keluar masuk tugas terbaru</string>
     <string name="home_fold_dock">Dock untuk perangkat lipat</string>
     <string name="home_all_apps_blur">Aktifkan Semua Tampilan Buram Wadah Aplikasi</string>
-    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature</string>
+    <string name="home_all_apps_blur_summary">Mohon atur kebeningan latar belakang laci aplikasi ke 100% untuk fitur ini. Perangkat MediaTek menggunakan fitur ini, agar gambar latarnya tidak jadi hitam pekat</string>
     <string name="settings">Pengaturan</string>
     <string name="system_default">Bawaan</string>
     <string name="launcher_icon">Ikon Peluncur</string>
