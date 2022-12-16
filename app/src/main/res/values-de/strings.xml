@@ -117,9 +117,9 @@
     <string name="fold_dock_hotseat">Anzahl der festen Apps</string>
     <string name="fold_dock_run">Anzahl laufender Apps</string>
     <string name="haptic_feedback">Haptisches Feedback für Slide-Slide-Return</string>
-    <string name="haptic_feedback_summary">The Official use is 162/163 respectively. Preset 2 is the vibration feedback during typing, you can try other haptic feedback yourself</string>
-    <string name="haptic_Back_ReadyBack">1. Ready Back</string>
-    <string name="haptic_Back_HandUp">2. Hand Up</string>
-    <string name="blur_view_color">Blur view background color</string>
+    <string name="haptic_feedback_summary">Die offizielle Verwendung ist 162/163. Voreinstellung 2 ist das Vibrations-Feedback während des Tippens, du kannst andere haptische Feedback selbst ausprobieren</string>
+    <string name="haptic_Back_ReadyBack">1. Bereit zurück</string>
+    <string name="haptic_Back_HandUp">2. Hand hoch</string>
+    <string name="blur_view_color">Hintergrundfarbe der Unschärfe</string>
     <string name="mtk_warning">MediaTek Geräte die dieses Feature verwenden, können eine Verzögerung in der Gesten Animation haben</string>
 </resources>
