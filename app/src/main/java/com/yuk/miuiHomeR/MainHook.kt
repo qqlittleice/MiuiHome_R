@@ -6,49 +6,7 @@ import android.os.Process
 import com.github.kyuubiran.ezxhelper.init.EzXHelperInit
 import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.Log.logexIfThrow
-import com.yuk.miuiHomeR.hook.AllAppsContainerViewBlur
-import com.yuk.miuiHomeR.hook.AllowMoveAllWidgetToMinus
-import com.yuk.miuiHomeR.hook.AlwaysBlurWallpaper
-import com.yuk.miuiHomeR.hook.AlwaysShowMiuiWidget
-import com.yuk.miuiHomeR.hook.AlwaysShowStatusClock
-import com.yuk.miuiHomeR.hook.AnimDurationRatio
-import com.yuk.miuiHomeR.hook.AppDrawer
-import com.yuk.miuiHomeR.hook.BaseHook
-import com.yuk.miuiHomeR.hook.BigIconCorner
-import com.yuk.miuiHomeR.hook.BlurLevel
-import com.yuk.miuiHomeR.hook.BlurRadius
-import com.yuk.miuiHomeR.hook.CloseFolderWhenLaunchedApp
-import com.yuk.miuiHomeR.hook.DisableRecentViewWallpaperDarken
-import com.yuk.miuiHomeR.hook.Dock
-import com.yuk.miuiHomeR.hook.DoubleTapToSleep
-import com.yuk.miuiHomeR.hook.EnableBigFolderIconBlur
-import com.yuk.miuiHomeR.hook.EnableBlurWhenOpenFolder
-import com.yuk.miuiHomeR.hook.EnableFolderIconBlur
-import com.yuk.miuiHomeR.hook.FoldDeviceDock
-import com.yuk.miuiHomeR.hook.FolderAnim
-import com.yuk.miuiHomeR.hook.FolderColumnsCount
-import com.yuk.miuiHomeR.hook.HapticFeedback
-import com.yuk.miuiHomeR.hook.HideSeekPoint
-import com.yuk.miuiHomeR.hook.HideStatusBarWhenEnterRecent
-import com.yuk.miuiHomeR.hook.HideWidgetTitles
-import com.yuk.miuiHomeR.hook.HomeSettings
-import com.yuk.miuiHomeR.hook.IconTitleColor
-import com.yuk.miuiHomeR.hook.IconTitleScrolling
-import com.yuk.miuiHomeR.hook.IconTitleSize
-import com.yuk.miuiHomeR.hook.InfiniteScroll
-import com.yuk.miuiHomeR.hook.OverlapMode
-import com.yuk.miuiHomeR.hook.Recent
-import com.yuk.miuiHomeR.hook.RemoveCardAnim
-import com.yuk.miuiHomeR.hook.ResourcesHook
-import com.yuk.miuiHomeR.hook.SetDeviceLevel
-import com.yuk.miuiHomeR.hook.ShortcutBlur
-import com.yuk.miuiHomeR.hook.ShortcutItemCount
-import com.yuk.miuiHomeR.hook.ShortcutSmallWindow
-import com.yuk.miuiHomeR.hook.ShowDockIconTitle
-import com.yuk.miuiHomeR.hook.TaskViewHorizontal
-import com.yuk.miuiHomeR.hook.TaskViewVertical
-import com.yuk.miuiHomeR.hook.UnlockAnim
-import com.yuk.miuiHomeR.hook.UnlockHotseatIcon
+import com.yuk.miuiHomeR.hook.*
 import com.yuk.miuiHomeR.utils.Helpers
 import com.yuk.miuiHomeR.utils.PrefsMap
 import com.yuk.miuiHomeR.utils.PrefsUtils
@@ -87,6 +45,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit /* Optional */ {
                         BlurLevel,
                         BlurRadius,
                         FolderColumnsCount,
+                        FolderVerticalPadding,
                         EnableBlurWhenOpenFolder,
                         SetDeviceLevel,
                         UnlockHotseatIcon,
