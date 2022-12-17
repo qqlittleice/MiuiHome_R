@@ -28,6 +28,7 @@
     <string name="blurred_background_when_opening_folder_view">Arrière plan flou dans le dossier</string>
     <string name="using_full_width_of_folder_view">Utiliser toute l\'espace d\'affichage du dossier</string>
     <string name="number_of_icons_in_folder_iew">Nombre de lignes d\'icônes dans le dossier</string>
+    <string name="vertical_padding_in_folder_view">vertical padding in the folder view</string>
     <string name="dock_settings">Dock</string>
     <string name="enable_dock_hook">Enable dock hook</string>
     <string name="enable_dock">Activer le flou du dock</string>
