@@ -28,6 +28,7 @@
     <string name="blurred_background_when_opening_folder_view">Làm mờ nền khi mở thư mục</string>
     <string name="using_full_width_of_folder_view">Sử dụng toàn bộ chiều rộng của thư mục</string>
     <string name="number_of_icons_in_folder_iew">Số cột trong thư mục</string>
+    <string name="vertical_padding_in_folder_view">vertical padding in the folder view</string>
     <string name="dock_settings">Thanh đế</string>
     <string name="enable_dock_hook">Hiển thị thanh đế</string>
     <string name="enable_dock">Bật mờ đế</string>
