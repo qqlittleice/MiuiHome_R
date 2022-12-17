@@ -28,6 +28,7 @@
     <string name="blurred_background_when_opening_folder_view">Fundo desfocado ao abrir a visualização de pastas</string>
     <string name="using_full_width_of_folder_view">Usar a largura total da visualização de pastas</string>
     <string name="number_of_icons_in_folder_iew">Número de linhas de ícones na visualização de pastas</string>
+    <string name="vertical_padding_in_folder_view">vertical padding in the folder view</string>
     <string name="dock_settings">Doca</string>
     <string name="enable_dock_hook">Enable dock hook</string>
     <string name="enable_dock">Ativar desfoque da doca</string>
