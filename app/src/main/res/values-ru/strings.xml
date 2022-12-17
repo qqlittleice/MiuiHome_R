@@ -28,6 +28,7 @@
     <string name="blurred_background_when_opening_folder_view">Размытый фон при открытии папки</string>
     <string name="using_full_width_of_folder_view">Использовать всю ширину папки</string>
     <string name="number_of_icons_in_folder_iew">Количество строк иконок в папке</string>
+    <string name="vertical_padding_in_folder_view">vertical padding in the folder view</string>
     <string name="dock_settings">Док-бар</string>
     <string name="enable_dock_hook">Включить хук док-бара</string>
     <string name="enable_dock">Включить размытие док-бара</string>
