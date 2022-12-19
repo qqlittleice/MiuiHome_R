@@ -28,6 +28,7 @@
     <string name="blurred_background_when_opening_folder_view">Blurred background when opening folder view</string>
     <string name="using_full_width_of_folder_view">Using the full width of the folder view</string>
     <string name="number_of_icons_in_folder_iew">Number of rows of icons in the folder view</string>
+    <string name="vertical_padding_in_folder_view">vertical padding in the folder view</string>
     <string name="dock_settings">Dock</string>
     <string name="enable_dock_hook">Enable dock hook</string>
     <string name="enable_dock">Enable dock blur</string>

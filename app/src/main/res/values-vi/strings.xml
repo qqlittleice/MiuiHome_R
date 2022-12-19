@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc">Make MiuiHome Great Again.</string>
+    <string name="xposed_desc">Làm cho MiuiHome tốt hơn.</string>
     <string name="backup_and_restore">Sao lưu và khôi phục</string>
     <string name="backup">Sao lưu cài đặt</string>
     <string name="restore">Khôi phục cài đặt</string>
@@ -28,8 +28,9 @@
     <string name="blurred_background_when_opening_folder_view">Làm mờ nền khi mở thư mục</string>
     <string name="using_full_width_of_folder_view">Sử dụng toàn bộ chiều rộng của thư mục</string>
     <string name="number_of_icons_in_folder_iew">Số cột trong thư mục</string>
+    <string name="vertical_padding_in_folder_view">Thêm vào chiều dọc trong chế độ xem thư mục</string>
     <string name="dock_settings">Thanh đế</string>
-    <string name="enable_dock_hook">Enable dock hook</string>
+    <string name="enable_dock_hook">Hiển thị thanh đế</string>
     <string name="enable_dock">Bật mờ đế</string>
     <string name="bottom_margin_of_dock_icon">Căn lề dưới đế</string>
     <string name="bottom_margin_of_home_icon">Căn lề dưới chỉ báo trang</string>
@@ -45,7 +46,7 @@
     <string name="unlock_launcher_icon_grids">Mở khóa giới hạn lưới</string>
     <string name="Always_blur_launcher_wallpaper">Luôn làm mờ hình nền</string>
     <string name="blur_radius">Bán Kính làm mờ</string>
-    <string name="unlock_hotseat">Mở khóa giới hạn số icons đế</string>
+    <string name="unlock_hotseat">Mở khóa giới hạn số biểu tượng đế</string>
     <string name="vertical_task_view_card_size">Kích thước thẻ tác vụ ở chế độ dọc</string>
     <string name="horizontal_task_view_card_size1">Kích thước thẻ tác vụ ở chế độ ngang - đứng</string>
     <string name="horizontal_task_view_card_size2">Kích thước thẻ tác vụ ở chế độ ngang - nằm</string>
@@ -86,7 +87,7 @@
     <string name="tg_chat">Nhóm Telegram</string>
     <string name="tg_channel">Kênh Telegram</string>
     <string name="qq_group">Nhóm QQ</string>
-    <string name="qq_channel">QQ Channel</string>
+    <string name="qq_channel">Kênh QQ</string>
     <string name="discussion">Thảo luận</string>
     <string name="repo_summary">Chào mừng các nhà phát triển tham gia vào quá trình phát triển</string>
     <string name="translate">Giúp chúng tôi dịch ứng dụng sang ngôn ngữ của bạn</string>
@@ -99,27 +100,27 @@
     <string name="anim_speed_recent">Tốc độ hoạt ảnh trong và ngoài màn hình gần đây</string>
     <string name="home_fold_dock">Thanh đế cho màn hình gập</string>
     <string name="home_all_apps_blur">Làm mờ Ngăn chứa ứng dụng</string>
-    <string name="home_all_apps_blur_summary">Please set app drawer background transparency to 100% to use this feature.Also this is a very early test feature, because refresh issues blur very easily turned into a black screen</string>
+    <string name="home_all_apps_blur_summary">Vui lòng đặt độ trong suốt của nền ngăn kéo ứng dụng thành 100% để sử dụng tính năng này. Ngoài ra, đây là tính năng thử nghiệm rất sớm vì các vấn đề làm mới mờ rất dễ biến thành màn hình đen</string>
     <string name="settings">Cài đặt</string>
     <string name="system_default">Mặc định</string>
     <string name="launcher_icon">Biểu tượng</string>
     <string name="recents_card_remove_anim">Sửa đổi hoạt ảnh xóa thẻ</string>
     <string name="recents_icon">Ẩn biểu tượng ứng dụng</string>
-    <string name="recent_text">Text displayed when no recent task</string>
-    <string name="recent_text_summary">Also you can type a space to remove the text</string>
-    <string name="big_icon_corner">Medium icon round corner follow</string>
-    <string name="big_folder_blur">Big folder blur</string>
-    <string name="big_folder_blur_corner_radius">Big folder blur corner radius</string>
-    <string name="big_folder_blur_background_width">Big folder blur view background width</string>
-    <string name="big_folder_blur_background_height">Big folder blur view background height</string>
-    <string name="big_folder_blur_drag_offset">Big folder drag view blur top offset</string>
+    <string name="recent_text">Văn bản hiển thị khi không có tác vụ gần đây</string>
+    <string name="recent_text_summary">Ngoài ra, bạn có thể nhập một dấu cách để xóa văn bản</string>
+    <string name="big_icon_corner">Bo tròn góc theo các biểu tượng trung bình</string>
+    <string name="big_folder_blur">Làm mờ thư mục lớn</string>
+    <string name="big_folder_blur_corner_radius">Góc làm mờ thư mục lớn</string>
+    <string name="big_folder_blur_background_width">Làm mờ chiều rộng nền thư mục lớn</string>
+    <string name="big_folder_blur_background_height">Làm mờ chiều cao nền thư mục lớn</string>
+    <string name="big_folder_blur_drag_offset">Làm mờ phần bù trên cùng khi kéo thả thư mục lớn</string>
     <string name="fold_dock_num">%d Num</string>
-    <string name="fold_dock_hotseat">Number of fixed Apps</string>
-    <string name="fold_dock_run">Number of running Apps</string>
-    <string name="haptic_feedback">Haptic feedback for side-slide return</string>
-    <string name="haptic_feedback_summary">The Official use is 162/163 respectively. Preset 2 is the vibration feedback during typing, you can try other haptic feedback yourself</string>
-    <string name="haptic_Back_ReadyBack">1. Ready Back</string>
-    <string name="haptic_Back_HandUp">2. Hand Up</string>
-    <string name="blur_view_color">Blur view background color</string>
-    <string name="mtk_warning">MediaTek devices use this feature may cause gesture animation lag</string>
+    <string name="fold_dock_hotseat">Số lượng ứng dụng cố định</string>
+    <string name="fold_dock_run">Số lượng ứng dụng đang chạy</string>
+    <string name="haptic_feedback">Phản hồi xúc giác cho thanh trượt bên</string>
+    <string name="haptic_feedback_summary">Việc sử dụng Chính thức là 162/163 tương ứng.  Cài đặt sẵn 2 là phản hồi rung khi gõ, bạn có thể tự mình thử các phản hồi xúc giác khác</string>
+    <string name="haptic_Back_ReadyBack">1. Sẵn sàng trở lại</string>
+    <string name="haptic_Back_HandUp">2. Giơ tay lên</string>
+    <string name="blur_view_color">Làm mờ màu nền của chế độ xem</string>
+    <string name="mtk_warning">Các thiết bị MediaTek sử dụng tính năng này có thể gây ra độ trễ cử chỉ hoạt ảnh</string>
 </resources>

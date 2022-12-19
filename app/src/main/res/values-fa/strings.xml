@@ -28,6 +28,7 @@
     <string name="blurred_background_when_opening_folder_view">بکگراند تار هنگام باز شدن پوشه</string>
     <string name="using_full_width_of_folder_view">استفاده از عرض کامل نمای پوشه ها</string>
     <string name="number_of_icons_in_folder_iew">تعداد ردیف آیکون‌ها در نمای پوشه</string>
+    <string name="vertical_padding_in_folder_view">vertical padding in the folder view</string>
     <string name="dock_settings">پیشخوان</string>
     <string name="enable_dock_hook">فعال کردن پیشخوان</string>
     <string name="enable_dock">تار کردن پیشخوان</string>

@@ -28,6 +28,7 @@
     <string name="blurred_background_when_opening_folder_view">Latar belakang kabur saat membuka tampilan folder</string>
     <string name="using_full_width_of_folder_view">Menggunakan lebar penuh tampilan folder</string>
     <string name="number_of_icons_in_folder_iew">Jumlah baris ikon dalam tampilan folder</string>
+    <string name="vertical_padding_in_folder_view">vertical padding in the folder view</string>
     <string name="dock_settings">Dok</string>
     <string name="enable_dock_hook">Aktifkan kail dok</string>
     <string name="enable_dock">Aktifkan blur dok</string>

@@ -28,6 +28,7 @@
     <string name="blurred_background_when_opening_folder_view">Unscharfer Hintergrund beim Öffnen der Ordneransicht</string>
     <string name="using_full_width_of_folder_view">Die volle Breite der Ordneransicht verwenden</string>
     <string name="number_of_icons_in_folder_iew">Anzahl der Zeilen von Symbolen in der Ordneransicht</string>
+    <string name="vertical_padding_in_folder_view">vertical padding in the folder view</string>
     <string name="dock_settings">Dock</string>
     <string name="enable_dock_hook">Dock-Hook aktivieren</string>
     <string name="enable_dock">Dock-Unschärfe aktivieren</string>
@@ -117,9 +118,9 @@
     <string name="fold_dock_hotseat">Anzahl der festen Apps</string>
     <string name="fold_dock_run">Anzahl laufender Apps</string>
     <string name="haptic_feedback">Haptisches Feedback für Slide-Slide-Return</string>
-    <string name="haptic_feedback_summary">The Official use is 162/163 respectively. Preset 2 is the vibration feedback during typing, you can try other haptic feedback yourself</string>
-    <string name="haptic_Back_ReadyBack">1. Ready Back</string>
-    <string name="haptic_Back_HandUp">2. Hand Up</string>
-    <string name="blur_view_color">Blur view background color</string>
+    <string name="haptic_feedback_summary">Die offizielle Verwendung ist 162/163. Voreinstellung 2 ist das Vibrations-Feedback während des Tippens, du kannst andere haptische Feedback selbst ausprobieren</string>
+    <string name="haptic_Back_ReadyBack">1. Bereit zurück</string>
+    <string name="haptic_Back_HandUp">2. Hand hoch</string>
+    <string name="blur_view_color">Hintergrundfarbe der Unschärfe</string>
     <string name="mtk_warning">MediaTek Geräte die dieses Feature verwenden, können eine Verzögerung in der Gesten Animation haben</string>
 </resources>
