@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc">Giúp MiuiHome Tuyệt Vời Trở Lại.</string>
+    <string name="xposed_desc">Làm cho MiuiHome tốt hơn.</string>
     <string name="backup_and_restore">Sao lưu và khôi phục</string>
     <string name="backup">Sao lưu cài đặt</string>
     <string name="restore">Khôi phục cài đặt</string>
@@ -28,7 +28,7 @@
     <string name="blurred_background_when_opening_folder_view">Làm mờ nền khi mở thư mục</string>
     <string name="using_full_width_of_folder_view">Sử dụng toàn bộ chiều rộng của thư mục</string>
     <string name="number_of_icons_in_folder_iew">Số cột trong thư mục</string>
-    <string name="vertical_padding_in_folder_view">vertical padding in the folder view</string>
+    <string name="vertical_padding_in_folder_view">Thêm vào chiều dọc trong chế độ xem thư mục</string>
     <string name="dock_settings">Thanh đế</string>
     <string name="enable_dock_hook">Hiển thị thanh đế</string>
     <string name="enable_dock">Bật mờ đế</string>
