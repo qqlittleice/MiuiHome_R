@@ -9,7 +9,7 @@
 [![Chat](https://img.shields.io/badge/Telegram-Chat-blue.svg?logo=telegram)](https://t.me/MiuiHome_Xposed)
 [![Release](https://img.shields.io/github/v/release/Xposed-Modules-Repo/com.yuk.miuihomer?label=release)](https://github.com/Xposed-Modules-Repo/com.yuk.miuihomeR/releases/latest)
 
-![Launcher](https://gcore.jsdelivr.net/gh/qqlittleice/MiuiHome@main/Pic/MiuiHome.png)
+![Launcher](https://gcore.jsdelivr.net/gh/qqlittleice/MiuiHome_R@main/MiuiHomeR.png)
 
 </div>
 
