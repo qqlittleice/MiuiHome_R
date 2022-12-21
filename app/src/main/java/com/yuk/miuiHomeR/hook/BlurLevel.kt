@@ -1,9 +1,13 @@
 package com.yuk.miuiHomeR.hook
 
+import android.app.Activity
 import com.github.kyuubiran.ezxhelper.utils.findMethod
 import com.github.kyuubiran.ezxhelper.utils.hookBefore
 import com.github.kyuubiran.ezxhelper.utils.hookReturnConstant
 import com.yuk.miuiHomeR.mPrefsMap
+import com.yuk.miuiHomeR.utils.ktx.callStaticMethod
+import com.yuk.miuiHomeR.utils.ktx.findClass
+import com.yuk.miuiHomeR.utils.ktx.hookAfterAllMethods
 import com.yuk.miuiHomeR.utils.ktx.hookBeforeMethod
 
 object BlurLevel : BaseHook() {
@@ -40,7 +44,15 @@ object BlurLevel : BaseHook() {
                 }
             }
         }
-
+        if (blurLevel == 0) {
+            val blurClass = "com.miui.home.launcher.common.BlurUtils".findClass()
+            val navStubViewClass = "com.miui.home.recents.NavStubView".findClass()
+            val applicationClass = "com.miui.home.launcher.Application".findClass()
+            navStubViewClass.hookAfterAllMethods("onTouchEvent") {
+                val mLauncher = applicationClass.callStaticMethod("getLauncher") as Activity
+                blurClass.callStaticMethod("fastBlur", 1.0f, mLauncher.window, true, 500L)
+            }
+        }
     }
 }
 
