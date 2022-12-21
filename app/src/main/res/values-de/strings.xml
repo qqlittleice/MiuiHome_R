@@ -28,7 +28,7 @@
     <string name="blurred_background_when_opening_folder_view">Unscharfer Hintergrund beim Öffnen der Ordneransicht</string>
     <string name="using_full_width_of_folder_view">Die volle Breite der Ordneransicht verwenden</string>
     <string name="number_of_icons_in_folder_iew">Anzahl der Zeilen von Symbolen in der Ordneransicht</string>
-    <string name="vertical_padding_in_folder_view">vertical padding in the folder view</string>
+    <string name="vertical_padding_in_folder_view">vertikale Füllung in der Ordneransicht</string>
     <string name="dock_settings">Dock</string>
     <string name="enable_dock_hook">Dock-Hook aktivieren</string>
     <string name="enable_dock">Dock-Unschärfe aktivieren</string>
