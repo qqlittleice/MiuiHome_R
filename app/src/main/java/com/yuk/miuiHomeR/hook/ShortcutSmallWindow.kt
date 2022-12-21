@@ -5,8 +5,6 @@ import android.content.ComponentName
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import androidx.core.content.ContextCompat
-import com.github.kyuubiran.ezxhelper.init.InitFields.appContext
 import com.github.kyuubiran.ezxhelper.init.InitFields.moduleRes
 import com.yuk.miuiHomeR.R
 import com.yuk.miuiHomeR.mPrefsMap
@@ -16,11 +14,14 @@ import com.yuk.miuiHomeR.utils.ktx.findClass
 import com.yuk.miuiHomeR.utils.ktx.getStaticObjectField
 import com.yuk.miuiHomeR.utils.ktx.hookAfterAllMethods
 import com.yuk.miuiHomeR.utils.ktx.hookBeforeMethod
+import com.yuk.miuiHomeR.utils.ktx.isDarkMode
 import com.yuk.miuiHomeR.utils.ktx.setStaticObjectField
+import de.robv.android.xposed.XposedBridge
 import de.robv.android.xposed.XposedHelpers
 
 @SuppressLint("StaticFieldLeak", "DiscouragedApi")
 object ShortcutSmallWindow : BaseHook() {
+    @SuppressLint("UseCompatLoadingForDrawables")
     override fun init() {
 
         if (!mPrefsMap.getBoolean("shortcut_small_window")) return
@@ -67,10 +68,10 @@ object ShortcutSmallWindow : BaseHook() {
             val mAllSystemShortcutMenuItems = mSystemShortcutMenuItem.getStaticObjectField("sAllSystemShortcutMenuItems") as Collection<Any>
             val mSmallWindowInstance = XposedHelpers.newInstance(mAppDetailsShortcutMenuItem)
             mSmallWindowInstance.callMethod("setShortTitle", moduleRes.getString(R.string.small_window))
+            XposedBridge.log(isDarkMode().toString())
             mSmallWindowInstance.callMethod(
-                "setIconDrawable", ContextCompat.getDrawable(
-                    appContext, appContext.resources.getIdentifier("ic_task_small_window", "drawable", "com.miui.home")
-                )
+                "setIconDrawable",
+                if (isDarkMode()) moduleRes.getDrawable(R.drawable.ic_task_small_window_dark) else moduleRes.getDrawable(R.drawable.ic_task_small_window_light)
             )
             val sAllSystemShortcutMenuItems = ArrayList<Any>()
             sAllSystemShortcutMenuItems.add(mSmallWindowInstance)
