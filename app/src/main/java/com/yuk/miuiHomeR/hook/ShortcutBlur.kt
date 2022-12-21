@@ -104,7 +104,9 @@ object ShortcutBlur : BaseHook() {
             val valueAnimator = ValueAnimator.ofInt(0, 50)
             valueAnimator.addUpdateListener { animator ->
                 val value = animator.animatedValue as Int
-                blurUtilsClass.callStaticMethod("fastBlurDirectly", value / 50f, mWindow)
+                if (!mPrefsMap.getBoolean("home_blur_wallpaper")) {
+                    blurUtilsClass.callStaticMethod("fastBlurDirectly", value / 50f, mWindow)
+                }
                 targetBlurView.setRenderEffect(renderEffectArray[value])
             }
             val dragView = dragObject.callMethod("getDragView") as View
@@ -177,7 +179,9 @@ object ShortcutBlur : BaseHook() {
                 valueAnimator.addUpdateListener { animator ->
                     val value = animator.animatedValue as Int
                     targetBlurView.setRenderEffect(renderEffectArray[value])
-                    blurUtilsClass.callStaticMethod("fastBlurDirectly", value / 50f, mWindow)
+                    if (!mPrefsMap.getBoolean("home_blur_wallpaper")) {
+                        blurUtilsClass.callStaticMethod("fastBlurDirectly", value / 50f, mWindow)
+                    }
                 }
                 valueAnimator.addListener(object : AnimatorListenerAdapter() {
                     override fun onAnimationEnd(animation: Animator) {
