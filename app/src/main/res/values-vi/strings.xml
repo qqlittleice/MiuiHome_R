@@ -123,4 +123,6 @@
     <string name="haptic_Back_HandUp">2. Giơ tay lên</string>
     <string name="blur_view_color">Làm mờ màu nền của chế độ xem</string>
     <string name="mtk_warning">Các thiết bị MediaTek sử dụng tính năng này có thể gây ra độ trễ cử chỉ hoạt ảnh</string>
+    <string name="complete_blur_fix">Complementary complete blur</string>
+    <string name="complete_blur_fix_summary">Enable this feature may cause in-app gesture up moment not blurred and other blur issues</string>
 </resources>
