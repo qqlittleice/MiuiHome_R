@@ -123,6 +123,4 @@
     <string name="haptic_Back_HandUp">2. Hand hoch</string>
     <string name="blur_view_color">Hintergrundfarbe der Unschärfe</string>
     <string name="mtk_warning">MediaTek Geräte die dieses Feature verwenden, können eine Verzögerung in der Gesten Animation haben</string>
-    <string name="complete_blur_fix">Complementary complete blur</string>
-    <string name="complete_blur_fix_summary">Enable this feature may cause in-app gesture up moment not blurred and other blur issues</string>
 </resources>
