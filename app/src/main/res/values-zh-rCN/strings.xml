@@ -123,4 +123,6 @@
     <string name="haptic_Back_HandUp">2. 完成返回时</string>
     <string name="blur_view_color">模糊视图背景色</string>
     <string name="mtk_warning">联发科开启该功能可能导致手势动画卡顿</string>
+    <string name="complete_blur_fix">Complementary complete blur</string>
+    <string name="complete_blur_fix_summary">Enable this feature may cause in-app gesture up moment not blurred and other blur issues</string>
 </resources>
