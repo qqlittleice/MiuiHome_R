@@ -44,7 +44,7 @@ object BlurLevel : BaseHook() {
                 }
             }
         }
-        if (blurLevel == 0) {
+        if (blurLevel == 0 && mPrefsMap.getBoolean("complete_blur_fix")) {
             val blurClass = "com.miui.home.launcher.common.BlurUtils".findClass()
             val navStubViewClass = "com.miui.home.recents.NavStubView".findClass()
             val applicationClass = "com.miui.home.launcher.Application".findClass()
