@@ -118,7 +118,7 @@
     <string name="fold_dock_hotseat">固定應用個數</string>
     <string name="fold_dock_run">運作應用個數</string>
     <string name="haptic_feedback">側滑返回時的震動回饋</string>
-    <string name="haptic_feedback_summary">官方使用分別為 162/163。 預設 2 點震動回饋，您可以嘗試其他的觸覺回饋</string>
+    <string name="haptic_feedback_summary">官方使用分別為 162/163。 預設輸入 2 個震動回饋，您可以嘗試其他的數值</string>
     <string name="haptic_Back_ReadyBack">1. 準備返回時</string>
     <string name="haptic_Back_HandUp">2. 完成返回時</string>
     <string name="blur_view_color">模糊視圖背景色彩</string>
