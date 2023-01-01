@@ -63,7 +63,7 @@
     <string name="hide_category_all">Ocultar \"todos\" na gaveta de aplicativos</string>
     <string name="hide_category_paging_edit">Ocultar o botão \"editar\" na paginação da gaveta de aplicativos</string>
     <string name="hide_clean_up">Ocultar o botão \"limpar tudo\"</string>
-    <string name="hide_small_window">Remove the \"Floating windows\" button</string>
+    <string name="hide_small_window">Remover o botão \"janelas flutuantes\"</string>
     <string name="github">Nosso repositório no GitHub</string>
     <string name="close_folder">Fechar pastas automaticamente</string>
     <string name="close_folder_summary">Fechar pasta ao iniciar o aplicativo da pasta</string>
