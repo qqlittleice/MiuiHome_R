@@ -28,7 +28,7 @@
     <string name="blurred_background_when_opening_folder_view">資料夾開啟時背景模糊</string>
     <string name="using_full_width_of_folder_view">利用整個資料夾視圖的寬度</string>
     <string name="number_of_icons_in_folder_iew">資料夾視圖內圖示的欄數</string>
-    <string name="vertical_padding_in_folder_view">vertical padding in the folder view</string>
+    <string name="vertical_padding_in_folder_view">資料夾視圖内水平間距</string>
     <string name="dock_settings">底欄</string>
     <string name="enable_dock_hook">啟用 Dock 模糊</string>
     <string name="enable_dock">啟用 Dock 模糊</string>
@@ -94,7 +94,7 @@
     <string name="translator">翻譯人員</string>
     <string name="developer">開發人員</string>
     <string name="translation">Crowdin 翻譯</string>
-    <string name="translators">聖小熊 (Github: @a406010503)</string>
+    <string name="translators">聖小熊 (Telegram: @HolyBearHome)</string>
     <string name="language">繁體中文（香港）</string>
     <string name="settings_language">語言</string>
     <string name="anim_speed_recent">動畫速度「進出最近任務畫面」</string>
@@ -119,8 +119,10 @@
     <string name="fold_dock_run">運作應用個數</string>
     <string name="haptic_feedback">側滑返回時的震動回饋</string>
     <string name="haptic_feedback_summary">官方使用分別為 162/163。 預設輸入 2 個震動回饋，您可以嘗試其他的數值</string>
-    <string name="haptic_Back_ReadyBack">1. Ready Back</string>
-    <string name="haptic_Back_HandUp">2. Hand Up</string>
-    <string name="blur_view_color">Blur view background color</string>
+    <string name="haptic_Back_ReadyBack">1. 準備返回時</string>
+    <string name="haptic_Back_HandUp">2. 完成返回時</string>
+    <string name="blur_view_color">模糊視圖背景色彩</string>
     <string name="mtk_warning">聯發科技裝置使用此功能可能導致手勢動畫卡頓</string>
+    <string name="complete_blur_fix">Complementary complete blur</string>
+    <string name="complete_blur_fix_summary">Enable this feature may cause in-app gesture up moment not blurred and other blur issues</string>
 </resources>
