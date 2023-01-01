@@ -63,6 +63,7 @@
     <string name="hide_category_all">اخفاء \"الكل\" من تصنيفات درج التطبيقات</string>
     <string name="hide_category_paging_edit">اخفاء زر \"تعديل\" في درج التطبيقات</string>
     <string name="hide_clean_up">إخفاء زر تنظيف الكل</string>
+    <string name="hide_small_window">إزالة زر \"النوافذ العائمة\"</string>
     <string name="github">Github Repository</string>
     <string name="close_folder">إغلاق المجلد تلقائيا</string>
     <string name="close_folder_summary">إغلاق المجلد عند فتح تطبيق من المجلد</string>

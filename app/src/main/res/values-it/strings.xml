@@ -63,6 +63,7 @@
     <string name="hide_category_all">Hide \"All\" in App Drawer</string>
     <string name="hide_category_paging_edit">Hide \"Edit\" Button in App Drawer\'s Paging</string>
     <string name="hide_clean_up">Hide the Clean All Button</string>
+    <string name="hide_small_window">Remove the \"Floating windows\" button</string>
     <string name="github">Github Repository</string>
     <string name="close_folder">Auto close folder</string>
     <string name="close_folder_summary">Close folder when launch app from folder</string>

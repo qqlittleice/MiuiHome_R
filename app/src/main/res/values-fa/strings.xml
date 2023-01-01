@@ -63,6 +63,7 @@
     <string name="hide_category_all">مخفی کردن \"همه\" در سربرگه کشوی برنامه ها</string>
     <string name="hide_category_paging_edit">پنهان کردن دکمه \"ویرایش\" در صفحه بندی کشوی برنامه‌ها</string>
     <string name="hide_clean_up">دکمه \"بستن همه\" را مخفی کنید</string>
+    <string name="hide_small_window">دکمه \"پنجره های شناور\" را حذف کنید</string>
     <string name="github">منبع Github</string>
     <string name="close_folder">بسته شدن خودکار پوشه</string>
     <string name="close_folder_summary">هنگام راه‌اندازی برنامه‌ای از پوشه، پوشه را ببندید</string>
