@@ -63,7 +63,7 @@
     <string name="hide_category_all">移除应用分组中的「全部」</string>
     <string name="hide_category_paging_edit">移除应用分页内的「编辑」按钮</string>
     <string name="hide_clean_up">移除「清理」按钮</string>
-    <string name="hide_small_window">移除「小窗应用」按钮</string>
+    <string name="hide_small_window">Remove the \"Floating windows\" button</string>
     <string name="github">项目地址</string>
     <string name="close_folder">自动关闭文件夹</string>
     <string name="close_folder_summary">从文件夹启动应用时关闭文件夹</string>
