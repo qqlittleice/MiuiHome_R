@@ -63,7 +63,7 @@
     <string name="hide_category_all">Uygulama Çekmecesinde \"Hepsi\" Seçeneğini Gizle</string>
     <string name="hide_category_paging_edit">Uygulama Çekmecesinin Sayfalamasında \"Düzenle\" Düğmesini Gizle</string>
     <string name="hide_clean_up">Tümünü Temizle Düğmesini Gizle</string>
-    <string name="hide_small_window">\"Yüzer pencereler\" düğmesini kaldırın</string>
+    <string name="hide_small_window">Remove the \"Floating windows\" button</string>
     <string name="github">GitHub Reposu</string>
     <string name="close_folder">Klasörü otomatik kapat</string>
     <string name="close_folder_summary">Uygulamayı klasörden başlatırken klasörü kapat</string>
