@@ -150,13 +150,13 @@
             app:showSeekBarValue="true" />
 
         <SeekBarPreference
+            android:defaultValue="0"
             android:key="prefs_key_home_folder_vertical_padding"
             android:title="@string/vertical_padding_in_folder_view"
-            android:defaultValue="0"
-            app:minValue="0"
-            app:maxValue="100"
             app:format="%d dp"
-            app:showSeekBarValue="true"/>
+            app:maxValue="100"
+            app:minValue="0"
+            app:showSeekBarValue="true" />
 
     </PreferenceCategory>
 </PreferenceScreen>

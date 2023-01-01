@@ -11,7 +11,6 @@
             app:entries="@array/recent_blur"
             app:entryValues="@array/recent_blur_value" />
 
-
         <SwitchPreference
             android:defaultValue="false"
             android:key="prefs_key_complete_blur_fix"
@@ -126,7 +125,6 @@
             android:title="@string/recents_card_bg_color"
             app:showAlphaSlider="true"
             app:showColorShades="true" />
-
 
     </PreferenceCategory>
 

@@ -48,21 +48,23 @@ fun isAlpha(): Boolean = InitFields.appContext.packageManager.getPackageInfo(
 ).versionName.contains("ALPHA", ignoreCase = true)
 
 fun isPadDevice(): Boolean = DeviceHelper.isTablet() || DeviceHelper.isFoldDevice()
+
 fun atLeastAndroidS(): Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
+
 fun atLeastAndroidT(): Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
 
 fun checkVersionCode(): Long = InitFields.appContext.packageManager.getPackageInfo(
     InitFields.appContext.packageName, 0
 ).longVersionCode
 
-fun checkMiuiVersion(): String = when (getProp("ro.miui.ui.version.name")) {
-    "V140" -> "14"
-    "V130" -> "13"
-    "V125" -> "12.5"
-    "V12" -> "12"
-    "V11" -> "11"
-    "V10" -> "10"
-    else -> "?"
+fun checkMiuiVersion(): Float = when (getProp("ro.miui.ui.version.name")) {
+    "V140" -> 14f
+    "V130" -> 13f
+    "V125" -> 12.5f
+    "V12" -> 12f
+    "V11" -> 11f
+    "V10" -> 10f
+    else -> 0f
 }
 
 fun checkAndroidVersion(): String = getProp("ro.build.version.release")
