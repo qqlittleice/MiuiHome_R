@@ -15,7 +15,7 @@ object FolderVerticalPadding : BaseHook() {
             "bind"
         ) {
             val mContent = XposedHelpers.getObjectField(it.thisObject, "mContent") as GridView
-            if (verticalPadding > 0) mContent.verticalSpacing = dp2px(verticalPadding.toFloat())
+            mContent.verticalSpacing = dp2px(verticalPadding.toFloat())
         }
     }
 }

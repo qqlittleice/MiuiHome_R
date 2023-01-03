@@ -3,6 +3,7 @@ package com.yuk.miuiHomeR.hook
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.ValueAnimator
+import android.app.Activity
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.RenderEffect
@@ -83,18 +84,15 @@ object ShortcutBlur : BaseHook() {
 
             if (!iconIsApplicatoin && !BLUR_ICON_APP_NAME.contains(iconTitle)) return@hookBeforeAllMethods
 
-            val mLauncher = applicationClass.callStaticMethod("getLauncher")
+            val mLauncher = applicationClass.callStaticMethod("getLauncher") as Activity
             val launcherStatusField = launcherStateClass.getDeclaredField("ALL_APPS")
             launcherStatusField.isAccessible = true
             val allAppsStatus = launcherStatusField.get(null)
-            val stateManager = mLauncher?.callMethod("getStateManager")
+            val stateManager = mLauncher.callMethod("getStateManager")
             val currentState = stateManager?.callMethod("getState")
             if (currentState == allAppsStatus) return@hookBeforeAllMethods
 
-
-            val systemUiController = mLauncher?.callMethod("getSystemUiController")
-            val mWindow = systemUiController?.getObjectField("mWindow")
-            val targetBlurView = mLauncher?.callMethod("getScreen") as View
+            val targetBlurView = mLauncher.callMethod("getScreen") as View
 
             val renderEffectArray = arrayOfNulls<RenderEffect>(51)
             for (index in 0..50) {
@@ -105,7 +103,7 @@ object ShortcutBlur : BaseHook() {
             valueAnimator.addUpdateListener { animator ->
                 val value = animator.animatedValue as Int
                 if (!mPrefsMap.getBoolean("home_blur_wallpaper")) {
-                    blurUtilsClass.callStaticMethod("fastBlurDirectly", value / 50f, mWindow)
+                    blurUtilsClass.callStaticMethod("fastBlurDirectly", value / 50f, mLauncher.window)
                 }
                 targetBlurView.setRenderEffect(renderEffectArray[value])
             }
