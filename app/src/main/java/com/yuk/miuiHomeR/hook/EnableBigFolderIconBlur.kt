@@ -43,7 +43,7 @@ object EnableBigFolderIconBlur : BaseHook() {
             mDockBlur = BlurFrameLayout(InitFields.appContext)
             XposedHelpers.setAdditionalInstanceField(it.thisObject, "mDockBlur", mDockBlur)
         }
-        //小文件夹模糊
+        //大文件夹模糊
         try {
             findMethod(
                 loadClass("com.miui.home.launcher.folder.FolderIcon2x2_4"), true
@@ -87,47 +87,6 @@ object EnableBigFolderIconBlur : BaseHook() {
                 if ("LauncherState" == hookParam.args[0].javaClass.simpleName) mDockBlur.visibility = View.VISIBLE
                 else mDockBlur.visibility = View.GONE
             }
-        }
-        try {
-            findMethod(
-                loadClass("com.miui.home.launcher.folder.FolderIcon2x2_9"), true
-            ) { name == "onFinishInflate" }.hookAfter {
-                val mIconImageView = it.thisObject.getObjectFieldAs<ImageView>("mImageView")
-                val mIconContainer = mIconImageView.parent as FrameLayout
-                val mDockBlur = XposedHelpers.getAdditionalInstanceField(it.thisObject, "mDockBlur") as BlurFrameLayout
-                val view = FrameLayout(mIconImageView.context)
-                mDockBlur.blurController.apply {
-                    cornerRadius = CornersRadius.all(value)
-                }
-                mIconImageView.visibility = View.GONE
-                mDockBlur.addView(view)
-                mIconContainer.addView(mDockBlur, 0)
-                val lp1 = mDockBlur.layoutParams as FrameLayout.LayoutParams
-                lp1.gravity = Gravity.CENTER
-                lp1.width = value1
-                lp1.height = value2
-                launcherClass.hookAfterMethod("showEditPanel", Boolean::class.java) { hookParam ->
-                    isShowEditPanel = hookParam.args[0] as Boolean
-                    if (isShowEditPanel) {
-                        mDockBlur.visibility = View.GONE
-                        mIconImageView.visibility = View.VISIBLE
-                    } else {
-                        mDockBlur.visibility = View.VISIBLE
-                        mIconImageView.visibility = View.GONE
-                    }
-                }
-                launcherClass.hookAfterMethod("openFolder", folderInfo, View::class.java) {
-                    mDockBlur.visibility = View.GONE
-                }
-                launcherClass.hookAfterMethod("closeFolder", Boolean::class.java) {
-                    if (!isShowEditPanel) mDockBlur.visibility = View.VISIBLE
-                }
-                launcherClass.hookAfterMethod("onStateSetStart", launcherStateClass) { hookParam ->
-                    if ("LauncherState" == hookParam.args[0].javaClass.simpleName) mDockBlur.visibility = View.VISIBLE
-                    else mDockBlur.visibility = View.GONE
-                }
-            }
-        } catch (_: Exception) {
         }
         val dragViewClass = "com.miui.home.launcher.DragView".findClass()
         dragViewClass.hookAfterAllMethods("showWithAnim") {
