@@ -32,6 +32,13 @@
     <string name="dock_settings">Dock</string>
     <string name="enable_dock_hook">Dock işlevini etkinleştir</string>
     <string name="enable_dock">Dock bulanıklığını etkinleştir</string>
+    <string name="bottom_margin_of_dock_icon">Dock simgesinin alt kenar boşluğu</string>
+    <string name="bottom_margin_of_home_icon">Sayfa göstergesinin alt kenar boşluğu</string>
+    <string name="height_of_dock_view">Dock görünümünün yüksekliği</string>
+    <string name="margins_on_both_sides_of_dock_view">Dock görünümünün her iki tarafındaki kenar boşlukları</string>
+    <string name="top_margin_of_dock_icon">Dock simgesinin üst kenar boşluğu</string>
+    <string name="bottom_margin_of_dock_view">Dock görünümünün alt kenar boşluğu</string>
+    <string name="corner_radius_of_dock_view">Dock görünümünün köşe yarıçapı</string>
     <string name="other_features">Diğer</string>
     <string name="always_show_status_bar_clock">Durum çubuğu saatini daima göster</string>
     <string name="double_tap_to_lock_screen">Ekranı kilitlemek için iki kez dokunun</string>
@@ -85,6 +92,8 @@
     <string name="discussion">Tartışma</string>
     <string name="repo_summary">Gelişmemize yardımcı olmak için bize katılın</string>
     <string name="translate">Uygulamayı kendi dilinize çevirmemize yardımcı olun</string>
+    <string name="translator">Çevirmen</string>
+    <string name="developer">Geliştirici</string>
     <string name="translation">Crowdin</string>
     <string name="translators">Sedat Karakaş </string>
     <string name="language">Türkçe</string>
