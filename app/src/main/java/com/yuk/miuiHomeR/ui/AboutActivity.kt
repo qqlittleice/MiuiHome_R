@@ -10,7 +10,7 @@ import com.yuk.miuiHomeR.R
 import com.yuk.miuiHomeR.ui.base.SubFragment
 import com.yuk.miuiHomeR.utils.ktx.getLocale
 import com.yuk.miuiHomeR.utils.ktx.setLocale
-import moralnorm.common.app.PickerDragActivity
+import moralnorm.appcompat.app.PickerDragActivity
 import moralnorm.internal.utils.ViewUtils
 import moralnorm.preference.Preference
 

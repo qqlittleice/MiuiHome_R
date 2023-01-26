@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.DayNight" />
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar" >
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.Light</item>
+    </style>
 
-    <style name="AppTheme.Dark" parent="Theme.AppCompat.Dark">
+
+    <style name="AppTheme.Dark" parent="Theme.AppCompat.Dark.DarkActionBar">
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.Dark</item>
         <item name="android:forceDarkAllowed">false</item>
     </style>

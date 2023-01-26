@@ -16,8 +16,8 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.util.AttributeSet;
+import android.widget.ImageView;
 
-import androidx.appcompat.widget.AppCompatImageView;
 
 import com.yuk.miuiHomeR.R;
 
@@ -25,7 +25,7 @@ import moralnorm.annotation.ColorInt;
 import moralnorm.annotation.ColorRes;
 import moralnorm.annotation.DrawableRes;
 
-public class CircleImageView extends AppCompatImageView {
+public class CircleImageView extends ImageView {
 
     private static final ScaleType SCALE_TYPE = ScaleType.CENTER_CROP;
 

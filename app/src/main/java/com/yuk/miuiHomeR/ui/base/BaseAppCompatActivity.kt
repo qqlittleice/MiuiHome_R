@@ -11,6 +11,7 @@ import com.yuk.miuiHomeR.utils.AppManager
 import com.yuk.miuiHomeR.utils.ktx.getLocale
 import com.yuk.miuiHomeR.utils.ktx.setLocale
 import moralnorm.appcompat.app.AppCompatActivity
+
 import moralnorm.internal.utils.ViewUtils
 import java.util.Locale
 
