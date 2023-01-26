@@ -18,4 +18,3 @@ object DisableRecentViewWallpaperDarken : BaseHook() {
 
     }
 }
-

@@ -4,8 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar" >
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.Light</item>
     </style>
-
-
+    
     <style name="AppTheme.Dark" parent="Theme.AppCompat.Dark.DarkActionBar">
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.Dark</item>
         <item name="android:forceDarkAllowed">false</item>
@@ -30,6 +29,7 @@
         <item name="android:windowAnimationStyle">@style/ActivityNoAnimation</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.Light</item>
     </style>
 
     <style name="Theme.AppCompat.Translucent.NoActionBar.NoAnimation.Dark">

@@ -20,7 +20,6 @@ object AnimDurationRatio : BaseHook() {
         }.hookBefore {
             it.result = value2
         }
+
     }
-
 }
-

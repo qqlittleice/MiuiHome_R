@@ -28,6 +28,7 @@ import de.robv.android.xposed.XposedHelpers
 @RequiresApi(Build.VERSION_CODES.S)
 object EnableFolderIconBlur : BaseHook() {
     override fun init() {
+
         if (!mPrefsMap.getBoolean("small_folder_blur")) return
         var isShowEditPanel = false
         val value = mPrefsMap.getInt("small_folder_corner", 58).toFloat()
@@ -116,5 +117,6 @@ object EnableFolderIconBlur : BaseHook() {
                 dragView.background = backgroundDrawable
             }
         }
+
     }
 }

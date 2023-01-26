@@ -59,5 +59,6 @@ object FolderAnim : BaseHook() {
         "com.miui.home.launcher.Launcher".hookAfterMethod("closeFolder", Boolean::class.java) {
             hook2?.unhook()
         }
+
     }
 }

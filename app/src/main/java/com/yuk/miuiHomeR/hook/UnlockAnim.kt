@@ -14,6 +14,6 @@ object UnlockAnim : BaseHook() {
             it.args[4] = 0.5f
             it.args[5] = 0.5f
         }
-    }
 
+    }
 }

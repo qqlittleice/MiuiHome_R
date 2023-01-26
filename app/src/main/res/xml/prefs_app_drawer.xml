@@ -20,4 +20,5 @@
             android:title="@string/hide_category_paging_edit" />
 
     </PreferenceCategory>
+
 </PreferenceScreen>

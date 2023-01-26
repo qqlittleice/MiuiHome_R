@@ -61,6 +61,7 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/MiuiHome_Xposed_build" />
         </Preference>
+
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/other_features">

@@ -26,4 +26,5 @@
             android:title="@string/restore" />
 
     </PreferenceCategory>
+
 </PreferenceScreen>

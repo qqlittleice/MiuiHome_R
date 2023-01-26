@@ -10,5 +10,6 @@ object UnlockHotseatIcon : BaseHook() {
         "com.miui.home.launcher.DeviceConfig".hookBeforeMethod("getHotseatMaxCount") {
             it.result = 99
         }
+
     }
 }

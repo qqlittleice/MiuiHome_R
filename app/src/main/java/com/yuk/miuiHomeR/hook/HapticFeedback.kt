@@ -23,5 +23,6 @@ object HapticFeedback : BaseHook() {
         }.replaceMethod {
             it.args[0].getObjectField("mHapticHelper")?.callMethod("performExtHapticFeedback", value1)
         }
+
     }
 }

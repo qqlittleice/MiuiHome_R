@@ -10,10 +10,7 @@ object InfiniteScroll : BaseHook() {
 
         if (!mPrefsMap.getBoolean("home_infinite_scroll")) return
         "com.miui.home.launcher.ScreenView".hookAfterMethod(
-            "getSnapToScreenIndex",
-            Int::class.javaPrimitiveType,
-            Int::class.javaPrimitiveType,
-            Int::class.javaPrimitiveType
+            "getSnapToScreenIndex", Int::class.javaPrimitiveType, Int::class.javaPrimitiveType, Int::class.javaPrimitiveType
         ) {
             if (it.args[0] !== it.result) return@hookAfterMethod
             val screenCount = it.thisObject.callMethod("getScreenCount") as Int
@@ -29,5 +26,6 @@ object InfiniteScroll : BaseHook() {
             if (it.result as Int == 0) it.result = screenCount
             else if (it.result as Int == screenCount - 1) it.result = 0
         }
+
     }
 }

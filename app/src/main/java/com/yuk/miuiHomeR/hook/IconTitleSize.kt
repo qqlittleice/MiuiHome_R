@@ -14,9 +14,9 @@ import com.yuk.miuiHomeR.utils.ktx.getObjectField
 import com.yuk.miuiHomeR.utils.ktx.hookAfterMethod
 
 object IconTitleSize : BaseHook() {
-
     @SuppressLint("DiscouragedApi")
     override fun init() {
+
         val value = mPrefsMap.getInt("icon_title_font_size", -1).toFloat()
         val launcherClass = "com.miui.home.launcher.Launcher".findClass()
         val shortcutInfoClass = "com.miui.home.launcher.ShortcutInfo".findClass()
@@ -71,5 +71,6 @@ object IconTitleSize : BaseHook() {
         } catch (e: Throwable) {
             Log.ex(e)
         }
+
     }
 }

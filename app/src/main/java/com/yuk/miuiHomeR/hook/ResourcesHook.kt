@@ -2,6 +2,7 @@ package com.yuk.miuiHomeR.hook
 
 import android.content.res.Resources
 import com.github.kyuubiran.ezxhelper.init.InitFields.appContext
+import com.github.kyuubiran.ezxhelper.utils.Log
 import com.yuk.miuiHomeR.mPrefsMap
 import com.yuk.miuiHomeR.utils.ResourcesHookData
 import com.yuk.miuiHomeR.utils.ResourcesHookMap
@@ -35,7 +36,6 @@ object ResourcesHook : BaseHook() {
 
         val value = mPrefsMap.getInt("task_view_corners", -1).toFloat()
         val value1 = mPrefsMap.getInt("task_view_header_height", -1).toFloat()
-
         if (mPrefsMap.getBoolean("home_unlock_grids")) {
             val deviceClass = "com.miui.home.launcher.compat.LauncherCellCountCompatDevice".findClass()
             deviceClass.hookBeforeAllMethods("shouldUseDeviceValue") { it.result = false }
@@ -45,14 +45,18 @@ object ResourcesHook : BaseHook() {
             hookMap["config_cell_count_y_min"] = ResourcesHookData("integer", 4)
             hookMap["config_cell_count_x_max"] = ResourcesHookData("integer", 16)
             hookMap["config_cell_count_y_max"] = ResourcesHookData("integer", 18)
+            try {
+                "com.miui.home.launcher.DeviceConfig".hookBeforeMethod("isThemeCoverCellConfig") {
+                    it.result = true
+                }
+            } catch (e: Throwable) {
+                Log.ex(e)
+            }
         }
-
         if (value != -1f && value != 20f) {
             hookMap["recents_task_view_rounded_corners_radius_min"] = ResourcesHookData("dimen", dp2px(value))
             hookMap["recents_task_view_rounded_corners_radius_max"] = ResourcesHookData("dimen", dp2px(value))
         }
-
         if (value1 != -1f && value != 40f) hookMap["recents_task_view_header_height"] = ResourcesHookData("dimen", dp2px(value1))
-
     }
 }

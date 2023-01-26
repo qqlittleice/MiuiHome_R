@@ -8,6 +8,7 @@ import com.yuk.miuiHomeR.utils.ktx.callMethod
 
 object ShortcutItemCount : BaseHook() {
     override fun init() {
+
         if (!mPrefsMap.getBoolean("shortcut_remove_restrictions")) return
         findMethod("com.miui.home.launcher.shortcuts.AppShortcutMenu") { name == "getMaxCountInCurrentOrientation" }.hookAfter {
             it.result = 20

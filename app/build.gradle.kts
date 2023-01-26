@@ -77,6 +77,7 @@ android {
         }
     }
 }
+
 fun getGitHeadRefsSuffix(project: Project): String {
     // .git/HEAD描述当前目录所指向的分支信息，内容示例："ref: refs/heads/master\n"
     val headFile = File(project.rootProject.projectDir, ".git" + File.separator + "HEAD")
@@ -100,6 +101,7 @@ fun getGitHeadRefsSuffix(project: Project): String {
         return ""
     }
 }
+
 autoResConfig {
     generateClass.set(true)
     generatedClassFullName.set("com.yuk.miuiHomeR.utils.Locales")
@@ -107,23 +109,23 @@ autoResConfig {
     generatedArrayFirstItem.set("SYSTEM")
     generateLocaleConfig.set(true)
 }
+
 dependencies {
     compileOnly(project(":hidden-api"))
     compileOnly("de.robv.android.xposed:api:82")
+
     implementation("com.github.kyuubiran:EzXHelper:1.0.3")
     implementation("org.lsposed.hiddenapibypass:hiddenapibypass:4.3")
 
-    implementation("androidx.appcompat:appcompat:1.7.0-alpha01")
-    implementation("androidx.core:core:1.7.0")
-    implementation("androidx.collection:collection:1.2.0-alpha01")
-    implementation("androidx.fragment:fragment:1.4.0-alpha04")
-    implementation("androidx.lifecycle:lifecycle-common:2.4.0-alpha02")
+    implementation("androidx.appcompat:appcompat:1.6.0")
+    implementation("androidx.core:core:1.9.0")
+    implementation("androidx.collection:collection:1.2.0")
+    implementation("androidx.fragment:fragment:1.5.5")
+    implementation("androidx.lifecycle:lifecycle-common:2.5.1")
     implementation("androidx.vectordrawable:vectordrawable:1.1.0")
     implementation("androidx.vectordrawable:vectordrawable-animated:1.1.0")
-    implementation("androidx.customview:customview:1.0.0")
+    implementation("androidx.customview:customview:1.1.0")
     implementation("androidx.customview:customview-poolingcontainer:1.0.0")
-
-
 
     implementation(files("libs/animation-release.aar"))
     implementation(files("libs/annotation-release.aar"))

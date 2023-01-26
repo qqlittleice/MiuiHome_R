@@ -80,4 +80,5 @@
             app:showColorShades="true" />
 
     </PreferenceCategory>
+
 </PreferenceScreen>

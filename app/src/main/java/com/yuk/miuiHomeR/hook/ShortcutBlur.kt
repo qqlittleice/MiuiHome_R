@@ -260,5 +260,6 @@ object ShortcutBlur : BaseHook() {
         blurUtilsClass.hookAfterAllMethods("fastBlurWhenExitRecents") {
             showBlurDrawable()
         }
+
     }
 }

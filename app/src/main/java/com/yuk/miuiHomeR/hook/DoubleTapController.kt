@@ -15,6 +15,7 @@ class DoubleTapController internal constructor(mContext: Context) {
     private var mFirstClickRawY: Float = 0f
     private var mLastClickTime: Long = 0
     private val mTouchSlop: Int = ViewConfiguration.get(mContext).scaledTouchSlop * 2
+
     fun isDoubleTapEvent(motionEvent: MotionEvent): Boolean {
         val action = motionEvent.actionMasked
         return when {
@@ -52,5 +53,6 @@ class DoubleTapController internal constructor(mContext: Context) {
                 false
             }
         }
+
     }
 }

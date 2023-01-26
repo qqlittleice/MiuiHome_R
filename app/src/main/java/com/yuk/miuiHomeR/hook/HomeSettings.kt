@@ -14,8 +14,8 @@ import com.yuk.miuiHomeR.utils.ktx.setObjectField
 import de.robv.android.xposed.XposedHelpers
 
 object HomeSettings : BaseHook() {
-
     override fun init() {
+
         "com.miui.home.settings.MiuiHomeSettings".findClass().hookAfterAllMethods("onCreatePreferences") {
             val mLayoutResId = (it.thisObject.getObjectField("mAllAppsSetting"))?.getObjectField("mLayoutResId")
             val mWidgetLayoutResId = (it.thisObject.getObjectField("mAllAppsSetting"))?.getObjectField("mWidgetLayoutResId")
@@ -38,7 +38,7 @@ object HomeSettings : BaseHook() {
                 callMethod("setIntent", Intent())
             }
             it.thisObject.callMethod("getPreferenceScreen")?.callMethod("addPreference", pref)
-
         }
+
     }
 }

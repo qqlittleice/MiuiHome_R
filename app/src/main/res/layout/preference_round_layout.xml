@@ -21,7 +21,8 @@
     android:layout_gravity="center_vertical"
     android:background="?preferenceItemBackground"
     android:clipChildren="false"
-    android:gravity="center_vertical">
+    android:gravity="center_vertical"
+    tools:ignore="PrivateResource">
 
     <FrameLayout
         android:id="@+id/icon_frame"
@@ -31,7 +32,7 @@
         android:paddingTop="@dimen/preference_item_padding_inner"
         android:paddingEnd="@dimen/preference_icon_padding_end"
         android:paddingBottom="@dimen/preference_item_padding_inner"
-        tools:ignore="RtlSymmetry">
+        tools:ignore="PrivateResource,RtlSymmetry">
 
         <com.yuk.miuiHomeR.view.CircleImageView
             android:id="@android:id/icon"
@@ -68,7 +69,8 @@
             android:layout_alignStart="@android:id/title"
             android:layout_marginTop="@dimen/preference_summary_margin_top"
             android:textAlignment="viewStart"
-            android:textAppearance="@style/TextAppearance.Preference.Secondary" />
+            android:textAppearance="@style/TextAppearance.Preference.Secondary"
+            tools:ignore="PrivateResource" />
 
     </RelativeLayout>
 
@@ -80,7 +82,8 @@
         android:clipChildren="false"
         android:gravity="center"
         android:minWidth="@dimen/preference_widget_min_width"
-        android:orientation="vertical" />
+        android:orientation="vertical"
+        tools:ignore="PrivateResource" />
 
     <ImageView
         android:id="@+id/arrow_right"
@@ -89,5 +92,5 @@
         android:layout_gravity="center|end"
         android:gravity="center"
         android:src="@drawable/ic_arrow_right"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription,PrivateResource" />
 </LinearLayout>

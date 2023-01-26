@@ -6,6 +6,4 @@ import android.os.Build;
 import androidx.annotation.RequiresApi;
 
 @RequiresApi(Build.VERSION_CODES.S)
-public abstract class BackgroundBlurDrawable extends Drawable {
-
-}
+public abstract class BackgroundBlurDrawable extends Drawable { }

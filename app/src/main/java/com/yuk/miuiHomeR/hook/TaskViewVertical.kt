@@ -8,8 +8,8 @@ import com.yuk.miuiHomeR.utils.ktx.findClass
 import com.yuk.miuiHomeR.utils.ktx.replaceMethod
 
 object TaskViewVertical : BaseHook() {
-
     override fun init() {
+
         val value = mPrefsMap.getInt("task_view_vertical", 100).toFloat() / 100
         if (value == -1f || value == 1f) return
         "com.miui.home.recents.views.TaskStackViewsAlgorithmVertical".replaceMethod(
@@ -18,9 +18,9 @@ object TaskViewVertical : BaseHook() {
             "com.miui.home.recents.util.Utilities".findClass().callStaticMethod(
                 "scaleRectAboutCenter",
                 it.args[0],
-                value * "com.miui.home.recents.util.Utilities".findClass()
-                    .callStaticMethod("getTaskViewScale", appContext) as Float
+                value * "com.miui.home.recents.util.Utilities".findClass().callStaticMethod("getTaskViewScale", appContext) as Float
             )
         }
+
     }
 }

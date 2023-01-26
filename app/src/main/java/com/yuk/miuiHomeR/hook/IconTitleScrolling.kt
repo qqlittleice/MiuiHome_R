@@ -14,9 +14,9 @@ import com.yuk.miuiHomeR.utils.ktx.getObjectField
 import com.yuk.miuiHomeR.utils.ktx.hookAfterMethod
 
 object IconTitleScrolling : BaseHook() {
-
     @SuppressLint("DiscouragedApi")
     override fun init() {
+
         if (!mPrefsMap.getBoolean("icon_title_font_scrolling")) return
         val launcherClass = "com.miui.home.launcher.Launcher".findClass()
         val shortcutInfoClass = "com.miui.home.launcher.ShortcutInfo".findClass()
@@ -60,11 +60,7 @@ object IconTitleScrolling : BaseHook() {
                 mTitleScrolling(mTitle)
             }
             "com.miui.home.launcher.common.Utilities".hookAfterMethod(
-                "adaptTitleStyleToWallpaper",
-                Context::class.java,
-                TextView::class.java,
-                Int::class.javaPrimitiveType,
-                Int::class.javaPrimitiveType
+                "adaptTitleStyleToWallpaper", Context::class.java, TextView::class.java, Int::class.javaPrimitiveType, Int::class.javaPrimitiveType
             ) {
                 val mTitle = it.args[1] as TextView
                 if (mTitle.id == mTitle.resources.getIdentifier("icon_title", "id", "com.miui.home")) {
@@ -74,6 +70,7 @@ object IconTitleScrolling : BaseHook() {
         } catch (e: Throwable) {
             Log.ex(e)
         }
+
     }
 
     private fun mTitleScrolling(mTitle: TextView) {
@@ -84,5 +81,4 @@ object IconTitleScrolling : BaseHook() {
         mTitle.isSelected = true
         mTitle.setHorizontallyScrolling(true)
     }
-
 }

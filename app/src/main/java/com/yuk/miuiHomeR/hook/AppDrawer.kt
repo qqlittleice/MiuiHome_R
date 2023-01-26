@@ -39,5 +39,6 @@ object AppDrawer : BaseHook() {
                 }
             }
         }
+
     }
 }

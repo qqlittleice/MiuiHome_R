@@ -58,4 +58,5 @@
             app:showAlphaSlider="true"
             app:showColorShades="true" />
     </moralnorm.preference.PreferenceCategory>
+
 </moralnorm.preference.PreferenceScreen>

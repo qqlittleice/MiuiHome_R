@@ -17,10 +17,7 @@ object HideSeekPoint : BaseHook() {
             showSeekBar(it.thisObject as View)
         }
         "com.miui.home.launcher.ScreenView".hookAfterMethod(
-            "addView",
-            View::class.java,
-            Int::class.javaPrimitiveType,
-            ViewGroup.LayoutParams::class.java
+            "addView", View::class.java, Int::class.javaPrimitiveType, ViewGroup.LayoutParams::class.java
         ) {
             showSeekBar(it.thisObject as View)
         }
@@ -44,6 +41,6 @@ object HideSeekPoint : BaseHook() {
             mScreenSeekBar.animate().cancel()
             mScreenSeekBar.visibility = View.GONE
         }
-    }
 
+    }
 }

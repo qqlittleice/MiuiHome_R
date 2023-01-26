@@ -19,4 +19,3 @@ object CloseFolderWhenLaunchedApp : BaseHook() {
 
     }
 }
-

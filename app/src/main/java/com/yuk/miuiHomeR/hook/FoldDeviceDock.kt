@@ -10,6 +10,7 @@ import de.robv.android.xposed.XC_MethodHook
 
 object FoldDeviceDock : BaseHook() {
     override fun init() {
+
         if (!mPrefsMap.getBoolean("home_fold_dock")) return
         var hook1: XC_MethodHook.Unhook? = null
         var hook2: XC_MethodHook.Unhook? = null

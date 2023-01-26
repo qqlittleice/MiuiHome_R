@@ -13,6 +13,7 @@ import com.yuk.miuiHomeR.utils.ktx.setIntField
 
 object Recent : BaseHook() {
     override fun init() {
+
         val recentsContainerClass = "com.miui.home.recents.views.RecentsContainer".findClass()
         if (mPrefsMap.getBoolean("home_hide_small_window")) {
             recentsContainerClass.hookAfterMethod(

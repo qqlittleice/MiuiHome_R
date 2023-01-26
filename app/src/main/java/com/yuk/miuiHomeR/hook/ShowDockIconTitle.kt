@@ -10,5 +10,6 @@ object ShowDockIconTitle : BaseHook() {
         "com.miui.home.launcher.DeviceConfig".hookBeforeMethod("isHotseatsAppTitleHided") {
             it.result = false
         }
+
     }
 }

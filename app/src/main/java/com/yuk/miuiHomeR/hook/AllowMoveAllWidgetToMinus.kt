@@ -37,6 +37,8 @@ object AllowMoveAllWidgetToMinus : BaseHook() {
                 it.result = launcherCallbacks != null && !isDraggingFromAssistant && !isDraggingToAssistant && i != 1
             }
         }
+
     }
 }
+
 

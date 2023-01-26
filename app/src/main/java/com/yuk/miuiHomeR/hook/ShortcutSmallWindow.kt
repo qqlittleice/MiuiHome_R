@@ -78,6 +78,6 @@ object ShortcutSmallWindow : BaseHook() {
             sAllSystemShortcutMenuItems.addAll(mAllSystemShortcutMenuItems)
             mSystemShortcutMenuItem.setStaticObjectField("sAllSystemShortcutMenuItems", sAllSystemShortcutMenuItems)
         }
-    }
 
+    }
 }

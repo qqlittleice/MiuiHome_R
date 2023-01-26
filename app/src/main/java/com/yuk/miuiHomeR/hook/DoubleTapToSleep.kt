@@ -24,8 +24,7 @@ object DoubleTapToSleep : BaseHook() {
         findMethod("com.miui.home.launcher.Workspace") {
             name == "dispatchTouchEvent" && parameterCount == 1
         }.hookBefore {
-            val mDoubleTapControllerEx =
-                XposedHelpers.getAdditionalInstanceField(it.thisObject, "mDoubleTapControllerEx") as DoubleTapController
+            val mDoubleTapControllerEx = XposedHelpers.getAdditionalInstanceField(it.thisObject, "mDoubleTapControllerEx") as DoubleTapController
             if (!mDoubleTapControllerEx.isDoubleTapEvent(it.args[0] as MotionEvent)) return@hookBefore
             val mCurrentScreenIndex = it.thisObject.getObject("mCurrentScreenIndex")
             val cellLayout = it.thisObject.invokeMethodAuto("getCellLayout", mCurrentScreenIndex)
@@ -34,8 +33,7 @@ object DoubleTapToSleep : BaseHook() {
             val context = it.thisObject.invokeMethodAuto("getContext") as Context
             context.sendBroadcast(
                 Intent("com.miui.app.ExtraStatusBarManager.action_TRIGGER_TOGGLE").putExtra(
-                    "com.miui.app.ExtraStatusBarManager.extra_TOGGLE_ID",
-                    10
+                    "com.miui.app.ExtraStatusBarManager.extra_TOGGLE_ID", 10
                 )
             )
         }
