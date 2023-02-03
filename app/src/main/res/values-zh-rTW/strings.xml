@@ -124,6 +124,6 @@
     <string name="haptic_Back_HandUp">2. 完成返回時</string>
     <string name="blur_view_color">模糊視圖背景色彩</string>
     <string name="mtk_warning">聯發科技裝置使用此功能可能導致手勢動畫延遲</string>
-    <string name="complete_blur_fix">Complementary complete blur</string>
-    <string name="complete_blur_fix_summary">Enable this feature may cause in-app gesture up moment not blurred and other blur issues</string>
+    <string name="complete_blur_fix">互補完整模糊</string>
+    <string name="complete_blur_fix_summary">啟用此功能可能會造成應用程式內手勢上劃瞬間無模糊或其他模糊問題</string>
 </resources>
